@@ -1,0 +1,2600 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Google Veo 3 & Flow | Cẩm Nang Master VIP & Kho 10 Kịch Bản Hollywood</title>
+  <meta name="description" content="Tài liệu thực chiến chuyên sâu về Google Veo 3 và Flow: Từ thiết lập hệ thống, quy trình tạo video chuẩn điện ảnh đến thư viện 10 Master Prompts Hollywood.">
+
+  <!-- Google Fonts: Be Vietnam Pro + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090C15;
+      --surface: #0F1423;
+      --surface-elevated: #161D31;
+      --surface-card: #1B233C;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(99, 102, 241, 0.4);
+      --border-cyan: rgba(34, 211, 238, 0.35);
+
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+
+      --primary: #6366F1;
+      --primary-light: #818CF8;
+      --cyan: #22D3EE;
+      --amber: #F59E0B;
+      --green: #10B981;
+      --red: #EF4444;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+      --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* injected_mobile_fixes */
+    html, body { overflow-x: hidden !important; max-width: 100% !important; }
+    .container { overflow-x: hidden; max-width: 100%; }
+    img, video { max-width: 100%; height: auto; }
+    pre, .prompt-code-wrap, table, .table-wrapper { overflow-x: auto !important; max-width: 100%; -webkit-overflow-scrolling: touch; }
+    p, a, span, h1, h2, h3, h4, h5, h6 { word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; }
+    /* Force specific elements that might overflow to be contained */
+    .bg-glow, .bg-glow::before, .bg-glow::after { max-width: 100vw; overflow: hidden; }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 40px 20px 120px;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      touch-action: pan-y;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 60%, rgba(34, 211, 238, 0.06), transparent);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* Print / PDF Export Stylesheet */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        padding: 0 !important;
+        background-image: none !important;
+      }
+      .no-print { display: none !important; }
+      .doc-card, .prompt-card, .tool-frame, .step-item {
+        background: #F8FAFC !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 24px !important;
+      }
+      h1, h2, h3 { color: #0F172A !important; -webkit-text-fill-color: initial !important; }
+      pre, code {
+        background: #E2E8F0 !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+      }
+      .callout {
+        border-left: 4px solid #6366F1 !important;
+        background: #F1F5F9 !important;
+        color: #1E293B !important;
+      }
+    }
+
+    /* Floating Navigation / Action Bar */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: rgba(18, 23, 38, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.02em;
+    }
+
+    .bar-brand-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .bar-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-action:hover {
+      background: var(--surface-card);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .btn-action.primary {
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.35);
+    }
+
+    /* Document Header */
+    .doc-header {
+      text-align: center;
+      padding: 30px 10px 50px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .doc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      max-width: 100%;
+      line-height: 1.4;
+      text-align: center;
+      white-space: normal;
+      box-sizing: border-box;
+    }
+
+    .doc-tag .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #FFFFFF 30%, #C7D2FE 70%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .doc-subtitle {
+      color: var(--text-muted);
+      font-size: 1.12rem;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 50px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .toc-link:hover {
+      background: rgba(99, 102, 241, 0.1);
+      border-color: var(--border-accent);
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    .toc-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      color: #FFFFFF;
+      letter-spacing: -0.025em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #CBD5E1;
+      font-size: 1.025rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Step Cards */
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .step-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    .step-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      color: #FFFFFF;
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    /* Screen Illustration Frames */
+    .screen-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin: 18px 0 20px;
+      background: #000000;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .screen-frame img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .screen-caption {
+      padding: 10px 16px;
+      background: rgba(18, 23, 38, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .screen-caption strong {
+      color: #E2E8F0;
+    }
+
+    /* Callout Alert Boxes */
+    .callout {
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      margin: 22px 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+    }
+
+    .callout.tip {
+      border-left-color: var(--cyan);
+      background: rgba(34, 211, 238, 0.04);
+      border-color: rgba(34, 211, 238, 0.2);
+    }
+
+    .callout.warning {
+      border-left-color: var(--amber);
+      background: rgba(245, 158, 11, 0.04);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout.tip .callout-title { color: var(--cyan); }
+    .callout.warning .callout-title { color: var(--amber); }
+
+    /* Formula 4 Pillars Grid */
+    .formula-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+
+    .formula-pillar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .formula-pillar:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+    }
+
+    .formula-pillar.p-1 { border-top: 4px solid #A855F7; }
+    .formula-pillar.p-2 { border-top: 4px solid var(--cyan); }
+    .formula-pillar.p-3 { border-top: 4px solid var(--amber); }
+    .formula-pillar.p-4 { border-top: 4px solid var(--green); }
+
+    .pillar-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .pillar-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .pillar-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .pillar-code {
+      margin-top: 10px;
+      padding: 6px 8px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #CBD5E1;
+    }
+
+    /* Prompt Cards */
+    .prompt-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-md);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .prompt-card:hover {
+      border-color: var(--border-cyan);
+    }
+
+    .prompt-card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .prompt-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .prompt-card:hover .prompt-card-img {
+      transform: scale(1.025);
+    }
+
+    .prompt-card-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(9, 12, 21, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .prompt-card-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    .prompt-card-body {
+      padding: 26px 28px;
+    }
+
+    .prompt-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .prompt-index {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      text-transform: uppercase;
+    }
+
+    .prompt-category {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    .prompt-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      letter-spacing: -0.015em;
+    }
+
+    .prompt-card-vi {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    /* Prompt Code Box */
+    .prompt-code-wrap {
+      background: #05070E;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      position: relative;
+    }
+
+    .prompt-code-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .code-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .btn-copy-prompt {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    .btn-copy-prompt:hover {
+      box-shadow: 0 0 14px rgba(99, 102, 241, 0.5);
+      transform: translateY(-1px);
+    }
+
+    pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.65;
+    }
+
+    .k { color: var(--cyan); font-weight: 600; }
+    .m { color: var(--amber); }
+
+    /* Multi-Shot Storyboard Styles */
+    .storyboard-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .shot-block {
+      background: rgba(10, 14, 26, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      transition: border-color 0.2s;
+    }
+
+    .shot-block:hover {
+      border-color: rgba(34, 211, 238, 0.35);
+    }
+
+    .shot-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .shot-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .shot-timing {
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+    }
+
+    .shot-role {
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 0.92rem;
+    }
+
+    .shot-desc {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    .capcut-tip-box {
+      margin-top: 18px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(99, 102, 241, 0.08));
+      border: 1px dashed rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      color: #FDE68A;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+
+    .capcut-tip-box svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* FAQ Accordion Items */
+    .faq-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 14px;
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+    }
+
+    /* Support Footer */
+    .support-card {
+      margin-top: 60px;
+      padding: 42px 30px;
+      background: linear-gradient(145deg, #111827, #030712);
+      border: 1px solid rgba(0, 104, 255, 0.4);
+      border-radius: var(--radius-xl);
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(0, 104, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0068FF, var(--cyan), #A855F7);
+    }
+
+    .support-card h3 {
+      font-size: 1.65rem;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    .support-card p {
+      color: #E2E8F0;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .support-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 13px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0068FF 0%, #0052cc 100%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF !important;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none !important;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 104, 255, 0.42), 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .support-contact:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #0d74ff 0%, #005cf6 100%);
+      box-shadow: 0 12px 32px rgba(0, 104, 255, 0.62), 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #FFFFFF !important;
+    }
+
+    .support-contact svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 6px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #0F172A;
+      border: 1px solid var(--cyan);
+      color: #FFFFFF;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* =========================================================
+       MOBILE RESPONSIVE OPTIMIZATION (<= 768px)
+       ========================================================= */
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 16px 90px;
+        line-height: 1.68;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .action-bar {
+        position: static;
+        top: auto;
+        padding: 12px 14px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+        border-radius: 14px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .bar-brand {
+        font-size: 0.85rem;
+      }
+      .bar-buttons {
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .btn-action {
+        padding: 7px 12px;
+        font-size: 0.78rem;
+      }
+
+      .doc-header {
+        padding: 12px 0 24px;
+        margin-bottom: 24px;
+      }
+      .doc-tag {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        margin-bottom: 12px;
+        letter-spacing: 0.02em;
+        line-height: 1.35;
+      }
+      h1 {
+        font-size: clamp(1.45rem, 6.2vw, 1.95rem);
+        line-height: 1.28;
+        margin-bottom: 12px;
+      }
+      .doc-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+        line-height: 1.58;
+      }
+      .doc-meta-strip {
+        gap: 8px 14px;
+        font-size: 0.76rem;
+      }
+
+      .toc-card {
+        padding: 18px 16px;
+        margin-bottom: 30px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .toc-title {
+        font-size: 1.02rem;
+        margin-bottom: 12px;
+      }
+      .toc-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .toc-link {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+      }
+
+      section {
+        margin-bottom: 36px;
+      }
+      .section-header {
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+      }
+      h2 {
+        font-size: 1.25rem;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .section-badge {
+        font-size: 0.68rem;
+        padding: 3px 8px;
+      }
+      p {
+        font-size: 0.92rem;
+        line-height: 1.65;
+      }
+
+      .step-card {
+        padding: 18px 16px;
+        margin-bottom: 18px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .step-top {
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.92rem;
+      }
+      .step-title {
+        font-size: 1.08rem;
+      }
+      .screen-frame {
+        margin: 14px 0 16px;
+        border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .screen-caption {
+        padding: 8px 12px;
+        font-size: 0.76rem;
+      }
+
+      .callout {
+        padding: 14px 16px;
+        margin: 16px 0;
+        border-radius: 12px;
+        box-sizing: border-box;
+      }
+      .callout-title {
+        font-size: 0.88rem;
+      }
+
+      .formula-pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 16px 0 24px;
+      }
+      .formula-pillar {
+        padding: 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+      }
+
+      .prompt-card {
+        margin-bottom: 24px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .prompt-card-badge {
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
+        font-size: 0.68rem;
+        max-width: calc(100% - 20px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .prompt-card-body {
+        padding: 18px 16px;
+      }
+      .prompt-card-title {
+        font-size: 1.12rem;
+      }
+      .prompt-card-vi {
+        font-size: 0.88rem;
+        margin-bottom: 14px;
+      }
+      .prompt-code-wrap {
+        padding: 14px 12px;
+        border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .prompt-code-meta {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      pre {
+        font-size: 0.8rem;
+        line-height: 1.58;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+      .btn-copy-prompt {
+        padding: 6px 12px;
+        font-size: 0.74rem;
+      }
+
+      .shot-item {
+        padding: 16px 14px;
+        margin-bottom: 14px;
+        border-radius: 14px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .lego-box {
+        padding: 16px 14px;
+        border-radius: 14px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .capcut-tip-box {
+        padding: 14px;
+        font-size: 0.84rem;
+        border-radius: 14px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .faq-block {
+        padding: 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+      }
+      .faq-question {
+        font-size: 0.96rem;
+      }
+      .faq-answer {
+        font-size: 0.88rem;
+      }
+
+      .support-card {
+        margin-top: 36px;
+        padding: 24px 16px;
+        border-radius: 18px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .support-card h3 {
+        font-size: 1.22rem;
+      }
+      .support-card p {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+      }
+      .support-contact {
+        font-size: 0.92rem;
+        padding: 10px 16px;
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Top Action Bar -->
+    <div class="action-bar no-print">
+      <div class="bar-brand">
+        <div class="bar-brand-badge">V3</div>
+        <span>👑 Veo 3 & Flow · VIP MASTER EDITION</span>
+      </div>
+      <div class="bar-buttons">
+        <button class="btn-action" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          In / Lưu PDF
+        </button>
+        <a href="index.html" class="btn-action primary">
+          Trang Mua Hàng →
+        </a>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="doc-header">
+      <div class="doc-tag">
+        <span class="dot"></span>
+        👑 ĐẶC QUYỀN GÓI SÁNG TẠO VIP (149.000đ) · MASTER EDITION 2026
+      </div>
+      <h1>Google Veo 3 & Flow: Cẩm Nang Master VIP & 10 Kịch Bản Hollywood</h1>
+      <p class="doc-subtitle">
+        Chúc mừng bạn đã sở hữu Gói Sáng Tạo VIP! Dưới đây là đặc quyền trọn bộ: Quy trình 6 bước thực chiến (ảnh thật 100%), công thức điện ảnh 4 trụ cột, từ điển góc máy và thư viện độc quyền 10 Kịch Bản Master Prompts 4K.
+      </p>
+      <div class="doc-meta-strip">
+        <div class="doc-meta-item">
+          <span>📖 Định dạng: E-Book Thực Hành</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>⏱️ Thời gian đọc: 10 phút</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>🎯 Áp dụng: Google Flow & VideoFX</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>🛡️ Hỗ trợ kỹ thuật: 1-1 qua Zalo</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="toc-card no-print">
+      <div class="toc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        Mục Lục Nhanh 9 Chương Thực Hành
+      </div>
+      <div class="toc-grid">
+        <a href="#ch-1" class="toc-link"><span class="toc-num">01</span> Tổng quan Google Veo 3</a>
+        <a href="#ch-2" class="toc-link"><span class="toc-num">02</span> Quy trình 6 bước thực chiến</a>
+        <a href="#ch-3" class="toc-link"><span class="toc-num">03</span> Công Thức Prompt 4 Trụ Cột</a>
+        <a href="#ch-4" class="toc-link"><span class="toc-num">04</span> Từ Điển Góc Quay & Ánh Sáng</a>
+        <a href="#ch-5" class="toc-link"><span class="toc-num">05</span> Bộ Khuôn Mẫu Tự Tạo Mọi Ngành & ChatGPT</a>
+        <a href="#ch-6" class="toc-link"><span class="toc-num">06</span> 10 Kịch Bản Phân Cảnh TVC & Reels</a>
+        <a href="#ch-7" class="toc-link"><span class="toc-num">07</span> Kỹ Thuật Nối Dài Video (+5s)</a>
+        <a href="#ch-8" class="toc-link"><span class="toc-num">08</span> Khắc Phục Lỗi Thường Gặp</a>
+        <a href="#ch-9" class="toc-link"><span class="toc-num">09</span> Kênh Hỗ Trợ & Bảo Hành</a>
+      </div>
+    </div>
+
+    <!-- CHAPTER 1 -->
+    <section id="ch-1">
+      <div class="section-header">
+        <h2>Chương 1: Tổng Quan Sức Mạnh Của Google Veo 3</h2>
+        <span class="section-badge">CÔNG NGHỆ CỐT LÕI</span>
+      </div>
+      <p>
+        <strong>Google Veo 3</strong> là mô hình sinh video bằng trí tuệ nhân tạo (Generative Video AI) tối tân nhất hiện nay của Google DeepMind. Khác với các công cụ tạo video thế hệ cũ thường xuyên bị rung lắc, méo mặt hay chuyển động kỳ dị, Veo 3 sở hữu 3 bước đột phá vượt bậc:
+      </p>
+      <ul>
+        <li><strong>Vật lý chuyển động chân thực (Real Physics Engine):</strong> Tái hiện chính xác hiện tượng tự nhiên như giọt nước rơi, khói sương bốc lên, ánh nắng xiên qua cửa kính và bánh xe lăn mượt mà trên đường ướt mưa.</li>
+        <li><strong>Hiểu sâu ngữ nghĩa điện ảnh (Cinematic Vocabulary):</strong> Bạn có thể điều khiển trực tiếp góc máy quay bằng ngôn ngữ chuyên ngành như <code>dolly in</code>, <code>360-degree orbit</code>, <code>aerial drone flight</code>, <code>macro close-up</code>.</li>
+        <li><strong>Khóa nét nhân vật & Bối cảnh (Consistency Lock):</strong> Giữ nguyên khuôn mặt, trang phục và ánh sáng của chủ thể khi tạo các cảnh quay nối tiếp, giúp bạn làm phim ngắn hoàn chỉnh.</li>
+      </ul>
+      <p>
+        <strong>Google Flow (trên Google Labs)</strong> chính là giao diện phòng làm phim trực quan giúp bạn nhập câu lệnh và nhận video thành phẩm độ phân giải 1080p - 4K chỉ sau khoảng 60–90 giây.
+      </p>
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section id="ch-2">
+      <div class="section-header">
+        <h2>Chương 2: Quy Trình 6 Bước Thực Chiến (Ảnh Chụp Thật Từ Google Flow)</h2>
+        <span class="section-badge">HÌNH ẢNH THỰC TẾ 100%</span>
+      </div>
+      <p>Dưới đây là 6 bước thao tác chuẩn xác từng nút bấm bên trong trình duyệt Google Chrome của bạn, sử dụng hình ảnh chụp trực tiếp từ giao diện Google Flow:</p>
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">1</div>
+          <div class="step-title">Bước 1: Mở Trang Web & Bấm "Tạo Bằng Google Flow"</div>
+        </div>
+        <p>
+          1. Mở trình duyệt Google Chrome và truy cập vào đường dẫn chính thức của Google Labs:  
+          👉 <a href="https://labs.google/fx/tools/flow" target="_blank" style="color:var(--cyan); font-weight:700;">https://labs.google/fx/tools/flow</a>
+        </p>
+        <p>
+          2. Tại trang chủ Google Flow, bạn nhìn vào giữa màn hình sẽ thấy nút tròn màu trắng:  
+          👉 Bấm vào nút <strong>"Tạo bằng Google Flow"</strong> để mở không gian làm phim.
+        </p>
+        <div class="screen-frame">
+          <img src="assets/guide_step1_home.png" alt="Ảnh thực tế Bước 1: Nút Tạo bằng Google Flow" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.1:</strong> Nút 'Tạo bằng Google Flow' ngay giữa màn hình trang chủ</span>
+            <span>Thời gian: ~10 giây</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">2</div>
+          <div class="step-title">Bước 2: Đăng Nhập Tài Khoản Google Được Cấp</div>
+        </div>
+        <p>
+          1. Nhập địa chỉ <strong>Email</strong> (Gmail) được gửi cho bạn khi kích hoạt gói VIP vào ô nhập liệu màu xanh.  
+          2. Bấm nút màu xanh <strong>Tiếp theo</strong> ➔ Điền <strong>Mật khẩu</strong> để đăng nhập vào phòng làm việc.
+        </p>
+        <div class="screen-frame">
+          <img src="assets/guide_step2_login.png" alt="Ảnh thực tế Bước 2: Điền Email và Mật khẩu Google" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.2:</strong> Màn hình đăng nhập tài khoản Google tiếng Việt</span>
+            <span>Thời gian: ~20 giây</span>
+          </div>
+        </div>
+        <div class="callout warning">
+          <div class="callout-title">⚠️ Lưu ý bảo mật & ổn định:</div>
+          <p>Khi đăng nhập lần đầu, bấm <strong>"Lưu mật khẩu"</strong> trên Chrome. Tránh đổi mật khẩu dồn dập hoặc bật tắt xác thực 2 lớp liên tục trong 24 giờ đầu để tài khoản luôn duy trì phiên làm việc mượt mà nhất.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">3</div>
+          <div class="step-title">Bước 3: Bấm Vào Nút "+ Dự Án Mới"</div>
+        </div>
+        <p>
+          Sau khi đăng nhập thành công, bạn sẽ vào màn hình quản lý dự án cá nhân.  
+          👉 Nhìn vào chính giữa màn hình, nhấp chuột vào nút bo tròn có dấu cộng: <strong>"+ Dự án mới"</strong> để mở không gian sáng tạo video.
+        </p>
+        <div class="screen-frame">
+          <img src="assets/guide_step3_new_project.png" alt="Ảnh thực tế Bước 3: Nút Dự án mới" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.3:</strong> Vị trí nút '+ Dự án mới' mở không gian sáng tạo</span>
+            <span>Thời gian: ~3 giây</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">4</div>
+          <div class="step-title">Bước 4: Cài Đặt Khung Hình (Dọc 9:16 Hoặc Ngang 16:9)</div>
+        </div>
+        <p>
+          Nhìn xuống thanh điều khiển ở cạnh dưới, bấm vào nút thông số (hiển thị <code>Video · 720p · 8 giây</code>) để mở menu cấu hình:
+        </p>
+        <ul>
+          <li>📱 <strong>Nút 9:16 (Khung Dọc viền đỏ):</strong> Chọn tỉ lệ này cho <strong>TikTok, Facebook Reels, YouTube Shorts, Instagram</strong>.</li>
+          <li>💻 <strong>Nút 16:9 (Khung Ngang viền xanh):</strong> Chọn tỉ lệ này cho <strong>YouTube dài, Màn hình máy tính, Tivi, TVC website</strong>.</li>
+          <li>⚡ <strong>Model:</strong> Chọn <strong>Veo 3.1 - Lite</strong> hoặc Veo 3 để tối ưu hóa tốc độ và độ chi tiết vật lý.</li>
+        </ul>
+        <div class="screen-frame">
+          <img src="assets/guide_step4_aspect_ratio.png" alt="Ảnh thực tế Bước 4: Cài đặt tỉ lệ khung hình 9:16 hoặc 16:9" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.4:</strong> Menu cài đặt Khung hình 9:16 (Dọc) hoặc 16:9 (Ngang) và Model Veo</span>
+            <span>Thời gian: ~5 giây</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">5</div>
+          <div class="step-title">Bước 5: Dán Kịch Bản VIP Vào Ô Nhập & Bấm Mũi Tên Tạo Video</div>
+        </div>
+        <p>
+          1. Kéo xuống <strong>Chương 5</strong> bên dưới, chọn 1 trong 10 Kịch Bản Master Prompts Hollywood bạn muốn và bấm nút <strong>Sao chép</strong>.  
+          2. Nhấp chuột vào ô màu đen ở đáy màn hình có dòng chữ: <strong>"Bạn muốn tạo những gì?"</strong> rồi dán câu lệnh vào (`Ctrl + V`).  
+          3. Bấm vào <strong>NÚT TRÒN CÓ MŨI TÊN ➔</strong> ở góc phải thanh dock để kích hoạt cỗ máy AI Veo 3 render video!
+        </p>
+        <div class="screen-frame">
+          <img src="assets/guide_step5_prompt_input.png" alt="Ảnh thực tế Bước 5: Ô Bạn muốn tạo những gì và nút tròn mũi tên" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.5:</strong> Ô nhập 'Bạn muốn tạo những gì?' và nút tròn mũi tên khởi tạo video</span>
+            <span>Thời gian render: ~60–90 giây</span>
+          </div>
+        </div>
+        <div class="callout tip">
+          <div class="callout-title">💡 Mẹo chuyên gia khi cỗ máy AI đang render:</div>
+          <p>Khi thanh tiến trình đang chạy phần trăm (0% ➔ 100%), bạn hãy giữ nguyên tab trình duyệt, <strong>không bấm F5 làm mới trang</strong> để đảm bảo phiên tạo hoàn thành trọn vẹn.</p>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">6</div>
+          <div class="step-title">Bước 6: Xem Video Thành Phẩm & Tải Xuống 1080p Sạch Logo Về Máy</div>
+        </div>
+        <p>
+          1. Khi máy render xong 100%, video thành phẩm sắc nét sẽ tự động phát trong khung dự án.  
+          2. Di chuột lên video (hoặc nhấp menu 3 chấm) ➔ Chọn mục <strong>"Tải xuống"</strong>.  
+          3. Chọn độ phân giải <strong>1080p (Đã tăng độ phân giải)</strong> hoặc <strong>720p</strong> để tải file video <code>.mp4</code> nguyên gốc, sắc nét không dính watermark về máy tính hoặc điện thoại!
+        </p>
+        <div class="screen-frame">
+          <img src="assets/guide_step6_download.png" alt="Ảnh thực tế Bước 6: Menu Tải xuống 1080p" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.6:</strong> Menu 'Tải xuống' -> 1080p lưu file video chất lượng cao về máy</span>
+            <span>Thời gian: ~5 giây</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3 -->
+    <section id="ch-3">
+      <div class="section-header">
+        <h2>Chương 3: Công Thức Viết Master Prompt 4 Trụ Cột</h2>
+        <span class="section-badge">BÍ QUYẾT ĐIỆN ẢNH</span>
+      </div>
+      <p>
+        90% người mới tạo video ra bị méo hoặc không như ý là vì viết câu lệnh quá ngắn: <em>"A girl walking" (Một cô gái đang đi bộ)</em>. AI sẽ tự đoán mò bối cảnh và tạo ra khung hình lộn xộn.
+      </p>
+      <p>Để video ra đời mang phong cách Hollywood rực rỡ, hãy luôn áp dụng <strong>Công Thức 4 Trụ Cột</strong> sau:</p>
+
+      <div class="formula-pillars-grid">
+        <div class="formula-pillar p-1">
+          <span class="pillar-tag">TRỤ CỘT 1</span>
+          <div class="pillar-name">🟣 Chủ Thể & Động Tác</div>
+          <p class="pillar-desc">Ai/cái gì, chất liệu bề mặt, biểu cảm khuôn mặt và động tác cơ học cụ thể.</p>
+          <div class="pillar-code">"luxury glass perfume bottle standing on wet black marble"</div>
+        </div>
+
+        <div class="formula-pillar p-2">
+          <span class="pillar-tag">TRỤ CỘT 2</span>
+          <div class="pillar-name">🔵 Góc Máy Camera</div>
+          <p class="pillar-desc">Quỹ đạo máy quay di chuyển: tiến gần, lượn vòng quanh, flycam trên cao.</p>
+          <div class="pillar-code">"camera slowly orbits 90 degrees, slow smooth dolly in"</div>
+        </div>
+
+        <div class="formula-pillar p-3">
+          <span class="pillar-tag">TRỤ CỘT 3</span>
+          <div class="pillar-name">🟠 Ánh Sáng & Không Gian</div>
+          <p class="pillar-desc">Quyết định chiều sâu, cảm xúc và độ sang trọng của màu sắc.</p>
+          <div class="pillar-code">"volumetric studio rim light, golden hour warm sunset"</div>
+        </div>
+
+        <div class="formula-pillar p-4">
+          <span class="pillar-tag">TRỤ CỘT 4</span>
+          <div class="pillar-name">🟢 Thông Số Điện Ảnh</div>
+          <p class="pillar-desc">Khóa độ nét, chống méo mó, khẩu độ ống kính và tốc độ khung hình.</p>
+          <div class="pillar-code">"cinematic color grading, shallow depth of field, 4k 60fps"</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4 -->
+    <section id="ch-4">
+      <div class="section-header">
+        <h2>Chương 4: Bảng Tra Cứu Thuật Ngữ Máy Quay & Ánh Sáng</h2>
+        <span class="section-badge">TỪ ĐIỂN CHUYÊN NGÀNH</span>
+      </div>
+      <p>Lưu lại bảng từ khóa chuẩn tiếng Anh dưới đây để ghép vào câu lệnh bất kỳ khi nào bạn cần:</p>
+
+      <div style="overflow-x:auto; width:100%; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; border-radius:var(--radius-md); border:1px solid var(--border); margin:20px 0; background:var(--surface);">
+        <table style="min-width:540px; width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.04); text-align:left; border-bottom:1px solid var(--border);">
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Thuật Ngữ Tiếng Anh</th>
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Ý Nghĩa Máy Quay</th>
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Tình Huống Sử Dụng Tốt Nhất</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:0.9rem; color:#CBD5E1;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Slow dolly in</td>
+              <td style="padding:12px 18px;">Máy quay từ từ tiến lại gần</td>
+              <td style="padding:12px 18px;">Giới thiệu sản phẩm, cận cảnh khuôn mặt</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">360-degree orbit</td>
+              <td style="padding:12px 18px;">Máy quay bay lượn vòng tròn</td>
+              <td style="padding:12px 18px;">Khoe toàn diện góc cạnh xe hơi, đồng hồ, thời trang</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Aerial drone flight</td>
+              <td style="padding:12px 18px;">Flycam bay trên cao nhìn xuống</td>
+              <td style="padding:12px 18px;">Phong cảnh du lịch, resort, bất động sản</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Extreme macro close-up</td>
+              <td style="padding:12px 18px;">Quay siêu cận cảnh từng milimet</td>
+              <td style="padding:12px 18px;">Chi tiết giọt nước, vân đá, trang sức, đồng hồ</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Low-angle tracking shot</td>
+              <td style="padding:12px 18px;">Máy quay đặt sát đất bám đuổi</td>
+              <td style="padding:12px 18px;">Xe đua tốc độ, người mẫu sải bước uy quyền</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--amber); font-weight:600;">Volumetric studio rim light</td>
+              <td style="padding:12px 18px;">Ánh sáng viền nổi khối phòng chụp</td>
+              <td style="padding:12px 18px;">Quảng cáo mỹ phẩm, đồ công nghệ sang trọng</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--amber); font-weight:600;">Golden hour sunset rays</td>
+              <td style="padding:12px 18px;">Nắng vàng hoàng hôn xiên qua</td>
+              <td style="padding:12px 18px;">Video cảm xúc, thiên nhiên lãng mạn</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5 -->
+    <section id="ch-5">
+      <div class="section-header">
+        <h2>Chương 5: Bộ Khuôn Mẫu Prompt "Điền Vào Chỗ Trống" & Trợ Lý ChatGPT Cho Mọi Ngành Hàng</h2>
+        <span class="section-badge">TỰ DO SÁNG TẠO 100%</span>
+      </div>
+      <p>
+        Nếu bạn không muốn dùng 10 kịch bản mẫu sẵn mà muốn <strong>tự làm video cho sản phẩm/ý tưởng kinh doanh riêng của mình</strong> (mở quán ăn, bán mỹ phẩm, quần áo thời trang, đồ gia dụng, bất động sản hay kênh chia sẻ kiến thức...), dưới đây là <strong>2 công cụ tối thượng</strong> giúp bạn biến mọi ý tưởng thành câu lệnh điện ảnh chỉ sau 10 giây:
+      </p>
+
+      <!-- Tool 1: ChatGPT Director -->
+      <div class="prompt-card" style="border-color: rgba(168, 85, 247, 0.4); background: linear-gradient(180deg, rgba(168, 85, 247, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index" style="color:var(--purple); background:rgba(168,85,247,0.12); border-color:rgba(168,85,247,0.3);">CÔNG CỤ 1 · TRỢ LÝ ĐẠO DIỄN MIỄN PHÍ</span>
+            <span class="prompt-category">Áp dụng: ChatGPT (3.5 / 4o) hoặc Google Gemini</span>
+          </div>
+          <h3 class="prompt-card-title">🤖 "Câu Thần Chú ChatGPT" — Tự Viết 3 Phân Cảnh Bằng Tiếng Việt</h3>
+          <p class="prompt-card-vi">
+            Bạn <strong>không cần giỏi tiếng Anh</strong>! Chỉ cần copy câu lệnh dưới đây dán vào ChatGPT hoặc Google Gemini, sau đó điền tên sản phẩm bằng tiếng Việt. AI sẽ tự động đóng vai đạo diễn Hollywood và sinh ra trọn bộ 3 prompt tiếng Anh chuẩn Veo 3 cho bạn:
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label" style="color:var(--purple);">CÂU LỆNH MẪU DÁN VÀO CHATGPT</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('prompt-chatgpt-director')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Sao chép câu lệnh ChatGPT
+              </button>
+            </div>
+            <pre class="prompt-text" id="prompt-chatgpt-director" style="color:#E2E8F0; font-size:0.88rem; line-height:1.6;">Hãy đóng vai một đạo diễn điện ảnh Hollywood và chuyên gia prompt cho Google Veo 3 / Google Flow.
+Tôi muốn làm video quảng cáo ngắn (15-18 giây) cho sản phẩm/ý tưởng sau:
+[ĐIỀN TÊN SẢN PHẨM / Ý TƯỞNG CỦA BẠN BẰNG TIẾNG VIỆT VÀO ĐÂY, VÍ DỤ: Hộp son môi dưỡng ẩm màu cam đất / Quán phở bò gia truyền / Căn hộ chung cư cao cấp view sông / Bộ đồ tập gym nữ]
+
+Hãy viết cho tôi 3 câu lệnh (Prompt) chuẩn tiếng Anh điện ảnh tương ứng với 3 phân cảnh liên hoàn:
+- Cảnh 1 (0s-6s) Hook thu hút: Góc quay cận cảnh, chuyển động gây tò mò, ánh sáng nổi khối.
+- Cảnh 2 (6s-12s) Cao trào & Tính năng: Chuyển động mượt mà trình diễn chi tiết đẹp nhất của sản phẩm.
+- Cảnh 3 (12s-18s) Cảnh kết & Outro: Góc quay toàn cảnh sang trọng hoặc kéo lùi để kêu gọi mua hàng.
+Yêu cầu: Có đầy đủ từ khóa góc máy (camera trajectory), ánh sáng điện ảnh, chất liệu bề mặt, và thông số chất lượng (4k 60fps, shallow depth of field).</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool 2: 4 Lego Templates -->
+      <h3 style="font-size:1.3rem; margin:36px 0 16px; color:#FFFFFF;">🧩 Bộ 4 Khuôn Mẫu Master "Điền Vào Chỗ Trống" (Lego Templates)</h3>
+      <p style="color:#94A3B8; margin-bottom:24px;">Giữ nguyên bộ khung điện ảnh đã được tối ưu hóa cho Veo 3, bạn chỉ cần thay thế các từ ngữ trong ngoặc vuông <code>[...]</code> bằng sản phẩm và bối cảnh mong muốn:</p>
+
+      <!-- Template 1 -->
+      <div class="prompt-card" style="margin-bottom:28px;">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KHUÔN MẪU 01</span>
+            <span class="prompt-category">Ngành Hàng: TVC Mỹ Phẩm · Sản Phẩm Đóng Hộp · Đồ Công Nghệ · Đồng Hồ</span>
+          </div>
+          <h4 class="prompt-card-title" style="font-size:1.15rem;">🏷️ TVC Giới Thiệu Sản Phẩm Sang Trọng (Commercial & Luxury)</h4>
+          <p class="prompt-card-vi" style="margin-bottom:12px;">
+            <strong>Cách thay thế:</strong> Đổi <code>[TÊN SẢN PHẨM]</code> thành sản phẩm của bạn (ví dụ: <em>luxury serum bottle / minimalist smartwatch</em>), chọn bề mặt đặt sản phẩm và hiệu ứng đi kèm.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TEMPLATE</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('tmpl-1')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Sao chép khuôn mẫu 01
+              </button>
+            </div>
+            <pre class="prompt-text" id="tmpl-1">Cinematic commercial macro shot of [TÊN SẢN PHẨM], [MÀU SẮC & CHẤT LIỆU BỀ MẶT], placed on [BỀ MẶT: polished black marble / elegant wooden table / crystal clear water surface], surrounded by [HIỆU ỨNG: swirling aromatic mist / delicate water splashes / floating golden dust particles], camera [GÓC QUAY: slowly orbits 360 degrees / slow smooth dolly in], soft volumetric studio rim lighting, shallow depth of field, Vogue luxury commercial grade, 4k 60fps.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="prompt-card" style="margin-bottom:28px;">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KHUÔN MẪU 02</span>
+            <span class="prompt-category">Ngành Hàng: Nhà Hàng · Quán Ăn · Đồ Uống · Tiệm Cafe & Bánh</span>
+          </div>
+          <h4 class="prompt-card-title" style="font-size:1.15rem;">🍲 Video Ẩm Thực Bốc Khói Hấp Dẫn (Food & Beverages)</h4>
+          <p class="prompt-card-vi" style="margin-bottom:12px;">
+            <strong>Cách thay thế:</strong> Đổi <code>[TÊN MÓN ĂN / ĐỒ UỐNG]</code> (ví dụ: <em>hot bowl of Vietnamese beef pho / iced matcha latte</em>), chọn chi tiết chuyển động bốc khói hoặc rưới nước sốt.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TEMPLATE</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('tmpl-2')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Sao chép khuôn mẫu 02
+              </button>
+            </div>
+            <pre class="prompt-text" id="tmpl-2">Extreme close-up macro shot of [TÊN MÓN ĂN / ĐỒ UỐNG], [CHI TIẾT CHUYỂN ĐỘNG: hot appetizing steam rising gently / pouring rich savory sauce over top / melted cheese pulling apart], rich glistening food textures, [ÁNH SÁNG: warm cozy restaurant ambiance lighting / soft golden morning daylight], cinematic slow motion 60fps, mouth-watering cinematography, commercial food documentary grade, 4k UHD.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="prompt-card" style="margin-bottom:28px;">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KHUÔN MẪU 03</span>
+            <span class="prompt-category">Ngành Hàng: Thời Trang · Người Mẫu · Video Reels / TikTok Xây Kênh Cá Nhân</span>
+          </div>
+          <h4 class="prompt-card-title" style="font-size:1.15rem;">👗 Video Người Mẫu & Phong Cách Sống (Fashion & Lifestyle)</h4>
+          <p class="prompt-card-vi" style="margin-bottom:12px;">
+            <strong>Cách thay thế:</strong> Đổi mô tả nhân vật, trang phục và bối cảnh (ví dụ: <em>stylish young man in casual denim jacket walking in coffee street</em>).
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TEMPLATE</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('tmpl-3')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Sao chép khuôn mẫu 03
+              </button>
+            </div>
+            <pre class="prompt-text" id="tmpl-3">Cinematic medium full shot of [MÔ TẢ NGƯỜI: charming Vietnamese woman / stylish young entrepreneur], wearing [TRANG PHỤC: elegant modern silk outfit / minimalist casual streetwear], [HÀNH ĐỘNG: walking with confidence / looking towards camera with warm charming smile], in [BỐI CẢNH: vibrant city pedestrian street / luxury cafe patio / historic ancient town], smooth gimbal tracking camera glide, golden hour warm natural backlight, natural skin texture, 4k 60fps.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 4 -->
+      <div class="prompt-card" style="margin-bottom:36px;">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KHUÔN MẪU 04</span>
+            <span class="prompt-category">Ngành Hàng: Bất Động Sản · Resort · Homestay · Du Lịch Khám Phá</span>
+          </div>
+          <h4 class="prompt-card-title" style="font-size:1.15rem;">🏖️ Flycam Toàn Cảnh Bất Động Sản & Du Lịch (Real Estate & Travel)</h4>
+          <p class="prompt-card-vi" style="margin-bottom:12px;">
+            <strong>Cách thay thế:</strong> Đổi tên địa điểm, kiến trúc villa/khách sạn và thời điểm bình minh hay hoàng hôn rực rỡ.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TEMPLATE</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('tmpl-4')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Sao chép khuôn mẫu 04
+              </button>
+            </div>
+            <pre class="prompt-text" id="tmpl-4">Breathtaking cinematic aerial drone flight gliding over [TÊN ĐỊA ĐIỂM / TÒA NHÀ / KHU NGHỈ DƯỠNG], [THỜI ĐIỂM: majestic sunrise with rolling sea of mist / dramatic golden hour sunset / vibrant illuminated city night], slow sweeping panoramic camera movement, National Geographic travel documentary grade, ultra detailed architectural textures, vibrant natural colors, 8k resolution.</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6 -->
+    <section id="ch-6">
+      <div class="section-header">
+        <h2>Chương 6: Kho 10 Kịch Bản Phân Cảnh TVC & Reels (Multi-Shot Storyboard)</h2>
+        <span class="section-badge">ĐẶC QUYỀN GÓI SÁNG TẠO VIP</span>
+      </div>
+      <p style="margin-bottom:20px;">
+        Khác với những câu lệnh đơn lẻ chỉ tạo ra 1 đoạn ngắn 8 giây rời rạc, dưới đây là <strong>10 Kịch Bản Chuỗi Phân Cảnh (Storyboard Đa Góc Máy)</strong> được đạo diễn chuyên nghiệp thiết kế sẵn. Mỗi kịch bản gồm đủ 3 nhịp: <strong>Hook (Cú giật giữ chân 0-6s) ➔ Diễn biến chính (6-12s) ➔ Cảnh kết & Kêu gọi (12-18s)</strong> để bạn tạo thành 1 video hoàn chỉnh đăng ngay lên TikTok, Facebook Reels, YouTube Shorts hoặc chạy quảng cáo TVC.
+      </p>
+      <div class="callout tip" style="margin-bottom:36px;">
+        <div class="callout-title">🎬 2 Cách làm video dài 15–20 giây từ kịch bản:</div>
+        <p>
+          • <strong>Cách 1 (Nối trực tiếp trong Flow):</strong> Tạo Cảnh 1 ➔ Bấm nút <code>Extend (+5s)</code> góc trên video ➔ Dán prompt Cảnh 2 để AI tự động vẽ tiếp giữ nguyên bối cảnh!<br>
+          • <strong>Cách 2 (Ghép nhanh bằng CapCut trong 1 phút):</strong> Tạo lần lượt 3 Cảnh tải file về ➔ Thả vào CapCut ➔ Chọn nhạc nền gợi ý ➔ Xuất file video 1080p hoàn chỉnh đăng mạng!
+        </p>
+      </div>
+
+      <!-- KỊCH BẢN 01: TVC Nước Hoa -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/perfume_cinematic.jpg" alt="TVC nước hoa cao cấp từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 01 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Mỹ Phẩm & Nước Hoa Luxury · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">TVC Quảng Cáo Chai Nước Hoa Pha Lê Đen Huyền Bí</div>
+          <p class="prompt-card-vi">
+            Chuỗi 3 phân cảnh điện ảnh quảng bá nước hoa: từ giọt sương cận cảnh siêu thực, cú lượn vòng 360 độ khói hương bồng bềnh đến toàn cảnh chai nước hoa ngự trị trên bục cẩm thạch sang trọng.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Cận cảnh giọt sương & Bề mặt pha lê</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Máy quay macro siêu cận tiến vào giọt sương trong veo đang từ từ lăn trên thân chai thủy tinh mờ, phản chiếu ánh sáng studio viền nổi khối.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-1-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-1-1"><span class="k">Extreme macro close-up</span> of crystal dewdrop slowly dripping down a luxury frosted glass perfume bottle, dark moody polished black marble reflections, soft volumetric studio rim lighting, shallow depth of field, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Lượn vòng 360° & Khói hương thơm ánh vàng</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Máy quay lượn vòng tròn quanh chai nước hoa, làn khói hương thơm óng ánh hạt vàng xoay chuyển huyền ảo quanh nắp chai kim loại.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-1-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-1-2"><span class="k">Smooth 360-degree orbit camera movement</span> around the luxury perfume bottle, ethereal golden aromatic mist swirling softly around the crystalline cap, cinematic studio lighting, elegant slow motion 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Cú kéo máy lùi toàn cảnh & Ánh sáng vương giả</span>
+                <span class="shot-timing">Chốt thương hiệu / Outro</span>
+              </div>
+              <p class="shot-desc">Máy quay kéo lùi từ từ để lộ toàn cảnh chai nước hoa đứng uy nghi trên bục đá đen bóng, ánh đèn bokeh vàng ấm rực rỡ phía sau như bìa tạp chí Vogue.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-1-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-1-3"><span class="k">Slow cinematic dolly back</span> revealing the luxury perfume bottle standing majestically on an illuminated obsidian pedestal, warm glowing bokeh lights in background, Vogue high-end commercial aesthetic, 4k UHD.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Chọn bài nhạc piano lofi nhẹ nhàng hoặc beat ambient sang trọng. Chèn âm thanh giọt nước rơi "ting" nhẹ ở giây thứ 2. Ghép 3 cảnh bằng hiệu ứng chuyển tiếp "Hòa tan" (Cross Dissolve) 0.4 giây.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 02: Sa Pa -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/sapa_drone.jpg" alt="Flycam Sa Pa từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 02 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Du Lịch & Khám Phá Thiên Nhiên · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Flycam Hành Trình Biển Mây Sa Pa Bình Minh Hùng Vĩ</div>
+          <p class="prompt-card-vi">
+            Chuỗi 3 cảnh quay flycam chuyển động từ cận ngọn lúa bậc thang vàng rực, bay vút lên đỉnh núi đón biển mây cuộn trào đến toàn cảnh bản làng yên bình trong sương sớm.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Flycam bay là sát ruộng bậc thang vàng óng</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Flycam bay tầm thấp lướt sát qua từng bông lúa chín trĩu hạt, làn sương sớm mờ ảo bốc lên từ thung lũng đón ánh nắng đầu ngày.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-2-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-2-1"><span class="k">Low-altitude cinematic drone flight</span> skimming closely above golden ripe rice terraces in Sapa Vietnam at dawn, delicate morning mist rising from terraced valley, warm sunrise glow, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Bay vượt đỉnh núi & Biển mây cuộn trào</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Flycam bốc cao vút qua rặng núi Fansipan, hé lộ biển mây trắng muốt bồng bềnh cuộn trôi với những dải nắng sớm rọi xuyên qua.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-2-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-2-2"><span class="k">Dramatic drone ascent soaring over mountain ridges</span> revealing a breathtaking sea of clouds rolling across Northern Vietnam mountain ranges, golden sunbeams piercing through clouds, National Geographic cinematography, 8k.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Toàn cảnh bản làng & Dòng suối uốn lượn</span>
+                <span class="shot-timing">Bình yên kết màn</span>
+              </div>
+              <p class="shot-desc">Cú lia máy flycam toàn cảnh từ trên cao xuống thung lũng Mường Hoa, mái nhà gỗ mộc mạc và dòng suối lấp lánh trong nắng ban mai.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-2-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-2-3"><span class="k">Grand wide aerial panoramic shot</span> of tranquil mountain village nestled beneath terraced fields, sparkling winding stream below, serene morning atmosphere, cinematic travel documentary grade, vibrant natural colors.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Chọn điệu nhạc sáo trúc kết hợp acoustic chill. Dùng hiệu ứng chuyển cảnh "Phóng to" (Zoom In) để tạo cảm giác bay liên tục không ngắt quãng.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 03: Bất Động Sản & Penthouse Triệu Đô -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/real_estate_penthouse.jpg" alt="Nội thất phòng khách Penthouse triệu đô từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 03 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Bất Động Sản & Nội Thất Penthouse Cao Cấp · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Tour Không Gian Sống Penthouse Thượng Lưu Đón Nắng Sớm</div>
+          <p class="prompt-card-vi">
+            Chuỗi kịch bản TVC 3 cảnh phân đoạn: Từ góc máy cận cảnh chi tiết sofa da và tia nắng sớm, cú trượt mượt mà bao quát phòng khách thoáng đạt đến khoảnh khắc máy quay mở rộng góc nhìn toàn cảnh skyline thành phố qua ô kính kịch trần.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Cận cảnh chất liệu sofa da & ánh nắng sớm</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Cú máy dolly chậm lướt qua góc sofa da bò cao cấp và bàn trà gỗ tối giản, tia nắng sớm chiếu xiên qua khung rèm voan tạo vệt bóng đổ nghệ thuật.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-3-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-3-1"><span class="k">Slow cinematic dolly shot</span> focusing on luxurious tan leather sofa texture and wooden coffee table, warm morning sunbeams streaming through sheer curtains casting soft shadows, interior architectural magazine style, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Trượt ngang toàn cảnh không gian mở phòng khách</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Máy quay trượt ngang êm ái mở rộng tầm nhìn toàn bộ không gian phòng khách thoáng đạt, cây xanh trang trí và thảm dệt tinh tế hài hòa với ánh sáng tự nhiên rực rỡ.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-3-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-3-2"><span class="k">Smooth tracking shot</span> gliding across the spacious minimalist living room, showcasing open-plan layout with elegant rug, modern lighting, and potted plants glowing in warm morning light, cinematic interior showcase, 4k.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Hướng mắt nhìn ra chân trời thành phố phồn hoa</span>
+                <span class="shot-timing">Cảnh chốt đỉnh cao</span>
+              </div>
+              <p class="shot-desc">Máy quay tiến dần về phía hệ vách kính kịch trần cao 4m, phóng tầm mắt ngắm trọn vẹn đường chân trời thành phố hiện đại với những tòa cao ốc nguy nga dưới bầu trời trong xanh.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-3-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-3-3"><span class="k">Slow push-in toward floor-to-ceiling glass wall</span>, revealing expansive breathtaking panoramic city skyline view with modern skyscrapers under clear blue sky, luxury high-rise penthouse lifestyle, 8k resolution.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc Lofi Jazz nhẹ nhàng thư thái hoặc dương cầm cổ điển. Chèn âm thanh tiếng gió nhẹ lay rèm cửa và tiếng chim hót buổi sáng ở Cảnh 1.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 04: Cute Cat Pixar -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 04 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Hoạt Hình 3D & Kênh Trẻ Em / TikTok Triệu View · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Chú Mèo Con Lông Xù Lái Xe Tay Ga Dạo Phố Mùa Thu</div>
+          <p class="prompt-card-vi">
+            Video 3D Pixar triệu view: chú mèo con vàng cam đội mũ bảo hiểm tí hon tự tin lái chiếc xe tay ga dạo công viên lá vàng rơi và vẫy tay chào khán giả.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Cận cảnh mèo con đội mũ bảo hiểm siêu cưng</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Cận cảnh chú mèo con lông xù đội mũ bảo hiểm cổ điển và kính phi công tí hon, hai bàn chân nhỏ bám chặt tay lái xe ga, đôi mắt to tròn long lanh chớp chớp.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-4-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-4-1"><span class="k">Adorable close-up shot</span> of a fluffy ginger kitten wearing a miniature vintage motorcycle helmet and pilot goggles, tiny paws holding pastel scooter handlebars, big sparkling eyes blinking with excitement, Pixar 3D animation style, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Xe bon bon qua con đường ngập lá vàng rơi</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Máy quay đi ngang bám theo chiếc xe màu xanh mint bon bon trên con đường công viên ngập nắng, lá vàng mùa thu bay phấp phới trong làn gió nhẹ.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-4-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-4-2"><span class="k">Side tracking shot following the kitten</span> riding a cute mint-green mini scooter along a sunlit park pathway, golden autumn leaves fluttering in breeze, warm cheerful sunlight, playful expressive animation, 4k UHD.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Mèo con bấm còi & Vẫy chân chào khán giả</span>
+                <span class="shot-timing">Gây thương nhớ / Triệu tim</span>
+              </div>
+              <p class="shot-desc">Máy quay trực diện đón đầu chú mèo con đang bấm chiếc còi tí hon rồi giơ một bàn chân mũm mĩm vẫy chào ống kính, đuôi ngoe nguẩy cực kỳ đáng yêu.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-4-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-4-3"><span class="k">Front-facing camera tracking the happy kitten</span> honking a tiny horn and waving one cute paw directly at camera, soft sunny bokeh background, irresistible wholesome charm, Pixar render quality.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Lồng nhạc acoustic ukulele vui tươi hoạt hình. Chèn tiếng còi "bíp bíp" và tiếng mèo kêu "meow" ở giây thứ 14 để kéo tương tác bình luận cực mạnh!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 05: Tech Foldable Phone -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 05 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Đồ Công Nghệ & Smartphone · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">TVC Smartphone Gập Trong Không Gian Vô Trọng Lực</div>
+          <p class="prompt-card-vi">
+            Phong cách quảng cáo Apple cao cấp: từ cú mở màn bản lề titan lơ lửng, màn hình OLED uốn cong phát sáng dải ngân hà đến cú gập đôi sắc bén đẳng cấp flagship.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Chiếc điện thoại gập từ từ mở ra trong không gian tối</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Chiếc điện thoại siêu mỏng đang gập kín từ từ hé mở trong không gian không trọng lực, cơ cấu bản lề titan phản chiếu ánh laser xanh cyan sắc sảo.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-5-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-5-1"><span class="k">Cinematic macro shot</span> of an ultra-slim foldable smartphone floating in zero gravity slowly unfolding, precision titanium hinge mechanism reflecting sleek cyan laser light, dark minimalist studio background, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Màn hình OLED mở rộng 180° & Dải ngân hà rực rỡ</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Màn hình mở phẳng hoàn toàn, tấm nền OLED uốn dẻo phát sáng rực rỡ hình ảnh dải ngân hà với hàng triệu vì sao chuyển động, viền máy mỏng như dao cạo.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-5-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-5-2"><span class="k">Smooth 360-degree rotation</span> of the unfolded phone floating weightlessly, glowing flexible OLED screen displaying breathtaking deep space galaxy visuals, razor-thin bezel, premium Apple commercial aesthetic, 8k.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Điện thoại gập lại chắc nịch & Khóa thương hiệu</span>
+                <span class="shot-timing">Khẳng định đỉnh cao</span>
+              </div>
+              <p class="shot-desc">Máy quay kéo lùi từ từ, chiếc điện thoại nhẹ nhàng xếp lại làm đôi với độ chuẩn xác tuyệt đối, ánh sáng viền titan lấp lánh khẳng định vị thế dẫn đầu công nghệ.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-5-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-5-3"><span class="k">Slow elegant dolly out</span> as the foldable phone snaps shut with crisp precision, subtle lens flare crossing the brushed titanium frame, dark futuristic ambiance, flagship tech showcase, 4k UHD.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc Ambient Minimalist tương lai. Chèn hiệu ứng âm thanh cơ khí "snap/click" đanh thép ở Cảnh 3 khi máy gập lại để tạo cảm giác gia công cao cấp.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 06: Wagyu Steak -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 06 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Ẩm Thực & Nhà Hàng Cao Cấp · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Cận Cảnh Bò Bít Tết Wagyu Xèo Xèo Trên Chảo Gang Rực Lửa</div>
+          <p class="prompt-card-vi">
+            Video kích thích vị giác cực độ (Sensory Food): từ miếng bò Wagyu vừa chạm chảo bốc lửa, thìa bơ thảo mộc rưới óng ả đến lát cắt ngọt lịm lộ phần thịt hồng hào mọng nước.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Miếng bò Wagyu chạm chảo gang xèo xèo bùng lửa</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Cận cảnh quay chậm 120fps miếng thịt bò Wagyu vân mỡ cẩm thạch áp chảo trên gang nóng rực, giọt mỡ sôi nổ lách tách cùng ngọn lửa bùng lên thơm phức.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-6-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-6-1"><span class="k">Extreme close-up slow motion 120fps</span> of a marbled Wagyu ribeye steak being seared on a smoking hot black cast-iron pan, sizzling rendered fat droplets bursting, appetizing flame burst, mouthwatering detail, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Rưới bơ thảo mộc sôi sùng sục & Nhánh hương thảo</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Thìa bơ vàng tan chảy sủi bọt rưới đều lên mặt thịt xém nâu giòn, nhánh hương thảo tươi và tép tỏi nướng hòa quyện vào làn khói thơm ngào ngạt.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-6-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-6-2"><span class="k">Sensory macro shot</span> of golden melted butter bubbling vigorously over crispy seared steak crust, fresh rosemary sprig and roasted garlic cloves basting in savory juices, gentle aromatic steam rising, 4k UHD.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Nhát dao cắt đôi miếng thịt hồng hào mọng nước</span>
+                <span class="shot-timing">Chốt vị giác hoàn hảo</span>
+              </div>
+              <p class="shot-desc">Lưỡi dao sắc ngọt cắt đôi miếng thịt bò, để lộ thớ thịt hồng hào mềm mại chuẩn medium-rare óng ả nước ngọt dưới ánh đèn nhà hàng Michelin ấm cúng.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-6-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-6-3"><span class="k">Smooth slow motion cut</span> slicing through the tender juicy steak, perfectly pink medium-rare center glistening with succulent juices, warm romantic restaurant ambient lighting, Michelin star culinary commercial, 8k.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Sử dụng âm thanh ASMR tiếng xèo xèo giòn rụm của dầu nóng và tiếng dao cắt ngọt xớt. Không cần lồng nhạc quá to, để âm thanh thực tế làm chủ đạo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 07: Paris Fashion Week -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/fashion_runway_red.jpg" alt="Người mẫu thời trang trên sàn diễn Paris từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 07 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Thời Trang Cao Cấp & Lookbook Người Mẫu · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Người Mẫu Catwalk Sàn Diễn Paris Fashion Week</div>
+          <p class="prompt-card-vi">
+            Phong cách tạp chí Vogue: từ nhịp gót giày uy quyền trên sàn diễn gương, ánh mắt thần thái ngút ngàn của siêu mẫu đến cú xoay váy lụa đỏ thướt tha kết màn.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Gót giày cao gót sải bước trên sàn diễn gương bóng loáng</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Góc máy đặt thấp bám theo gót giày cao gót đính đá nện chắc nịch trên sàn runway đen bóng như gương, vạt váy lụa đỏ quét nhẹ theo từng nhịp bước.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-7-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-7-1"><span class="k">Low-angle close-up tracking shot</span> of supermodel high-heeled stilettos stepping powerfully down a high-gloss black runway, flowing crimson silk gown brushing the reflective floor, subtle flashbulbs popping, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Thần thái kiêu kỳ & Tà váy lụa đỏ tung bay</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Máy quay đi lùi đều phía trước bắt trọn khuôn mặt sắc lạnh quyền lực của siêu mẫu, tà áo choàng lụa bay phấp phới dưới ánh đèn follow spotlight chói lọi.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-7-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-7-2"><span class="k">Steadycam walking backward tracking shot</span> of the elegant female supermodel staring intensely at camera, avant-garde couture gown fluttering dramatically in breeze, stark dramatic spotlighting, Paris Fashion Week, Vogue editorial grade.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Cú xoay người 180° kiêu hãnh & Váy xòe như đóa hoa</span>
+                <span class="shot-timing">Cú pose kết thúc</span>
+              </div>
+              <p class="shot-desc">Siêu mẫu dừng lại ở cuối sàn diễn, làm cú xoay người 180 độ cực kỳ duyên dáng làm chiếc váy tung bay xòe tròn như đóa hoa rồi bước đi giữa tiếng vỗ tay tán thưởng.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-7-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-7-3"><span class="k">Fluid slow motion 180-degree spin</span> at the runway end, dress fabric fanning out gracefully, camera slowly tilts up as audience applauds in dark silhouettes, cinematic fashion film, 4k UHD.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc nền Deep House thời trang sang chảnh. Thêm hiệu ứng chớp sáng trắng (White Flash) 0.1s ở mỗi nhịp gót chân nện xuống sàn.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 08: Luxury Villa -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/bds_flycam.jpg" alt="Biệt thự nghỉ dưỡng triệu đô hồ bơi vô cực từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 08 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Bất Động Sản & Nghỉ Dưỡng Thượng Lưu · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Biệt Thự Triệu Đô Mặt Biển Hồ Bơi Vô Cực Hoàng Hôn</div>
+          <p class="prompt-card-vi">
+            Phong cách giới thiệu bất động sản Architectural Digest: lướt êm ái trên mặt hồ bơi vô cực, tiến vào kiến trúc kính đèn vàng ấm cúng và toàn cảnh hoàng hôn biển tím mộng mơ.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Flycam lướt là sát mặt nước hồ bơi vô cực</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Flycam bay tầm siêu thấp lướt êm ru trên mặt nước hồ bơi vô cực phẳng như gương, phản chiếu bầu trời hoàng hôn cam rực và tím biếc.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-8-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-8-1"><span class="k">Smooth ultra-low drone glide</span> skimming across the glass-like surface of an infinity pool, vibrant orange and purple sunset sky reflecting on water, gentle ripples, luxury architectural lifestyle, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Tiến vào biệt thự kính hiện đại & Đèn chùm rực rỡ</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Flycam tiến thẳng vào gian phòng khách tường kính trong suốt, hệ thống đèn vàng ấm áp bên trong đồng loạt tỏa sáng tương phản tuyệt đẹp với biển đêm.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-8-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-8-2"><span class="k">Cinematic forward drone push-in</span> toward an ultra-luxury modern glass villa with teakwood terraces, warm architectural interior chandelier lights turning on against twilight ocean backdrop, Architectural Digest standard, 8k.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Toàn cảnh vịnh biển triệu đô từ trên cao</span>
+                <span class="shot-timing">Đỉnh cao thượng lưu</span>
+              </div>
+              <p class="shot-desc">Flycam bay vút lên cao nhìn bao quát toàn bộ căn biệt thự ngự trị bên vách đá nhìn ra bờ biển ngọc lam yên bình, sóng vỗ nhẹ vào bãi đá cuội.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-8-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-8-3"><span class="k">Grand wide aerial establishing shot</span> of the illuminated clifftop estate overlooking turquoise sea waves crashing gently on rocky cove below, peaceful dusk atmosphere, multi-million dollar real estate commercial, 4k UHD.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc chillout thư giãn phong cách resort nghỉ dưỡng. Chèn âm thanh tiếng sóng biển rì rào du dương và tiếng ly sâm panh cụng nhau.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 09: Action FPV Drone -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 09 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: Cảm Giác Mạnh & Thể Thao Tốc Độ Red Bull · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">Cú Lao Dốc & Nhào Lộn FPV Racing Xuyên Khe Núi Rừng Thông</div>
+          <p class="prompt-card-vi">
+            Video hành động thót tim: từ cú lao dốc thẳng đứng từ đỉnh vách đá, nhào lộn luồn lách qua tán rừng thông phủ sương đến cú lướt sát mặt thác nước cuồn cuộn.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Cú lao dốc thẳng đứng rơi tự do từ vách đá</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Drone đua FPV lao đầu thẳng đứng 90 độ từ đỉnh vách núi đá dựng đứng xuống vực sâu phủ sương mù, cảm giác rơi tự do nghẹt thở đầy phấn khích.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-9-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-9-1"><span class="k">Exhilarating dynamic FPV racing drone</span> vertical dive down a sheer rocky mountain cliff face, mist parting around camera lens, extreme high-speed descent, GoPro Hero 12 cinematography, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Nhào lộn 360° xoay vòng luồn qua rừng thông</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Drone bẻ lái nhào lộn xoay tròn (barrel roll) luồn lách qua các thân thông cổ thụ phủ rêu, những vạt nắng sớm xiên qua tán cây tạo chuyển động mờ sắc sảo.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-9-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-9-2"><span class="k">High-speed FPV drone barrel rolling</span> through dense ancient pine forest canopy, weaving tightly between mossy tree trunks, golden morning sunbeams breaking through fog, exhilarating motion blur, Red Bull action sports style.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Lướt sát bọt nước thác chảy & Vút lên trời xanh</span>
+                <span class="shot-timing">Cú bứt phá ngoạn mục</span>
+              </div>
+              <p class="shot-desc">Drone lao vút qua mặt dòng sông bọt tung trắng xóa, lướt sát từng milimet trên dòng thác đổ rồi giật ngược bốc thẳng lên bầu trời xanh biếc bao la.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-9-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-9-3"><span class="k">Fast low-level skimming shot</span> over rushing whitewater river, skimming inches above cascading waterfall before pulling up hard into clear blue sky, thrilling climax, 4k UHD.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc điện tử Drum & Bass hoặc Trap tiết tấu nhanh. Chèn hiệu ứng âm thanh tiếng gió rít "whoosh" cực đã tai ở mỗi cú ngoặt cua.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KỊCH BẢN 10: F&B Cà Phê Espresso & Lounge Thượng Hạng -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/fb_espresso_crema.jpg" alt="Ly Espresso siêu nét từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 10 · MULTI-SHOT</span>
+            <span class="prompt-category">Ngành Hàng: F&B · Quảng Cáo Cà Phê & Lounge Thượng Hạng · Thời lượng: ~18s</span>
+          </div>
+          <div class="prompt-card-title">TVC Nghệ Thuật Chiết Xuất Cà Phê Espresso & Thưởng Thức Lounge</div>
+          <p class="prompt-card-vi">
+            Chuỗi 3 cảnh TVC chuẩn thương hiệu cao cấp: Từ cận cảnh dòng Espresso đậm đặc rót vào tách tạo lớp bọt crema vàng óng, khoảnh khắc hơi nóng bốc lên ngát hương đến trải nghiệm nâng tách trong không gian lounge sang trọng.
+          </p>
+
+          <div class="storyboard-timeline">
+            <!-- Shot 1 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 1 · HOOK (0s - 6s)</span>
+                <span class="shot-role">Cận cảnh vĩ mô dòng Espresso sủi bọt crema</span>
+                <span class="shot-timing">Thời lượng: 6 giây</span>
+              </div>
+              <p class="shot-desc">Cận cảnh cực đại dòng cà phê Espresso nóng hổi màu nâu óng ả chảy êm từ tay pha máy chuyên nghiệp vào tách gốm, lớp crema dày mịn sủi bọt óng ánh.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 1 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-10-1')">Sao chép Cảnh 1</button>
+                </div>
+                <pre id="p-10-1"><span class="k">Extreme macro slow motion 120fps shot</span> of rich concentrated Espresso dripping smoothly from coffee machine portafilter into a ceramic cup, thick velvety golden-brown crema foaming, 4k 120fps commercial food photography.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 2 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 2 · CAO TRÀO (6s - 12s)</span>
+                <span class="shot-role">Hơi nóng bốc lên nghi ngút trong nắng sớm</span>
+                <span class="shot-timing">Hoặc bấm Extend (+5s)</span>
+              </div>
+              <p class="shot-desc">Góc máy ngang ghi lại làn khói nước mỏng manh bay bồng bềnh từ tách cà phê vừa chiết xuất xong, tia nắng sớm chiếu rọi làm nổi bật ánh sáng vàng ấm cúng.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 2 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-10-2')">Sao chép Cảnh 2</button>
+                </div>
+                <pre id="p-10-2"><span class="k">Slow motion close-up shot</span> of steaming hot freshly brewed espresso cup on rustic wooden table, delicate steam swirls illuminated by warm golden sunrise light, cozy luxury morning cafe aesthetic, 4k 60fps.</pre>
+              </div>
+            </div>
+
+            <!-- Shot 3 -->
+            <div class="shot-block">
+              <div class="shot-header">
+                <span class="shot-badge">CẢNH 3 · KẾT THÚC (12s - 18s)</span>
+                <span class="shot-role">Nâng tách thưởng thức trọn vẹn hương vị</span>
+                <span class="shot-timing">Phong cách thượng lưu</span>
+              </div>
+              <p class="shot-desc">Bàn tay thanh lịch nhẹ nhàng nâng tách cà phê thưởng thức trong không gian lounge êm dịu, tạo cảm giác thư thái và trọn vẹn năng lượng cho ngày mới.</p>
+              <div class="prompt-code-wrap">
+                <div class="prompt-code-meta">
+                  <span class="code-label">PROMPT CẢNH 3 (COPY 1 CHẠM)</span>
+                  <button class="btn-copy-prompt" onclick="copyPrompt('p-10-3')">Sao chép Cảnh 3</button>
+                </div>
+                <pre id="p-10-3"><span class="k">Elegant medium close-up shot</span> of hands gently lifting the warm coffee cup in a luxurious quiet cafe lounge, soft ambient bokeh lights in background, peaceful upscale lifestyle, 4k 60fps.</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="capcut-tip-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div>
+              <strong>Gợi ý Dựng CapCut & Âm thanh:</strong> Nhạc acoustic / bossa nova phong cách quán cà phê châu Âu. Chèn hiệu ứng âm thanh tiếng máy pha cà phê xì hơi nước và tiếng thìa sứ khẽ khuấy vào tách.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 7 -->
+    <section id="ch-7">
+      <div class="section-header">
+        <h2>Chương 7: Kỹ Thuật Nối Dài Video (Extend +5s) & Tạo Phim Hoàn Chỉnh</h2>
+        <span class="section-badge">TÍNH NĂNG VŨ KHÍ</span>
+      </div>
+      <p>
+        Một trong những thế mạnh độc quyền của Google Veo 3 so với các AI khác là tính năng <strong>Extend Video (+5s)</strong>:
+      </p>
+      <div class="callout tip">
+        <div class="callout-title">🎬 Cách thức hoạt động của Extend:</div>
+        <p>
+          Khi video 8 giây đầu tiên được tạo xong, bạn không cần phải bắt đầu lại từ con số 0. Bằng cách nhấn nút <strong>Extend (+5s)</strong> ở góc trên bên phải video, AI sẽ đọc toàn bộ thông tin về nhân vật, trang phục, góc ánh sáng của giây thứ 8 và <strong>vẽ tiếp 5 giây tiếp theo của câu chuyện</strong>.
+        </p>
+      </div>
+      <p><strong>Công thức làm phim ngắn 15s - 30s không cần CapCut:</strong></p>
+      <ol style="margin-left:24px; color:#CBD5E1; margin-bottom:20px;">
+        <li style="margin-bottom:10px;"><strong>Đoạn 1 (0–8s):</strong> Giới thiệu nhân vật hoặc sản phẩm từ xa (ví dụ: máy quay tiến lại gần <code>dolly in</code>).</li>
+        <li style="margin-bottom:10px;"><strong>Bấm Extend lần 1 (+5s):</strong> Nhân vật bắt đầu hành động hoặc sản phẩm mở hộp (ví dụ: tay cầm sản phẩm lên).</li>
+        <li style="margin-bottom:10px;"><strong>Bấm Extend lần 2 (+5s):</strong> Cận cảnh cảm xúc hoặc chi tiết tính năng sản phẩm tỏa sáng.</li>
+      </ol>
+      <p>👉 Kết quả: Bạn nhận được 1 video dài 18 giây liền mạch tuyệt đối, nhân vật không hề bị biến đổi khuôn mặt!</p>
+    </section>
+
+    <!-- CHAPTER 8 -->
+    <section id="ch-8">
+      <div class="section-header">
+        <h2>Chương 8: Cẩm Nang Khắc Phục Mọi Lỗi Thường Gặp (100% Xử Lý Được)</h2>
+        <span class="section-badge">CẨM NANG SỬA LỖI</span>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 1. Nhân vật bị méo ngón tay hoặc mắt lác khi cử động?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Mô tả quá nhiều động tác phức tạp trong cùng một câu lệnh khiến AI bị xung đột giải phẫu.<br>
+          <strong>Cách xử lý:</strong> Thêm cụm từ khóa khóa nét giải phẫu vào đuôi prompt: <code>symmetrical facial features, natural relaxed hands, steady gaze, photorealistic skin texture, no extra limbs</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 2. Máy quay bị rung giật, xoay quá nhanh làm chóng mặt?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Dùng từ khóa camera chung chung như "camera moves" hoặc "fast pan".<br>
+          <strong>Cách xử lý:</strong> Thêm các từ khóa kiểm soát tốc độ mượt mà: <code>slow gentle pan</code>, <code>smooth steadycam glide</code>, <code>constant horizon lock</code>, <code>fluid motion 60fps</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 3. Màu sắc video bị bợt, nhợt nhạt và thiếu độ tương phản?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Thiếu từ khóa quy định không gian ánh sáng.<br>
+          <strong>Cách xử lý:</strong> Luôn thêm ít nhất một nguồn sáng cụ thể: <code>volumetric lighting</code>, <code>cinematic rim light</code>, <code>rich contrast</code>, <code>ARRI Alexa color science</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 4. Câu lệnh bị Google báo lỗi từ chối tạo video (Policy Violation)?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Chứa tên người nổi tiếng còn sống hoặc thương hiệu có bản quyền khắt khe.<br>
+          <strong>Cách xử lý:</strong> Tránh ghi đích danh tên thương hiệu hoặc người nổi tiếng. Thay vì ghi "Iron Man", hãy ghi "a futuristic armored superhero with glowing chest reactor".
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 5. Video xem thử trên web bị mờ, không giống độ nét 4K?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Trình duyệt tự động nén bản preview để tải nhanh qua mạng.<br>
+          <strong>Cách xử lý:</strong> Hãy luôn bấm nút <strong>Download 4K</strong> để tải file gốc <code>.mp4</code> về máy tính hoặc điện thoại. Khi mở trên máy, video sẽ hiển thị độ phân giải gốc siêu nét.
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 9 -->
+    <section id="ch-9">
+      <div class="section-header">
+        <h2>Chương 9: Kênh Hỗ Trợ Kỹ Thuật VIP & Bảo Hành</h2>
+        <span class="section-badge">HẬU MÃI TẬN TÂM</span>
+      </div>
+      <p>
+        Chúng tôi cam kết đồng hành cùng bạn trên từng thước phim AI. Bất kỳ lúc nào bạn gặp trục trặc về tài khoản hoặc cần tư vấn viết câu lệnh theo ý tưởng riêng:
+      </p>
+
+      <div class="support-card">
+        <h3>Bạn Cần Hỗ Trợ Trực Tiếp 1-1 Qua Zalo?</h3>
+        <p>
+          Đội ngũ kỹ thuật viên luôn sẵn sàng giải đáp, hỗ trợ đăng nhập và chia sẻ thêm các kịch bản video AI mới cập nhật mỗi tuần.
+        </p>
+        <a class="support-contact" href="https://zalo.me/0347999726" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg>
+          <span>Zalo Hỗ Trợ VIP: 0347.999.726 (Bấm để nhắn tin)</span>
+        </a>
+        <p style="font-size:0.85rem; color:var(--text-dim); margin-top:16px; margin-bottom:0;">
+          Thời gian hỗ trợ: 8:00 - 22:00 tất cả các ngày trong tuần (Kể cả Thứ 7 & Chủ Nhật)
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>Đã sao chép câu lệnh vào bộ nhớ tạm!</span>
+  </div>
+
+  <script>
+    function copyPrompt(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = el.innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    }
+  </script>
+
+  <!-- Floating Zalo Contact Widget -->
+  <style>
+    .float-contact { position: fixed; bottom: 24px; right: 24px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+    .float-btn { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; box-shadow: 0 10px 25px rgba(0,104,255,0.45), 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.25s, box-shadow 0.25s; position: relative; text-decoration: none; }
+    .float-btn:hover { transform: scale(1.1); box-shadow: 0 14px 30px rgba(0,104,255,0.65), 0 6px 16px rgba(0,0,0,0.5); }
+    .float-zalo { background: #0068FF; }
+    .float-zalo svg { width: 34px; height: 34px; border-radius: 8px; }
+    .float-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #0068FF; animation: float-pulse 2s cubic-bezier(0.24, 0, 0.38, 1) infinite; pointer-events: none; }
+    @keyframes float-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(1.55); opacity: 0; } }
+    .float-tooltip { position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 14px; background: #0F172A; border: 1px solid rgba(0,104,255,0.4); padding: 8px 14px; border-radius: 8px; white-space: nowrap; font-size: 0.85rem; font-weight: 700; color: #FFFFFF; opacity: 0; pointer-events: none; transition: opacity 0.3s; box-shadow: 0 4px 16px rgba(0,0,0,0.6); }
+    .float-tooltip::after { content: ''; position: absolute; top: 50%; right: -5px; transform: translateY(-50%); border-width: 5px 0 5px 6px; border-style: solid; border-color: transparent transparent transparent #0F172A; }
+    .float-btn:hover .float-tooltip { opacity: 1; }
+    @media (max-width: 768px) { .float-contact { bottom: 85px; right: 14px; } .float-btn { width: 50px; height: 50px; } .float-zalo svg { width: 30px; height: 30px; } .float-tooltip { display: none; } }
+  </style>
+  <div class="float-contact">
+    <a href="https://zalo.me/0347999726" target="_blank" rel="noopener" class="float-btn float-zalo" title="Chat Zalo 0347.999.726">
+      <div class="float-pulse"></div>
+      <svg width="34" height="34" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg>
+      <div class="float-tooltip">Chat Zalo Hỗ Trợ 24/7</div>
+    </a>
+  </div>
+
+</body>
+</html>

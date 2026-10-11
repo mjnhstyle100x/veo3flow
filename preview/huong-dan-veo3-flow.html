@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Cẩm Nang Sáng Tạo Video Điện Ảnh Với Google Veo 3 & Flow | Master Guide 2026</title>
+  <meta name="description" content="Tài liệu thực chiến chuyên sâu về Google Veo 3 và Flow: Từ thiết lập hệ thống, quy trình tạo video chuẩn điện ảnh đến thư viện 10 Master Prompts Hollywood.">
+
+  <!-- Google Fonts: Be Vietnam Pro + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090C15;
+      --surface: #0F1423;
+      --surface-elevated: #161D31;
+      --surface-card: #1B233C;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(99, 102, 241, 0.4);
+      --border-cyan: rgba(34, 211, 238, 0.35);
+
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+
+      --primary: #6366F1;
+      --primary-light: #818CF8;
+      --cyan: #22D3EE;
+      --amber: #F59E0B;
+      --green: #10B981;
+      --red: #EF4444;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+      --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.25);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* injected_mobile_fixes */
+    html, body { overflow-x: hidden !important; max-width: 100% !important; }
+    .container { overflow-x: hidden; max-width: 100%; }
+    img, video { max-width: 100%; height: auto; }
+    pre, .prompt-code-wrap, table, .table-wrapper { overflow-x: auto !important; max-width: 100%; -webkit-overflow-scrolling: touch; }
+    p, a, span, h1, h2, h3, h4, h5, h6 { word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; }
+    /* Force specific elements that might overflow to be contained */
+    .bg-glow, .bg-glow::before, .bg-glow::after { max-width: 100vw; overflow: hidden; }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 40px 20px 120px;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      touch-action: pan-y;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 60%, rgba(34, 211, 238, 0.06), transparent);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* Print / PDF Export Stylesheet */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        padding: 0 !important;
+        background-image: none !important;
+      }
+      .no-print { display: none !important; }
+      .doc-card, .prompt-card, .tool-frame, .step-item {
+        background: #F8FAFC !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 24px !important;
+      }
+      h1, h2, h3 { color: #0F172A !important; -webkit-text-fill-color: initial !important; }
+      pre, code {
+        background: #E2E8F0 !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+      }
+      .callout {
+        border-left: 4px solid #6366F1 !important;
+        background: #F1F5F9 !important;
+        color: #1E293B !important;
+      }
+    }
+
+    /* Floating Navigation / Action Bar */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: rgba(18, 23, 38, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.02em;
+    }
+
+    .bar-brand-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .bar-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-action:hover {
+      background: var(--surface-card);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .btn-action.primary {
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(99, 102, 241, 0.35);
+    }
+
+    /* Document Header */
+    .doc-header {
+      text-align: center;
+      padding: 30px 10px 50px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .doc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      max-width: 100%;
+      line-height: 1.4;
+      text-align: center;
+      white-space: normal;
+      box-sizing: border-box;
+    }
+
+    .doc-tag .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 2.85rem);
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #FFFFFF 30%, #C7D2FE 70%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .doc-subtitle {
+      color: var(--text-muted);
+      font-size: 1.12rem;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .doc-meta-strip {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .doc-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 50px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .toc-link:hover {
+      background: rgba(99, 102, 241, 0.1);
+      border-color: var(--border-accent);
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    .toc-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      color: #FFFFFF;
+      letter-spacing: -0.025em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #CBD5E1;
+      font-size: 1.025rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Step Cards */
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .step-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    .step-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      color: #FFFFFF;
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      box-shadow: 0 0 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    /* Screen Illustration Frames */
+    .screen-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin: 18px 0 20px;
+      background: #000000;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .screen-frame img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .screen-caption {
+      padding: 10px 16px;
+      background: rgba(18, 23, 38, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .screen-caption strong {
+      color: #E2E8F0;
+    }
+
+    /* Callout Alert Boxes */
+    .callout {
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      margin: 22px 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+    }
+
+    .callout.tip {
+      border-left-color: var(--cyan);
+      background: rgba(34, 211, 238, 0.04);
+      border-color: rgba(34, 211, 238, 0.2);
+    }
+
+    .callout.warning {
+      border-left-color: var(--amber);
+      background: rgba(245, 158, 11, 0.04);
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout.tip .callout-title { color: var(--cyan); }
+    .callout.warning .callout-title { color: var(--amber); }
+
+    /* Formula 4 Pillars Grid */
+    .formula-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+
+    .formula-pillar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .formula-pillar:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+    }
+
+    .formula-pillar.p-1 { border-top: 4px solid #A855F7; }
+    .formula-pillar.p-2 { border-top: 4px solid var(--cyan); }
+    .formula-pillar.p-3 { border-top: 4px solid var(--amber); }
+    .formula-pillar.p-4 { border-top: 4px solid var(--green); }
+
+    .pillar-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .pillar-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .pillar-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .pillar-code {
+      margin-top: 10px;
+      padding: 6px 8px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #CBD5E1;
+    }
+
+    /* Prompt Cards */
+    .prompt-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-md);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .prompt-card:hover {
+      border-color: var(--border-cyan);
+    }
+
+    .prompt-card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .prompt-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .prompt-card:hover .prompt-card-img {
+      transform: scale(1.025);
+    }
+
+    .prompt-card-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(9, 12, 21, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .prompt-card-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    .prompt-card-body {
+      padding: 26px 28px;
+    }
+
+    .prompt-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .prompt-index {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(34, 211, 238, 0.1);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      text-transform: uppercase;
+    }
+
+    .prompt-category {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    .prompt-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      letter-spacing: -0.015em;
+    }
+
+    .prompt-card-vi {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    /* Prompt Code Box */
+    .prompt-code-wrap {
+      background: #05070E;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      position: relative;
+    }
+
+    .prompt-code-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .code-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .btn-copy-prompt {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--primary), #8B5CF6);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    .btn-copy-prompt:hover {
+      box-shadow: 0 0 14px rgba(99, 102, 241, 0.5);
+      transform: translateY(-1px);
+    }
+
+    pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.65;
+    }
+
+    .k { color: var(--cyan); font-weight: 600; }
+    .m { color: var(--amber); }
+
+    /* FAQ Accordion Items */
+    .faq-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 14px;
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+    }
+
+    /* Support Footer */
+    .support-card {
+      margin-top: 60px;
+      padding: 42px 30px;
+      background: linear-gradient(145deg, #111827, #030712);
+      border: 1px solid rgba(0, 104, 255, 0.4);
+      border-radius: var(--radius-xl);
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(0, 104, 255, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0068FF, var(--cyan), #A855F7);
+    }
+
+    .support-card h3 {
+      font-size: 1.65rem;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    .support-card p {
+      color: #E2E8F0;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .support-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 13px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0068FF 0%, #0052cc 100%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF !important;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none !important;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 104, 255, 0.42), 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .support-contact:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #0d74ff 0%, #005cf6 100%);
+      box-shadow: 0 12px 32px rgba(0, 104, 255, 0.62), 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #FFFFFF !important;
+    }
+
+    .support-contact svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 6px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #0F172A;
+      border: 1px solid var(--cyan);
+      color: #FFFFFF;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* =========================================================
+       MOBILE RESPONSIVE OPTIMIZATION (<= 768px)
+       ========================================================= */
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 16px 90px;
+        line-height: 1.68;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .action-bar {
+        position: static;
+        top: auto;
+        padding: 12px 14px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+        border-radius: 14px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .bar-brand {
+        font-size: 0.88rem;
+      }
+      .bar-buttons {
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .btn-action {
+        padding: 7px 12px;
+        font-size: 0.78rem;
+      }
+
+      .doc-header {
+        padding: 12px 0 24px;
+        margin-bottom: 24px;
+      }
+      .doc-tag {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        margin-bottom: 12px;
+        letter-spacing: 0.02em;
+        line-height: 1.35;
+      }
+      h1 {
+        font-size: clamp(1.45rem, 6.2vw, 1.95rem);
+        line-height: 1.28;
+        margin-bottom: 12px;
+      }
+      .doc-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+        line-height: 1.58;
+      }
+      .doc-meta-strip {
+        gap: 8px 14px;
+        font-size: 0.76rem;
+      }
+
+      .toc-card {
+        padding: 18px 16px;
+        margin-bottom: 30px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .toc-title {
+        font-size: 1.02rem;
+        margin-bottom: 12px;
+      }
+      .toc-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .toc-link {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+      }
+
+      section {
+        margin-bottom: 36px;
+      }
+      .section-header {
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+      }
+      h2 {
+        font-size: 1.25rem;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .section-badge {
+        font-size: 0.68rem;
+        padding: 3px 8px;
+      }
+      p {
+        font-size: 0.92rem;
+        line-height: 1.65;
+      }
+
+      .step-card {
+        padding: 18px 16px;
+        margin-bottom: 18px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .step-top {
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.92rem;
+      }
+      .step-title {
+        font-size: 1.08rem;
+      }
+      .screen-frame {
+        margin: 14px 0 16px;
+        border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .screen-caption {
+        padding: 8px 12px;
+        font-size: 0.76rem;
+      }
+
+      .callout {
+        padding: 14px 16px;
+        margin: 16px 0;
+        border-radius: 12px;
+        box-sizing: border-box;
+      }
+      .callout-title {
+        font-size: 0.88rem;
+      }
+
+      .formula-pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 16px 0 24px;
+      }
+      .formula-pillar {
+        padding: 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+      }
+
+      .prompt-card {
+        margin-bottom: 24px;
+        border-radius: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .prompt-card-badge {
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
+        font-size: 0.68rem;
+        max-width: calc(100% - 20px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .prompt-card-body {
+        padding: 18px 16px;
+      }
+      .prompt-card-title {
+        font-size: 1.12rem;
+      }
+      .prompt-card-vi {
+        font-size: 0.88rem;
+        margin-bottom: 14px;
+      }
+      .prompt-code-wrap {
+        padding: 14px 12px;
+        border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .prompt-code-meta {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      pre {
+        font-size: 0.8rem;
+        line-height: 1.58;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+      .btn-copy-prompt {
+        padding: 6px 12px;
+        font-size: 0.74rem;
+      }
+
+      .faq-block {
+        padding: 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+      }
+      .faq-question {
+        font-size: 0.96rem;
+      }
+      .faq-answer {
+        font-size: 0.88rem;
+      }
+
+      .support-card {
+        margin-top: 36px;
+        padding: 24px 16px;
+        border-radius: 18px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .support-card h3 {
+        font-size: 1.22rem;
+      }
+      .support-card p {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+      }
+      .support-contact {
+        font-size: 0.92rem;
+        padding: 10px 16px;
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Top Action Bar -->
+    <div class="action-bar no-print">
+      <div class="bar-brand">
+        <div class="bar-brand-badge">V3</div>
+        <span>Veo 3 & Flow · Master Guide</span>
+      </div>
+      <div class="bar-buttons">
+        <button class="btn-action" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          In / Lưu PDF
+        </button>
+        <a href="index.html" class="btn-action primary">
+          Trang Mua Hàng →
+        </a>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="doc-header">
+      <div class="doc-tag">
+        <span class="dot"></span>
+        TÀI LIỆU HƯỚNG DẪN THỰC CHIẾN · PHIÊN BẢN CHÍNH THỨC 2026
+      </div>
+      <h1>Google Veo 3 & Flow: Cẩm Nang Sáng Tạo Video Điện Ảnh Từ A–Z</h1>
+      <p class="doc-subtitle">
+        Tài liệu thực hành chuyên sâu dành cho người sáng tạo nội dung, doanh nghiệp và người mới bắt đầu: Từ thiết lập hệ thống, quy trình tạo video 4K sắc nét đến kho thư viện 10 Master Prompts Hollywood.
+      </p>
+      <div class="doc-meta-strip">
+        <div class="doc-meta-item">
+          <span>📖 Định dạng: E-Book Thực Hành</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>⏱️ Thời gian đọc: 10 phút</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>🎯 Áp dụng: Google Flow & VideoFX</span>
+        </div>
+        <div class="doc-meta-item">
+          <span>🛡️ Hỗ trợ kỹ thuật: 1-1 qua Zalo</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="toc-card no-print">
+      <div class="toc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        Mục Lục Nhanh 8 Chương Thực Hành
+      </div>
+      <div class="toc-grid">
+        <a href="#ch-1" class="toc-link"><span class="toc-num">01</span> Tổng quan Google Veo 3</a>
+        <a href="#ch-2" class="toc-link"><span class="toc-num">02</span> 4 Bước Tạo Video Đầu Tiên</a>
+        <a href="#ch-3" class="toc-link"><span class="toc-num">03</span> Công Thức Prompt 4 Trụ Cột</a>
+        <a href="#ch-4" class="toc-link"><span class="toc-num">04</span> Từ Điển Góc Quay & Ánh Sáng</a>
+        <a href="#ch-5" class="toc-link"><span class="toc-num">05</span> Kho 10 Master Prompts VIP</a>
+        <a href="#ch-6" class="toc-link"><span class="toc-num">06</span> Kỹ Thuật Nối Dài Video (+5s)</a>
+        <a href="#ch-7" class="toc-link"><span class="toc-num">07</span> Khắc Phục Lỗi Thường Gặp</a>
+        <a href="#ch-8" class="toc-link"><span class="toc-num">08</span> Kênh Hỗ Trợ & Bảo Hành</a>
+      </div>
+    </div>
+
+    <!-- CHAPTER 1 -->
+    <section id="ch-1">
+      <div class="section-header">
+        <h2>Chương 1: Tổng Quan Sức Mạnh Của Google Veo 3</h2>
+        <span class="section-badge">CÔNG NGHỆ CỐT LÕI</span>
+      </div>
+      <p>
+        <strong>Google Veo 3</strong> là mô hình sinh video bằng trí tuệ nhân tạo (Generative Video AI) tối tân nhất hiện nay của Google DeepMind. Khác với các công cụ tạo video thế hệ cũ thường xuyên bị rung lắc, méo mặt hay chuyển động kỳ dị, Veo 3 sở hữu 3 bước đột phá vượt bậc:
+      </p>
+      <ul>
+        <li><strong>Vật lý chuyển động chân thực (Real Physics Engine):</strong> Tái hiện chính xác hiện tượng tự nhiên như giọt nước rơi, khói sương bốc lên, ánh nắng xiên qua cửa kính và bánh xe lăn mượt mà trên đường ướt mưa.</li>
+        <li><strong>Hiểu sâu ngữ nghĩa điện ảnh (Cinematic Vocabulary):</strong> Bạn có thể điều khiển trực tiếp góc máy quay bằng ngôn ngữ chuyên ngành như <code>dolly in</code>, <code>360-degree orbit</code>, <code>aerial drone flight</code>, <code>macro close-up</code>.</li>
+        <li><strong>Khóa nét nhân vật & Bối cảnh (Consistency Lock):</strong> Giữ nguyên khuôn mặt, trang phục và ánh sáng của chủ thể khi tạo các cảnh quay nối tiếp, giúp bạn làm phim ngắn hoàn chỉnh.</li>
+      </ul>
+      <p>
+        <strong>Google Flow (trên Google Labs)</strong> chính là giao diện phòng làm phim trực quan giúp bạn nhập câu lệnh và nhận video thành phẩm độ phân giải 1080p - 4K chỉ sau khoảng 60–90 giây.
+      </p>
+    </section>
+
+    <!-- CHAPTER 2 -->
+    <section id="ch-2">
+      <div class="section-header">
+        <h2>Chương 2: Quy Trình 4 Bước Tạo Video Đầu Tiên</h2>
+        <span class="section-badge">HƯỚNG DẪN THỰC CHIẾN</span>
+      </div>
+      <p>Dưới đây là 4 thao tác trực quan chuẩn xác nhất bên trong giao diện Google Flow:</p>
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">1</div>
+          <div class="step-title">Mở Trang Web & Đăng Nhập Tài Khoản</div>
+        </div>
+        <p>
+          Truy cập vào phòng làm phim chính thức của Google Labs tại đường dẫn:  
+          👉 <a href="https://labs.google/fx/tools/flow" target="_blank" style="color:var(--cyan); font-weight:700;">https://labs.google/fx/tools/flow</a>
+        </p>
+        <p>
+          Nhìn lên góc <strong>trên cùng bên phải</strong>, nhấp vào nút màu xanh <strong>Sign In</strong> và điền thông tin <strong>Email + Mật khẩu</strong> đã được cấp:
+        </p>
+        <div class="screen-frame">
+          <img src="assets/step1_signin.png" alt="Ảnh minh họa Bước 1: Vị trí nút Sign In góc trên bên phải màn hình" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.1:</strong> Vị trí nút Sign In (Đăng nhập) ở góc trên bên phải trang chủ Google Flow</span>
+            <span>Trạng thái: Hoàn tất</span>
+          </div>
+        </div>
+        <div class="callout warning">
+          <div class="callout-title">⚠️ Lưu ý bảo mật tài khoản:</div>
+          <p>Không đổi mật khẩu dồn dập hoặc bật tắt xác thực 2 lớp liên tục trong 24 giờ đầu tiên để tránh bị Google kích hoạt kiểm tra bot tự động.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">2</div>
+          <div class="step-title">Lựa Chọn Tỉ Lệ Khung Hình (Ngang 16:9 Hoặc Dọc 9:16)</div>
+        </div>
+        <p>
+          Trước khi tạo video, bạn cần xác định nền tảng đăng tải để chọn khung hình phù hợp:
+        </p>
+        <ul>
+          <li><strong>Khung hình 9:16 (Dọc):</strong> Dành cho <strong>TikTok, Facebook Reels, YouTube Shorts, Instagram</strong> (chuẩn màn hình điện thoại).</li>
+          <li><strong>Khung hình 16:9 (Ngang):</strong> Dành cho <strong>YouTube dài, Màn hình máy tính, Tivi, Video quảng cáo website</strong>.</li>
+        </ul>
+        <div class="screen-frame">
+          <img src="assets/step2_aspect_ratio.png" alt="Ảnh minh họa Bước 2: Chọn khung hình 9:16 Dọc hoặc 16:9 Ngang" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.2:</strong> Lựa chọn tỉ lệ khung hình Dọc (9:16) hoặc Ngang (16:9) tại thanh điều khiển</span>
+            <span>Mẹo: Chọn trước khi bấm tạo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">3</div>
+          <div class="step-title">Dán Câu Lệnh (Prompt) & Bấm Nút Tạo Video</div>
+        </div>
+        <p>
+          Nhấp chuột vào <strong>ô màu đen dài ở đáy màn hình</strong> (thanh Prompt), dán câu lệnh miêu tả bằng tiếng Anh vào và bấm nút màu tím <strong>✨ Generate Video</strong>:
+        </p>
+        <div class="screen-frame">
+          <img src="assets/step3_prompt_generate.png" alt="Ảnh minh họa Bước 3: Dán prompt vào ô dài và bấm nút màu tím Generate" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.3:</strong> Ô nhập Prompt tiếng Anh và nút bấm khởi tạo ✨ Generate Video</span>
+            <span>Thời gian render: ~60-90 giây</span>
+          </div>
+        </div>
+        <div class="callout tip">
+          <div class="callout-title">💡 Mẹo chuyên gia:</div>
+          <p>Khi thanh tiến trình đang đếm phần trăm (0% ➔ 100%), bạn hãy để nguyên tab trình duyệt, không bấm F5 tải lại trang để tránh mất lượt tạo.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-top">
+          <div class="step-number">4</div>
+          <div class="step-title">Kiểm Tra Video Thành Phẩm & Tải Về Máy Tính / Điện Thoại</div>
+        </div>
+        <p>
+          Khi video dựng xong, hệ thống sẽ tự động phát. Bạn chỉ cần bấm vào nút <strong>Download 4K</strong> (mũi tên tải xuống) ở góc trên video để lưu file <code>.mp4</code> nguyên gốc không dính logo watermark:
+        </p>
+        <div class="screen-frame">
+          <img src="assets/step4_download.png" alt="Ảnh minh họa Bước 4: Nút Download 4K và nút Extend nối dài video" loading="lazy">
+          <div class="screen-caption">
+            <span><strong>Hình 2.4:</strong> Tải video 4K sạch logo hoặc bấm nút Extend (+5s) để nối tiếp kịch bản</span>
+            <span>Định dạng: MP4 nguyên bản</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3 -->
+    <section id="ch-3">
+      <div class="section-header">
+        <h2>Chương 3: Công Thức Viết Master Prompt 4 Trụ Cột</h2>
+        <span class="section-badge">BÍ QUYẾT ĐIỆN ẢNH</span>
+      </div>
+      <p>
+        90% người mới tạo video ra bị méo hoặc không như ý là vì viết câu lệnh quá ngắn: <em>"A girl walking" (Một cô gái đang đi bộ)</em>. AI sẽ tự đoán mò bối cảnh và tạo ra khung hình lộn xộn.
+      </p>
+      <p>Để video ra đời mang phong cách Hollywood rực rỡ, hãy luôn áp dụng <strong>Công Thức 4 Trụ Cột</strong> sau:</p>
+
+      <div class="formula-pillars-grid">
+        <div class="formula-pillar p-1">
+          <span class="pillar-tag">TRỤ CỘT 1</span>
+          <div class="pillar-name">🟣 Chủ Thể & Động Tác</div>
+          <p class="pillar-desc">Ai/cái gì, chất liệu bề mặt, biểu cảm khuôn mặt và động tác cơ học cụ thể.</p>
+          <div class="pillar-code">"luxury glass perfume bottle standing on wet black marble"</div>
+        </div>
+
+        <div class="formula-pillar p-2">
+          <span class="pillar-tag">TRỤ CỘT 2</span>
+          <div class="pillar-name">🔵 Góc Máy Camera</div>
+          <p class="pillar-desc">Quỹ đạo máy quay di chuyển: tiến gần, lượn vòng quanh, flycam trên cao.</p>
+          <div class="pillar-code">"camera slowly orbits 90 degrees, slow smooth dolly in"</div>
+        </div>
+
+        <div class="formula-pillar p-3">
+          <span class="pillar-tag">TRỤ CỘT 3</span>
+          <div class="pillar-name">🟠 Ánh Sáng & Không Gian</div>
+          <p class="pillar-desc">Quyết định chiều sâu, cảm xúc và độ sang trọng của màu sắc.</p>
+          <div class="pillar-code">"volumetric studio rim light, golden hour warm sunset"</div>
+        </div>
+
+        <div class="formula-pillar p-4">
+          <span class="pillar-tag">TRỤ CỘT 4</span>
+          <div class="pillar-name">🟢 Thông Số Điện Ảnh</div>
+          <p class="pillar-desc">Khóa độ nét, chống méo mó, khẩu độ ống kính và tốc độ khung hình.</p>
+          <div class="pillar-code">"cinematic color grading, shallow depth of field, 4k 60fps"</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 4 -->
+    <section id="ch-4">
+      <div class="section-header">
+        <h2>Chương 4: Bảng Tra Cứu Thuật Ngữ Máy Quay & Ánh Sáng</h2>
+        <span class="section-badge">TỪ ĐIỂN CHUYÊN NGÀNH</span>
+      </div>
+      <p>Lưu lại bảng từ khóa chuẩn tiếng Anh dưới đây để ghép vào câu lệnh bất kỳ khi nào bạn cần:</p>
+
+      <div style="overflow-x:auto; width:100%; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; border-radius:var(--radius-md); border:1px solid var(--border); margin:20px 0; background:var(--surface);">
+        <table style="min-width:540px; width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.04); text-align:left; border-bottom:1px solid var(--border);">
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Thuật Ngữ Tiếng Anh</th>
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Ý Nghĩa Máy Quay</th>
+              <th style="padding:14px 18px; color:#FFFFFF; font-size:0.9rem;">Tình Huống Sử Dụng Tốt Nhất</th>
+            </tr>
+          </thead>
+          <tbody style="font-size:0.9rem; color:#CBD5E1;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Slow dolly in</td>
+              <td style="padding:12px 18px;">Máy quay từ từ tiến lại gần</td>
+              <td style="padding:12px 18px;">Giới thiệu sản phẩm, cận cảnh khuôn mặt</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">360-degree orbit</td>
+              <td style="padding:12px 18px;">Máy quay bay lượn vòng tròn</td>
+              <td style="padding:12px 18px;">Khoe toàn diện góc cạnh xe hơi, đồng hồ, thời trang</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Aerial drone flight</td>
+              <td style="padding:12px 18px;">Flycam bay trên cao nhìn xuống</td>
+              <td style="padding:12px 18px;">Phong cảnh du lịch, resort, bất động sản</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Extreme macro close-up</td>
+              <td style="padding:12px 18px;">Quay siêu cận cảnh từng milimet</td>
+              <td style="padding:12px 18px;">Chi tiết giọt nước, vân đá, trang sức, đồng hồ</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--cyan); font-weight:600;">Low-angle tracking shot</td>
+              <td style="padding:12px 18px;">Máy quay đặt sát đất bám đuổi</td>
+              <td style="padding:12px 18px;">Xe đua tốc độ, người mẫu sải bước uy quyền</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--amber); font-weight:600;">Volumetric studio rim light</td>
+              <td style="padding:12px 18px;">Ánh sáng viền nổi khối phòng chụp</td>
+              <td style="padding:12px 18px;">Quảng cáo mỹ phẩm, đồ công nghệ sang trọng</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 18px; font-family:'JetBrains Mono',monospace; color:var(--amber); font-weight:600;">Golden hour sunset rays</td>
+              <td style="padding:12px 18px;">Nắng vàng hoàng hôn xiên qua</td>
+              <td style="padding:12px 18px;">Video cảm xúc, thiên nhiên lãng mạn</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5 -->
+    <section id="ch-5">
+      <div class="section-header">
+        <h2>Chương 5: Thư Viện 10 Kịch Bản Master Prompts Tinh Tuyển</h2>
+        <span class="section-badge">GÓI SÁNG TẠO VIP</span>
+      </div>
+      <p style="margin-bottom:30px;">
+        Toàn bộ 10 câu lệnh dưới đây đã được thử nghiệm và tinh chỉnh tỉ mỉ trên mô hình Google Veo 3 để cho ra chất lượng 4K hoàn mỹ nhất. Bạn chỉ cần nhấn nút <strong>Sao chép câu lệnh</strong> và dán thẳng vào Google Flow:
+      </p>
+
+      <!-- PROMPT 1: Perfume -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/perfume_cinematic.jpg" alt="Video review nước hoa cao cấp từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 01</span>
+            <span class="prompt-category">Ngành Hàng: Mỹ Phẩm & Nước Hoa Cao Cấp</span>
+          </div>
+          <div class="prompt-card-title">TVC Quảng Cáo Chai Nước Hoa Thủy Tinh Khắc Pha Lê</div>
+          <p class="prompt-card-vi">
+            Chai nước hoa thủy tinh sang trọng đứng uy nghi trên mặt đá cẩm thạch đen bóng ướt, giọt sương li ti đọng trên thân chai, camera lượn vòng 90 độ êm ái với ánh sáng studio nổi khối sắc sảo.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-1')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-1"><span class="k">Close-up shot</span> of a luxury frosted glass perfume bottle standing on a polished black marble surface, micro water droplets on glass, soft volumetric studio rim lighting. <span class="m">Camera slowly orbits 90 degrees around the bottle</span>, shallow depth of field, commercial grade, 4k 60fps, ultra realistic photorealistic.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 2: Sapa -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/sapa_drone.jpg" alt="Flycam phong cảnh Sa Pa từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 02</span>
+            <span class="prompt-category">Ngành Hàng: Du Lịch & Khám Phá Thiên Nhiên</span>
+          </div>
+          <div class="prompt-card-title">Flycam Lượn Biển Mây Ruộng Bậc Thang Sa Pa Lúc Bình Minh</div>
+          <p class="prompt-card-vi">
+            Góc máy Flycam bay lướt qua những thung lũng ruộng bậc thang vàng óng ả tại Sa Pa (Việt Nam), những dải mây trắng bồng bềnh lững lờ trôi, ánh nắng sớm vàng ấm rọi xuyên qua núi non hùng vĩ.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-2')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-2"><span class="k">Breathtaking aerial drone flight</span> over golden terraced rice fields in Sapa Vietnam at sunrise, gentle mist floating between mountain valleys. <span class="m">Camera glides smoothly forward and slowly tilts up to reveal the vast sky</span>, warm cinematic golden sunlight rays, National Geographic cinematography, ultra high definition 8k, vibrant natural colors.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 3: Bất Động Sản & Penthouse -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/real_estate_penthouse.jpg" alt="Nội thất phòng khách Penthouse triệu đô từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 03</span>
+            <span class="prompt-category">Ngành Hàng: Bất Động Sản & Thiết Kế Nội Thất Penthouse</span>
+          </div>
+          <div class="prompt-card-title">Tour Nội Thất Penthouse Triệu Đô Đón Nắng Sớm Toàn Cảnh Thành Phố</div>
+          <p class="prompt-card-vi">
+            Góc máy trượt êm ái qua không gian phòng khách Penthouse tối giản sang trọng, sofa da bò tắm trong nắng sớm và cửa kính kịch trần mở ra toàn cảnh đường chân trời thành phố phồn hoa.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-3')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-3"><span class="k">Smooth slow dolly shot</span> gliding through a luxurious minimalist penthouse living room, premium tan leather sofa bathed in warm morning sunlight, sheer curtains swaying gently. <span class="m">Camera moves forward toward floor-to-ceiling glass windows</span> revealing a breathtaking panoramic modern city skyline view, high-end architectural interior photography, 8k resolution, cinematic elegance.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 4: Tech Gadget -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 04</span>
+            <span class="prompt-category">Ngành Hàng: Đồ Công Nghệ & Smartphone</span>
+          </div>
+          <div class="prompt-card-title">TVC Giới Thiệu Điện Thoại Gập Siêu Mỏng Trong Không Gian Vô Trọng Lực</div>
+          <p class="prompt-card-vi">
+            Chiếc điện thoại gập thông minh viền titan lơ lửng xoay nhẹ trong không gian tối giản, màn hình OLED uốn dẻo phát sáng hình dải ngân hà, ánh sáng viền xanh neon chạy dọc thân máy.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-4')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-4"><span class="k">Slow motion macro shot</span> of a futuristic ultra-slim foldable smartphone floating in zero gravity, glowing flexible OLED screen displaying vibrant galaxy visuals. <span class="m">Smooth 360-degree rotation</span>, titanium frame edge reflection, dark minimalist studio background, blue laser rim lighting, Apple commercial style, 8k 60fps.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 5: Culinary Food -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 05</span>
+            <span class="prompt-category">Ngành Hàng: Ẩm Thực & Nhà Hàng Cao Cấp</span>
+          </div>
+          <div class="prompt-card-title">Cận Cảnh Miếng Bò Bít Tết Wagyu Xèo Xèo Trên Chảo Gang Nóng</div>
+          <p class="prompt-card-vi">
+            Quay chậm cận cảnh miếng thịt bò Wagyu A5 dày mọng nước đang xèo xèo trên chảo gang rực lửa, bơ thảo mộc tan chảy sủi bọt thơm lừng, khói bốc lên mờ ảo dưới ánh đèn vàng ấm cúng.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-5')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-5"><span class="k">Extreme macro slow motion 120fps shot</span> of a premium thick Wagyu steak searing on a hot cast iron pan, melting herb butter bubbling over charred crust, gentle steam rising. <span class="m">Gentle tilt down camera movement</span>, warm appetizing restaurant mood lighting, shallow depth of field, mouthwatering detail, 4k UHD.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 6: Fashion Runway -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/fashion_runway_red.jpg" alt="Người mẫu thời trang trên sàn diễn từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 06</span>
+            <span class="prompt-category">Ngành Hàng: Thời Trang Cao Cấp & Người Mẫu</span>
+          </div>
+          <div class="prompt-card-title">Người Mẫu Catwalk Sàn Diễn Thời Trang Paris Haute Couture</div>
+          <p class="prompt-card-vi">
+            Một nữ người mẫu thanh lịch sải bước tự tin trên sàn diễn catwalk bóng loáng tại Paris, chiếc váy lụa đỏ thướt tha tung bay nhẹ nhàng theo từng nhịp bước, đèn flash máy ảnh chớp nháy phía sau.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-6')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-6"><span class="k">Medium full-length tracking shot</span> of an elegant female supermodel walking down a reflective runway at Paris Fashion Week, wearing a flowing crimson silk couture dress floating in motion. <span class="m">Camera moving backwards at steady pace</span>, soft runway spotlights, subtle camera flashes from dark audience, Vogue editorial aesthetic, 4k 60fps.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 7: Thẩm Mỹ & Spa -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 07</span>
+            <span class="prompt-category">Ngành Hàng: Hoạt Hình 3D & Kênh Trẻ Em / TikTok</span>
+          </div>
+          <div class="prompt-card-title">Chú Mèo Con Lông Xù Lái Xe Tay Ga Tí Hon Dạo Phố</div>
+          <p class="prompt-card-vi">
+            Một chú mèo con lông xù màu vàng cam đội chiếc mũ bảo hiểm cổ điển tí hon, đang ngồi lái chiếc xe tay ga mini dạo chơi trong công viên đầy nắng vàng, phong cách hoạt hình Pixar dễ thương triệu view.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-7')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-7"><span class="k">Charming cinematic shot</span> of a cute fluffy ginger kitten wearing a tiny vintage motorcycle helmet, riding a miniature scooter through a sunlit city park. <span class="m">Slow dolly alongside</span>, shallow depth of field, warm golden sunlight filtering through autumn leaves, Pixar 3D animation style, adorable and vibrant, 4k 60fps.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 8: Luxury Architecture -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/bds_flycam.jpg" alt="Biệt thự hiện đại kính tràn viền hồ bơi vô cực từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 08</span>
+            <span class="prompt-category">Ngành Hàng: Bất Động Sản & Kiến Trúc Nghỉ Dưỡng</span>
+          </div>
+          <div class="prompt-card-title">Biệt Thự Hiện Đại Kính Tràn Viền Hồ Bơi Vô Cực Hoàng Hôn</div>
+          <p class="prompt-card-vi">
+            Flycam lướt êm ái trên mặt nước hồ bơi vô cực tiến về phía căn biệt thự nghỉ dưỡng triệu đô bằng kính và đá cẩm thạch, ánh nắng ban mai rực rỡ tương phản với làn nước xanh ngắt.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-8')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-8"><span class="k">Smooth low aerial glide</span> over a crystal clear infinity pool towards a modern minimalist luxury villa with floor-to-ceiling glass walls, bright sunny day, architectural commercial photography. <span class="m">Forward steadycam glide</span>, Architectural Digest cinematography, ultra detailed, 8k resolution.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 9: Trang Sức Cao Cấp -->
+      <div class="prompt-card">
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 09</span>
+            <span class="prompt-category">Ngành Hàng: Thể Thao Mạo Hiểm & Hành Động Kịch Tính</span>
+          </div>
+          <div class="prompt-card-title">Cú Nhào Lộn Drone FPV Tốc Độ Cao Xuyên Qua Khe Núi Đá</div>
+          <p class="prompt-card-vi">
+            Góc nhìn drone đua FPV lao vun vút nhào lộn qua hẻm núi đá hùng vĩ, lướt sát mặt thác nước cuồn cuộn tung bọt trắng xóa, chuyển động siêu nhanh nhưng không hề bị vỡ hình.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-9')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-9"><span class="k">High-speed dynamic FPV racing drone view</span> diving down a narrow rocky canyon, barrel rolling past cascading waterfalls with water spray catching sunlight. <span class="m">Rapid fluid dive and tilt-up recovery</span>, intense motion blur on edges, GoPro Hero 12 cinematic color profile, 4k 60fps action footage.</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMPT 10: F&B Cà Phê Espresso -->
+      <div class="prompt-card">
+        <div class="prompt-card-media">
+          <img class="prompt-card-img" src="assets/fb_espresso_crema.jpg" alt="Ly Espresso siêu nét từ Google Veo 3" loading="lazy">
+          <div class="prompt-card-badge"><span class="dot"></span> THÀNH PHẨM THỰC TẾ · GOOGLE VEO 3 4K</div>
+        </div>
+        <div class="prompt-card-body">
+          <div class="prompt-header-row">
+            <span class="prompt-index">KỊCH BẢN 10</span>
+            <span class="prompt-category">Ngành Hàng: F&B · Cà Phê & Đồ Uống Thượng Hạng</span>
+          </div>
+          <div class="prompt-card-title">Cận Cảnh Rót Cà Phê Espresso Thượng Hạng Lớp Crema Sủi Bọt Óng Ả</div>
+          <p class="prompt-card-vi">
+            Cận cảnh siêu chi tiết dòng cà phê Espresso đậm đặc chảy từ tay cầm máy pha vào tách gốm, lớp bọt crema vàng óng sủi tăm mịn màng, làn khói thơm lan tỏa trong ánh nắng sớm ấm áp.
+          </p>
+          <div class="prompt-code-wrap">
+            <div class="prompt-code-meta">
+              <span class="code-label">PROMPT TIẾNG ANH (COPY 1 CHẠM)</span>
+              <button class="btn-copy-prompt" onclick="copyPrompt('p-10')">Sao chép câu lệnh</button>
+            </div>
+            <pre id="p-10"><span class="k">Ultra macro slow motion 120fps shot</span> of rich concentrated Espresso coffee pouring smoothly from an espresso portafilter into a ceramic cup, thick golden-brown crema foaming and bubbling richly on top, steam rising gently in warm cozy cafe sunlight, commercial beverage cinematography, 4k 120fps.</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6 -->
+    <section id="ch-6">
+      <div class="section-header">
+        <h2>Chương 6: Kỹ Thuật Nối Dài Video (Extend +5s) & Tạo Phim Hoàn Chỉnh</h2>
+        <span class="section-badge">TÍNH NĂNG VŨ KHÍ</span>
+      </div>
+      <p>
+        Một trong những thế mạnh độc quyền của Google Veo 3 so với các AI khác là tính năng <strong>Extend Video (+5s)</strong>:
+      </p>
+      <div class="callout tip">
+        <div class="callout-title">🎬 Cách thức hoạt động của Extend:</div>
+        <p>
+          Khi video 8 giây đầu tiên được tạo xong, bạn không cần phải bắt đầu lại từ con số 0. Bằng cách nhấn nút <strong>Extend (+5s)</strong> ở góc trên bên phải video, AI sẽ đọc toàn bộ thông tin về nhân vật, trang phục, góc ánh sáng của giây thứ 8 và <strong>vẽ tiếp 5 giây tiếp theo của câu chuyện</strong>.
+        </p>
+      </div>
+      <p><strong>Công thức làm phim ngắn 15s - 30s không cần CapCut:</strong></p>
+      <ol style="margin-left:24px; color:#CBD5E1; margin-bottom:20px;">
+        <li style="margin-bottom:10px;"><strong>Đoạn 1 (0–8s):</strong> Giới thiệu nhân vật hoặc sản phẩm từ xa (ví dụ: máy quay tiến lại gần <code>dolly in</code>).</li>
+        <li style="margin-bottom:10px;"><strong>Bấm Extend lần 1 (+5s):</strong> Nhân vật bắt đầu hành động hoặc sản phẩm mở hộp (ví dụ: tay cầm sản phẩm lên).</li>
+        <li style="margin-bottom:10px;"><strong>Bấm Extend lần 2 (+5s):</strong> Cận cảnh cảm xúc hoặc chi tiết tính năng sản phẩm tỏa sáng.</li>
+      </ol>
+      <p>👉 Kết quả: Bạn nhận được 1 video dài 18 giây liền mạch tuyệt đối, nhân vật không hề bị biến đổi khuôn mặt!</p>
+    </section>
+
+    <!-- CHAPTER 7 -->
+    <section id="ch-7">
+      <div class="section-header">
+        <h2>Chương 7: Cẩm Nang Khắc Phục Mọi Lỗi Thường Gặp (100% Xử Lý Được)</h2>
+        <span class="section-badge">CẨM NANG SỬA LỖI</span>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 1. Nhân vật bị méo ngón tay hoặc mắt lác khi cử động?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Mô tả quá nhiều động tác phức tạp trong cùng một câu lệnh khiến AI bị xung đột giải phẫu.<br>
+          <strong>Cách xử lý:</strong> Thêm cụm từ khóa khóa nét giải phẫu vào đuôi prompt: <code>symmetrical facial features, natural relaxed hands, steady gaze, photorealistic skin texture, no extra limbs</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 2. Máy quay bị rung giật, xoay quá nhanh làm chóng mặt?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Dùng từ khóa camera chung chung như "camera moves" hoặc "fast pan".<br>
+          <strong>Cách xử lý:</strong> Thêm các từ khóa kiểm soát tốc độ mượt mà: <code>slow gentle pan</code>, <code>smooth steadycam glide</code>, <code>constant horizon lock</code>, <code>fluid motion 60fps</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 3. Màu sắc video bị bợt, nhợt nhạt và thiếu độ tương phản?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Thiếu từ khóa quy định không gian ánh sáng.<br>
+          <strong>Cách xử lý:</strong> Luôn thêm ít nhất một nguồn sáng cụ thể: <code>volumetric lighting</code>, <code>cinematic rim light</code>, <code>rich contrast</code>, <code>ARRI Alexa color science</code>.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 4. Câu lệnh bị Google báo lỗi từ chối tạo video (Policy Violation)?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Chứa tên người nổi tiếng còn sống hoặc thương hiệu có bản quyền khắt khe.<br>
+          <strong>Cách xử lý:</strong> Tránh ghi đích danh tên thương hiệu hoặc người nổi tiếng. Thay vì ghi "Iron Man", hãy ghi "a futuristic armored superhero with glowing chest reactor".
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <div class="faq-question">❌ 5. Video xem thử trên web bị mờ, không giống độ nét 4K?</div>
+        <div class="faq-answer">
+          <strong>Nguyên nhân:</strong> Trình duyệt tự động nén bản preview để tải nhanh qua mạng.<br>
+          <strong>Cách xử lý:</strong> Hãy luôn bấm nút <strong>Download 4K</strong> để tải file gốc <code>.mp4</code> về máy tính hoặc điện thoại. Khi mở trên máy, video sẽ hiển thị độ phân giải gốc siêu nét.
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 8 -->
+    <section id="ch-8">
+      <div class="section-header">
+        <h2>Chương 8: Kênh Hỗ Trợ Kỹ Thuật VIP & Bảo Hành</h2>
+        <span class="section-badge">HẬU MÃI TẬN TÂM</span>
+      </div>
+      <p>
+        Chúng tôi cam kết đồng hành cùng bạn trên từng thước phim AI. Bất kỳ lúc nào bạn gặp trục trặc về tài khoản hoặc cần tư vấn viết câu lệnh theo ý tưởng riêng:
+      </p>
+
+      <div class="support-card">
+        <h3>Bạn Cần Hỗ Trợ Trực Tiếp 1-1 Qua Zalo?</h3>
+        <p>
+          Đội ngũ kỹ thuật viên luôn sẵn sàng giải đáp, hỗ trợ đăng nhập và chia sẻ thêm các kịch bản video AI mới cập nhật mỗi tuần.
+        </p>
+        <a class="support-contact" href="https://zalo.me/0347999726" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg>
+          <span>Zalo Hỗ Trợ 1-1: 0347.999.726 (Bấm để nhắn tin)</span>
+        </a>
+        <p style="font-size:0.85rem; color:var(--text-dim); margin-top:16px; margin-bottom:0;">
+          Thời gian hỗ trợ: 8:00 - 22:00 tất cả các ngày trong tuần (Kể cả Thứ 7 & Chủ Nhật)
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>Đã sao chép câu lệnh vào bộ nhớ tạm!</span>
+  </div>
+
+  <script>
+    function copyPrompt(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = el.innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    }
+  </script>
+
+  <!-- Floating Zalo Contact Widget -->
+  <style>
+    .float-contact { position: fixed; bottom: 24px; right: 24px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+    .float-btn { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; box-shadow: 0 10px 25px rgba(0,104,255,0.45), 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.25s, box-shadow 0.25s; position: relative; text-decoration: none; }
+    .float-btn:hover { transform: scale(1.1); box-shadow: 0 14px 30px rgba(0,104,255,0.65), 0 6px 16px rgba(0,0,0,0.5); }
+    .float-zalo { background: #0068FF; }
+    .float-zalo svg { width: 34px; height: 34px; border-radius: 8px; }
+    .float-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #0068FF; animation: float-pulse 2s cubic-bezier(0.24, 0, 0.38, 1) infinite; pointer-events: none; }
+    @keyframes float-pulse { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(1.55); opacity: 0; } }
+    .float-tooltip { position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 14px; background: #0F172A; border: 1px solid rgba(0,104,255,0.4); padding: 8px 14px; border-radius: 8px; white-space: nowrap; font-size: 0.85rem; font-weight: 700; color: #FFFFFF; opacity: 0; pointer-events: none; transition: opacity 0.3s; box-shadow: 0 4px 16px rgba(0,0,0,0.6); }
+    .float-tooltip::after { content: ''; position: absolute; top: 50%; right: -5px; transform: translateY(-50%); border-width: 5px 0 5px 6px; border-style: solid; border-color: transparent transparent transparent #0F172A; }
+    .float-btn:hover .float-tooltip { opacity: 1; }
+    @media (max-width: 768px) { .float-contact { bottom: 85px; right: 14px; } .float-btn { width: 50px; height: 50px; } .float-zalo svg { width: 30px; height: 30px; } .float-tooltip { display: none; } }
+  </style>
+  <div class="float-contact">
+    <a href="https://zalo.me/0347999726" target="_blank" rel="noopener" class="float-btn float-zalo" title="Chat Zalo 0347.999.726">
+      <div class="float-pulse"></div>
+      <svg width="34" height="34" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg>
+      <div class="float-tooltip">Chat Zalo Hỗ Trợ 24/7</div>
+    </a>
+  </div>
+
+</body>
+</html>

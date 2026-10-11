@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>VŨ KHÍ CHỐT DEAL — Tạo video BĐS với Google Veo 3 chỉ từ 19.000đ</title>
+  <meta name="description" content="Hướng dẫn dùng Google Flow & Veo 3 cho người mới bằng tiếng Việt. Chỉ từ 19.000đ, có sẵn combo kèm tài khoản Veo 3 và bộ câu lệnh mẫu tạo video đẹp.">
+  <meta property="og:title" content="Vũ khí chốt deal cho Môi giới BĐS: Tự tạo video Flycam, kiến trúc nội thất siêu thực bằng Google Veo 3. Không cần thuê đội media.">
+  <meta property="og:description" content="Hướng dẫn tiếng Việt, combo kèm tài khoản Veo 3, bộ prompt mẫu. Thanh toán VietQR.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Be Vietnam Pro: thiết kế riêng cho tiếng Việt, dấu hiển thị chuẩn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       DESIGN TOKENS — UI/UX Pro Max: Dark Cinema + Glass
+       ========================================================= */
+    :root {
+      --bg: #07080F;
+      --bg-2: #0B0D18;
+      --surface: rgba(17, 20, 35, 0.72);
+      --surface-solid: #11142A;
+      --surface-hover: rgba(25, 30, 52, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.16);
+
+      --primary: #6366F1;
+      --primary-2: #8B5CF6;
+      --cyan: #22D3EE;
+      --amber: #F59E0B;
+      --amber-2: #FBBF24;
+      --green: #10B981;
+      --red: #F87171;
+
+      --text: #F1F5F9;
+      --muted: #94A3B8;
+      --dim: #64748B;
+
+      --r-sm: 10px;
+      --r-md: 14px;
+      --r-lg: 20px;
+      --r-xl: 28px;
+      --pill: 999px;
+
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --t: 0.25s var(--ease);
+
+      --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* injected_mobile_fixes */
+    html, body { overflow-x: hidden !important; max-width: 100% !important; }
+    .container { overflow-x: hidden; max-width: 100%; }
+    img, video { max-width: 100%; height: auto; }
+    pre, .prompt-code-wrap, table, .table-wrapper { overflow-x: auto !important; max-width: 100%; -webkit-overflow-scrolling: touch; }
+    p, a, span, h1, h2, h3, h4, h5, h6 { word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; }
+    /* Force specific elements that might overflow to be contained */
+    .bg-glow, .bg-glow::before, .bg-glow::after { max-width: 100vw; overflow: hidden; }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.68;
+      overflow-x: hidden;
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      touch-action: pan-y;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+
+    /* Ambient background */
+    .bg-glow { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .bg-glow::before, .bg-glow::after {
+      content: ''; position: absolute; border-radius: 50%; filter: blur(110px);
+    }
+    .bg-glow::before { width: 760px; height: 520px; top: -220px; left: 50%; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(99,102,241,0.28), transparent); }
+    .bg-glow::after { width: 520px; height: 520px; bottom: -200px; right: -160px; background: radial-gradient(closest-side, rgba(34,211,238,0.12), transparent); }
+    .grid-lines {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse at 50% 0%, #000 20%, transparent 70%);
+    }
+
+    .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+    section { position: relative; z-index: 1; }
+
+    /* Typography */
+    h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.28; font-weight: 800; text-wrap: balance; }
+    .section-title, .section-desc, .plan-name, .plan-for { text-wrap: balance; }
+    .grad { background: linear-gradient(120deg, #fff 10%, #A5B4FC 50%, var(--cyan) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .grad-warm { background: linear-gradient(90deg, var(--amber-2), #FB7185); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: var(--pill);
+      background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.32);
+      color: #C7D2FE; font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(16,185,129,0.6); animation: ping 2s infinite; }
+    @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.55); } 80%,100% { box-shadow: 0 0 0 10px rgba(16,185,129,0); } }
+
+    .section { padding: 96px 0; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 52px; }
+    .section-tag { display: inline-block; color: var(--cyan); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+    .section-title { font-size: clamp(1.75rem, 3.6vw, 2.6rem); margin-bottom: 14px; text-wrap: balance; }
+    .section-desc { color: var(--muted); font-size: 1.05rem; text-wrap: balance; line-height: 1.65; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 26px; border-radius: var(--pill);
+      font-weight: 800; font-size: 0.94rem; white-space: normal; text-align: center;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      transition: transform var(--t), box-shadow var(--t), background var(--t), border-color var(--t);
+      position: relative; overflow: hidden; min-height: 48px;
+    }
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn-cta { background: linear-gradient(135deg, var(--amber-2), var(--amber)); color: #111; box-shadow: 0 10px 30px -8px rgba(245,158,11,0.55); }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -8px rgba(245,158,11,0.7); }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #fff; box-shadow: 0 10px 30px -10px rgba(99,102,241,0.7); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(99,102,241,0.85); }
+    .btn-ghost { background: rgba(255,255,255,0.04); border: 1px solid var(--border-strong); color: var(--text); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .btn-sm { padding: 10px 18px; font-size: 0.88rem; min-height: 40px; }
+    .btn-block { width: 100%; }
+    .shine::after {
+      content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,0.45), transparent);
+      transform: skewX(-20deg); animation: shine 3.8s infinite;
+    }
+    @keyframes shine { 0% { left: -75%; } 35%, 100% { left: 130%; } }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      transition: border-color var(--t), background var(--t), transform var(--t);
+    }
+    .card:hover { border-color: var(--border-strong); background: var(--surface-hover); }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+    .header {
+      width: 100%;
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(7,8,15,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent; transition: border-color var(--t), background var(--t);
+    }
+    .header.scrolled { border-color: var(--border); background: rgba(7,8,15,0.9); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 20px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.12rem; letter-spacing: -0.02em; }
+    .logo-mark {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--cyan)); box-shadow: 0 0 24px rgba(34,211,238,0.35);
+    }
+    .logo-mark svg { width: 16px; height: 16px; fill: #fff; margin-left: 2px; }
+    .nav-links { display: flex; gap: 10px; list-style: none; align-items: center; }
+    .nav-links a {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 7px 15px; border-radius: var(--pill);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #F1F5F9;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      transition: all var(--t);
+      backdrop-filter: blur(10px);
+    }
+    .nav-links a:hover {
+      color: #FFFFFF;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(34, 211, 238, 0.2));
+      border-color: rgba(34, 211, 238, 0.55);
+      box-shadow: 0 4px 20px -2px rgba(34, 211, 238, 0.35);
+      transform: translateY(-2px);
+    }
+    .nav-links a#nav-pricing {
+      background: rgba(245, 158, 11, 0.12);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: var(--amber-2);
+      box-shadow: 0 0 16px -4px rgba(245, 158, 11, 0.3);
+    }
+    .nav-links a#nav-pricing:hover {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: var(--amber-2);
+      color: #FFFFFF;
+      box-shadow: 0 6px 24px -2px rgba(245, 158, 11, 0.55);
+    }
+    @media (max-width: 900px) { .nav-links { display: none; } }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero { padding: 64px 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    @media (max-width: 980px) { .hero-grid { grid-template-columns: 1fr; gap: 48px; } .hero-copy { text-align: center; } .hero-actions, .hero-trust { justify-content: center; } }
+    .hero h1 { font-size: clamp(2.1rem, 5vw, 3.5rem); margin: 20px 0 18px; }
+    .hero-sub { color: var(--muted); font-size: clamp(1.02rem, 1.6vw, 1.15rem); max-width: 560px; margin-bottom: 30px; }
+    @media (max-width: 980px) { .hero-sub { margin-left: auto; margin-right: auto; } }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+    .price-tag-inline { display: inline-flex; align-items: baseline; gap: 6px; }
+    .price-tag-inline s { opacity: 0.6; font-weight: 500; font-size: 0.85em; }
+    .hero-trust { 
+      display: flex; flex-direction: row; gap: 24px; 
+      margin-top: 40px;
+      padding: 18px 20px; 
+      background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.08) 30%, rgba(16, 185, 129, 0.08) 70%, transparent); 
+      border-top: 1px solid rgba(16, 185, 129, 0.2); 
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2); 
+      width: 100%;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-trust-title {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .hero-trust-list { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; color: #F8FAFC; font-size: 1.05rem; align-items: center; }
+    .hero-trust-list li { display: flex; align-items: center; justify-content: center; gap: 8px; list-style: none; font-weight: 700; }
+    .hero-trust-list svg { width: 22px; height: 22px; color: var(--green); flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.65)); }
+
+    /* Flow studio mock - Cinematic AI Studio */
+    .studio { border-radius: var(--r-xl); padding: 14px; background: linear-gradient(180deg, rgba(23,27,48,0.96), rgba(12,14,26,0.98)); border: 1px solid var(--border-strong); box-shadow: 0 40px 80px -30px rgba(0,0,0,0.9), 0 0 60px -20px rgba(99,102,241,0.35); }
+    .studio-bar { display: flex; align-items: center; justify-content: space-between; padding: 4px 6px 10px; }
+    .dots { display: flex; gap: 6px; }
+    .dots i { width: 10px; height: 10px; border-radius: 50%; background: #334155; }
+    .dots i:nth-child(1) { background: #F87171; } .dots i:nth-child(2) { background: #FBBF24; } .dots i:nth-child(3) { background: #34D399; }
+    .studio-title { font-family: var(--mono); font-size: 0.72rem; color: var(--dim); letter-spacing: 0.05em; }
+
+    /* Scene switcher tabs (Option 3) */
+    .scene-tabs { display: flex; gap: 6px; padding: 0 2px 10px; overflow-x: auto; scrollbar-width: none; }
+    .scene-tabs::-webkit-scrollbar { display: none; }
+    .scene-tab {
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px;
+      border-radius: var(--pill); background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1); color: #94A3B8;
+      font-size: 0.74rem; font-weight: 700; font-family: inherit;
+      cursor: pointer; transition: all var(--t); white-space: nowrap;
+    }
+    .scene-tab:hover {
+      background: rgba(255, 255, 255, 0.08); color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    .scene-tab.active {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(34, 211, 238, 0.2));
+      border-color: rgba(34, 211, 238, 0.65); color: #FFFFFF;
+      box-shadow: 0 0 14px -2px rgba(34, 211, 238, 0.4);
+    }
+    .tab-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); transition: all var(--t); }
+    .scene-tab.active .tab-dot { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+
+    /* 16:9 Cinematic viewport (Option 1) */
+    .preview {
+      position: relative; aspect-ratio: 16 / 9; border-radius: var(--r-md); overflow: hidden;
+      background: #000; box-shadow: inset 0 0 40px rgba(0,0,0,0.85);
+    }
+    .cinema-viewport { position: absolute; inset: 0; overflow: hidden; }
+    .cinema-slide {
+      position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .cinema-slide.active { opacity: 1; pointer-events: auto; }
+    .cinema-img {
+      position: absolute; inset: -5%;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      transform-origin: center center;
+    }
+    .cinema-slide.active .ken-burns-1 {
+      animation: kb1 12s ease-in-out infinite alternate;
+    }
+    .cinema-slide.active .ken-burns-2 {
+      animation: kb2 12s ease-in-out infinite alternate;
+    }
+    .cinema-slide.active .ken-burns-3 {
+      animation: kb3 12s ease-in-out infinite alternate;
+    }
+    @keyframes kb1 {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.1) translate(-1.5%, -1%); }
+    }
+    @keyframes kb2 {
+      0% { transform: scale(1.08) translate(1%, -1%); }
+      100% { transform: scale(1) translate(-1%, 1%); }
+    }
+    @keyframes kb3 {
+      0% { transform: scale(1) translate(-1%, 0); }
+      100% { transform: scale(1.1) translate(1%, -1%); }
+    }
+    .cinema-overlay {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0.65) 100%),
+                  linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 22%, transparent 78%, rgba(0,0,0,0.5) 100%);
+      pointer-events: none;
+    }
+    .scene-letterbox::before, .scene-letterbox::after { content: ''; position: absolute; left: 0; right: 0; height: 6.5%; background: #000; z-index: 2; }
+    .scene-letterbox::before { top: 0; } .scene-letterbox::after { bottom: 0; }
+
+    .hud { position: absolute; z-index: 3; font-family: var(--mono); font-size: 0.68rem; color: rgba(255,255,255,0.92); }
+    .hud-tl { top: 9%; left: 4%; display: flex; align-items: center; gap: 6px; }
+    .hud-tl .rec { width: 8px; height: 8px; border-radius: 50%; background: #EF4444; box-shadow: 0 0 8px #EF4444; animation: blink 1.2s infinite; }
+    @keyframes blink { 50% { opacity: 0.2; } }
+    .hud-tr { top: 9%; right: 4%; }
+    .hud-bl { bottom: 9%; left: 4%; padding: 4px 8px; border-radius: 6px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); }
+    .hud-br { bottom: 9%; right: 4%; display: flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 6px; background: rgba(0,0,0,0.6); border: 1px solid rgba(34,211,238,0.4); color: var(--cyan); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.05em; backdrop-filter: blur(6px); }
+
+    .gen-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+    .prompt-box {
+      flex: 1; min-height: 64px; padding: 12px 14px; border-radius: var(--r-md);
+      background: rgba(0,0,0,0.45); border: 1px solid var(--border);
+      font-family: var(--mono); font-size: 0.78rem; color: #E2E8F0; line-height: 1.55;
+    }
+    .prompt-box .caret { display: inline-block; width: 7px; height: 1em; background: var(--cyan); vertical-align: -2px; margin-left: 2px; animation: blink 1s steps(1) infinite; }
+    .gen-btn { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow: 0 8px 20px -6px rgba(99,102,241,0.7); flex-shrink: 0; cursor: pointer; transition: transform var(--t); }
+    .gen-btn:hover { transform: scale(1.05); }
+    .gen-btn svg { width: 22px; height: 22px; color: #fff; }
+    .progress { height: 4px; border-radius: 4px; background: rgba(255,255,255,0.08); margin-top: 12px; overflow: hidden; }
+    .progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--cyan)); border-radius: 4px; }
+    .progress-label { display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.74rem; color: var(--dim); font-family: var(--mono); }
+
+    /* =========================================================
+       PAIN POINTS
+       ========================================================= */
+    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 860px) { .pain-grid { grid-template-columns: 1fr; } }
+    .pain { padding: 28px; display: flex; flex-direction: column; }
+    .pain-ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 18px; background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.25); color: var(--red); flex-shrink: 0; }
+    .pain-ico svg { width: 22px; height: 22px; }
+    .pain h3 { font-size: 1.15rem; margin-bottom: 8px; min-height: 28px; }
+    .pain p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; flex: 1; }
+    .pain .fix { margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--border-strong); display: flex; align-items: center; gap: 8px; color: #A7F3D0; font-size: 0.94rem; font-weight: 600; min-height: 42px; }
+    .pain .fix svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+
+    /* =========================================================
+       STEPS
+       ========================================================= */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+    .step { padding: 28px; position: relative; display: flex; flex-direction: column; }
+    .step-num { font-family: var(--mono); font-size: 0.8rem; font-weight: 700; color: var(--cyan); margin-bottom: 14px; display: inline-flex; align-self: flex-start; padding: 4px 10px; border-radius: var(--pill); background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.25); letter-spacing: 0.05em; }
+    .step h3 { font-size: 1.15rem; margin-bottom: 8px; min-height: 28px; }
+    .step p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; flex: 1; }
+
+    /* =========================================================
+       PRICING
+       ========================================================= */
+    .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+    @media (max-width: 980px) { .pricing { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+    .plan { padding: 30px 26px; display: flex; flex-direction: column; position: relative; }
+    .plan.featured {
+      background: linear-gradient(180deg, rgba(37,40,84,0.95), rgba(15,17,34,0.95));
+      border: 1.5px solid rgba(139,92,246,0.7);
+      box-shadow: 0 30px 60px -25px rgba(99,102,241,0.55);
+    }
+    @media (min-width: 981px) { .plan.featured { transform: translateY(-12px); } }
+    .ribbon { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); padding: 5px 14px; border-radius: var(--pill); background: linear-gradient(90deg, var(--primary), var(--primary-2)); font-size: 0.74rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 4px 16px -2px rgba(99,102,241,0.5); }
+    .plan-name { font-size: 1.25rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; }
+    .plan-for { color: var(--muted); font-size: 0.88rem; min-height: 44px; line-height: 1.45; }
+    .plan-price { display: flex; align-items: baseline; gap: 10px; margin: 18px 0 6px; min-height: 48px; flex-wrap: wrap; }
+    .plan-price strong { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; }
+    .plan-price s { color: var(--dim); font-size: 0.98rem; }
+    .plan-save { display: inline-block; font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #111; background: var(--amber-2); padding: 2px 8px; border-radius: 6px; }
+    .plan-note { color: var(--dim); font-size: 0.82rem; margin-bottom: 18px; line-height: 1.45; min-height: 24px; display: flex; align-items: center; }
+    .plan ul { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; padding-top: 18px; border-top: 1px solid var(--border); flex: 1; }
+    .plan li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.91rem; color: #CBD5E1; line-height: 1.45; min-height: 42px; }
+    .plan li svg { width: 18px; height: 18px; color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
+    .plan li.off { color: var(--dim); }
+    .plan li.off svg { color: var(--dim); }
+    .plan li b { color: #fff; }
+
+    .guarantee {
+      margin: 36px auto 0; max-width: 820px; display: flex; gap: 16px; align-items: center;
+      padding: 18px 24px; border-radius: var(--r-lg); background: rgba(16,185,129,0.07);
+      border: 1px solid rgba(16,185,129,0.35); box-shadow: 0 10px 30px -10px rgba(16,185,129,0.15);
+    }
+    .guarantee svg { width: 32px; height: 32px; color: var(--green); flex-shrink: 0; }
+    .guarantee p { font-size: 0.95rem; color: #E2E8F0; line-height: 1.55; }
+    .guarantee-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: var(--pill); background: rgba(16,185,129,0.16); border: 1px solid rgba(16,185,129,0.4); color: #A7F3D0; margin-right: 6px; }
+    .guarantee-zalo { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: var(--pill); background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.45); color: var(--cyan); font-weight: 700; text-decoration: none; margin: 0 2px; }
+    .guarantee-zalo:hover { background: rgba(34,211,238,0.22); color: #fff; }
+    .guarantee-zalo svg { width: 14px; height: 14px; color: inherit; }
+
+    /* =========================================================
+       PROMPT SAMPLES
+       ========================================================= */
+    .prompts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 980px) { .prompts { grid-template-columns: 1fr; } }
+    .pcard { padding: 24px; display: flex; flex-direction: column; gap: 14px; position: relative; }
+    .pcard-top { display: flex; justify-content: space-between; align-items: center; }
+    .chip { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border-radius: var(--pill); background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.3); color: #C7D2FE; }
+    .chip.free { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.3); color: #A7F3D0; }
+    .pcard h3 { font-size: 1.05rem; min-height: 26px; }
+    .pcode { font-family: var(--mono); font-size: 0.84rem; color: #E2E8F0; background: rgba(0,0,0,0.45); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px 16px; line-height: 1.65; flex: 1; min-height: 140px; }
+    .pcode .k { color: var(--cyan); } .pcode .l { color: var(--amber-2); }
+    .copy-btn { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 16px; border-radius: var(--pill); border: 1px solid var(--border-strong); background: rgba(255,255,255,0.04); color: #F1F5F9; transition: all var(--t); min-height: 42px; }
+    .copy-btn:hover { background: rgba(34,211,238,0.14); border-color: rgba(34,211,238,0.5); color: #fff; transform: translateY(-2px); box-shadow: 0 4px 16px -2px rgba(34,211,238,0.3); }
+    .copy-btn svg { width: 15px; height: 15px; }
+    .locked { position: relative; }
+    .locked .pcode { filter: blur(4px); user-select: none; }
+    .lock-over { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 24px; border-radius: var(--r-lg); background: linear-gradient(180deg, rgba(7,8,15,0.2), rgba(7,8,15,0.92)); }
+    .lock-over svg { width: 30px; height: 30px; margin: 0 auto 10px; color: var(--amber-2); }
+    .lock-over p { font-weight: 700; margin-bottom: 14px; }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq details { border-radius: var(--r-md); }
+    .faq summary { list-style: none; cursor: pointer; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 1.02rem; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary svg { width: 20px; height: 20px; color: var(--cyan); transition: transform var(--t); flex-shrink: 0; }
+    .faq details[open] summary svg { transform: rotate(45deg); }
+    .faq details[open] { border-color: rgba(99,102,241,0.4); }
+    .faq .ans { padding: 0 24px 22px; color: var(--muted); font-size: 0.96rem; }
+
+    /* =========================================================
+       FINAL CTA + FOOTER
+       ========================================================= */
+    .final {
+      text-align: center; padding: 64px 28px; border-radius: var(--r-xl); position: relative; overflow: hidden;
+      background: radial-gradient(ellipse at top, rgba(99,102,241,0.35), transparent 60%), linear-gradient(180deg, #13163A, #0B0D1E);
+      border: 1px solid rgba(139,92,246,0.4);
+    }
+    .final h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-bottom: 14px; }
+    .final p { color: #CBD5E1; max-width: 560px; margin: 0 auto 30px; }
+    .footer { 
+      padding: 44px 0 110px; 
+      border-top: 1px solid rgba(0, 104, 255, 0.3); 
+      margin-top: 90px; 
+      color: #E2E8F0; 
+      font-size: 0.95rem; 
+      position: relative; 
+      z-index: 1; 
+      background: linear-gradient(180deg, #111827, #05070E);
+      box-shadow: inset 0 20px 40px rgba(0, 104, 255, 0.05);
+    }
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #0068FF, var(--cyan), #A855F7);
+    }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .footer a { font-weight: 600; transition: color 0.2s; }
+    .footer a:hover { color: var(--cyan); }
+    #footer-zalo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #0068FF, #0052cc);
+      color: #fff;
+      border-radius: var(--pill);
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 104, 255, 0.4);
+      transition: all 0.25s;
+    }
+    #footer-zalo:hover {
+      background: linear-gradient(135deg, #0d74ff, #004dc0);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 104, 255, 0.6);
+      color: #fff !important;
+    }
+    @media (min-width: 769px) { .footer { padding-bottom: 44px; } }
+
+    /* Sticky mobile CTA (Trượt lên mượt mà khi cuộn qua Hero) */
+    .mbar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      display: none; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(7,8,15,0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
+      transform: translateY(115%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .mbar.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    body.modal-open .mbar {
+      transform: translateY(120%) !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .mbar small { display: block; color: var(--dim); font-size: 0.72rem; }
+    .mbar strong { font-size: 1.08rem; color: var(--amber-2); }
+    @media (max-width: 768px) { .mbar { display: flex; } }
+
+    /* =========================================================
+       MOBILE OPTIMIZATION (<= 768px)
+       ========================================================= */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .nav { height: 54px; }
+      .logo { font-size: 0.98rem; }
+      .logo-mark { width: 28px; height: 28px; border-radius: 8px; }
+      #nav-cta { display: none; }
+
+      .section { padding: 40px 0; }
+      .section-head { margin-bottom: 24px; padding: 0; width: 100%; box-sizing: border-box; }
+      .section-tag { font-size: 0.72rem; margin-bottom: 8px; }
+      .section-title { font-size: 1.48rem; margin-bottom: 10px; line-height: 1.28; }
+      .section-desc { font-size: 0.88rem; line-height: 1.55; }
+
+      .eyebrow { font-size: 0.7rem; padding: 4px 12px; letter-spacing: 0.03em; gap: 6px; max-width: 100%; }
+      .dot { width: 7px; height: 7px; }
+
+      .hero { padding: 14px 0 24px; }
+      .hero-grid { gap: 18px; width: 100%; }
+      .hero-copy { width: 100%; }
+      .hero h1 { font-size: clamp(1.4rem, 6vw, 1.85rem); line-height: 1.24; margin: 10px 0 8px; }
+      .hero-sub { font-size: 0.86rem; line-height: 1.5; margin-bottom: 16px; color: #CBD5E1; }
+      .hero-actions { display: flex; flex-direction: column; width: 100%; gap: 8px; margin-bottom: 12px; }
+      .hero-actions .btn {
+        width: 100%; min-height: 44px; padding: 10px 16px; font-size: 0.86rem;
+        justify-content: center; white-space: normal; text-align: center; word-break: break-word;
+      }
+      .price-tag-inline { flex-wrap: wrap; justify-content: center; }
+      .hero-trust {
+        display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+        gap: 6px 12px; font-size: 0.76rem; padding-top: 0; margin-bottom: 4px;
+      }
+      .hero-trust li { display: inline-flex; align-items: center; gap: 5px; list-style: none; white-space: normal; }
+      .hero-trust svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+      .studio { padding: 10px; border-radius: 16px; margin-top: 4px; width: 100%; box-sizing: border-box; overflow: hidden; }
+      .studio-bar { padding: 2px 4px 8px; }
+      .studio-title { font-size: 0.65rem; }
+      .scene-tabs { gap: 5px; padding-bottom: 8px; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; width: 100%; }
+      .scene-tab { padding: 5px 11px; font-size: 0.72rem; min-height: 32px; }
+      .preview { border-radius: 12px; overflow: hidden; width: 100%; }
+      .hud { font-size: 0.58rem; }
+      .hud-tl, .hud-tr { top: 6%; }
+      .hud-bl, .hud-br { bottom: 6%; padding: 2px 6px; font-size: 0.58rem; }
+      .gen-row { gap: 8px; margin-top: 10px; width: 100%; }
+      .prompt-box { padding: 10px 12px; font-size: 0.74rem; min-height: 52px; line-height: 1.45; word-break: break-word; }
+      .gen-btn { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; }
+
+      .card { border-radius: 16px; width: 100%; box-sizing: border-box; }
+      .pain-grid { gap: 14px; width: 100%; }
+      .pain { padding: 18px 16px; }
+      .pain-ico { width: 38px; height: 38px; margin-bottom: 12px; }
+      .pain h3 { font-size: 1.02rem; }
+      .pain p { font-size: 0.88rem; }
+      .pain .fix { font-size: 0.86rem; min-height: auto; }
+
+      .steps { gap: 14px; width: 100%; }
+      .step { padding: 18px 16px; }
+      .step h3 { font-size: 1.02rem; }
+      .step p { font-size: 0.88rem; }
+
+      .pricing { gap: 16px; width: 100%; max-width: 100%; }
+      .plan { padding: 22px 16px; border-radius: 16px; width: 100%; box-sizing: border-box; }
+      .plan-name { font-size: 1.15rem; }
+      .plan-for { font-size: 0.84rem; min-height: auto; }
+      .plan-price { margin: 12px 0 4px; min-height: auto; }
+      .plan-price strong { font-size: 2.1rem; }
+      .plan-note { min-height: auto; margin-bottom: 12px; font-size: 0.8rem; }
+      .plan ul { gap: 9px; margin-bottom: 18px; padding-top: 14px; }
+      .plan li { font-size: 0.86rem; min-height: auto; line-height: 1.4; }
+      .guarantee { flex-direction: column; text-align: center; padding: 16px 14px; gap: 10px; margin-top: 20px; width: 100%; box-sizing: border-box; }
+      .guarantee svg { margin: 0 auto; width: 26px; height: 26px; }
+      .guarantee p { font-size: 0.88rem; line-height: 1.5; }
+
+      .prompts { gap: 14px; width: 100%; }
+      .pcard { padding: 18px 16px; gap: 12px; border-radius: 16px; width: 100%; box-sizing: border-box; }
+      .pcard h3 { font-size: 1rem; min-height: auto; }
+      .pcode { padding: 12px 14px; font-size: 0.78rem; min-height: auto; line-height: 1.55; word-break: break-word; overflow-wrap: break-word; }
+      .copy-btn { width: 100%; justify-content: center; min-height: 40px; white-space: normal; text-align: center; }
+
+      .faq { width: 100%; gap: 10px; }
+      .faq details { border-radius: 14px; }
+      .faq summary { padding: 14px 16px; font-size: 0.92rem; }
+      .faq .ans { padding: 0 16px 16px; font-size: 0.88rem; line-height: 1.55; }
+
+      .final { padding: 34px 16px; border-radius: 18px; width: 100%; box-sizing: border-box; }
+      .final h2 { font-size: 1.5rem; }
+      .final p { font-size: 0.88rem; margin-bottom: 20px; }
+      .final .hero-actions { width: 100%; }
+      .final .hero-actions .btn { width: 100%; }
+
+      .footer { margin-top: 44px; padding: 26px 0 100px; }
+      .footer-row { flex-direction: column; text-align: center; gap: 12px; }
+      .footer-row div:last-child { justify-content: center; flex-wrap: wrap; }
+
+      .overlay { padding: 12px; }
+      .modal { padding: 16px 14px; max-height: 94vh; border-radius: 18px; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .modal-head h3 { font-size: 1.12rem; }
+      .pkg { padding: 8px 10px; gap: 8px; min-height: 46px; }
+      .pkg-info b { font-size: 0.84rem; }
+      .pkg-info span { font-size: 0.72rem; }
+      .pkg-price { font-size: 0.92rem; margin-left: 4px; }
+      .bump { padding: 8px 10px; }
+      .bump b { font-size: 0.78rem; }
+      .bump p { font-size: 0.72rem; }
+      .total strong { font-size: 1.15rem; }
+      .qr-img { width: 175px; }
+      .bank-rows { padding: 2px 10px; }
+      .bank-row { font-size: 0.82rem; }
+      .mini-copy { padding: 3px 8px; font-size: 0.68rem; }
+    }
+
+    /* =========================================================
+       CHECKOUT MODAL
+       ========================================================= */
+    .overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(2,3,8,0.82); backdrop-filter: blur(12px); opacity: 0; pointer-events: none; transition: opacity var(--t); }
+    .overlay.open { opacity: 1; pointer-events: auto; }
+    .modal {
+      width: 100%;
+      max-width: 540px;
+      max-height: min(92vh, 660px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: var(--surface-solid);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--r-xl);
+      padding: 20px 22px;
+      transform: translateY(16px) scale(0.98);
+      transition: transform var(--t);
+      box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(139, 92, 246, 0.45) rgba(15, 23, 42, 0.4);
+    }
+    .modal::-webkit-scrollbar {
+      width: 5px;
+    }
+    .modal::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 999px;
+      margin: 8px 0;
+    }
+    .modal::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #6366f1, #22d3ee);
+      border-radius: 999px;
+    }
+    .modal::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #818cf8, #38bdf8);
+    }
+    .overlay.open .modal { transform: none; }
+    .modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .modal-head h3 { font-size: 1.2rem; font-weight: 800; }
+    .modal-head p { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+    .x-btn { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,0.06); flex-shrink: 0; }
+    .x-btn:hover { background: rgba(255,255,255,0.14); }
+    .x-btn svg { width: 15px; height: 15px; }
+
+    .pkg-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+    .pkg {
+      display: flex; align-items: center; gap: 12px; padding: 10px 14px; min-height: 54px;
+      border-radius: var(--r-md); border: 1px solid var(--border-strong);
+      cursor: pointer; transition: all var(--t);
+      background: rgba(255, 255, 255, 0.02);
+      box-sizing: border-box;
+    }
+    .pkg:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .pkg:has(input:checked) {
+      border-color: var(--primary-2);
+      background: linear-gradient(90deg, rgba(99, 102, 241, 0.16), rgba(139, 92, 246, 0.08));
+      box-shadow: 0 0 16px -4px rgba(139, 92, 246, 0.35);
+    }
+    .pkg input { accent-color: var(--primary-2); width: 18px; height: 18px; flex-shrink: 0; cursor: pointer; margin: 0; }
+    .pkg-info { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+    .pkg-info b { display: block; font-size: 0.9rem; font-weight: 700; color: #FFFFFF; line-height: 1.25; }
+    .pkg-info span { color: var(--muted); font-size: 0.76rem; display: block; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+    .pkg-price { font-weight: 800; font-size: 1.02rem; color: #FFFFFF; white-space: nowrap; margin-left: 8px; flex-shrink: 0; }
+    .pkg:has(input:checked) .pkg-price { color: var(--amber-2); }
+
+    .bump { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: var(--r-md); border: 1.5px dashed rgba(251,191,36,0.5); background: rgba(251,191,36,0.06); cursor: pointer; margin-bottom: 10px; }
+    .bump input { accent-color: var(--amber); width: 17px; height: 17px; flex-shrink: 0; margin: 0; }
+    .bump b { color: var(--amber-2); font-size: 0.82rem; display: block; line-height: 1.25; }
+    .bump p { font-size: 0.74rem; color: #CBD5E1; margin-top: 2px; }
+    .bump[hidden] { display: none; }
+
+    .field { margin-bottom: 8px; }
+    .field label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 3px; font-weight: 600; }
+    .field input { width: 100%; padding: 8px 12px; border-radius: var(--r-sm); background: rgba(0,0,0,0.35); border: 1px solid var(--border-strong); color: var(--text); font: inherit; font-size: 0.88rem; transition: border-color var(--t); }
+    .field input:focus { outline: none; border-color: var(--primary-2); box-shadow: 0 0 0 3px rgba(139,92,246,0.25); }
+    .total { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; margin: 2px 0 8px; border-top: 1px dashed var(--border-strong); }
+    .total span { font-size: 0.88rem; color: var(--muted); }
+    .total strong { font-size: 1.3rem; color: var(--amber-2); }
+    #co-submit { padding: 11px 16px; font-size: 0.92rem; }
+    .secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 7px; font-size: 0.72rem; color: var(--dim); }
+    .secure svg { width: 13px; height: 13px; }
+
+    .qr-wrap { text-align: center; }
+    .qr-img { width: 200px; max-width: 100%; aspect-ratio: 1; margin: 0 auto 12px; border-radius: var(--r-md); background: #fff; padding: 8px; object-fit: contain; }
+    .qr-missing { width: 200px; max-width: 100%; aspect-ratio: 1; margin: 0 auto 12px; border-radius: var(--r-md); border: 1px dashed var(--border-strong); display: grid; place-items: center; padding: 16px; font-size: 0.82rem; color: var(--muted); }
+    .bank-rows { text-align: left; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: var(--r-md); padding: 4px 12px; margin-bottom: 12px; }
+    .bank-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.86rem; }
+    .bank-row:last-child { border-bottom: 0; }
+    .bank-row span { color: var(--muted); }
+    .bank-row b { display: flex; align-items: center; gap: 8px; text-align: right; word-break: break-all; }
+    .mini-copy { padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; background: rgba(34,211,238,0.14); border: 1px solid rgba(34,211,238,0.35); color: var(--cyan); transition: all var(--t); cursor: pointer; }
+    .mini-copy:hover { background: rgba(34,211,238,0.28); color: #fff; border-color: var(--cyan); transform: translateY(-1px); }
+    .qr-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 12px; }
+
+    /* Toast */
+    .toast { position: fixed; left: 50%; bottom: 90px; transform: translate(-50%, 20px); z-index: 200; padding: 12px 18px; border-radius: var(--pill); background: #111827; border: 1px solid rgba(34,211,238,0.5); font-size: 0.9rem; opacity: 0; pointer-events: none; transition: opacity var(--t), transform var(--t); white-space: nowrap; max-width: calc(100vw - 32px); overflow: hidden; text-overflow: ellipsis; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <!-- SVG sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+    <symbol id="i-warp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a href="#top" class="logo" id="logo" aria-label="VEO3 FLOW - về đầu trang">
+        <span class="logo-mark"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+        <span>VEO3 <em>FLOW</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#van-de" id="nav-problem">VẤN ĐỀ</a></li>
+        <li><a href="#cach-hoat-dong" id="nav-how">CÁCH HOẠT ĐỘNG</a></li>
+        <li><a href="#bang-gia" id="nav-pricing">BẢNG GIÁ</a></li>
+        <li><a href="#prompt-mau" id="nav-prompts">PROMPT MẪU</a></li>
+        <li><a href="#hoi-dap" id="nav-faq">HỎI ĐÁP</a></li>
+      </ul>
+      <button class="btn btn-cta btn-sm shine" id="nav-cta" data-open="combo">MUA NGAY</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span> CẨM NANG GOOGLE VEO 3 THỰC CHIẾN</span>
+          <h1>Vũ Khí Chốt Deal: Tạo Video BĐS Với <span class="grad">VEO 3</span><br>Chỉ Từ <span class="grad-warm">19.000đ</span></h1>
+          <p class="hero-sub">Không cần thuê đội bay Flycam hay quay dựng đắt đỏ. Chỉ cần Copy & Paste lệnh có sẵn để tạo ngay video 4K quay toàn cảnh dự án, nội thất sang trọng. Tự tay làm video chuyên nghiệp gửi khách VIP chốt sale ngay trên điện thoại.</p>
+          <div class="hero-actions">
+            <button class="btn btn-cta shine" id="hero-cta" data-open="combo">
+              <svg><use href="#i-bolt"/></svg>
+              <span class="price-tag-inline">LẤY COMBO DÙNG NGAY <span data-price="combo">69.000đ</span></span>
+            </button>
+            <button class="btn btn-ghost" id="hero-cta-starter" data-open="starter">
+              CHỈ HỌC HƯỚNG DẪN — <span data-price="starter">19.000đ</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Flow studio mock - Cinematic AI Studio -->
+        <div class="studio" aria-label="Minh hoạ giao diện tạo video AI">
+          <div class="studio-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span class="studio-title">flow · veo 3 · 16:9 · 8s cinematic</span>
+          </div>
+
+          <!-- Scene switcher tabs (Option 3) -->
+          <div class="scene-tabs" role="tablist" aria-label="Chọn mẫu video minh hoạ">
+            <button class="scene-tab active" data-scene="0" role="tab" aria-selected="true" type="button">
+              <span class="tab-dot"></span>
+              <span>🚁 Flycam Biệt Thự</span>
+            </button>
+            <button class="scene-tab" data-scene="1" role="tab" aria-selected="false" type="button">
+              <span class="tab-dot"></span>
+              <span>🏢 Penthouse VIP</span>
+            </button>
+            <button class="scene-tab" data-scene="2" role="tab" aria-selected="false" type="button">
+              <span class="tab-dot"></span>
+              <span>🌲 BĐS Nghỉ Dưỡng</span>
+            </button>
+          </div>
+
+          <!-- 16:9 Cinematic Viewport (Option 1) -->
+          <div class="preview scene-letterbox">
+            <div class="cinema-viewport" id="cinema-viewport">
+              <div class="cinema-slide active" style="--bg: url('assets/bds_flycam.jpg')">
+                <div class="cinema-img ken-burns-1"></div>
+                <div class="cinema-overlay"></div>
+              </div>
+              <div class="cinema-slide" style="--bg: url('assets/real_estate_penthouse.jpg')">
+                <div class="cinema-img ken-burns-2"></div>
+                <div class="cinema-overlay"></div>
+              </div>
+              <div class="cinema-slide" style="--bg: url('assets/sapa_drone.jpg')">
+                <div class="cinema-img ken-burns-3"></div>
+                <div class="cinema-overlay"></div>
+              </div>
+            </div>
+            <div class="hud hud-tl"><span class="rec"></span> REC 00:08</div>
+            <div class="hud hud-tr">1080p · 24fps</div>
+            <div class="hud hud-bl" id="hud-cam">CAM: slow aerial dolly</div>
+            <div class="hud hud-br" id="hud-engine">GOOGLE VEO 3</div>
+          </div>
+          <div class="gen-row">
+            <div class="prompt-box" id="typer" aria-live="polite"></div>
+            <button class="gen-btn" id="gen-play-btn" type="button" aria-label="Tạo lại cảnh" title="Tạo video"><svg><use href="#i-spark"/></svg></button>
+          </div>
+          <div class="progress"><i id="prog"></i></div>
+          <div class="progress-label"><span id="prog-text">Đang tạo video…</span><span id="prog-pct">0%</span></div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-title"><span class="dot"></span> QUYỀN LỢI ĐẶC QUYỀN</div>
+        <ul class="hero-trust-list">
+          <li><svg><use href="#i-check"/></svg> VietQR 1 chạm</li>
+          <li><svg><use href="#i-check"/></svg> Nhận ngay qua email</li>
+          <li><svg><use href="#i-check"/></svg> Bảo hành 1-1 Zalo 0347.999.726</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PAIN POINTS ================= -->
+    <section class="section" id="van-de">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">RÀO CẢN NGƯỜI MỚI</span>
+          <h2 class="section-title">3 Nỗi Đau Của Sales BĐS Khi Làm Video Bán Hàng</h2>
+          <p class="section-desc">Làm video BĐS truyền thống tốn quá nhiều tiền và công sức, nhưng bỏ qua thì lại mất khách VIP vào tay đối thủ.</p>
+        </div>
+        <div class="pain-grid">
+          <article class="card pain reveal">
+            <div class="pain-ico"><svg><use href="#i-card"/></svg></div>
+            <h3>Không có tài khoản dùng được</h3>
+            <p>Đăng ký gói Google AI cần thẻ quốc tế, nhiều bước tiếng Anh, dễ bị kẹt ngay từ đầu.</p>
+            <div class="fix"><svg><use href="#i-check"/></svg> Combo có sẵn tài khoản, đăng nhập là dùng.</div>
+          </article>
+          <article class="card pain reveal">
+            <div class="pain-ico"><svg><use href="#i-map"/></svg></div>
+            <h3>Không biết bắt đầu từ đâu</h3>
+            <p>Giao diện Flow lạ lẫm: chọn chế độ nào, ghép cảnh ra sao, tải video về thế nào?</p>
+            <div class="fix"><svg><use href="#i-check"/></svg> Video hướng dẫn từng bước bằng tiếng Việt.</div>
+          </article>
+          <article class="card pain reveal">
+            <div class="pain-ico"><svg><use href="#i-warp"/></svg></div>
+            <h3>Video ra xấu, méo, tốn lượt</h3>
+            <p>Viết câu lệnh chung chung khiến nhân vật biến dạng, góc máy lộn xộn, phải tạo lại nhiều lần.</p>
+            <div class="fix"><svg><use href="#i-check"/></svg> Bộ prompt mẫu đã viết sẵn cấu trúc chuẩn.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section" id="cach-hoat-dong" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">QUY TRÌNH 3 BƯỚC ĐƠN GIẢN</span>
+          <h2 class="section-title">Từ Lúc Thanh Toán Đến Khi Tạo Ra Video Đầu Tiên</h2>
+          <p class="section-desc">Không cần cài đặt phức tạp, quy trình tinh gọn giúp bạn sở hữu video AI chỉ sau vài phút.</p>
+        </div>
+        <div class="steps">
+          <div class="card step reveal">
+            <span class="step-num">BƯỚC 01</span>
+            <h3>Chọn gói & quét mã VietQR</h3>
+            <p>Chọn gói phù hợp, nhập email, quét mã bằng app ngân hàng bất kỳ.</p>
+          </div>
+          <div class="card step reveal">
+            <span class="step-num">BƯỚC 02</span>
+            <h3>Nhận hướng dẫn & tài khoản</h3>
+            <p>Link tài liệu (và tài khoản nếu mua combo) được gửi về email của bạn.</p>
+          </div>
+          <div class="card step reveal">
+            <span class="step-num">BƯỚC 03</span>
+            <h3>Làm theo, tạo video đầu tiên</h3>
+            <p>Mở Flow, dán prompt mẫu, bấm tạo. Video 8 giây đầu tiên của bạn đã sẵn sàng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section" id="bang-gia">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">BẢNG GIÁ ƯU ĐÃI HÔM NAY</span>
+          <h2 class="section-title">Chọn Gói Phù Hợp Với Nhu Cầu Của Bạn</h2>
+          <p class="section-desc">Thanh toán một lần duy nhất qua VietQR · Không gia hạn tự động · Bảo hành 1-1 uy tín.</p>
+        </div>
+
+        <div class="pricing">
+          <!-- Starter -->
+          <article class="card plan reveal">
+            <h3 class="plan-name">GÓI KHỞI ĐẦU</h3>
+            <p class="plan-for">Dành cho bạn đã có tài khoản Google AI và chỉ cần học cách làm video chuẩn đẹp.</p>
+            <div class="plan-price">
+              <strong data-price="starter">19.000đ</strong>
+              <s data-price-old="starter">49.000đ</s>
+              <span class="plan-save">-30.000đ</span>
+            </div>
+            <p class="plan-note">Học nhanh trong 15 phút, xem lại trọn đời</p>
+            <ul>
+              <li><svg><use href="#i-check"/></svg> <span><b>Video hướng dẫn Flow cơ bản</b> (Từng bước chi tiết)</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Cẩm nang tiếng Việt thực chiến</b> kèm ảnh minh họa</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>03 prompt mẫu chuẩn điện ảnh</b> để thực hành ngay</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Cập nhật nội dung mới</b> miễn phí trọn đời</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Hỗ trợ đa nền tảng:</b> điện thoại, tablet & máy tính</span></li>
+              <li class="off"><svg><use href="#i-x"/></svg> <span>Không kèm tài khoản Veo 3 (Cần tự có tài khoản)</span></li>
+            </ul>
+            <button class="btn btn-ghost btn-block" id="buy-starter" data-open="starter">CHỌN GÓI KHỞI ĐẦU</button>
+          </article>
+
+          <!-- Combo (featured) -->
+          <article class="card plan featured reveal">
+            <span class="ribbon">ĐƯỢC CHỌN NHIỀU NHẤT</span>
+            <h3 class="plan-name">COMBO DÙNG NGAY</h3>
+            <p class="plan-for">Có đủ mọi thứ để tạo video ngay hôm nay, không cần thẻ Visa hay tự đăng ký.</p>
+            <div class="plan-price">
+              <strong data-price="combo">69.000đ</strong>
+              <s data-price-old="combo">79.000đ</s>
+              <span class="plan-save" data-save="combo">-10.000đ</span>
+            </div>
+            <p class="plan-note">Hướng dẫn + tài khoản có sẵn, tiết kiệm nhất</p>
+            <ul>
+              <li><svg><use href="#i-check"/></svg> <span><b>Toàn bộ quyền lợi của Gói Khởi Đầu</b></span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>01 Tài khoản Veo 3</b> có sẵn, đăng nhập dùng ngay</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Hướng dẫn đăng nhập an toàn</b> không lo bị khóa nick</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Bảo hành 1-1 trong 24 giờ</b> (Đổi mới ngay nếu lỗi)</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>03 prompt mẫu chuẩn điện ảnh</b> tạo video đẹp ngay</span></li>
+              <li class="off"><svg><use href="#i-x"/></svg> <span>Chưa bao gồm 10 kịch bản TVC & khuôn mẫu VIP</span></li>
+            </ul>
+            <button class="btn btn-cta btn-block shine" id="buy-combo" data-open="combo">LẤY COMBO DÙNG NGAY</button>
+          </article>
+
+          <!-- Pro -->
+          <article class="card plan reveal" style="border-color: rgba(99, 102, 241, 0.45); background: linear-gradient(180deg, rgba(99, 102, 241, 0.08), rgba(17, 20, 42, 0.75));">
+            <span class="ribbon" style="background: linear-gradient(135deg, var(--primary), #8B5CF6);">TRỌN GÓI A-Z</span>
+            <h3 class="plan-name">GÓI SÁNG TẠO VIP</h3>
+            <p class="plan-for">Dành cho bạn muốn làm video điện ảnh, TVC quảng cáo & video ngắn TikTok triệu view.</p>
+            <div class="plan-price">
+              <strong data-price="pro">149.000đ</strong>
+              <s data-price-old="pro">249.000đ</s>
+              <span class="plan-save" style="background: linear-gradient(135deg, var(--primary), #8B5CF6); color: #fff;">-100.000đ</span>
+            </div>
+            <p class="plan-note" style="color:var(--cyan)">01 Tài khoản + 10 Kịch bản TVC & Trợ lý ChatGPT</p>
+            <ul>
+              <li><svg><use href="#i-check"/></svg> <span><b>01 Tài khoản Veo 3</b> dùng ngay (Bảo hành 1-1 trong 24h)</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>10 Kịch bản TVC & Reels</b> (Chuỗi 2-3 shot nối cảnh 15-20s)</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Bộ 4 Khuôn mẫu Lego</b> "Điền vào chỗ trống" mọi ngành</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Trợ lý ChatGPT Đạo Diễn</b> tự sinh prompt sản phẩm riêng</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Cẩm nang Master VIP A-Z</b> (Ảnh thật + Công thức 4 trụ cột)</span></li>
+              <li><svg><use href="#i-check"/></svg> <span><b>Ưu tiên hỗ trợ kỹ thuật 1-1</b> qua Zalo 0347.999.726</span></li>
+            </ul>
+            <button class="btn btn-primary btn-block" id="buy-pro" data-open="pro">LẤY GÓI VIP TRỌN GÓI</button>
+          </article>
+        </div>
+
+        <div class="guarantee reveal">
+          <svg><use href="#i-shield"/></svg>
+          <p><span class="guarantee-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px;display:inline-block"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> BẢO HÀNH 1-1 MINH BẠCH</span> Tài khoản lỗi không đăng nhập được cam kết <b>ĐỔI MỚI NGAY LẬP TỨC</b>. Mọi vấn đề kỹ thuật, nhắn trực tiếp <a href="https://zalo.me/0347999726" target="_blank" rel="noopener" class="guarantee-zalo"><svg width="16" height="16" style="vertical-align:middle;margin-right:2px;" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg> Zalo: 0347.999.726</a> để được hỗ trợ trong 5 phút.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROMPT SAMPLES ================= -->
+    <section class="section" id="prompt-mau" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">BỘ CÂU LỆNH MẪU THỰC CHIẾN</span>
+          <h2 class="section-title">Prompt Mẫu Thực Chiến — Copy & Dán Vào Flow</h2>
+          <p class="section-desc">Một câu lệnh chuẩn cần mô tả rõ chủ thể, góc máy, ánh sáng và chuyển động. Thử ngay 2 mẫu miễn phí dưới đây.</p>
+        </div>
+        <div class="prompts">
+          <article class="card pcard reveal">
+            <div class="pcard-media" style="border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 16/9; margin-bottom: 4px;">
+              <img src="assets/bds_flycam.jpg" alt="Flycam Biệt thự hồ bơi từ Veo 3" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+            </div>
+            <div class="pcard-top"><span class="chip free">Miễn phí</span><span class="chip">Bất Động Sản</span></div>
+            <h3>Flycam Biệt Thự Hồ Bơi Ven Biển</h3>
+            <div class="pcode" id="p1"><span class="k">Cinematic 8k aerial drone shot</span> flying over a luxury modern coastal villa with a swimming pool, minimalist white architecture, bright sunny day, real estate commercial photography. <span class="l">Camera slowly glides forward</span>, turquoise water reflections, ultra detailed, 60fps.</div>
+            <button class="copy-btn" data-copy="p1" id="copy-p1"><svg><use href="#i-copy"/></svg> SAO CHÉP PROMPT</button>
+          </article>
+          <article class="card pcard reveal">
+            <div class="pcard-media" style="border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 16/9; margin-bottom: 4px;">
+              <img src="assets/real_estate_penthouse.jpg" alt="Căn hộ Penthouse triệu đô từ Veo 3" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy">
+            </div>
+            <div class="pcard-top"><span class="chip free">Miễn phí</span><span class="chip">Nội Thất Penthouse</span></div>
+            <h3>Tour Căn Hộ Penthouse Triệu Đô Đón Nắng Sớm</h3>
+            <div class="pcode" id="p2"><span class="k">Smooth slow dolly shot</span> gliding through a luxurious minimalist penthouse living room, premium tan leather sofa bathed in warm morning sunlight. <span class="l">Camera moves forward</span> toward floor-to-ceiling glass windows revealing panoramic city skyline view, 8k resolution.</div>
+            <button class="copy-btn" data-copy="p2" id="copy-p2"><svg><use href="#i-copy"/></svg> SAO CHÉP PROMPT</button>
+          </article>
+          <article class="card pcard locked reveal">
+            <div class="pcard-media" style="border-radius: var(--r-sm); overflow: hidden; aspect-ratio: 16/9; margin-bottom: 4px;">
+              <img src="assets/fb_espresso_crema.jpg" alt="Tiện ích Lounge 5 sao & F&B từ Veo 3" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.6);" loading="lazy">
+            </div>
+            <div class="pcard-top"><span class="chip">Gói Sáng Tạo VIP</span><span class="chip">BĐS · F&B · Thời Trang</span></div>
+            <h3>10 Kịch Bản TVC Phân Cảnh BĐS & Đa Ngành</h3>
+            <div class="pcode" aria-hidden="true">Ultra macro slow motion 120fps shot of rich concentrated Espresso coffee pouring smoothly into ceramic cup at luxury residential lounge / Elegant female supermodel catwalk Paris runway / Clifftop villa infinity pool sunset...</div>
+            <div class="lock-over">
+              <div>
+                <svg><use href="#i-lock"/></svg>
+                <p>+ 10 kịch bản phân cảnh TVC BĐS, F&B, Thời Trang chuẩn điện ảnh</p>
+                <button class="btn btn-primary btn-sm" data-open="pro" id="unlock-pro">MỞ KHOÁ VỚI GÓI SÁNG TẠO VIP</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="hoi-dap" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">GIẢI ĐÁP THẮC MẮC</span>
+          <h2 class="section-title">Câu Hỏi Thường Gặp Khi Bắt Đầu</h2>
+        </div>
+        <div class="faq">
+          <details class="card" open>
+            <summary>Tôi chưa từng làm video AI, có làm được không?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Được. Hướng dẫn được làm cho người mới hoàn toàn: từ cách đăng nhập Flow, chọn chế độ, dán câu lệnh đến tải video về máy. Chỉ cần biết dùng điện thoại hoặc máy tính cơ bản.</div>
+          </details>
+          <details class="card">
+            <summary>Sau khi chuyển khoản, bao lâu tôi nhận được sản phẩm?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Sau khi xác nhận thanh toán, link tài liệu (và tài khoản nếu mua combo) sẽ được gửi về email bạn đã nhập. Nếu chưa thấy, hãy kiểm tra hộp thư Spam/Quảng cáo hoặc nhắn <a href="https://zalo.me/0347999726" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:underline">Zalo 0347.999.726</a> kèm mã đơn hàng.</div>
+          </details>
+          <details class="card">
+            <summary>Tài khoản Veo 3 dùng được bao lâu? Có giới hạn không?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Mỗi tài khoản có số lượt (credit) tạo video nhất định theo gói của Google. Thông tin cụ thể về số lượt và thời hạn được ghi rõ trong email giao hàng. Tài khoản được bảo hành <span data-warranty>24 giờ</span> nếu không đăng nhập được.</div>
+          </details>
+          <details class="card">
+            <summary>Tôi đã có tài khoản Google AI rồi thì mua gói nào?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Bạn chỉ cần Gói Khởi Đầu 19.000đ để học cách dùng, hoặc mua thêm bộ prompt nâng cao khi muốn làm video đẹp hơn.</div>
+          </details>
+          <details class="card">
+            <summary>Tôi muốn tự làm video cho sản phẩm/ngành hàng riêng của tôi thì sao?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Gói VIP 149k đã bao gồm sẵn <strong>Bộ 4 Khuôn Mẫu "Điền Vào Chỗ Trống"</strong> (dành cho Mỹ phẩm, Quán ăn F&B, Thời trang, Bất động sản...) và <strong>Câu Lệnh ChatGPT Đạo Diễn</strong>. Bạn chỉ cần nhập tên sản phẩm bằng tiếng Việt là AI sẽ tự động viết câu lệnh điện ảnh chuẩn xác 100% cho riêng bạn mà không cần giỏi tiếng Anh!</div>
+          </details>
+          <details class="card">
+            <summary>Sản phẩm này có liên kết với Google không?<svg><use href="#i-plus"/></svg></summary>
+            <div class="ans">Không. Đây là tài liệu hướng dẫn và dịch vụ hỗ trợ độc lập. Google, Veo và Flow là thương hiệu thuộc sở hữu của Google LLC.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="container">
+      <div class="final reveal">
+        <h2>Video AI Đầu Tiên Của Bạn Chỉ Cách <span class="grad-warm">VÀI PHÚT</span></h2>
+        <p>Bắt đầu với 19.000đ hoặc sở hữu ngay Combo có sẵn tài khoản để tạo video ngay hôm nay.</p>
+        <div class="hero-actions" style="justify-content:center;margin-bottom:0">
+          <button class="btn btn-cta shine" id="final-cta" data-open="combo">LẤY COMBO <span data-price="combo">69.000đ</span> — DÙNG NGAY <svg><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-ghost" id="final-starter" data-open="starter">GÓI KHỞI ĐẦU <span data-price="starter">19.000đ</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <p>© <span id="year"></span> VEO3 FLOW. Tài liệu hướng dẫn độc lập.</p>
+        <p style="font-size:0.78rem;margin-top:4px">Google, Veo, Flow là thương hiệu của Google LLC. Chúng tôi không liên kết với Google.</p>
+      </div>
+      <div style="display:flex;gap:20px;align-items:center">
+        <a href="#bang-gia">Bảng giá</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+        <a href="https://zalo.me/0347999726" id="footer-zalo" target="_blank" rel="noopener">Zalo: 0347.999.726</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="mbar">
+    <div><small>COMBO DÙNG NGAY</small><strong data-price="combo">69.000đ</strong></div>
+    <button class="btn btn-cta btn-sm shine" id="mbar-cta" data-open="combo">MUA NGAY</button>
+  </div>
+
+  <!-- ================= CHECKOUT MODAL ================= -->
+  <div class="overlay" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-title">
+    <div class="modal">
+      <!-- Step 1: form -->
+      <div id="co-step-form">
+        <div class="modal-head">
+          <div>
+            <h3 id="co-title">Thanh Toán Đơn Hàng</h3>
+            <p>Sản phẩm được gửi qua email sau khi xác nhận thanh toán</p>
+          </div>
+          <button class="x-btn" data-close id="co-close" aria-label="Đóng"><svg><use href="#i-x"/></svg></button>
+        </div>
+
+        <form id="co-form" novalidate>
+          <div class="pkg-list" role="radiogroup" aria-label="Chọn gói">
+            <label class="pkg"><input type="radio" name="pkg" value="starter"><span class="pkg-info"><b>GÓI KHỞI ĐẦU</b><span>Cẩm nang Google Flow cơ bản</span></span><span class="pkg-price" data-price="starter">19.000đ</span></label>
+            <label class="pkg"><input type="radio" name="pkg" value="combo" checked><span class="pkg-info"><b>COMBO DÙNG NGAY</b><span>Cẩm nang + 01 Tài khoản Veo 3</span></span><span class="pkg-price" data-price="combo">69.000đ</span></label>
+            <label class="pkg"><input type="radio" name="pkg" value="pro"><span class="pkg-info"><b>GÓI SÁNG TẠO VIP</b><span>01 TK Veo 3 + 10 Kịch bản & Mẫu tự tạo</span></span><span class="pkg-price" data-price="pro">149.000đ</span></label>
+          </div>
+
+          <label class="bump" id="bump">
+            <input type="checkbox" id="bump-check">
+            <span>
+              <b>THÊM TÀI KHOẢN VEO 3 — +<span data-price="account">60.000đ</span></b>
+              <p>Chưa có tài khoản Google AI? Thêm vào để dùng ngay sau khi học.</p>
+            </span>
+          </label>
+
+          <div class="field">
+            <label for="co-email">Email nhận sản phẩm *</label>
+            <input type="email" id="co-email" required placeholder="ban@gmail.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="co-phone">Số Zalo (để hỗ trợ khi cần)</label>
+            <input type="tel" id="co-phone" placeholder="09xx xxx xxx" autocomplete="tel" inputmode="tel">
+          </div>
+
+          <div class="total"><span>Tổng thanh toán</span><strong id="co-total">69.000đ</strong></div>
+          <button type="submit" class="btn btn-cta btn-block shine" id="co-submit">TẠO MÃ VIETQR THANH TOÁN</button>
+          <p class="secure"><svg><use href="#i-shield"/></svg> Chuyển khoản trực tiếp qua ngân hàng, không lưu thông tin thẻ</p>
+        </form>
+      </div>
+
+      <!-- Step 2: QR -->
+      <div id="co-step-qr" hidden>
+        <div class="modal-head">
+          <div>
+            <h3>Quét Mã VietQR Để Thanh Toán</h3>
+            <p>Mở app ngân hàng → Quét QR. Số tiền & nội dung đã được điền sẵn.</p>
+          </div>
+          <button class="x-btn" data-close aria-label="Đóng"><svg><use href="#i-x"/></svg></button>
+        </div>
+        <div class="qr-wrap">
+          <div id="qr-slot"></div>
+          <div class="bank-rows">
+            <div class="bank-row"><span>Ngân hàng</span><b id="qr-bank">—</b></div>
+            <div class="bank-row"><span>Số tài khoản</span><b><span id="qr-acc">—</span><button class="mini-copy" data-copy-text="acc" type="button">SAO CHÉP</button></b></div>
+            <div class="bank-row"><span>Chủ tài khoản</span><b id="qr-name">—</b></div>
+            <div class="bank-row"><span>Số tiền</span><b id="qr-amount" style="color:var(--amber-2)">—</b></div>
+            <div class="bank-row"><span>Nội dung CK</span><b><span id="qr-code">—</span><button class="mini-copy" data-copy-text="code" type="button">SAO CHÉP</button></b></div>
+          </div>
+          <p class="qr-note">Vui lòng giữ nguyên <b>nội dung chuyển khoản</b> để đơn hàng được xác nhận nhanh nhất.</p>
+          <button class="btn btn-primary btn-block" id="co-paid" type="button">TÔI ĐÃ CHUYỂN KHOẢN</button>
+          <button class="btn btn-ghost btn-block" id="co-back" type="button" style="margin-top:10px">QUAY LẠI</button>
+        </div>
+      </div>
+
+      <!-- Step 3: done -->
+      <div id="co-step-done" hidden style="text-align:center">
+        <div style="width:64px;height:64px;border-radius:50%;margin:8px auto 16px;display:grid;place-items:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.35);color:var(--amber-2)">
+          <svg style="width:30px;height:30px"><use href="#i-shield"/></svg>
+        </div>
+        <h3 style="font-size:1.35rem;margin-bottom:8px">Đã Ghi Nhận Thông Tin Chuyển Khoản!</h3>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.6;margin-bottom:18px">
+          Hệ thống đang đối soát biến động số dư Techcombank cho mã đơn: <b id="done-code" style="color:var(--cyan);font-family:var(--mono)">—</b>.<br>
+          Tài liệu & Tài khoản Veo 3 sẽ được gửi tự động về: <b id="done-email" style="color:var(--text)">—</b>
+        </p>
+
+        <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:var(--r-md);padding:14px 16px;margin-bottom:20px;text-align:left;font-size:0.86rem;color:#CBD5E1;line-height:1.55;">
+          <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:var(--cyan);margin-bottom:4px;">
+            <svg style="width:16px;height:16px;flex-shrink:0"><use href="#i-bolt"/></svg>
+            <span>NHẬN TÀI LIỆU & TÀI KHOẢN NGAY TRONG 2 PHÚT:</span>
+          </div>
+          Vui lòng bấm nút bên dưới để gửi ảnh chụp biên lai chuyển khoản qua Zalo. Kỹ thuật viên sẽ kiểm tra và kích hoạt ngay cho bạn!
+        </div>
+
+        <a class="btn btn-cta btn-block shine" id="done-zalo" href="https://zalo.me/0347999726" target="_blank" rel="noopener" style="text-decoration:none;margin-bottom:10px;">
+          <svg width="24" height="24" style="margin-right:8px;vertical-align:middle;" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg> GỬI BILL QUA ZALO NHẬN HÀNG NGAY
+        </a>
+        <button class="btn btn-ghost btn-block" data-close style="margin-top:6px" type="button">TÔI SẼ ĐỢI QUA EMAIL (ĐÓNG)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    /* =========================================================
+       CẤU HÌNH — CHỈ CẦN SỬA PHẦN NÀY
+       ========================================================= */
+    const CONFIG = {
+      // Thông tin nhận tiền (VietQR). bankId: mã ngân hàng theo VietQR, vd 'MB', 'VCB', 'TCB', 'ACB'
+      bank: {
+        bankId: 'TCB',             // Techcombank
+        bankName: 'Techcombank',   // Tên ngân hàng
+        accountNo: '88888888888355', // Số tài khoản nhận tiền
+        accountName: 'GIANG BINH MINH' // Tên chủ tài khoản (viết hoa, không dấu)
+      },
+      zalo: '0347999726',          // Số Zalo nhận tư vấn & bảo hành 1-1
+      warranty: '24 giờ',  // thời gian bảo hành tài khoản
+      orderPrefix: 'VF',   // tiền tố nội dung chuyển khoản
+      prices: {
+        starter: 19000,
+        starterOld: 49000,
+        account: 60000,    // giá tài khoản lẻ (dùng cho order bump)
+        combo: 69000,
+        pro: 149000,
+        proOld: 249000
+      },
+      // Tuỳ chọn: URL webhook/Google Apps Script để lưu đơn hàng (để trống nếu chưa có)
+      orderWebhook: ''
+    };
+
+    /* ========================================================= */
+    const $ = (s, el = document) => el.querySelector(s);
+    const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+    const vnd = n => n.toLocaleString('vi-VN') + 'đ';
+    const P = CONFIG.prices;
+
+    // Đồng bộ giá & thông tin từ CONFIG ra giao diện
+    const comboOld = P.starter + P.account;
+    $$('[data-price]').forEach(el => { const k = el.dataset.price; if (P[k] != null) el.textContent = vnd(P[k]); });
+    $$('[data-price-old="starter"]').forEach(el => el.textContent = vnd(P.starterOld));
+    $$('[data-price-old="combo"]').forEach(el => el.textContent = vnd(comboOld));
+    $$('[data-price-old="pro"]').forEach(el => el.textContent = vnd(P.proOld));
+    $$('[data-save="combo"]').forEach(el => {
+      const save = comboOld - P.combo;
+      if (save > 0) el.textContent = '-' + vnd(save); else el.remove();
+    });
+    $$('[data-warranty]').forEach(el => el.textContent = CONFIG.warranty);
+    $('#year').textContent = new Date().getFullYear();
+    const zaloUrl = CONFIG.zalo ? 'https://zalo.me/' + CONFIG.zalo.replace(/\D/g, '') : '#';
+    ['#footer-zalo', '#done-zalo'].forEach(s => $(s).href = zaloUrl);
+
+    // Toast
+    let toastTimer;
+    function toast(msg) {
+      const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+    }
+    async function copyText(text, msg) {
+      try { await navigator.clipboard.writeText(text); toast(msg || 'Đã sao chép!'); }
+      catch { toast('Không sao chép được, hãy bôi đen và copy thủ công'); }
+    }
+
+    // Header scroll state & Sticky mobile CTA (Thông minh: Ẩn khi đang xem Bảng giá hoặc CTA cuối để không che nút)
+    const header = $('#header');
+    const mbar = $('.mbar');
+    const heroActions = $('.hero-actions');
+    const pricingSection = $('#bang-gia');
+    const finalSection = $('.final');
+
+    const onScroll = () => {
+      const scrolled = window.scrollY > 10;
+      header.classList.toggle('scrolled', scrolled);
+      if (mbar && heroActions) {
+        const heroRect = heroActions.getBoundingClientRect();
+        const pastHero = heroRect.bottom < 40;
+        
+        let inDirectCTA = false;
+        if (pricingSection) {
+          const pr = pricingSection.getBoundingClientRect();
+          if (pr.top < window.innerHeight - 80 && pr.bottom > 140) inDirectCTA = true;
+        }
+        if (finalSection) {
+          const fr = finalSection.getBoundingClientRect();
+          if (fr.top < window.innerHeight - 80 && fr.bottom > 100) inDirectCTA = true;
+        }
+        
+        mbar.classList.toggle('show', pastHero && !inDirectCTA);
+      }
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.05, rootMargin: '0px 0px 150px 0px' });
+    $$('.reveal').forEach(el => io.observe(el));
+    setTimeout(() => $$('.reveal:not(.in)').forEach(el => el.classList.add('in')), 600);
+
+    // Copy prompt buttons
+    $$('[data-copy]').forEach(btn => btn.addEventListener('click', () => copyText($('#' + btn.dataset.copy).innerText.trim(), 'Đã sao chép prompt — dán vào Flow nhé!')));
+
+    /* ---------- Hero typing demo & Scene switcher (Option 1 + Option 3) ---------- */
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const demos = [
+      {
+        title: '🚁 Flycam Biệt Thự',
+        text: 'Cinematic 8k aerial drone shot flying over a luxury modern coastal villa with a swimming pool, minimalist white architecture, bright sunny day, real estate commercial photography, slow dolly forward, 4k 60fps…',
+        cam: 'CAM: slow aerial dolly'
+      },
+      {
+        title: '🏢 Penthouse VIP',
+        text: 'Smooth slow dolly through a luxurious minimalist penthouse living room, premium leather sofa bathed in warm morning sunlight, panoramic city skyline view through floor-to-ceiling windows, 8k…',
+        cam: 'CAM: slow architectural dolly'
+      },
+      {
+        title: '🌲 BĐS Nghỉ Dưỡng',
+        text: 'Breathtaking 8k aerial drone shot sweeping over lush green terraced rice fields in Sapa at golden hour sunset, dramatic clouds, majestic mountains, eco-resort landscape, cinematic lighting…',
+        cam: 'CAM: sweeping aerial drone'
+      }
+    ];
+
+    const typer = $('#typer'), prog = $('#prog'), pct = $('#prog-pct'), progText = $('#prog-text'), hudCam = $('#hud-cam');
+    const slides = $$('.cinema-slide', $('#cinema-viewport'));
+    const sceneTabs = $$('.scene-tab');
+    let currentScene = 0;
+    let typeTimer = null, runTimer = null, loopTimer = null;
+    let userInteracted = false, resumeTimeout = null;
+
+    function setSceneVisuals(idx) {
+      currentScene = idx;
+      slides.forEach((sl, i) => sl.classList.toggle('active', i === idx));
+      sceneTabs.forEach((tb, i) => {
+        const isActive = i === idx;
+        tb.classList.toggle('active', isActive);
+        tb.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      if (hudCam) hudCam.textContent = demos[idx].cam;
+    }
+
+    function runScene(idx) {
+      clearTimeout(typeTimer);
+      clearInterval(runTimer);
+      clearTimeout(loopTimer);
+
+      setSceneVisuals(idx);
+      const d = demos[idx];
+
+      if (reduceMotion) {
+        typer.textContent = d.text;
+        prog.style.width = '100%';
+        pct.textContent = '100%';
+        progText.textContent = 'Hoàn tất — video 1080p sẵn sàng';
+        return;
+      }
+
+      let i = 0;
+      prog.style.transition = 'none';
+      prog.style.width = '0';
+      pct.textContent = '0%';
+      progText.textContent = 'Đang nhập câu lệnh…';
+      typer.innerHTML = '<span class="caret"></span>';
+
+      function typeChar() {
+        i++;
+        typer.innerHTML = d.text.slice(0, i) + '<span class="caret"></span>';
+        if (i < d.text.length) {
+          typeTimer = setTimeout(typeChar, 24);
+        } else {
+          progText.textContent = 'Veo 3 đang render video 1080p…';
+          let p = 0;
+          runTimer = setInterval(() => {
+            p = Math.min(100, p + 2 + Math.random() * 4);
+            prog.style.width = p + '%';
+            pct.textContent = Math.round(p) + '%';
+            if (p >= 100) {
+              clearInterval(runTimer);
+              progText.textContent = 'Hoàn tất — sẵn sàng tải về';
+              loopTimer = setTimeout(() => {
+                if (!userInteracted) {
+                  runScene((currentScene + 1) % demos.length);
+                }
+              }, 3800);
+            }
+          }, 85);
+        }
+      }
+      typeChar();
+    }
+
+    // User clicks scene tabs (Option 3)
+    sceneTabs.forEach(tb => {
+      tb.addEventListener('click', () => {
+        const targetIdx = parseInt(tb.dataset.scene, 10);
+        userInteracted = true;
+        clearTimeout(resumeTimeout);
+        runScene(targetIdx);
+        resumeTimeout = setTimeout(() => {
+          userInteracted = false;
+          runScene((currentScene + 1) % demos.length);
+        }, 8500);
+      });
+    });
+
+    // Sparkle button re-runs current scene
+    const genPlayBtn = $('#gen-play-btn');
+    if (genPlayBtn) {
+      genPlayBtn.addEventListener('click', () => {
+        runScene(currentScene);
+      });
+    }
+
+    // Initialize first scene
+    runScene(0);
+
+    /* ---------- Checkout ---------- */
+    const overlay = $('#checkout');
+    const form = $('#co-form');
+    const bump = $('#bump'), bumpCheck = $('#bump-check');
+    const steps = { form: $('#co-step-form'), qr: $('#co-step-qr'), done: $('#co-step-done') };
+    let lastFocus = null, order = null;
+
+    function showStep(name) { Object.entries(steps).forEach(([k, el]) => el.hidden = k !== name); }
+    function selectedPkg() { return form.pkg.value; }
+    function calcTotal() {
+      const pkg = selectedPkg();
+      bump.hidden = pkg !== 'starter';
+      let total = P[pkg];
+      if (pkg === 'starter' && bumpCheck.checked) total += P.account;
+      $('#co-total').textContent = vnd(total);
+      return total;
+    }
+    form.addEventListener('change', calcTotal);
+
+    function openCheckout(pkg) {
+      lastFocus = document.activeElement;
+      const radio = form.querySelector(`input[value="${pkg}"]`);
+      if (radio) radio.checked = true;
+      bumpCheck.checked = false;
+      calcTotal(); showStep('form');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
+      setTimeout(() => $('#co-email').focus(), 150);
+    }
+    function closeCheckout() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
+      if (lastFocus) lastFocus.focus();
+    }
+    $$('[data-open]').forEach(b => b.addEventListener('click', () => openCheckout(b.dataset.open)));
+    overlay.addEventListener('click', e => { if (e.target === overlay || e.target.closest('[data-close]')) closeCheckout(); });
+    addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeCheckout(); });
+    const h = location.hash.replace('#', '');
+    if (['starter', 'combo', 'pro'].includes(h)) setTimeout(() => openCheckout(h), 150);
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const email = $('#co-email');
+      if (!email.value || !email.checkValidity()) { email.focus(); toast('Vui lòng nhập email hợp lệ'); return; }
+      const pkg = selectedPkg();
+      const amount = calcTotal();
+      const code = CONFIG.orderPrefix + Date.now().toString().slice(-6) + Math.floor(Math.random() * 10);
+      order = { code, pkg, bump: pkg === 'starter' && bumpCheck.checked, amount, email: email.value.trim(), phone: $('#co-phone').value.trim(), createdAt: new Date().toISOString() };
+
+      // Gửi đơn về webhook (nếu có cấu hình)
+      if (CONFIG.orderWebhook) {
+        fetch(CONFIG.orderWebhook, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(order) }).catch(() => {});
+      }
+      renderQR(); showStep('qr');
+    });
+
+    function renderQR() {
+      const b = CONFIG.bank, slot = $('#qr-slot');
+      $('#qr-amount').textContent = vnd(order.amount);
+      $('#qr-code').textContent = order.code;
+      if (b.bankId && b.accountNo) {
+        const url = `https://img.vietqr.io/image/${encodeURIComponent(b.bankId)}-${encodeURIComponent(b.accountNo)}-compact2.png?amount=${order.amount}&addInfo=${encodeURIComponent(order.code)}&accountName=${encodeURIComponent(b.accountName)}`;
+        slot.innerHTML = `<img class="qr-img" src="${url}" alt="Mã VietQR thanh toán ${vnd(order.amount)}" width="240" height="240">`;
+        $('#qr-bank').textContent = b.bankName || b.bankId;
+        $('#qr-acc').textContent = b.accountNo;
+        $('#qr-name').textContent = b.accountName || '—';
+      } else {
+        slot.innerHTML = '<div class="qr-missing">Chưa cấu hình tài khoản ngân hàng.<br>Hãy điền CONFIG.bank trong file HTML.</div>';
+      }
+    }
+    $$('[data-copy-text]').forEach(btn => btn.addEventListener('click', () => {
+      const v = btn.dataset.copyText === 'acc' ? CONFIG.bank.accountNo : order?.code;
+      if (v) copyText(v);
+    }));
+    $('#co-back').addEventListener('click', () => showStep('form'));
+    $('#co-paid').addEventListener('click', () => {
+      $('#done-email').textContent = order.email;
+      $('#done-code').textContent = order.code;
+      showStep('done');
+    });
+  </script>
+
+  <!-- Floating Contact Widget -->
+  <style>
+    .float-contact { position: fixed; bottom: 20px; right: 20px; z-index: 900; display: flex; flex-direction: column; gap: 12px; }
+    .float-btn { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,0.5); transition: all 0.3s; position: relative; }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-zalo { background: #0068FF; }
+    .float-zalo svg { fill: #fff; width: 34px; height: 34px; }
+    .float-pulse { position: absolute; inset: 0; border-radius: 50%; border: 2px solid #0068FF; animation: float-pulse 2s infinite; pointer-events: none; }
+    @keyframes float-pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
+    .float-tooltip { position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 14px; background: #111827; border: 1px solid var(--border-strong); padding: 8px 12px; border-radius: 8px; white-space: nowrap; font-size: 0.85rem; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+    .float-tooltip::after { content: ''; position: absolute; top: 50%; right: -5px; transform: translateY(-50%); border-width: 5px 0 5px 6px; border-style: solid; border-color: transparent transparent transparent var(--border-strong); }
+    .float-btn:hover .float-tooltip { opacity: 1; }
+    @media (max-width: 768px) { .float-contact { bottom: 90px; right: 14px; } .float-btn { width: 48px; height: 48px; } .float-zalo svg { width: 28px; height: 28px; } .float-tooltip { display: none; } }
+  </style>
+  <div class="float-contact">
+    <a href="https://zalo.me/0347999726" target="_blank" class="float-btn float-zalo">
+      <div class="float-pulse"></div>
+      <svg width="34" height="34" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/>
+<path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M49.834 26.474V27.199C49.834 33.266 48.943 36.811 47.256 39.958C45.569 43.105 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C17.837 49.834 14.561 49.238 11.81 48.097L7.275 43.427L49.834 26.474Z" fill="#001A33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.779 43.589C10.102 43.846 13.006 43.184 15.068 42.183C24.023 47.132 38.02 46.895 46.492 41.473C46.821 40.98 47.128 40.468 47.413 39.936C49.106 36.778 50 33.22 50 27.132V22.718C50 16.629 49.106 13.071 47.413 9.913C45.739 6.754 43.246 4.281 40.088 2.588C36.929 0.894 33.371 0 27.283 0H22.85C17.664 0 14.298 0.653 11.47 1.899C11.315 2.037 11.164 2.178 11.015 2.321C2.717 10.32 2.087 27.659 9.123 37.078C9.131 37.092 9.139 37.106 9.149 37.12C10.233 38.719 9.187 41.515 7.551 43.152C7.284 43.399 7.379 43.551 7.779 43.589Z" fill="white"/>
+<path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="#0068FF"/>
+<path d="M32.942 29.095H34.326V17H32.24V28.393C32.24 28.773 32.544 29.095 32.942 29.095Z" fill="#0068FF"/>
+<path d="M25.814 19.692C23.198 19.692 21.075 21.816 21.075 24.432C21.075 27.048 23.198 29.171 25.814 29.171C28.43 29.171 30.553 27.048 30.553 24.432C30.572 21.816 28.449 19.692 25.814 19.692ZM25.814 27.218C24.279 27.218 23.027 25.967 23.027 24.432C23.027 22.896 24.279 21.645 25.814 21.645C27.35 21.645 28.601 22.896 28.601 24.432C28.601 25.967 27.369 27.218 25.814 27.218Z" fill="#0068FF"/>
+<path d="M40.487 19.616C37.852 19.616 35.71 21.758 35.71 24.393C35.71 27.029 37.852 29.171 40.487 29.171C43.122 29.171 45.264 27.029 45.264 24.393C45.264 21.758 43.122 19.616 40.487 19.616ZM40.487 27.218C38.932 27.218 37.681 25.967 37.681 24.412C37.681 22.858 38.932 21.607 40.487 21.607C42.041 21.607 43.292 22.858 43.292 24.412C43.292 25.967 42.041 27.218 40.487 27.218Z" fill="#0068FF"/>
+<path d="M29.456 29.094H30.575V19.957H28.622V28.279C28.622 28.715 29.001 29.094 29.456 29.094Z" fill="#0068FF"/>
+</svg>
+      <div class="float-tooltip">Hỗ trợ & Mua Hàng 24/7</div>
+    </a>
+  </div>
+</body>
+</html>
