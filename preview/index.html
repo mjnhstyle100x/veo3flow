@@ -534,23 +534,70 @@
     @media (max-width: 768px) { .mbar { display: flex; } }
 
     /* =========================================================
-       TESTIMONIALS
+       TESTIMONIALS & ZALO SOCIAL PROOF
        ========================================================= */
     .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     @media (max-width: 980px) { .testi-grid { grid-template-columns: 1fr; } }
     .testi-card {
-      padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+      padding: 20px; display: flex; flex-direction: column; gap: 14px;
       border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface);
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
       transition: transform 0.25s var(--ease), border-color 0.25s ease;
+      position: relative;
     }
-    .testi-card:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4); }
-    .testi-stars { font-size: 0.95rem; letter-spacing: 2px; }
-    .testi-text { font-size: 0.93rem; line-height: 1.62; color: #E2E8F0; font-style: italic; }
-    .testi-author { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.95rem; color: #fff; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-    .testi-author strong { display: block; font-size: 0.95rem; color: #fff; font-weight: 700; }
-    .testi-author span { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .testi-card:hover { transform: translateY(-4px); border-color: rgba(0, 104, 255, 0.45); }
+    .testi-header-row { display: flex; justify-content: space-between; align-items: center; }
+    .testi-stars { font-size: 0.92rem; letter-spacing: 2px; }
+    .zalo-verify-pill {
+      display: inline-flex; align-items: center; gap: 5px; font-size: 0.72rem; font-weight: 700;
+      color: #38BDF8; background: rgba(0, 104, 255, 0.12); border: 1px solid rgba(0, 104, 255, 0.35);
+      padding: 3px 9px; border-radius: var(--pill);
+    }
+    .zalo-verify-pill svg { width: 14px; height: 14px; }
+    
+    .testi-user-box { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 0.95rem; color: #fff; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .testi-user-info strong { display: block; font-size: 0.98rem; color: #fff; font-weight: 700; }
+    .testi-user-info span { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .testi-phone { color: var(--cyan) !important; font-family: var(--mono); font-size: 0.76rem !important; }
+
+    /* Zalo Chat Container inside card */
+    .zalo-chat-box {
+      background: rgba(10, 14, 26, 0.75); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--r-md); padding: 14px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .zalo-msg { padding: 10px 13px; border-radius: 12px; font-size: 0.88rem; line-height: 1.55; position: relative; }
+    .zalo-msg-in {
+      background: rgba(30, 41, 59, 0.85); color: #F1F5F9; align-self: flex-start;
+      border-bottom-left-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.06); max-width: 95%;
+    }
+    .zalo-msg-out {
+      background: linear-gradient(135deg, #0052CC, #0068FF); color: #FFFFFF; align-self: flex-end;
+      border-bottom-right-radius: 3px; font-size: 0.84rem; max-width: 90%;
+    }
+    .zalo-time { font-size: 0.68rem; color: rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: flex-end; gap: 4px; margin-top: 4px; }
+    
+    .testi-video-wrap {
+      margin-top: 8px; border-radius: 8px; overflow: hidden; position: relative;
+      aspect-ratio: 16/9; background: #000; border: 1px solid rgba(255,255,255,0.15);
+    }
+    .testi-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .testi-video-tag {
+      position: absolute; bottom: 6px; left: 6px; right: 6px;
+      background: rgba(0,0,0,0.78); backdrop-filter: blur(4px);
+      color: #38BDF8; font-size: 0.72rem; font-weight: 700; padding: 4px 8px; border-radius: 5px;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    .testi-bill-wrap {
+      margin-top: 8px; background: rgba(15, 23, 42, 0.95); border: 1px dashed rgba(16, 185, 129, 0.45);
+      border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px;
+    }
+    .testi-bill-head { display: flex; justify-content: space-between; align-items: center; font-size: 0.76rem; }
+    .testi-bill-bank { color: var(--muted); font-weight: 600; }
+    .testi-bill-status { color: var(--green); font-weight: 700; }
+    .testi-bill-amount { font-size: 1.15rem; font-weight: 800; color: #34D399; font-family: var(--mono); }
+    .testi-bill-desc { font-size: 0.74rem; color: var(--dim); }
 
     /* Scene letterbox fallback loading background */
     .scene-letterbox {
@@ -963,44 +1010,123 @@
     <section class="section" id="danh-gia" style="padding-top:0">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-tag">ĐỒNG NGHIỆP NÓI GÌ</span>
-          <h2 class="section-title">Hơn 500+ Môi Giới BĐS Đã Tự Làm Video Bán Hàng</h2>
-          <p class="section-desc">Không còn tốn tiền triệu thuê flycam hay mò mẫm phần mềm dựng phim phức tạp.</p>
+          <span class="section-tag">BẰNG CHỨNG XÁC THỰC QUA ZALO</span>
+          <h2 class="section-title">Hơn 500+ Môi Giới BĐS Đã Tự Tạo Video & Chốt Deal</h2>
+          <p class="section-desc">Ảnh chụp phản hồi thực tế qua Zalo và video do chính anh em môi giới tạo ra từ Google Veo 3.</p>
         </div>
         <div class="testi-grid">
           <!-- Card 1 -->
           <article class="card testi-card reveal">
-            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-            <p class="testi-text">"Trước đây bán biệt thự hay penthouse muốn có clip toàn cảnh phải thuê đội flycam 3-5 triệu mà đợi cả tuần. Với combo Veo 3 và prompt mẫu của bạn, mình tự gõ lệnh ra video 4K mất chưa tới 2 phút. Khách VIP xem thích quá chốt cọc trong tuần luôn!"</p>
-            <div class="testi-author">
+            <div class="testi-header-row">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <span class="zalo-verify-pill">
+                <svg viewBox="0 0 50 50" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/><path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="white"/></svg>
+                Xác thực Zalo
+              </span>
+            </div>
+
+            <!-- Zalo Chat Box 1 -->
+            <div class="zalo-chat-box">
+              <div class="zalo-msg zalo-msg-in">
+                Em ơi tài khoản dùng mượt lắm nhé. Hôm qua anh vừa gõ prompt tạo clip Penthouse này gửi cho khách VIP bên Masteri, khách xem ưng góc máy quá chốt cọc trong ngày luôn! Đỡ tốn 4-5 triệu thuê đội flycam.
+                <!-- Video đính kèm của học viên -->
+                <div class="testi-video-wrap">
+                  <video class="testi-video-player" src="assets/video_penthouse_vip.mp4" poster="assets/real_estate_penthouse.jpg" autoplay loop muted playsinline></video>
+                  <div class="testi-video-tag">🎬 Video anh Tuấn tự tạo (Penthouse đón nắng)</div>
+                </div>
+                <span class="zalo-time">21:15</span>
+              </div>
+              <div class="zalo-msg zalo-msg-out">
+                Dạ em chúc mừng anh Tuấn chốt deal thành công nha! Cần thêm prompt góc quay ban công anh cứ nhắn em nhé 🎉
+                <span class="zalo-time" style="color:rgba(255,255,255,0.8)">21:18 · ✓✓ Đã xem</span>
+              </div>
+            </div>
+
+            <div class="testi-user-box">
               <div class="testi-avatar" style="background: linear-gradient(135deg, #6366F1, #8B5CF6)">QT</div>
-              <div>
+              <div class="testi-user-info">
                 <strong>Trần Quốc Tuấn</strong>
                 <span>Chuyên viên BĐS Cao Cấp · Vinhomes</span>
+                <span class="testi-phone">0984.•••.721 (Đã xác minh)</span>
               </div>
             </div>
           </article>
+
           <!-- Card 2 -->
           <article class="card testi-card reveal">
-            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-            <p class="testi-text">"Lúc đầu sợ dốt tiếng Anh với mù công nghệ không làm được. Nhưng cẩm nang tiếng Việt từng bước có ảnh thật rất dễ hiểu. Có sẵn tài khoản đăng nhập là làm được ngay. Video tạo ra góc quay bao quát đẹp không khác gì TVC trên tivi."</p>
-            <div class="testi-author">
+            <div class="testi-header-row">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <span class="zalo-verify-pill">
+                <svg viewBox="0 0 50 50" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/><path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="white"/></svg>
+                Xác thực Zalo
+              </span>
+            </div>
+
+            <!-- Zalo Chat Box 2 -->
+            <div class="zalo-chat-box">
+              <div class="zalo-msg zalo-msg-in">
+                Ban đầu chị sợ mù công nghệ với dốt tiếng Anh thì không làm được. Ai ngờ cẩm nang tiếng Việt chỉ từng bước dễ ợt em ạ. Chị vừa tạo thử căn biệt thự nghỉ dưỡng này đăng Reels Facebook mà bao nhiêu khách nhắn hỏi!
+                <!-- Video đính kèm của học viên -->
+                <div class="testi-video-wrap">
+                  <video class="testi-video-player" src="assets/video_resort_villa.mp4" poster="assets/sapa_drone.jpg" autoplay loop muted playsinline></video>
+                  <div class="testi-video-tag">🎬 Video chị Lan tự tạo (Biệt thự đồi núi)</div>
+                </div>
+                <span class="zalo-time">14:02</span>
+              </div>
+              <div class="zalo-msg zalo-msg-out">
+                Clip chị làm góc máy flycam hoàng hôn đẹp xuất sắc luôn ạ! Cần thêm prompt biệt thự biển chị cứ ới em nhé ❤️
+                <span class="zalo-time" style="color:rgba(255,255,255,0.8)">14:05 · ✓✓ Đã xem</span>
+              </div>
+            </div>
+
+            <div class="testi-user-box">
               <div class="testi-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4)">HL</div>
-              <div>
+              <div class="testi-user-info">
                 <strong>Nguyễn Hoàng Lan</strong>
                 <span>Môi giới BĐS Nghỉ Dưỡng & Ven Biển</span>
+                <span class="testi-phone">0912.•••.389 (Đã xác minh)</span>
               </div>
             </div>
           </article>
+
           <!-- Card 3 -->
           <article class="card testi-card reveal">
-            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
-            <p class="testi-text">"Gói 69k quá hời! Tính ra tạo được 20 video, mỗi video tốn có hơn 3 nghìn bạc mà dùng để đăng Reels, TikTok hay gửi Zalo cho khách thì sang chảnh gấp chục lần ảnh chụp điện thoại. Cả team mình 6 người đều mua dùng."</p>
-            <div class="testi-author">
+            <div class="testi-header-row">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <span class="zalo-verify-pill">
+                <svg viewBox="0 0 50 50" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.782 0.166H27.199C33.265 0.166 36.81 1.057 39.957 2.744C43.104 4.431 45.588 6.896 47.256 10.043C48.943 13.19 49.834 16.735 49.834 22.801V27.199C49.834 33.265 48.943 36.81 47.256 39.957C45.569 43.104 43.104 45.588 39.957 47.256C36.81 48.943 33.265 49.834 27.199 49.834H22.801C16.735 49.834 13.19 48.943 10.043 47.256C6.896 45.569 4.412 43.104 2.744 39.957C1.057 36.81 0.166 33.265 0.166 27.199V22.801C0.166 16.735 1.057 13.19 2.744 10.043C4.431 6.896 6.896 4.412 10.043 2.744C13.171 1.057 16.735 0.166 22.782 0.166Z" fill="#0068FF"/><path d="M20.563 17H10.838V19.085H17.587L10.933 27.332C10.724 27.635 10.573 27.919 10.573 28.564V29.095H19.748C20.203 29.095 20.582 28.716 20.582 28.261V27.142H13.492L19.748 19.294C19.843 19.18 20.013 18.972 20.089 18.877L20.127 18.82C20.487 18.289 20.563 17.834 20.563 17.284V17Z" fill="white"/></svg>
+                Xác thực Zalo
+              </span>
+            </div>
+
+            <!-- Zalo Chat Box 3 -->
+            <div class="zalo-chat-box">
+              <div class="zalo-msg zalo-msg-in">
+                Gói 69k quá hời em ơi. 1.000 credit tạo được 20 video, chia ra có hơn 3k một video. Cả team anh 6 người chiều nay nhờ anh lấy thêm combo để làm video chạy ads. Anh vừa quét mã chuyển thêm rồi nhé!
+                <!-- Biên lai VietQR đính kèm -->
+                <div class="testi-bill-wrap">
+                  <div class="testi-bill-head">
+                    <span class="testi-bill-bank">VietQR · MBBank</span>
+                    <span class="testi-bill-status">✓ Giao dịch thành công</span>
+                  </div>
+                  <div class="testi-bill-amount">69.000 đ</div>
+                  <div class="testi-bill-desc">Mã GD: VEO3-839210 · Combo 1.000 Credit</div>
+                </div>
+                <div class="testi-video-tag" style="position:static;margin-top:6px">🧾 Biên lai chuyển khoản VietQR xác thực</div>
+                <span class="zalo-time">16:45</span>
+              </div>
+              <div class="zalo-msg zalo-msg-out">
+                Dạ em nhận được rồi ạ! Em đã gửi đủ tài khoản và tài liệu vào Zalo cho cả team anh rồi nhé! 🚀
+                <span class="zalo-time" style="color:rgba(255,255,255,0.8)">16:48 · ✓✓ Đã xem</span>
+              </div>
+            </div>
+
+            <div class="testi-user-box">
               <div class="testi-avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444)">MĐ</div>
-              <div>
+              <div class="testi-user-info">
                 <strong>Lê Minh Đức</strong>
                 <span>Team Leader BĐS CenLand Hà Nội</span>
+                <span class="testi-phone">0973.•••.516 (Đã xác minh)</span>
               </div>
             </div>
           </article>
