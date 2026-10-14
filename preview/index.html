@@ -298,6 +298,10 @@
       pointer-events: none;
     }
     .cinema-slide.active { opacity: 1; pointer-events: auto; }
+    .cinema-video {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center; display: block;
+    }
     .cinema-img {
       position: absolute; inset: -5%;
       background-image: var(--bg);
@@ -860,16 +864,16 @@
           <!-- 16:9 Cinematic Viewport (Option 1) -->
           <div class="preview scene-letterbox">
             <div class="cinema-viewport" id="cinema-viewport">
-              <div class="cinema-slide active" style="--bg: url('assets/bds_flycam.jpg')">
-                <div class="cinema-img ken-burns-1"></div>
+              <div class="cinema-slide active">
+                <video class="cinema-video" src="assets/video_villa_coastal.mp4" poster="assets/bds_flycam.jpg" autoplay loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
-              <div class="cinema-slide" style="--bg: url('assets/real_estate_penthouse.jpg')">
-                <div class="cinema-img ken-burns-2"></div>
+              <div class="cinema-slide">
+                <video class="cinema-video" src="assets/video_penthouse_vip.mp4" poster="assets/real_estate_penthouse.jpg" loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
-              <div class="cinema-slide" style="--bg: url('assets/sapa_drone.jpg')">
-                <div class="cinema-img ken-burns-3"></div>
+              <div class="cinema-slide">
+                <video class="cinema-video" src="assets/video_resort_villa.mp4" poster="assets/sapa_drone.jpg" loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
             </div>
@@ -1451,7 +1455,19 @@
 
     function setSceneVisuals(idx) {
       currentScene = idx;
-      slides.forEach((sl, i) => sl.classList.toggle('active', i === idx));
+      slides.forEach((sl, i) => {
+        const isActive = i === idx;
+        sl.classList.toggle('active', isActive);
+        const vid = sl.querySelector('video');
+        if (vid) {
+          if (isActive) {
+            vid.currentTime = 0;
+            vid.play().catch(() => {});
+          } else {
+            vid.pause();
+          }
+        }
+      });
       sceneTabs.forEach((tb, i) => {
         const isActive = i === idx;
         tb.classList.toggle('active', isActive);
