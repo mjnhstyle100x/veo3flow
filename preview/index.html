@@ -1374,7 +1374,7 @@
           <label class="bump" id="bump">
             <input type="checkbox" id="bump-check">
             <span>
-              <b>THÊM TÀI KHOẢN VEO 3 DÙNG RIÊNG — +<span data-price="account">60.000đ</span></b>
+              <b>THÊM TÀI KHOẢN VEO 3 DÙNG RIÊNG — +<span data-price="account">50.000đ</span></b>
               <p>Cấp riêng mật khẩu, có 1.000 Credit dùng trong tháng (reset cuối tháng), bảo hành 1-1.</p>
             </span>
           </label>
@@ -1474,8 +1474,9 @@
       prices: {
         starter: 19000,
         starterOld: 49000,
-        account: 60000,    // giá tài khoản lẻ (dùng cho order bump)
+        account: 50000,    // giá tài khoản lẻ (dùng cho order bump: 19k + 50k = 69k)
         combo: 69000,
+        comboOld: 79000,   // giá gốc combo
         pro: 149000,
         proOld: 249000
       },
@@ -1490,7 +1491,7 @@
     const P = CONFIG.prices;
 
     // Đồng bộ giá & thông tin từ CONFIG ra giao diện
-    const comboOld = P.starter + P.account;
+    const comboOld = P.comboOld || 79000;
     $$('[data-price]').forEach(el => { const k = el.dataset.price; if (P[k] != null) el.textContent = vnd(P[k]); });
     $$('[data-price-old="starter"]').forEach(el => el.textContent = vnd(P.starterOld));
     $$('[data-price-old="combo"]').forEach(el => el.textContent = vnd(comboOld));
