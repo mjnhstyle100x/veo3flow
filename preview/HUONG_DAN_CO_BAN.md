@@ -63,40 +63,40 @@ Nhìn xuống thanh công cụ dưới đáy màn hình, bấm vào nút thông 
 
 ---
 
-## 🍔 MẸO TỰ NGHĨ CÂU LỆNH (CÔNG THỨC CHIẾC BÁNH MÌ KẸP 3 TẦNG)
+## 🍔 MẸO TỰ NGHĨ CÂU LỆNH (CÔNG THỨC CHIẾC BÁNH MÌ KẸP 3 TẦNG CHO BĐS)
 
-Nếu sau này bạn muốn tự tạo video theo ý riêng của mình, chỉ cần nhớ công thức 3 tầng này:
+Nếu sau này bạn muốn tự tạo video theo ý riêng của mình cho từng căn nhà, dự án, bạn không cần phải giỏi tiếng Anh. Chỉ cần nhớ công thức 3 tầng này:
 
-* **Tầng 1 (Cái gì/Con gì?):** Bạn muốn video có ai?  
-  *(Ví dụ: Một chú mèo con lông xù màu cam, hoặc Một chai nước hoa, hoặc Chiếc xe ô tô thể thao).*
-* **Tầng 2 (Đang làm gì, ở đâu?):**  
-  *(Ví dụ: Đang đi dạo trong công viên đầy nắng vàng, hoặc Đang đứng trên mặt đá cẩm thạch).*
-* **Tầng 3 (Dán câu thần chú làm đẹp):** Luôn dán thêm cụm từ này vào cuối câu lệnh:  
-  `cinematic, 4k 60fps, ultra realistic, beautiful lighting`  
-  *(Câu này để ra lệnh cho AI phải vẽ nét căng, chuyển động mượt mà, không bị mờ).*
+* **Tầng 1 – Chủ thể BĐS (Cái gì?):** Mô tả công trình hoặc không gian nội thất  
+  *(Ví dụ: Căn biệt thự hiện đại màu trắng 3 tầng có hồ bơi vô cực, Phòng khách căn hộ Penthouse sang trọng ốp đá marble, Dãy shophouse thương mại mặt tiền đại lộ).*
+* **Tầng 2 – Bối cảnh & Góc máy (Ở đâu, quay thế nào?):** Mô tả cảnh quan xung quanh, thời điểm ánh sáng và cách di chuyển camera  
+  *(Ví dụ: Nằm sát bờ biển xanh ngắt lúc nắng sớm bình minh, camera flycam bay lướt chậm từ trên cao xuống).*
+* **Tầng 3 – Câu thần chú làm đẹp BĐS (Giữ cố định):** Luôn gắn cụm từ khóa này vào cuối câu lệnh:  
+  `architectural cinematography, smooth aerial dolly shot, natural golden hour lighting, photorealistic, 8k ultra HD`  
+  *(Cụm từ này ra lệnh cho AI phải vẽ công trình sắc nét, góc quay máy bay mượt mà và ánh sáng chuẩn điện ảnh).*
 
-> 💡 **Mẹo lười:** Bạn chỉ cần gõ tiếng Việt Tầng 1 và Tầng 2 vào [Google Dịch](https://translate.google.com), dịch sang tiếng Anh, rồi dán thêm câu thần chú Tầng 3 vào đuôi là xong!
+> 💡 **Mẹo lười cho Môi giới BĐS:** Bạn chỉ cần gõ tiếng Việt Tầng 1 và Tầng 2 vào [Google Dịch](https://translate.google.com), dịch sang tiếng Anh, rồi dán thêm câu thần chú Tầng 3 vào đuôi là xong!
 
 ---
 
-## 🎬 3 CÂU LỆNH MẪU "MÌ ĂN LIỀN" (BẤM COPY LÀ CÓ VIDEO ĐẸP NGAY)
+## 🎬 3 CÂU LỆNH MẪU BĐS "MÌ ĂN LIỀN" (BẤM COPY LÀ CÓ VIDEO ĐẸP NGAY)
 
-### Mẫu 1: Chú Mèo Con Dễ Thương Lái Xe (Dễ thương triệu view TikTok)
-> *Mô tả: Một chú mèo con đội mũ bảo hiểm tí hon đang ngồi lái xe tay ga mini trên phố nắng đẹp.*
+### Mẫu 01 – Chủ đề: BĐS Nghỉ Dưỡng / Ven Biển (Flycam Biệt Thự Hồ Bơi Vô Cực)
+> *Mô tả tiếng Việt: Cảnh flycam góc rộng bay lướt chậm qua căn biệt thự trắng hiện đại ven biển, hồ bơi vô cực xanh ngọc bích phản chiếu nắng vàng, hàng dừa xanh mát và biển khơi phía xa.*
 ```text
-A cute fluffy ginger kitten wearing a tiny vintage motorcycle helmet, riding a small pastel scooter through a sunny park path, funny and adorable facial expression, slow motion, shallow depth of field, bright warm sunlight, Pixar cinematic animation style, 4k 60fps.
+Cinematic aerial drone shot, slow forward dolly movement over a modern luxury white coastal villa with a turquoise infinity pool, surrounded by lush palm trees overlooking a crystal-clear ocean under warm golden morning sunlight, architectural photography, ultra realistic, 4k 60fps.
 ```
 
-### Mẫu 2: Review Chai Nước Hoa Thủy Tinh (Bán hàng mỹ phẩm cao cấp)
-> *Mô tả: Chai nước hoa thủy tinh sang trọng đứng trên đá cẩm thạch đen ướt, máy quay lượn vòng 90 độ êm ái.*
+### Mẫu 02 – Chủ đề: Căn Hộ Cao Cấp (Tour Nội Thất Phòng Khách Penthouse Triệu Đô)
+> *Mô tả tiếng Việt: Máy quay lướt nhẹ nhàng vào không gian phòng khách Penthouse tối giản sang trọng, sofa da màu kem ấm, tường ốp đá tự nhiên, cửa kính kịch trần đón ánh nắng ban mai nhìn ra toàn cảnh thành phố.*
 ```text
-Close-up shot of a luxury frosted glass perfume bottle standing on a polished black marble surface, micro water droplets on glass, soft volumetric studio rim lighting. Camera slowly orbits 90 degrees around the bottle, shallow depth of field, commercial grade, 4k 60fps, ultra realistic photorealistic.
+Slow architectural dolly shot moving smoothly through a luxury minimalist penthouse living room, warm cream leather sofa, natural stone accent wall, floor-to-ceiling glass windows with morning sunbeams revealing a modern city skyline, interior design magazine style, photorealistic, 4k 60fps.
 ```
 
-### Mẫu 3: Flycam Phong Cảnh Du Lịch Sa Pa (Hùng vĩ chuẩn VTV)
-> *Mô tả: Flycam bay lướt qua ruộng bậc thang Sa Pa lúc sáng sớm, có biển mây bồng bềnh và ánh nắng sớm.*
+### Mẫu 03 – Chủ đề: BĐS Sinh Thái / Đồi Núi (Biệt Thự Nghỉ Dưỡng Giữa Rừng Thông Lúc Hoàng Hôn)
+> *Mô tả tiếng Việt: Cảnh flycam bao quát căn biệt thự nghỉ dưỡng sang trọng ẩn mình giữa đồi thông xanh ngát vào buổi chiều tà, ánh đèn vàng ấm áp từ bên trong hắt ra mặt nước hồ bơi, sương mờ nhẹ phủ trên dãy núi phía xa.*
 ```text
-Breathtaking aerial drone flight over golden terraced rice fields in Sapa Vietnam at sunrise, gentle mist floating between mountain valleys. Camera glides smoothly forward and slowly tilts up to reveal the vast sky, warm cinematic golden sunlight rays, National Geographic cinematography, ultra high definition 8k, vibrant natural colors.
+Sweeping aerial drone shot at dusk of a luxury mountain resort villa nestled among pine forests, warm glowing golden interior lights reflecting on a calm swimming pool, misty mountain peaks in the background under a twilight sky, cinematic atmosphere, ultra high definition 8k.
 ```
 
 ---
