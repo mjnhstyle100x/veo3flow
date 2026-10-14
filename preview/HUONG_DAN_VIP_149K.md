@@ -1,11 +1,11 @@
-# GOOGLE VEO 3 & FLOW | CẨM NANG MASTER VIP 2026
-## (ĐẶC QUYỀN GÓI SÁNG TẠO VIP 149.000đ — TRỌN BỘ 10 KỊCH BẢN MASTER PROMPTS ĐIỆN ẢNH)
+# GOOGLE VEO 3 & FLOW | CẨM NANG MASTER VIP BẤT ĐỘNG SẢN 2026
+## (ĐẶC QUYỀN GÓI SÁNG TẠO VIP 149.000đ — KỸ THUẬT IMAGE-TO-VIDEO & TRỌN BỘ 10 KỊCH BẢN TVC BĐS TRIỆU ĐÔ)
 
-> 👑 Chúc mừng bạn đã sở hữu Gói Sáng Tạo VIP! Dưới đây là toàn bộ cẩm nang chuyên sâu, từ quy trình tạo video 4K sắc nét, công thức viết prompt 4 trụ cột, từ điển góc máy Hollywood đến **Kho 10 Kịch Bản Master Prompts tinh tuyển** cho 10 ngành nghề hot nhất.
+> 👑 **Chúc mừng bạn đã sở hữu Gói Sáng Tạo VIP!** Dưới đây là toàn bộ cẩm nang chuyên sâu độc quyền dành riêng cho **Môi giới Bất động sản**: từ quy trình tạo video 4K sắc nét, công thức viết prompt 4 trụ cột, từ điển góc máy Hollywood, kỹ thuật biến ảnh phối cảnh 3D thành video 4K giữ nguyên thiết kế (Image-to-Video), Trợ lý ChatGPT Đạo Diễn, Bộ 4 khuôn mẫu Lego BĐS đến **Kho 10 Kịch Bản TVC Phân Cảnh BĐS Triệu Đô** theo 4 phân khúc chuyên sâu.
 
 ---
 
-## 🚀 PHẦN 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN (ẢNH CHỤP THẬT 100% TỪ GOOGLE FLOW)
+## 🚀 PHẦN 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN (TẠO TỪ TEXT-TO-VIDEO TRÊN GOOGLE FLOW)
 
 ### BƯỚC 1: Mở Trang Web & Bấm "Tạo Bằng Google Flow"
 1. Mở trình duyệt Google Chrome và truy cập vào đường dẫn:  
@@ -46,7 +46,7 @@ Nhìn xuống thanh công cụ dưới đáy, bấm vào nút thông số (hiể
 ---
 
 ### BƯỚC 5: Dán Kịch Bản VIP Vào Ô Nhập & Bấm Mũi Tên Tạo Video
-1. Chọn 1 trong 10 Kịch Bản Master Prompts ở Phần 3 bên dưới, bấm copy.  
+1. Chọn 1 trong 10 Kịch Bản Master Prompts ở bên dưới, bấm copy.  
 2. Nhấp chuột vào ô màu đen ở đáy màn hình có dòng chữ: **`"Bạn muốn tạo những gì?"`** rồi dán câu lệnh vào (`Ctrl + V`).  
 3. Bấm vào **NÚT TRÒN CÓ MŨI TÊN ➔** ở góc phải thanh nhập để cỗ máy AI Veo 3 tạo video!  
 *(💡 Lưu ý: Chờ AI render khoảng 60–90 giây, giữ nguyên tab và không bấm F5 làm mới).*
@@ -64,276 +64,403 @@ Nhìn xuống thanh công cụ dưới đáy, bấm vào nút thông số (hiể
 
 ---
 
-## 🏛️ PHẦN 2: CÔNG THỨC MASTER PROMPT 4 TRỤ CỘT HOLLYWOOD
+## 📸 PHẦN 2: VŨ KHÍ TỐI THƯỢNG CHO SALES BĐS: BIẾN ẢNH PHỐI CẢNH 3D / ẢNH THẬT CỦA CHỦ ĐẦU TƯ THÀNH VIDEO 4K (IMAGE-TO-VIDEO)
+
+Nỗi sợ lớn nhất của môi giới Bất động sản khi dùng AI là: *"AI tự vẽ ra căn biệt thự hay căn hộ rất đẹp, nhưng lại không giống với dự án thật mà tôi đang bán cho khách"*. 
+
+Tính năng **Tạo Video Từ Ảnh (Image-to-Video / Frames-to-Video)** trên [Google Flow](https://labs.google/fx/tools/flow) giải quyết triệt để vấn đề này: Bạn tải **chính bức ảnh phối cảnh 3D của chủ đầu tư, ảnh chụp căn hộ mẫu, hoặc ảnh chụp thực tế lô đất** lên làm khung hình gốc, sau đó dùng câu lệnh điều khiển góc máy bay lướt qua mà vẫn **giữ nguyên thiết kế kiến trúc gốc**.
+
+### 1. Quy trình 4 bước thao tác Image-to-Video trên Google Flow
+
+| Bước | Thao tác trên Google Flow | Lưu ý quan trọng để không bị méo kiến trúc dự án |
+| :--- | :--- | :--- |
+| **Bước 1: Chọn ảnh gốc** | Chọn ảnh phối cảnh 3D hoặc ảnh chụp thực tế sắc nét nhất của dự án (ưu tiên ảnh ngang cho TVC `16:9` hoặc ảnh dọc cho TikTok/Reels `9:16`). | Không dùng ảnh có chèn quá nhiều chữ quảng cáo, logo đè lên mặt tiền tòa nhà hoặc số điện thoại cắt ngang ảnh. |
+| **Bước 2: Tải ảnh lên Flow** | Tại ô nhập câu lệnh trên Google Flow, bấm vào biểu tượng **Dấu cộng (`+`) / Thêm khung hình đầu tiên (First Frame)** và tải tấm ảnh dự án của bạn lên. | Đợi ảnh tải lên hoàn tất 100% và hiển thị hình thu nhỏ (thumbnail) ngay trong thanh nhập lệnh. |
+| **Bước 3: Dán lệnh điều khiển góc máy** | Sao chép 1 trong **6 Câu lệnh Image-to-Video BĐS** bên dưới và dán vào ô câu lệnh. | **Nguyên tắc vàng:** Khi đã có ảnh gốc, **KHÔNG mô tả lại hình dáng căn nhà** (vì AI đã nhìn thấy trong ảnh). Chỉ dùng câu lệnh để ra lệnh cho **Camera di chuyển** và **Môi trường chuyển động** (nắng, nước, mây, lá cây). |
+| **Bước 4: Xuất video 1080p** | Bấm nút mũi tên tạo video, chờ 60–90 giây và tải về bản `1080p MP4`. | Nếu muốn cảnh quay dài hơn 8 giây, bấm nút `Extend` để nối tiếp góc bay. |
+
+### 2. Trọn bộ 6 Câu lệnh tiếng Anh "Image-to-Video" giữ nguyên thiết kế dự án thật
+
+#### Mẫu I2V-01: Dành cho Ảnh Phối Cảnh Tổng Thể Dự Án / Khu Đô Thị / Đất Nền (Góc Flycam Bay Tiến Chậm)
+* **Hiệu ứng tạo ra:** Camera flycam từ từ bay tiến về phía trước bao quát toàn khu dự án trong ảnh, mây trôi nhẹ trên bầu trời, ánh nắng chiếu rọi tự nhiên và giữ nguyên 100% quy hoạch mặt bằng trong ảnh.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+Keep the exact architectural structure, buildings, and layout from the reference image intact. Smooth, slow cinematic aerial drone push-in shot gliding gently forward over the property. Subtle natural ambient motion: soft clouds drifting slowly across the sky, gentle tree leaves swaying in the breeze, and warm golden sunlight casting realistic reflections. Photorealistic architectural visualization, rock-steady gimbal movement, 4k 60fps.
+```
+
+#### Mẫu I2V-02: Dành cho Ảnh Mặt Tiền Biệt Thự / Nhà Phố / Shophouse (Góc Máy Trượt Ngang Điện Ảnh)
+* **Hiệu ứng tạo ra:** Ống kính lướt ngang chậm rãi qua mặt tiền căn nhà phố/shophouse như quay bằng thanh trượt gimbal, cây xanh trước nhà rung rinh nhẹ trong nắng sớm, không làm biến dạng đường nét mặt tiền.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+strictly preserve the original building facade, materials, and proportions from the input image. Slow, ultra-smooth cinematic camera trucking shot moving laterally across the front of the property, accompanied by a gentle push-in. Subtle environmental life: green foliage swaying softly in a light breeze, natural warm morning sunbeams shifting gently across the glass windows and stone walls. High-end real estate commercial, 4k 60fps, photorealistic.
+```
+
+#### Mẫu I2V-03: Dành cho Ảnh Biệt Thự Có Hồ Bơi / Resort Ven Biển (Góc Lướt Mặt Nước Lung Linh)
+* **Hiệu ứng tạo ra:** Giữ nguyên kiến trúc biệt thự trong ảnh, làm cho mặt nước hồ bơi gợn sóng lấp lánh ánh nắng, hàng dừa đung đưa nhẹ và camera lướt thấp tiến về phía căn biệt thự.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+Maintain the exact villa design and surrounding landscape from the uploaded image. Slow, low-angle cinematic dolly shot gliding smoothly forward just above the swimming pool surface. Realistic gentle water ripples reflecting the warm golden sunlight, palm fronds and garden plants moving softly in the coastal breeze. Ultra-realistic luxury resort cinematography, crystal-clear details, 4k 60fps.
+```
+
+#### Mẫu I2V-04: Dành cho Ảnh Nội Thất Phòng Khách / Phòng Ngủ Căn Hộ Mẫu (Góc Tiến Vào Không Gian Sống)
+* **Hiệu ứng tạo ra:** Giữ nguyên 100% đồ nội thất sofa, bàn trà, vách ốp trong ảnh căn hộ mẫu; camera đẩy nhẹ vào trong phòng, rèm voan khẽ đung đưa và tia nắng chiếu ấm áp qua khung cửa sổ.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+Preserve all interior furniture, textures, colors, and spatial layout from the reference photo without distortion. Slow, steady architectural dolly-in camera movement advancing gently into the room. Subtle atmospheric motion: sheer window curtains breathing softly in a light draft, warm natural sunlight rays streaming through the glass with delicate dust motes, creating a cozy luxury living atmosphere. Architectural Digest style, 4k 60fps, photorealistic.
+```
+
+#### Mẫu I2V-05: Dành cho Ảnh Chụp Ban Công / Tầm Nhìn View Hồ, View Sông, View Thành Phố
+* **Hiệu ứng tạo ra:** Camera đẩy nhẹ từ ban công hướng ra khung cảnh phía trước, mặt nước sông/hồ lấp lánh, mây trôi và dòng xe cộ/thành phố phía xa chuyển động chân thực.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+Keep the balcony railings, foreground architecture, and skyline layout faithful to the input image. Smooth cinematic camera push-out moving gently forward toward the panoramic view. Subtle, realistic background motion: shimmering water surface on the river or lake, soft clouds moving across the horizon, and warm ambient sunset lighting enveloping the scenery. Ultra-high-definition real estate showcase, 4k 60fps.
+```
+
+#### Mẫu I2V-06: Hiệu Ứng Chạng Vạng Lên Đèn (Day-to-Dusk) Cho Ảnh Phối Cảnh Tòa Nhà / Biệt Thự
+* **Hiệu ứng tạo ra:** Giữ nguyên góc chụp của bức ảnh phối cảnh, camera zoom cực nhẹ trong khi ánh sáng chuyển dần sang chiều tà và hệ thống đèn vàng ấm áp bên trong các khung cửa kính bật sáng lung linh.
+* **Prompt Tiếng Anh (Copy dán vào Flow kèm ảnh):**
+```text
+Maintain the exact architectural geometry and framing of the building from the reference image. Very slow, subtle cinematic zoom-in as the ambient lighting transitions smoothly into golden twilight dusk. Warm, inviting golden interior lights and landscape pathway lamps gradually glow brighter, reflecting softly on the glass windows and surroundings. Luxury architectural twilight cinematography, 4k 60fps, photorealistic.
+```
+
+---
+
+## 🏛️ PHẦN 3: CÔNG THỨC MASTER PROMPT 4 TRỤ CỘT BẤT ĐỘNG SẢN
 
 Để video đạt độ chân thực tối đa và không bị biến dạng, hãy áp dụng công thức 4 thành phần sau:
 
-1. **Trụ Cột 1 (Chủ Thể & Động Tác):** Ai/cái gì, biểu cảm, chất liệu bề mặt và chuyển động cụ thể.
-   *(Ví dụ: `luxury frosted glass perfume bottle standing on polished black marble surface`)*
-2. **Trụ Cột 2 (Góc Máy & Camera):** Hướng máy quay di chuyển.
-   *(Ví dụ: `camera slowly orbits 90 degrees around the bottle, slow smooth dolly in`)*
-3. **Trụ Cột 3 (Ánh Sáng & Không Gian):** Yếu tố quyết định độ sang trọng và cảm xúc.
-   *(Ví dụ: `soft volumetric studio rim lighting, dark moody aesthetic`)*
+1. **Trụ Cột 1 (Chủ Thể Kiến Trúc & Động Tác):** Công trình hoặc không gian nội thất, vật liệu bề mặt.
+   *(Ví dụ: `luxury modern white coastal villa with turquoise infinity pool and palm trees`)*
+2. **Trụ Cột 2 (Góc Máy & Camera):** Hướng máy quay di chuyển (Flycam, Dolly, Tracking).
+   *(Ví dụ: `cinematic aerial drone push-in shot gliding forward, smooth gimbal stabilization`)*
+3. **Trụ Cột 3 (Ánh Sáng & Môi Trường):** Yếu tố quyết định độ sang trọng và cảm xúc.
+   *(Ví dụ: `natural golden hour morning sunlight, gentle ocean water reflections`)*
 4. **Trụ Cột 4 (Thông Số Kỹ Thuật):** Khóa nét và chất lượng khung hình.
-   *(Ví dụ: `shallow depth of field, commercial grade, 4k 60fps, ultra realistic photorealistic`)*
+   *(Ví dụ: `architectural cinematography, 4k 60fps, photorealistic, ultra realistic`)*
 
 ---
 
-## 🧩 PHẦN 3: BỘ KHUÔN MẪU TỰ ĐIỀN (TEMPLATES) & CÂU LỆNH CHATGPT TỰ TẠO CHO MỌI NGÀNH HÀNG
+## 🎥 PHẦN 4: BẢNG TRA CỨU THUẬT NGỮ MÁY QUAY & ÁNH SÁNG BĐS
 
-Nếu bạn không muốn dùng 10 kịch bản mẫu sẵn mà muốn **tự làm video cho sản phẩm/ý tưởng riêng của mình** (bán quần áo, mỹ phẩm, mở quán ăn, bất động sản, review du lịch...), hãy áp dụng 2 "vũ khí tối thượng" dưới đây:
-
-### 1. "Câu Thần Chú ChatGPT / Gemini" (Trợ Lý Đạo Diễn Tự Viết Prompt)
-Bạn không cần giỏi tiếng Anh! Hãy sao chép nguyên văn câu lệnh tiếng Việt dưới đây và dán vào **ChatGPT** hoặc **Google Gemini** (hoàn toàn miễn phí):
-
-```text
-Hãy đóng vai một đạo diễn điện ảnh Hollywood và chuyên gia prompt cho Google Veo 3 / Google Flow.
-Tôi muốn làm video quảng cáo ngắn (15-18 giây) cho sản phẩm/ý tưởng sau:
-[ĐIỀN TÊN SẢN PHẨM / Ý TƯỞNG CỦA BẠN BẰNG TIẾNG VIỆT VÀO ĐÂY, VÍ DỤ: Hộp son môi dưỡng ẩm màu cam đất / Quán phở bò gia truyền / Căn hộ chung cư cao cấp view sông]
-
-Hãy viết cho tôi 3 câu lệnh (Prompt) chuẩn tiếng Anh điện ảnh tương ứng với 3 phân cảnh liên hoàn:
-- Cảnh 1 (0s-6s) Hook thu hút: Góc quay cận cảnh, chuyển động gây tò mò, ánh sáng nổi khối.
-- Cảnh 2 (6s-12s) Cao trào & Tính năng: Chuyển động mượt mà trình diễn chi tiết đẹp nhất của sản phẩm.
-- Cảnh 3 (12s-18s) Cảnh kết & Outro: Góc quay toàn cảnh sang trọng hoặc kéo lùi để kêu gọi mua hàng.
-Yêu cầu: Có đầy đủ từ khóa góc máy (camera trajectory), ánh sáng điện ảnh, chất liệu bề mặt, và thông số chất lượng (4k 60fps, shallow depth of field).
-```
-
-👉 Chỉ mất 5 giây, ChatGPT sẽ tự động nhả ra 3 câu prompt tiếng Anh chuẩn như các đạo diễn chuyên nghiệp viết sẵn!
+| Thuật Ngữ Tiếng Anh | Ý Nghĩa Máy Quay BĐS | Tình Huống Sử Dụng Tốt Nhất |
+| :--- | :--- | :--- |
+| `Aerial drone flight` | Flycam bay trên cao nhìn xuống | Toàn cảnh khu đất nền, quy hoạch đại đô thị, tiện ích sinh thái |
+| `Smooth dolly in` | Máy quay từ từ tiến vào công trình | Giới thiệu cổng chào, mặt tiền biệt thự hoặc tiến vào phòng khách |
+| `Lateral tracking shot` | Máy quay lướt ngang dọc mặt tiền | Dãy shophouse thương mại, vỉa hè phố đi bộ, nhà phố liền kề |
+| `Low-angle pool dolly` | Máy quay lướt sát mặt nước hồ bơi | Biệt thự nghỉ dưỡng, resort ven biển, hồ bơi vô cực |
+| `Architectural push-out` | Máy quay đẩy nhẹ từ trong ra ngoài | Ban công căn hộ ngắm view hồ, view sông, ngắm hoàng hôn |
+| `Golden hour lighting` | Nắng vàng rực rỡ buổi sáng / chiều | Tăng độ ấm áp, nâng tầm giá trị thẩm mỹ công trình |
+| `Twilight blue hour` | Trời xanh thẫm lúc chạng vạng lên đèn | Khoe hệ thống đèn chiếu sáng mặt tiền, tòa nhà chung cư cao cấp |
 
 ---
 
-### 2. Bộ 4 Khuôn Mẫu Master "Điền Vào Chỗ Trống" (Lego Templates)
-Bạn có thể tự tay ghép câu lệnh bằng cách giữ nguyên bộ khung và chỉ cần thay đổi từ ngữ trong dấu ngoặc vuông `[...]`:
+## 🤖 PHẦN 5: TRỢ LÝ CHATGPT ĐẠO DIỄN BĐS & BỘ 4 KHUÔN MẪU LEGO BĐS "ĐIỀN VÀO CHỖ TRỐNG"
 
-#### 🏷️ Khuôn Mẫu 01: TVC Sản Phẩm / Mỹ Phẩm / Đồ Công Nghệ / Đồng Hồ (Commercial & Luxury)
-```text
-Cinematic commercial macro shot of [TÊN SẢN PHẨM], [MÀU SẮC & CHẤT LIỆU BỀ MẶT], placed on [BỀ MẶT: polished black marble / elegant wooden table / crystal clear water surface], surrounded by [HIỆU ỨNG: swirling aromatic mist / delicate water splashes / floating golden dust particles], camera [GÓC QUAY: slowly orbits 360 degrees / slow smooth dolly in], soft volumetric studio rim lighting, shallow depth of field, Vogue luxury commercial grade, 4k 60fps.
-```
-* **Ví dụ thay thế thực tế:** Bán hũ kem dưỡng ➔ Thay `[TÊN SẢN PHẨM]` thành `luxury frosted glass skincare cream jar`, thay `[BỀ MẶT]` thành `white marble with pink rose petals`.
+### 1. Câu lệnh cài đặt "Trợ Lý ChatGPT Đạo Diễn BĐS" (Hỗ trợ cả Ảnh thật & Tự dựng cảnh)
 
-#### 🍲 Khuôn Mẫu 02: Quán Ăn / Món Ngon / Đồ Uống F&B (Food & Beverages)
-```text
-Extreme close-up macro shot of [TÊN MÓN ĂN / ĐỒ UỐNG], [CHI TIẾT CHUYỂN ĐỘNG: hot appetizing steam rising gently / pouring rich savory sauce over top / melted cheese pulling apart], rich glistening food textures, [ÁNH SÁNG: warm cozy restaurant ambiance lighting / soft golden morning daylight], cinematic slow motion 60fps, mouth-watering cinematography, commercial food documentary grade, 4k UHD.
-```
-* **Ví dụ thay thế thực tế:** Bán trà sữa trân đường đen ➔ Thay thành `iced brown sugar boba milk tea with fresh cream dripping down glass wall, slow motion 60fps`.
+Khách hàng chỉ cần sao chép đoạn lệnh dưới đây dán vào ChatGPT (bản miễn phí hoặc Plus đều dùng được):
 
-#### 👗 Khuôn Mẫu 03: Thời Trang / Người Mẫu / Video Xây Kênh Cá Nhân (Fashion & Lifestyle)
 ```text
-Cinematic medium full shot of [MÔ TẢ NGƯỜI: charming Vietnamese woman / stylish young entrepreneur], wearing [TRANG PHỤC: elegant modern silk outfit / minimalist casual streetwear], [HÀNH ĐỘNG: walking with confidence / looking towards camera with warm charming smile], in [BỐI CẢNH: vibrant city pedestrian street / luxury cafe patio / historic ancient town], smooth gimbal tracking camera glide, golden hour warm natural backlight, natural skin texture, 4k 60fps.
-```
+Hãy đóng vai Đạo diễn hình ảnh (Director of Photography) chuyên quay TVC Bất động sản hạng sang và chuyên gia viết prompt cho Google Veo 3 trên Google Flow. 
+Khi tôi mô tả dự án BĐS của tôi bằng tiếng Việt, hãy xuất ra cho tôi 2 phương án câu lệnh (Prompt) bằng tiếng Anh chuẩn điện ảnh:
+1. PHƯƠNG ÁN DÙNG ẢNH THẬT CỦA DỰ ÁN (Image-to-Video Prompt): Viết 1 câu lệnh tập trung hoàn toàn vào việc giữ nguyên kiến trúc gốc trong ảnh (Keep exact architecture intact), điều khiển góc máy di chuyển mượt mà (slow aerial push-in, smooth architectural dolly, lateral tracking) và chuyển động môi trường tự nhiên (nắng, mây, mặt nước, cây xanh) để tôi ghép với ảnh phối cảnh 3D của chủ đầu tư.
+2. PHƯƠNG ÁN TỰ DỰNG TVC 3 CẢNH LIÊN HOÀN (Text-to-Video Multi-shot): Viết 3 câu lệnh nối tiếp nhau (Cảnh 1: Đại cảnh Flycam vị trí & quy mô -> Cảnh 2: Trung cảnh kiến trúc mặt tiền & tiện ích -> Cảnh 3: Cận cảnh lướt máy không gian nội thất hoặc tầm nhìn ban công), kèm thông số ánh sáng golden hour, 4k 60fps photorealistic.
 
-#### 🏖️ Khuôn Mẫu 04: Bất Động Sản / Du Lịch / Khách Sạn / Kiến Trúc (Real Estate & Travel)
-```text
-Breathtaking cinematic aerial drone flight gliding over [TÊN ĐỊA ĐIỂM / TÒA NHÀ / KHU NGHỈ DƯỠNG], [THỜI ĐIỂM: majestic sunrise with rolling sea of mist / dramatic golden hour sunset / vibrant illuminated city night], slow sweeping panoramic camera movement, National Geographic travel documentary grade, ultra detailed architectural textures, vibrant natural colors, 8k resolution.
+Dự án Bất động sản tôi đang bán là: [ĐIỀN TÊN HOẶC MÔ TẢ DỰ ÁN CỦA BẠN VÀO ĐÂY — Ví dụ: Khu đất nền phân lô ven sông có đường nhựa 12m / Căn shophouse 4 tầng mặt tiền đại lộ sầm uất / Căn hộ 2 phòng ngủ view hồ điều hòa / Biệt thự nghỉ dưỡng ven biển].
 ```
 
 ---
 
-### 3. Bảng Tra Cứu Từ Khóa "Gắp - Thả" Nhanh
-* **Hiệu ứng đặc biệt:** `crystal dewdrop` (giọt sương long lanh), `steaming hot` (bốc khói nóng nghi ngút), `water splash` (bắn nước nghệ thuật), `golden bokeh lights` (đốm sáng tròn mờ ảo phía sau).
-* **Quỹ đạo camera:** `slow dolly in` (tiến sát lại gần), `cinematic dolly back` (kéo lùi ra xa), `360 orbit` (lượn vòng quanh), `extreme macro close-up` (siêu cận cảnh từng milimet).
-* **Ánh sáng:** `studio rim lighting` (viền sáng nổi khối sang chảnh), `golden hour sunset` (nắng hoàng hôn ấm áp), `neon moody reflections` (phản chiếu ánh đèn neon đêm).
-* **Độ nét & Thẩm mỹ:** `shallow depth of field` (xóa phông chuyên nghiệp), `cinematic color grading` (màu phim rạp), `commercial grade 4k` (chuẩn quảng cáo truyền hình).
+### 2. Bộ 4 Khuôn Mẫu Lego BĐS "Điền Vào Chỗ Trống" (Theo 4 Phân Khúc)
+
+#### Khuôn mẫu Lego 01: Phân khúc Đất Nền Dự Án & Quy Hoạch Đại Đô Thị
+* **Công thức lắp ghép:**
+```text
+Breathtaking aerial drone flight [GÓC BAY FLYCAM] over [MÔ TẢ KHU ĐẤT NỀN / HẠ TẦNG ĐƯỜNG XÁ], surrounded by [CẢNH QUAN SÔNG HỒ / CÂY XANH], under [THỜI ĐIỂM ÁNH SÁNG]. Smooth gimbal stabilization, clear land plot boundaries, modern infrastructure, real estate masterplan cinematography, ultra realistic, 4k 60fps.
+```
+* **Từ khóa gợi ý điền vào chỗ trống:**
+  * `[GÓC BAY FLYCAM]`: `gliding smoothly forward` (bay tiến thẳng) / `slowly orbiting 90 degrees` (bay lượn vòng) / `descending gently from high altitude` (hạ độ cao từ trên cao xuống).
+  * `[MÔ TẢ KHU ĐẤT NỀN / HẠ TẦNG ĐƯỜNG XÁ]`: `a newly developed residential land project with wide paved asphalt roads, clean sidewalks, and green street trees`.
+  * `[CẢNH QUAN SÔNG HỒ / CÂY XANH]`: `a winding blue river and lush green parks`.
+  * `[THỜI ĐIỂM ÁNH SÁNG]`: `warm golden sunrise sunbeams` / `bright clear blue sky at noon`.
+
+#### Khuôn mẫu Lego 02: Phân khúc Nhà Phố Thương Mại & Shophouse Đại Lộ
+* **Công thức lắp ghép:**
+```text
+Cinematic architectural tracking shot moving smoothly along [LOẠI HÌNH NHÀ PHỐ / SHOPHOUSE], featuring [ĐẶC ĐIỂM MẶT TIỀN & VỈA HÈ], with [KHÔNG KHÍ HOẠT ĐỘNG XUNG QUANH] at [THỜI ĐIỂM ÁNH SÁNG]. Crisp architectural lines, luxury commercial real estate film, shallow depth of field, 4k 60fps, photorealistic.
+```
+* **Từ khóa gợi ý điền vào chỗ trống:**
+  * `[LOẠI HÌNH NHÀ PHỐ / SHOPHOUSE]`: `a grand boulevard of European neoclassical 4-story shophouses` / `a modern luxury townhouse row with glass facades`.
+  * `[ĐẶC ĐIỂM MẶT TIỀN & VỈA HÈ]`: `arched stone windows, wide granite sidewalks, and outdoor cafe seating`.
+  * `[KHÔNG KHÍ HOẠT ĐỘNG XUNG QUANH]`: `warm glowing storefront lights and a vibrant upscale atmosphere`.
+  * `[THỜI ĐIỂM ÁNH SÁNG]`: `golden hour sunset` / `blue hour twilight with glowing street lamps`.
+
+#### Khuôn mẫu Lego 03: Phân khúc Nội Thất Chung Cư Cao Cấp & Penthouse
+* **Công thức lắp ghép:**
+```text
+Slow, fluid architectural dolly shot gliding through [KHÔNG GIAN PHÒNG & PHONG CÁCH THIẾT KẾ], showcasing [ĐỒ NỘI THẤT & VẬT LIỆU CHỦ ĐẠO], with floor-to-ceiling glass windows revealing [TẦM NHÌN VIEW QUA CỬA KÍNH] under [ÁNH SÁNG TỰ NHIÊN]. Architectural Digest interior cinematography, 35mm lens, ultra realistic, 4k 60fps.
+```
+* **Từ khóa gợi ý điền vào chỗ trống:**
+  * `[KHÔNG GIAN PHÒNG & PHONG CÁCH THIẾT KẾ]`: `a spacious luxury minimalist penthouse living room` / `a cozy Indochine-style high-end apartment living and dining area`.
+  * `[ĐỒ NỘI THẤT & VẬT LIỆU CHỦ ĐẠO]`: `a cream Italian leather sofa, Calacatta marble accent wall, and warm oak wood flooring`.
+  * `[TẦM NHÌN VIEW QUA CỬA KÍNH]`: `a panoramic modern city skyline and emerald lake`.
+  * `[ÁNH SÁNG TỰ NHIÊN]`: `soft morning sunbeams streaming through sheer curtains`.
+
+#### Khuôn mẫu Lego 04: Phân khúc Biệt Thự Nghỉ Dưỡng Ven Biển & Đồi Núi
+* **Công thức lắp ghép:**
+```text
+Sweeping cinematic aerial drone shot approaching [LOẠI HÌNH BIỆT THỰ NGHỈ DƯỠNG], complete with [TIỆN ÍCH HỒ BƠI / SÂN VƯỜN], nestled in [BỐI CẢNH THIÊN NHIÊN] during [THỜI ĐIỂM ÁNH SÁNG]. Serene luxury resort atmosphere, crystal-clear water reflections, photorealistic, 8k ultra HD.
+```
+* **Từ khóa gợi ý điền vào chỗ trống:**
+  * `[LOẠI HÌNH BIỆT THỰ NGHỈ DƯỠNG]`: `a modern white tropical beachfront villa` / `a glass-and-timber mountain retreat villa`.
+  * `[TIỆN ÍCH HỒ BƠI / SÂN VƯỜN]`: `a turquoise infinity pool overlooking the ocean and wooden sun-lounger deck`.
+  * `[BỐI CẢNH THIÊN NHIÊN]`: `lush swaying coconut palms and pristine white sand beach` / `misty green pine forests and rolling mountain peaks`.
+  * `[THỜI ĐIỂM ÁNH SÁNG]`: `warm golden twilight with glowing interior lights`.
 
 ---
 
-## 🎬 PHẦN 4: KHO 10 KỊCH BẢN PHÂN CẢNH TVC & REELS (MULTI-SHOT STORYBOARDS)
+## 🎬 PHẦN 6: KHO 10 KỊCH BẢN PHÂN CẢNH TVC BĐS TRIỆU ĐÔ (MULTI-SHOT STORYBOARD)
 
-> 💡 **Quy trình sản xuất video 15–20s từ kịch bản:**  
-> • **Cách 1 (Nhanh nhất - Ghép CapCut 1 phút):** Tạo lần lượt Cảnh 1, Cảnh 2, Cảnh 3 tải về máy ➔ Mở CapCut kéo 3 clip vào ➔ Chèn nhạc gợi ý ➔ Xuất video 1080p hoàn chỉnh.  
-> • **Cách 2 (Nối trực tiếp trong Flow):** Tạo Cảnh 1 ➔ Bấm nút `Extend (+5s)` ở góc trên video ➔ Dán prompt Cảnh 2 để AI tự động vẽ tiếp giữ nguyên bối cảnh!
+Mỗi kịch bản gồm **3 Cảnh liên hoàn (Text-to-Video)** để ghép thành TVC 24–30 giây hoàn chỉnh, kèm **1 Lệnh Image-to-Video** dành riêng cho trường hợp bạn muốn dùng ảnh phối cảnh thật của chủ đầu tư.
 
----
+### 🏞️ PHÂN KHÚC 1: ĐẤT NỀN DỰ ÁN & ĐẠI ĐÔ THỊ QUY HOẠCH
 
-### Kịch Bản 01: TVC Nước Hoa Pha Lê Đen Huyền Bí (Mỹ Phẩm & Luxury)
-* **Tổng quan:** Video quảng cáo sản phẩm 18 giây sang chảnh, từng giọt sương, khói hương thơm và bục cẩm thạch vương giả.
-* **Cảnh 1 (0s - 6s) - Hook giọt sương:**  
-  ```text
-  Extreme macro close-up of crystal dewdrop slowly dripping down a luxury frosted glass perfume bottle, dark moody polished black marble reflections, soft volumetric studio rim lighting, shallow depth of field, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Cao trào lượn 360° & khói hương (hoặc Extend +5s):**  
-  ```text
-  Smooth 360-degree orbit camera movement around the luxury perfume bottle, ethereal golden aromatic mist swirling softly around the crystalline cap, cinematic studio lighting, elegant slow motion 60fps.
-  ```
-* **Cảnh 3 (12s - 18s) - Cảnh kết kéo lùi toàn cảnh & Outro thương hiệu:**  
-  ```text
-  Slow cinematic dolly back revealing the luxury perfume bottle standing majestically on an illuminated obsidian pedestal, warm glowing bokeh lights in background, Vogue high-end commercial aesthetic, 4k UHD.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc piano lofi hoặc ambient sang trọng; chèn âm thanh "ting" giọt nước ở giây thứ 2; chuyển cảnh "Fade to Black" 0.4s.
-
----
-
-### Kịch Bản 02: Hành Trình Biển Mây Sa Pa Lúc Bình Minh (Du Lịch & Khám Phá)
-* **Tổng quan:** Flycam 18 giây từ ruộng bậc thang vàng óng, bay vượt đỉnh núi đón biển mây đến bản làng thanh bình.
-* **Cảnh 1 (0s - 6s) - Hook lướt sát ngọn lúa trĩu hạt:**  
-  ```text
-  Low-altitude cinematic drone flight skimming closely above golden ripe rice terraces in Sapa Vietnam at dawn, delicate morning mist rising from terraced valley, warm sunrise glow, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Cao trào bay vút đón biển mây (hoặc Extend +5s):**  
-  ```text
-  Dramatic drone ascent soaring over mountain ridges revealing a breathtaking sea of clouds rolling across Northern Vietnam mountain ranges, golden sunbeams piercing through clouds, National Geographic cinematography, 8k.
-  ```
-* **Cảnh 3 (12s - 18s) - Toàn cảnh thung lũng bản làng & suối uốn lượn:**  
-  ```text
-  Grand wide aerial panoramic shot of tranquil mountain village nestled beneath terraced fields, sparkling winding stream below, serene morning atmosphere, cinematic travel documentary grade, vibrant natural colors.
-  ```
-* 🎵 *Gợi ý CapCut:* Sáo mèo kết hợp beat chill acoustic hiện đại; chuyển cảnh "Phóng to" (Zoom In) tạo cảm giác bay liền mạch.
+#### Kịch bản 01: Khu Đất Nền Phân Lô Ven Sông Đón Bình Minh (TVC Vị Trí & Hạ Tầng)
+* **Cảnh 1 (Đại cảnh Flycam vị trí ven sông):**
+```text
+Breathtaking high-altitude aerial drone shot gliding smoothly forward over a well-planned riverside residential land development at sunrise. Clean grid of subdivided land plots, wide newly paved black asphalt roads, neat stone sidewalks, and rows of young green street trees bordering a calm, shimmering blue river. Warm golden morning sunlight rays, photorealistic real estate masterplan, 4k 60fps.
+```
+* **Cảnh 2 (Trung cảnh hạ tầng đường nội khu & công viên):**
+```text
+Low-angle aerial drone dolly shot flying smoothly at tree-top level along the main internal boulevard of the riverside land project. Crisp white road markings, modern solar street lamps, manicured green grass medians, and a lush riverside jogging park in the background under warm morning sunbeams. Ultra-realistic architectural visualization, 4k 60fps.
+```
+* **Cảnh 3 (Cận cảnh bến cảnh quan ven sông & tiềm năng an cư):**
+```text
+Smooth gimbal tracking shot moving gently along a scenic stone promenade and wooden viewing deck beside the tranquil river at golden hour. Lush tropical plants, blooming flowers along the walkway, and calm water reflecting the bright morning sky. Peaceful, high-value investment atmosphere, 4k 60fps, photorealistic.
+```
+* **📸 Lệnh dùng với Ảnh phối cảnh phân lô thật của dự án (Image-to-Video):**
+```text
+Keep the exact land plot layout, road network, and riverside boundaries from the reference image intact. Smooth, slow aerial drone push-in gliding gently over the masterplan, with shimmering water reflections on the river and soft morning clouds moving across the sky, 4k 60fps photorealistic.
+```
+* **💡 Gợi ý Dựng CapCut & Âm thanh:** Nhạc nền phong cách Corporate Inspiration hoặc Ambient sâu lắng. Chèn text động giới thiệu: "Vị trí đắc địa - Mặt tiền ven sông - Pháp lý sổ đỏ từng nền".
 
 ---
 
-### Kịch Bản 03: Tour Không Gian Sống Penthouse Thượng Lưu (Bất Động Sản Cao Cấp)
-* **Tổng quan:** TVC kiến trúc nội thất 18 giây: cận cảnh chất liệu sofa da tắm nắng sớm, trượt ngang bao quát không gian phòng khách và hướng mắt ngắm trọn vẹn skyline thành phố qua vách kính kịch trần.
-* **Cảnh 1 (0s - 6s) - Hook góc máy cận cảnh sofa da & nắng sớm:**  
-  ```text
-  Slow cinematic dolly shot focusing on luxurious tan leather sofa texture and wooden coffee table, warm morning sunbeams streaming through sheer curtains casting soft shadows, interior architectural magazine style, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Trượt ngang toàn cảnh không gian mở phòng khách (hoặc Extend +5s):**  
-  ```text
-  Smooth tracking shot gliding across the spacious minimalist living room, showcasing open-plan layout with elegant rug, modern lighting, and potted plants glowing in warm morning light, cinematic interior showcase, 4k.
-  ```
-* **Cảnh 3 (12s - 18s) - Hướng tầm mắt ra skyline thành phố phồn hoa:**  
-  ```text
-  Slow push-in toward floor-to-ceiling glass wall, revealing expansive breathtaking panoramic city skyline view with modern skyscrapers under clear blue sky, luxury high-rise penthouse lifestyle, 8k resolution.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc Lofi Jazz nhẹ nhàng thư thái hoặc piano cổ điển sang trọng; chèn âm thanh tiếng gió nhẹ lay rèm cửa và tiếng chim hót buổi sáng ở Cảnh 1.
+#### Kịch bản 02: Đại Đô Thị Xanh Thông Minh & Hồ Điều Hòa Trung Tâm
+* **Cảnh 1 (Đại cảnh cổng chào & trục đại lộ chính):**
+```text
+Majestic aerial drone shot slowly ascending and pushing forward over the grand iconic entrance plaza of a modern eco-smart township. Lush vertical gardens, wide multi-lane boulevard lined with palm trees, and sleek modern residential towers surrounding a central emerald lake in the distance. Bright sunny day, crystal-clear 8k cinematography.
+```
+* **Cảnh 2 (Trung cảnh hồ điều hòa trung tâm & công viên ven hồ):**
+```text
+Sweeping aerial drone orbit shot curving smoothly around a vast emerald central regulating lake inside a luxury green urban township. White sandy lakeside beach, wooden kayaking pier, lush green lawns, and modern glass apartment buildings reflecting on the calm water surface under warm afternoon sunlight, 4k 60fps.
+```
+* **Cảnh 3 (Cảnh chạng vạng toàn khu đô thị lên đèn sầm uất):**
+```text
+High-angle panoramic drone dolly shot gliding slowly over the smart eco-township at twilight blue hour. Thousands of warm golden apartment windows, illuminated lakeside walking paths, and glowing boulevard streetlights creating a vibrant, prosperous metropolitan atmosphere. Photorealistic, 4k 60fps.
+```
+* **📸 Lệnh dùng với Ảnh phối cảnh đại đô thị thật (Image-to-Video):**
+```text
+Strictly preserve the urban masterplan, towers, and central lake layout from the uploaded image. Slow, steady high-altitude drone pan and push-in across the township, with subtle water ripples on the central lake and warm golden sunlight shifting across the buildings, 4k 60fps.
+```
+* **💡 Gợi ý Dựng CapCut & Âm thanh:** Nhạc giao hưởng hiện đại (Orchestral Hybrid), chuyển cảnh bằng vệt sáng lướt nhanh (Light Leak Transition).
 
 ---
 
-### Kịch Bản 04: Chú Mèo Con Lái Xe Tay Ga Dạo Phố (TikTok Triệu View 3D Pixar)
-* **Tổng quan:** Video hoạt hình 3D siêu cưng: chú mèo con vàng cam đội mũ bảo hiểm vít ga dạo công viên lá vàng và vẫy tay chào.
-* **Cảnh 1 (0s - 6s) - Cận cảnh mèo con đội mũ bảo hiểm tí hon:**  
-  ```text
-  Adorable close-up shot of a fluffy ginger kitten wearing a miniature vintage motorcycle helmet and pilot goggles, tiny paws holding pastel scooter handlebars, big sparkling eyes blinking with excitement, Pixar 3D animation style, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Xe chạy bon bon qua lá vàng rơi (hoặc Extend +5s):**  
-  ```text
-  Side tracking shot following the kitten riding a cute mint-green mini scooter along a sunlit park pathway, golden autumn leaves fluttering in breeze, warm cheerful sunlight, playful expressive animation, 4k UHD.
-  ```
-* **Cảnh 3 (12s - 18s) - Mèo con bấm còi tí hon & vẫy tay chào ống kính:**  
-  ```text
-  Front-facing camera tracking the happy kitten honking a tiny horn and waving one cute paw directly at camera, soft sunny bokeh background, irresistible wholesome charm, Pixar render quality.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc acoustic ukulele vui tươi; lồng tiếng còi "bíp bíp" và tiếng mèo "meow" ở đoạn vẫy tay cuối video.
+### 🏪 PHÂN KHÚC 2: NHÀ PHỐ THƯƠNG MẠI & SHOPHOUSE ĐẠI LỘ
+
+#### Kịch bản 03: Dãy Shophouse Tân Cổ Điển Châu Âu Mặt Tiền Phố Đi Bộ
+* **Cảnh 1 (Góc máy trượt dọc mặt tiền kiến trúc Châu Âu):**
+```text
+Cinematic architectural tracking shot gliding smoothly at street level along a grand row of 5-story European neoclassical commercial shophouses. Cream travertine stone facades, wrought-iron balconies, arched glass ground-floor storefronts, and wide granite sidewalks lined with green trees under warm golden afternoon sunlight, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Góc cận không gian kinh doanh cafe & boutique tầng trệt):**
+```text
+Slow gimbal dolly-in shot moving past an upscale outdoor cafe terrace and luxury boutique storefront on the ground floor of a neoclassical shophouse. Warm amber interior lighting, polished brass signage, lush potted olive trees on the wide sidewalk, and soft golden sunbeams creating a bustling high-yield commercial vibe, 4k 60fps.
+```
+* **Cảnh 3 (Toàn cảnh đại lộ shophouse rực rỡ ánh đèn đêm):**
+```text
+Low-altitude drone dolly shot flying smoothly down the center of the illuminated commercial shophouse boulevard at dusk. Warm architectural facade uplighting highlighting the classical columns, glowing shop windows reflecting on the clean stone pavement, luxury commercial real estate TVC, 4k 60fps.
+```
+* **📸 Lệnh dùng với Ảnh phối cảnh Shophouse thật của dự án (Image-to-Video):**
+```text
+Keep the exact shophouse facade design, roofline, and street layout from the reference photo unchanged. Smooth lateral camera trucking shot gliding past the storefronts with warm glowing window lights and gentle movement of street trees in the breeze, 4k 60fps photorealistic.
+```
+* **💡 Gợi ý Dựng CapCut & Âm thanh:** Nhạc nền Jazz Acoustic sang trọng hoặc âm thanh phố xá rộn rã nhẹ nhàng.
 
 ---
 
-### Kịch Bản 05: TVC Smartphone Gập Không Gian Vô Trọng Lực (Đồ Công Nghệ)
-* **Tổng quan:** Quảng cáo công nghệ Apple style: bản lề titan lơ lửng hé mở, màn hình OLED uốn dẻo dải ngân hà và cú gập đôi chắc nịch.
-* **Cảnh 1 (0s - 6s) - Điện thoại gập từ từ hé mở trong không gian tối:**  
-  ```text
-  Cinematic macro shot of an ultra-slim foldable smartphone floating in zero gravity slowly unfolding, precision titanium hinge mechanism reflecting sleek cyan laser light, dark minimalist studio background, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Màn hình OLED mở rộng 180° vũ trụ rực rỡ (hoặc Extend +5s):**  
-  ```text
-  Smooth 360-degree rotation of the unfolded phone floating weightlessly, glowing flexible OLED screen displaying breathtaking deep space galaxy visuals, razor-thin bezel, premium Apple commercial aesthetic, 8k.
-  ```
-* **Cảnh 3 (12s - 18s) - Gập lại với độ chuẩn xác tuyệt đối & Outro:**  
-  ```text
-  Slow elegant dolly out as the foldable phone snaps shut with crisp precision, subtle lens flare crossing the brushed titanium frame, dark futuristic ambiance, flagship tech showcase, 4k UHD.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc ambient tech điện tử; chèn âm thanh cơ khí "click" lúc điện thoại gập mở để tạo cảm giác cao cấp.
+#### Kịch bản 04: Nhà Phố Hiện Đại Sân Vườn Trong Khu Compound Khép Kín
+* **Cảnh 1 (Mặt tiền nhà phố hiện đại kính & gỗ kèm gara sang trọng):**
+```text
+Slow cinematic dolly forward shot approaching a modern 3-story luxury townhouse in an exclusive gated community. Sleek architectural design combining floor-to-ceiling glass, warm cedar wood louvers, grey natural stone, a landscaped front courtyard garden, and a clean carport under soft morning sunlight, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Không gian sân vườn sau nhà & bàn trà thư giãn):**
+```text
+Smooth eye-level tracking shot moving through a private Zen backyard garden of a modern townhouse. Stepping stones over a shallow koi water feature, bamboo landscaping, a cozy outdoor timber lounge deck, and large sliding glass doors connecting seamlessly to the living room, warm sunlit atmosphere, 4k 60fps.
+```
+* **Cảnh 3 (Phòng khách thông tầng tràn ngập ánh sáng tự nhiên):**
+```text
+Fluid interior architectural dolly shot gliding through a double-height mezzanine living room inside a modern townhouse. Warm oak stairs, minimalist beige sectional sofa, pendant chandelier, and tall glass windows overlooking the green courtyard garden with morning sunbeams pouring in, 4k 60fps.
+```
+* **📸 Lệnh dùng với Ảnh thật Nhà phố / Biệt thự liền kề (Image-to-Video):**
+```text
+Preserve the exact modern townhouse facade, gate, and greenery from the input image. Slow, steady camera push-in toward the front entrance as natural morning sunlight reflects softly off the glass windows and garden leaves sway gently, 4k 60fps photorealistic.
+```
 
 ---
 
-### Kịch Bản 06: Bò Bít Tết Wagyu Áp Chảo Nóng (Ẩm Thực & Nhà Hàng F&B)
-* **Tổng quan:** Video ẩm thực kích thích vị giác (Sensory Food): miếng bò chạm chảo bốc lửa, rưới bơ thảo mộc và lát cắt hồng mọng nước.
-* **Cảnh 1 (0s - 6s) - Miếng bò chạm chảo gang bốc khói xèo xèo:**  
-  ```text
-  Extreme close-up slow motion 120fps of a marbled Wagyu ribeye steak being seared on a smoking hot black cast-iron pan, sizzling rendered fat droplets bursting, appetizing flame burst, mouthwatering detail, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Rưới bơ vàng óng sủi bọt & hương thảo (hoặc Extend +5s):**  
-  ```text
-  Sensory macro shot of golden melted butter bubbling vigorously over crispy seared steak crust, fresh rosemary sprig and roasted garlic cloves basting in savory juices, gentle aromatic steam rising, 4k UHD.
-  ```
-* **Cảnh 3 (12s - 18s) - Lát cắt ngọt lịm lộ phần thịt hồng medium-rare:**  
-  ```text
-  Smooth slow motion cut slicing through the tender juicy steak, perfectly pink medium-rare center glistening with succulent juices, warm romantic restaurant ambient lighting, Michelin star culinary commercial, 8k.
-  ```
-* 🎵 *Gợi ý CapCut:* Âm thanh ASMR xèo xèo giòn rụm của chảo nóng và tiếng dao cắt ngọt xớt; nhạc jazz nhẹ nhàng làm nền.
+### 🏙️ PHÂN KHÚC 3: CHUNG CƯ CAO CẤP & PENTHOUSE THƯỢNG LƯU
+
+#### Kịch bản 05: Tour Không Gian Sống Penthouse Triệu Đô Đón Nắng Sớm
+* **Cảnh 1 (Phòng khách Penthouse kính kịch trần view toàn cảnh thành phố):**
+```text
+Slow architectural dolly shot moving smoothly through a luxury minimalist penthouse living room at sunrise. Warm cream Italian leather sofa, natural travertine stone accent wall, dark walnut coffee table, and massive floor-to-ceiling glass windows revealing a panoramic modern city skyline bathed in golden morning sunbeams, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Khu bếp đảo đá Marble & bàn ăn thượng lưu):**
+```text
+Smooth lateral tracking shot gliding past a bespoke luxury penthouse kitchen and dining area. Bookmatched Calacatta gold marble waterfall island, brushed bronze fixtures, wine cellar display with warm LED backlighting, and a solid wood dining table overlooking the sunlit city horizon, Architectural Digest style, 4k 60fps.
+```
+* **Cảnh 3 (Phòng ngủ Master & tầm nhìn ban công săn mây):**
+```text
+Gentle forward dolly shot advancing through a serene master bedroom suite toward an open glass balcony door. Plush neutral linen king bed, sheer white curtains billowing softly in the morning breeze, opening out to a private sky terrace with panoramic city and river views, 4k 60fps, photorealistic.
+```
+* **📸 Lệnh dùng với Ảnh chụp Nội thất Penthouse / Căn hộ mẫu thật (Image-to-Video):**
+```text
+Keep all furniture, interior decor, and architectural details from the uploaded photo completely intact. Slow, fluid dolly-in camera movement advancing gently into the room while sheer window curtains move softly and warm morning sunlight streams through the glass, 4k 60fps.
+```
 
 ---
 
-### Kịch Bản 07: Người Mẫu Catwalk Tuần Lễ Thời Trang Paris (Haute Couture)
-* **Tổng quan:** Video sàn diễn thời trang Vogue: nhịp gót giày uy quyền, thần thái kiêu kỳ tà áo bay và cú xoay người 180 độ bung xòe.
-* **Cảnh 1 (0s - 6s) - Gót giày sải bước trên sàn catwalk gương đen:**  
-  ```text
-  Low-angle close-up tracking shot of supermodel high-heeled stilettos stepping powerfully down a high-gloss black runway, flowing crimson silk gown brushing the reflective floor, subtle flashbulbs popping, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Thần thái sắc lạnh & Tà váy lụa đỏ tung bay (hoặc Extend +5s):**  
-  ```text
-  Steadycam walking backward tracking shot of the elegant female supermodel staring intensely at camera, avant-garde couture gown fluttering dramatically in breeze, stark dramatic spotlighting, Paris Fashion Week, Vogue editorial grade.
-  ```
-* **Cảnh 3 (12s - 18s) - Cú xoay người 180° bung xòe kết màn:**  
-  ```text
-  Fluid slow motion 180-degree spin at the runway end, dress fabric fanning out gracefully, camera slowly tilts up as audience applauds in dark silhouettes, cinematic fashion film, 4k UHD.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc Deep House thời trang sang chảnh; chèn hiệu ứng chớp sáng trắng (White Flash) 0.1s ở mỗi nhịp gót chân nện sàn.
+#### Kịch bản 06: Căn Hộ Cao Cấp Phong Cách Đông Dương (Indochine) Tinh Tế
+* **Cảnh 1 (Phòng khách Indochine sang trọng, ấm cúng):**
+```text
+Slow, steady interior dolly shot gliding into an elegant Indochine-style luxury apartment living room. Dark espresso crafted wood furniture, cream upholstered sofa with tropical silk cushions, woven rattan cabinet details, patterned encaustic floor tiles, and warm golden sunlight filtering through wooden plantation shutters, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Góc bàn ăn gia đình & không gian bếp ấm áp):**
+```text
+Smooth pan and dolly shot showcasing an Indochine dining space connected to a modern luxury kitchen. Round dark timber dining table with rattan-back chairs, brass lotus pendant lamp glowing softly, indoor tropical palm plants, and warm natural daylight creating a nostalgic yet sophisticated home atmosphere, 4k 60fps.
+```
+* **Cảnh 3 (Ban công xanh mát thưởng trà chiều ngắm hồ):**
+```text
+Cinematic push-out shot moving from the living room onto a cozy landscaped apartment balcony at sunset. Bistrot rattan table with a ceramic teapot set, blooming bougainvillea and tropical ferns along the railing, overlooking a tranquil emerald lake and city skyline under a warm orange dusk sky, 4k 60fps.
+```
+* **📸 Lệnh dùng với Ảnh thật Căn hộ Indochine / Căn hộ thực tế (Image-to-Video):**
+```text
+Strictly maintain the original furniture, flooring, and wall decor from the reference image. Very slow, smooth camera pan and push-in across the living space with warm natural light rays filtering gently through the window blinds, 4k 60fps photorealistic.
+```
 
 ---
 
-### Kịch Bản 08: Biệt Thự Triệu Đô Ven Biển Hoàng Hôn (Bất Động Sản Nghỉ Dưỡng)
-* **Tổng quan:** Video bất động sản Architectural Digest: lướt sát mặt hồ bơi vô cực, tiến vào kiến trúc kính đèn vàng và toàn cảnh hoàng hôn tím.
-* **Cảnh 1 (0s - 6s) - Flycam là là sát mặt hồ bơi vô cực hoàng hôn:**  
-  ```text
-  Smooth ultra-low drone glide skimming across the glass-like surface of an infinity pool, vibrant orange and purple sunset sky reflecting on water, gentle ripples, luxury architectural lifestyle, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Tiến vào biệt thự kính đèn vàng bừng sáng (hoặc Extend +5s):**  
-  ```text
-  Cinematic forward drone push-in toward an ultra-luxury modern glass villa with teakwood terraces, warm architectural interior chandelier lights turning on against twilight ocean backdrop, Architectural Digest standard, 8k.
-  ```
-* **Cảnh 3 (12s - 18s) - Toàn cảnh vách đá & vịnh biển thượng lưu:**  
-  ```text
-  Grand wide aerial establishing shot of the illuminated clifftop estate overlooking turquoise sea waves crashing gently on rocky cove below, peaceful dusk atmosphere, multi-million dollar real estate commercial, 4k UHD.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc chillout thư giãn phong cách resort; hòa âm tiếng sóng biển rì rào du dương; chuyển cảnh "Hòa tan" (Cross Dissolve).
+#### Kịch bản 07: Tổ Hợp Tiện Ích Chung Cư Hạng Sang Chuẩn Khách Sạn 5 Sao
+* **Cảnh 1 (Sảnh đón Lobby thông tầng ốp đá Marble lộng lẫy):**
+```text
+Grand symmetric dolly-in shot gliding across a polished marble floor inside a 5-star residential apartment lobby. Double-height ceiling with a cascading crystal chandelier, warm fluted stone columns, plush velvet lounge seating, and courteous hotel-style reception ambiance, photorealistic architectural film, 4k 60fps.
+```
+* **Cảnh 2 (Hồ bơi vô cực tràn bờ trên tầng thượng — Sky Infinity Pool):**
+```text
+Low-angle gimbal dolly shot gliding smoothly along the edge of a rooftop infinity swimming pool high above the city. Crystal-clear turquoise water spilling over the glass edge, sunken poolside cabanas, lush tropical landscaping, and a breathtaking sunset city skyline in the background, 4k 60fps.
+```
+* **Cảnh 3 (Phòng Gym & Yoga Panorama nhìn ra toàn cảnh đô thị):**
+```text
+Smooth tracking shot moving through a state-of-the-art luxury sky gym and yoga studio inside a high-end residential tower. Sleek black fitness equipment, warm wood flooring, ambient LED ceiling strips, and wrap-around floor-to-ceiling glass windows overlooking the glittering city lights at twilight, 4k 60fps.
+```
+* **📸 Lệnh dùng với Ảnh phối cảnh Tiện ích / Hồ bơi / Sảnh đón của dự án (Image-to-Video):**
+```text
+Preserve the exact lobby or pool architecture from the input image. Smooth forward dolly camera movement with realistic shimmering water reflections, warm glowing ambient lights, and gentle movement of poolside plants, 4k 60fps photorealistic.
+```
 
 ---
 
-### Kịch Bản 09: Cú Lao Dốc & Nhào Lộn Drone FPV Xuyên Rừng (Cảm Giác Mạnh)
-* **Tổng quan:** Hành động tốc độ nghẹt thở Red Bull: rơi tự do từ đỉnh vách đá, nhào lộn luồn tán rừng thông và lướt sát dòng thác nước.
-* **Cảnh 1 (0s - 6s) - Lao dốc thẳng đứng rơi tự do từ vách đá:**  
-  ```text
-  Exhilarating dynamic FPV racing drone vertical dive down a sheer rocky mountain cliff face, mist parting around camera lens, extreme high-speed descent, GoPro Hero 12 cinematography, 4k 60fps.
-  ```
-* **Cảnh 2 (6s - 12s) - Nhào lộn 360° luồn lách qua tán rừng thông (hoặc Extend +5s):**  
-  ```text
-  High-speed FPV drone barrel rolling through dense ancient pine forest canopy, weaving tightly between mossy tree trunks, golden morning sunbeams breaking through fog, exhilarating motion blur, Red Bull action sports style.
-  ```
-* **Cảnh 3 (12s - 18s) - Lướt sát bọt nước thác đổ & Vút lên trời:**  
-  ```text
-  Fast low-level skimming shot over rushing whitewater river, skimming inches above cascading waterfall before pulling up hard into clear blue sky, thrilling climax, 4k UHD.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc điện tử Drum & Bass tiết tấu dồn dập; chèn hiệu ứng âm thanh tiếng gió rít "whoosh" cực đã tai mỗi cú nhào lộn.
+### 🏖️ PHÂN KHÚC 4: BIỆT THỰ TRIỆU ĐÔ & BẤT ĐỘNG SẢN NGHỈ DƯỠNG
+
+#### Kịch bản 08: Biệt Thự Triệu Đô Mặt Biển Hồ Bơi Vô Cực Lúc Hoàng Hôn
+* **Cảnh 1 (Flycam lướt từ biển vào mặt tiền biệt thự trắng):**
+```text
+Cinematic aerial drone shot gliding smoothly forward from the turquoise ocean toward a modern luxury white beachfront villa. Expansive infinity swimming pool reflecting the warm golden sun, wooden sundeck with white loungers, swaying coconut palm trees, and pristine white sand beach, architectural cinematography, 4k 60fps.
+```
+* **Cảnh 2 (Cảnh lướt thấp qua mặt nước hồ bơi vào phòng khách mở):**
+```text
+Low-angle dolly shot skimming gently over the calm infinity pool water toward the open-plan outdoor living pavilion of the coastal villa. Flowing white linen curtains billowing softly in the ocean breeze, sunken fire-pit lounge, and warm golden sunset light illuminating the travertine stone walls, 4k 60fps.
+```
+* **Cảnh 3 (Toàn cảnh biệt thự biển lên đèn lung linh lúc chạng vạng):**
+```text
+Slow orbital aerial drone shot circling the beachfront luxury villa at twilight dusk. Warm amber interior and underwater pool lights glowing vibrantly against the deep blue evening ocean sky, gentle waves lapping the shore, ultra-realistic 8k resort film.
+```
+* **📸 Lệnh dùng với Ảnh thật Biệt thự biển của dự án (Image-to-Video):**
+```text
+Keep the exact coastal villa architecture and pool layout from the reference image intact. Slow aerial dolly push-in with gentle ocean waves, shimmering water ripples in the infinity pool, and palm leaves swaying softly in the breeze, 4k 60fps photorealistic.
+```
 
 ---
 
-### Kịch Bản 10: Nghệ Thuật Chiết Xuất Cà Phê Espresso & Lounge Thượng Hạng (Ngành F&B / Đồ Uống)
-* **Tổng quan:** TVC chuẩn thương hiệu cao cấp 18 giây: cận cảnh dòng Espresso đậm đặc rót vào tách tạo lớp crema vàng óng, hơi nóng bốc lên ngát hương và trải nghiệm thưởng thức trong không gian lounge sang trọng.
-* **Cảnh 1 (0s - 6s) - Cận cảnh vĩ mô dòng Espresso sủi bọt crema:**  
-  ```text
-  Extreme macro slow motion 120fps shot of rich concentrated Espresso dripping smoothly from coffee machine portafilter into a ceramic cup, thick velvety golden-brown crema foaming, 4k 120fps commercial food photography.
-  ```
-* **Cảnh 2 (6s - 12s) - Hơi nóng bốc lên nghi ngút trong nắng sớm (hoặc Extend +5s):**  
-  ```text
-  Slow motion close-up shot of steaming hot freshly brewed espresso cup on rustic wooden table, delicate steam swirls illuminated by warm golden sunrise light, cozy luxury morning cafe aesthetic, 4k 60fps.
-  ```
-* **Cảnh 3 (12s - 18s) - Nâng tách thưởng thức trọn vẹn hương vị:**  
-  ```text
-  Elegant medium close-up shot of hands gently lifting the warm coffee cup in a luxurious quiet cafe lounge, soft ambient bokeh lights in background, peaceful upscale lifestyle, 4k 60fps.
-  ```
-* 🎵 *Gợi ý CapCut:* Nhạc acoustic / bossa nova phong cách quán cà phê châu Âu; chèn hiệu ứng âm thanh tiếng máy pha cà phê xì hơi nước và tiếng thìa sứ khẽ khuấy vào tách.
+#### Kịch bản 09: Biệt Thự Nghỉ Dưỡng Đồi Thông Săn Mây Sáng Sớm
+* **Cảnh 1 (Flycam xuyên qua làn sương rừng thông mở ra căn biệt thự):**
+```text
+Sweeping aerial drone shot flying smoothly over misty green pine forests at dawn to reveal a luxury modern mountain resort villa perched on a hillside. Warm golden interior lights glowing through expansive glass walls, surrounded by rolling mountain peaks and soft floating morning clouds, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Hồ bơi nước ấm vô cực & bể sục Jacuzzi bốc khói nhẹ):**
+```text
+Slow gimbal tracking shot gliding beside a heated cliffside infinity pool and stone Jacuzzi at the mountain villa. Delicate wisps of warm steam rising gently from the calm water surface, wooden terrace with cozy fire pit, overlooking a sea of white clouds in the valley below under golden sunrise rays, 4k 60fps.
+```
+* **Cảnh 3 (Không gian phòng khách lò sưởi ấm áp nhìn ra rừng thông):**
+```text
+Smooth interior dolly shot moving through a cozy timber-and-stone mountain villa living room. Flickering modern glass fireplace, plush wool sofa, warm ambient lamps, and giant panoramic windows framing the misty pine forest bathed in morning sunlight, 4k 60fps, photorealistic.
+```
+* **📸 Lệnh dùng với Ảnh thật Biệt thự đồi núi / Nghỉ dưỡng (Image-to-Video):**
+```text
+Maintain the exact mountain villa architecture and pine forest surroundings from the uploaded photo. Slow, cinematic aerial push-in as soft morning mist drifts gently through the pine trees and warm golden interior lights glow softly on the glass, 4k 60fps.
+```
 
 ---
 
-## 🛠️ PHẦN 5: KHẮC PHỤC 5 LỖI PHỔ BIẾN
-1. **Lỗi khuôn mặt biến dạng:** Thêm `consistent facial features, natural anatomy, highly detailed eyes`.
-2. **Lỗi máy quay bị giật:** Sử dụng các từ khóa `smooth camera glide, steady tracking shot` thay vì các từ chung chung.
-3. **Lỗi bản quyền:** Tránh dùng tên thương hiệu có bản quyền trực tiếp (dùng `luxury sports car` thay vì `Ferrari`).
-4. **Lỗi video bị mờ khi đăng mạng:** Luôn chọn tải file **4K**, dùng CapCut để xuất định dạng bitrate cao trước khi đăng TikTok/Facebook.
-5. **Kênh hỗ trợ VIP:** Ưu tiên hỗ trợ 1-1 qua **Zalo: 0347.999.726** bảo hành đổi mới trong vòng 24h.
+#### Kịch bản 10: Dinh Thự Ven Hồ & Sân Golf Đẳng Cấp Chủ Nhân
+* **Cảnh 1 (Flycam bay dọc thảm cỏ sân golf xanh mướt hướng về dinh thự):**
+```text
+Majestic aerial drone dolly shot gliding smoothly over a manicured emerald-green golf course fairway and tranquil lake toward a grand lakeside mansion. Classical-modern fusion architecture, private boat dock, manicured French gardens, and warm golden late-afternoon sunlight, 4k 60fps, photorealistic.
+```
+* **Cảnh 2 (Đường lái xe riêng lát đá & cổng dinh thự bề thế):**
+```text
+Low-angle smooth tracking shot moving along a private cobblestone driveway lined with sculpted cypress trees and a cascading stone fountain in front of the luxury golf-view mansion. Warm sunlight glinting through the leaves, prestigious billionaire estate atmosphere, 4k 60fps.
+```
+* **Cảnh 3 (Sân vườn ven hồ & tiệc tối thượng lưu bên hồ bơi):**
+```text
+Slow sweeping crane shot gliding over the expansive backyard terrace of the lakeside mansion at twilight. Infinity pool reflecting warm string lights and glowing tall windows, outdoor dining pergola beside the calm lake, serene ultra-luxury lifestyle cinematography, 4k 60fps, photorealistic.
+```
+* **📸 Lệnh dùng với Ảnh thật Dinh thự / Biệt thự sân golf (Image-to-Video):**
+```text
+Strictly preserve the mansion architecture, golf lawn, and lakeside setting from the reference image. Smooth, slow camera dolly forward with gentle water ripples on the lake, swaying tree foliage, and warm golden sunset lighting, 4k 60fps photorealistic.
+```
 
 ---
 
-## 💾 PHẦN 6: CÁCH LƯU HOẶC GỬI HƯỚNG DẪN NÀY CHO KHÁCH HÀNG VIP:
-1. **Gửi file PDF sang trọng:** Mở file [huong-dan-vip-149k.html](file:///e:/ui-ux-pro-max-skill/preview/huong-dan-vip-149k.html) bằng Google Chrome -> Bấm nút **"In / Lưu PDF"** ở góc trên cùng (hoặc bấm `Ctrl + P`) -> Chọn "Lưu dưới dạng PDF" -> Bấm Lưu.
-2. **Gửi qua tin nhắn Zalo:** Copy trực tiếp nội dung ở trên dán vào tin nhắn Zalo kèm 6 file ảnh minh họa chụp thật trong thư mục `assets/` (`guide_step1_home.png` đến `guide_step6_download.png`).
+## ⏱️ PHẦN 7: KỸ THUẬT NỐI DÀI VIDEO (EXTEND +5S) & TẠO PHIM BĐS HOÀN CHỈNH
+
+Một trong những thế mạnh độc quyền của Google Veo 3 so với các AI khác là tính năng **Extend Video (+5s)**:
+* Khi video 8 giây đầu tiên được tạo xong, bạn nhấn nút **`Extend (+5s)`** ở góc trên bên phải video.
+* AI sẽ đọc toàn bộ bối cảnh kiến trúc của giây thứ 8 và **vẽ tiếp 5 giây nối tiếp câu chuyện liền mạch**.
+* **Công thức làm video TVC 18s - 30s:**
+  * Đoạn 1 (0–8s): Flycam bao quát toàn cảnh dự án từ trên cao xuống.
+  * Bấm Extend lần 1 (+5s): Camera hạ thấp lướt vào khu vực cổng chào hoặc hồ bơi.
+  * Bấm Extend lần 2 (+5s): Camera tiến sát vào mặt tiền hoặc không gian phòng khách sang trọng.
+
+---
+
+## ❓ PHẦN 8: CẨM NANG KHẮC PHỤC MỌI LỖI THƯỜNG GẶP (100% XỬ LÝ ĐƯỢC)
+
+**1. Tạo video bị méo kiến trúc hoặc chuyển động quá nhanh?**  
+👉 Thêm các từ khóa điều khiển: `smooth cinematic camera movement, rock-steady gimbal stabilization, slow dolly in`. Tuyệt đối không dùng các từ trừu tượng như "very beautiful" hay "hyper dynamic".
+
+**2. Dùng ảnh thật nhưng AI vẽ ra căn nhà khác?**  
+👉 Hãy đặt cụm từ này ở ngay đầu prompt: `Keep the exact architectural structure, buildings, and layout from the reference image intact.` Đồng thời KHÔNG mô tả lại màu sơn hay số tầng trong prompt vì AI sẽ bị hiểu nhầm là bạn muốn vẽ mới.
+
+**3. Video tạo ra bị tối hoặc màu sắc nhạt nhòa?**  
+👉 Thêm từ khóa ánh sáng điện ảnh: `natural golden hour morning sunbeams, warm amber interior glow, 4k 60fps photorealistic`.
+
+---
+
+## 🛡️ PHẦN 9: KÊNH HỖ TRỢ KỸ THUẬT VIP & BẢO HÀNH 1-1
+
+* 💬 **Zalo Kỹ Thuật Viên 1-1:** **0347.999.726** (Hỗ trợ trong 5 phút).
+* 🔄 **Bảo hành 1 đổi 1:** Đổi mới tài khoản ngay trong 24 giờ nếu có sự cố đăng nhập.
+* 🌐 **Trang chủ dịch vụ:** **[https://veo3flow-preview.vercel.app](https://veo3flow-preview.vercel.app)**
