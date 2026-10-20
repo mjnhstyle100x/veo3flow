@@ -2,7 +2,7 @@
 ## (ĐẶC QUYỀN GÓI VIP PRO REAL ESTATE 199.000đ — GHÉP MẶT CHÍNH CHỦ, ĐỒNG NHẤT NHÂN VẬT, GEMINI BIÊN KỊCH 5 PHÂN CẢNH, DỰNG CAPCUT & TẶNG 1 TÀI KHOẢN VEO 3)
 
 > 👑 **Chúc mừng bạn đã sở hữu Gói VIP Pro Real Estate 199.000đ!**  
-> Dưới đây là toàn bộ cẩm nang Master độc quyền dành riêng cho **Môi giới Bất động sản**: từ việc kích hoạt tài khoản Veo 3 (1.000 credits), kỹ thuật đưa khuôn mặt của chính bạn vào video, bí quyết giữ đúng 1 nhân vật qua mọi phân cảnh, dùng Google Gemini tự động xuất kịch bản 5 cảnh Hollywood, quy trình dựng CapCut có giọng đọc tiếng Việt đến kho 10 kịch bản TVC BĐS triệu đô.
+> Dưới đây là toàn bộ cẩm nang Master thực chiến tinh gọn dành riêng cho **Môi giới Bất động sản**: từ việc kích hoạt tài khoản Veo 3 (1.000 credits), kỹ thuật đưa khuôn mặt của chính bạn vào video, bí quyết giữ đúng 1 nhân vật qua mọi phân cảnh, dùng Google Gemini tự động xuất kịch bản 5 cảnh Hollywood, quy trình dựng CapCut có giọng đọc tiếng Việt đến kỹ thuật Image-to-Video biến ảnh 3D thành video 4K.
 
 ---
 
@@ -29,7 +29,7 @@ Slow architectural dolly shot gliding smoothly through the entrance into a luxur
 
 ---
 
-## 🚀 PHẦN 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN TRÊN GOOGLE FLOW
+## 🚀 CHƯƠNG 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN TRÊN GOOGLE FLOW
 1. **Bước 1:** Truy cập [https://labs.google/fx/tools/flow](https://labs.google/fx/tools/flow) ➔ Bấm **"Tạo bằng Google Flow"**.
 2. **Bước 2:** Đăng nhập Gmail & Mật khẩu được cấp ➔ Bấm Lưu mật khẩu trên Chrome.
 3. **Bước 3:** Nhấp nút **"+ Dự án mới"** để mở không gian sáng tạo.
@@ -39,7 +39,7 @@ Slow architectural dolly shot gliding smoothly through the entrance into a luxur
 
 ---
 
-## 👤 PHẦN 2: KỸ THUẬT GHÉP MẶT CHÍNH BẠN VÀO VIDEO AI (FACE SWAP BĐS)
+## 👤 CHƯƠNG 2: VŨ KHÍ 1: KỸ THUẬT GHÉP MẶT CHÍNH BẠN VÀO VIDEO AI (FACE SWAP BĐS)
 
 ### 1. Tiêu chuẩn chọn ảnh chân dung đầu vào:
 * Chụp thẳng trực diện (Front-facing), mắt nhìn vào ống kính, khuôn mặt mỉm cười tự tin.
@@ -59,18 +59,18 @@ Strictly preserve the exact facial features, identity, hairstyle, and business a
 
 ---
 
-## 🎭 PHẦN 3: BÍ QUYẾT ĐỒNG NHẤT NHÂN VẬT (CHARACTER CONSISTENCY) MỌI PHÂN CẢNH
+## 🎭 CHƯƠNG 3: VŨ KHÍ 2: BÍ QUYẾT ĐỒNG NHẤT NHÂN VẬT (CHARACTER CONSISTENCY) MỌI CẢNH
 
 1. **Khóa cố định "Character DNA" trong mọi prompt:**
    * **Nam môi giới:** `"A sharp 28-year-old Vietnamese male real estate consultant, neatly groomed short black hair, wearing a tailored navy blue blazer, crisp white dress shirt, no tie, modern minimalist silver watch, confident trustworthy smile"`
    * **Nữ môi giới:** `"An elegant 26-year-old Vietnamese female real estate advisor, straight shoulder-length black hair, wearing a chic white cream business suit, light professional makeup, friendly radiant smile, holding a luxury leather portfolio"`
 
 2. **Kỹ thuật "Nối Khung Hình" (Last Frame to First Frame):**
-   * Lấy ảnh khung hình cuối của Cảnh 1 tải vào ô Khung hình đầu tiên (`First Frame`) của Cảnh 2 ➔ Nhân vật bước đi tiếp nối không bao giờ bị đổi người.
+   * Lấy ảnh khung hình cuối của Cảnh 1 tải vào ô Khung hình đầu tiên (`First Frame`) của Cảnh 2 ➔ Nhân vật di chuyển tiếp nối từ ngoài cổng vào trong nhà không bao giờ bị đổi người.
 
 ---
 
-## 🤖 PHẦN 4: TRỢ LÝ GOOGLE GEMINI "BIÊN KỊCH BĐS TỰ ĐỘNG 5 PHÂN CẢNH"
+## 🤖 CHƯƠNG 4: VŨ KHÍ 3: TRỢ LÝ GOOGLE GEMINI "BIÊN KỊCH BĐS TỰ ĐỘNG 5 PHÂN CẢNH"
 
 Mở **gemini.google.com** và dán đoạn lệnh sau:
 ```text
@@ -92,7 +92,7 @@ Thông tin sản phẩm BĐS của tôi là: [ĐIỀN TÊN SẢN PHẨM, VỊ TR
 
 ---
 
-## 🎬 PHẦN 5: QUY TRÌNH DỰNG VIDEO HOÀN CHỈNH BẰNG CAPCUT & VOICE AI
+## 🎬 CHƯƠNG 5: VŨ KHÍ 4: QUY TRÌNH DỰNG VIDEO HOÀN CHỈNH BẰNG CAPCUT & VOICE AI
 1. **Bước 1 (Lồng tiếng AI):** Dùng tính năng *Văn bản ➔ Đọc văn bản* trong CapCut hoặc Vbee để tạo giọng đọc tiếng Việt truyền cảm theo kịch bản Gemini.
 2. **Bước 2 (Ghép video):** Kéo 5 video từ Veo 3 vào CapCut, cắt gọt khớp từng câu của giọng đọc, chèn chuyển cảnh *Mờ đen 0.3s*.
 3. **Bước 3 (Phụ đề tự động):** Bấm *Văn bản ➔ Phụ đề tự động*, chọn mẫu chữ màu vàng neon viền đen phong cách TikTok.
@@ -100,7 +100,7 @@ Thông tin sản phẩm BĐS của tôi là: [ĐIỀN TÊN SẢN PHẨM, VỊ TR
 
 ---
 
-## 📸 PHẦN 6: IMAGE-TO-VIDEO: BIẾN ẢNH PHỐI CẢNH 3D CỦA CĐT THÀNH VIDEO 4K (6 MẪU)
+## 📸 CHƯƠNG 6: IMAGE-TO-VIDEO: BIẾN ẢNH PHỐI CẢNH 3D CỦA CĐT THÀNH VIDEO 4K (6 MẪU)
 *(Tải ảnh 3D/ảnh thật của CĐT vào ô `First Frame` và dán lệnh tương ứng)*
 * **I2V-01: Flycam bay tiến chậm bao quát toàn khu đô thị/đất nền**
 * **I2V-02: Camera trượt ngang lướt qua mặt tiền shophouse/nhà phố**
@@ -111,21 +111,5 @@ Thông tin sản phẩm BĐS của tôi là: [ĐIỀN TÊN SẢN PHẨM, VỊ TR
 
 ---
 
-## 🏛️ PHẦN 7: CÔNG THỨC MASTER PROMPT 4 TRỤ CỘT & TỪ ĐIỂN GÓC MÁY
-* **Trụ cột 1:** Chủ thể BĐS & Nhân vật (Subject)
-* **Trụ cột 2:** Cú máy & Động tác camera (Camera Motion)
-* **Trụ cột 3:** Ánh sáng & Thời điểm (Lighting & Atmosphere)
-* **Trụ cột 4:** Thần chú khóa nét: `architectural cinematography, photorealistic, 4k 60fps, 8k resolution`
-
----
-
-## 📁 PHẦN 8: KHO 10 KỊCH BẢN PHÂN CẢNH TVC BĐS TRIỆU ĐÔ
-* **Phân khúc 1: Đất nền dự án & Đại đô thị quy hoạch** (Kịch bản 01, 02)
-* **Phân khúc 2: Nhà phố thương mại & Shophouse đại lộ** (Kịch bản 03, 04, 05)
-* **Phân khúc 3: Căn hộ chung cư cao cấp & Penthouse** (Kịch bản 06, 07, 08)
-* **Phân khúc 4: Biệt thự nghỉ dưỡng ven biển & Đồi núi** (Kịch bản 09, 10)
-
----
-
-## 🛠️ PHẦN 9: XỬ LÝ LỖI & HỖ TRỢ KỸ THUẬT VIP 1-1
+## 🛠️ CHƯƠNG 7: XỬ LÝ LỖI & HỖ TRỢ KỸ THUẬT VIP 1-1
 * **Bảo hành tài khoản 1 đổi 1 trong 24 giờ:** Hotline & Zalo kỹ thuật: **0347.999.726**.
