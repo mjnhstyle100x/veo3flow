@@ -79,25 +79,38 @@ Nếu sau này bạn muốn tự tạo video theo ý riêng của mình cho từ
 
 ---
 
-## 🎬 3 CÂU LỆNH MẪU BĐS "MÌ ĂN LIỀN" (BẤM COPY LÀ CÓ VIDEO ĐẸP NGAY)
+## 🎬 3 CÂU LỆNH MẪU BĐS THỰC CHIẾN "MÌ ĂN LIỀN" (BẤM COPY LÀ CÓ VIDEO ĐẸP NGAY)
 
-### Mẫu 01 – Chủ đề: BĐS Nghỉ Dưỡng / Ven Biển (Flycam Biệt Thự Hồ Bơi Vô Cực)
-> *Mô tả tiếng Việt: Cảnh flycam góc rộng bay lướt chậm qua căn biệt thự trắng hiện đại ven biển, hồ bơi vô cực xanh ngọc bích phản chiếu nắng vàng, hàng dừa xanh mát và biển khơi phía xa.*
+### Mẫu 01 – Chủ đề: Giới Thiệu Dự Án / Chung Cư Cao Cấp (Flycam Toàn Cảnh & Đài Phun Nước)
+> *Mô tả tiếng Việt: Cảnh flycam góc cao lướt chậm từ trên không tiến dần vào cổng chào và quảng trường trung tâm đại dự án chung cư cao cấp, các tòa tháp kính hiện đại phản chiếu ánh nắng hoàng hôn vàng rực rỡ, quảng trường đi bộ xanh mát có đài phun nước pha lê và cây xanh nhiệt đới chuẩn phong cách resort.*
 ```text
-Cinematic aerial drone shot, slow forward dolly movement over a modern luxury white coastal villa with a turquoise infinity pool, surrounded by lush palm trees overlooking a crystal-clear ocean under warm golden morning sunlight, architectural photography, ultra realistic, 4k 60fps.
+Cinematic aerial drone shot slowly descending towards the grand entrance of a luxury modern residential mega-project, glass facade towers reflecting the golden sunset, landscaped pedestrian plaza with crystal fountain and walking paths, lush tropical greenery, architectural cinematography, photorealistic, 4k 60fps, 8k resolution.
 ```
 
-### Mẫu 02 – Chủ đề: Căn Hộ Cao Cấp (Tour Nội Thất Phòng Khách Penthouse Triệu Đô)
-> *Mô tả tiếng Việt: Máy quay lướt nhẹ nhàng vào không gian phòng khách Penthouse tối giản sang trọng, sofa da màu kem ấm, tường ốp đá tự nhiên, cửa kính kịch trần đón ánh nắng ban mai nhìn ra toàn cảnh thành phố.*
+### Mẫu 02 – Chủ đề: Đất Nền Phân Lô Sổ Đỏ (🌟 CÓ MẶT NGƯỜI MẪU AI DẪN DẮT)
+> *Mô tả tiếng Việt: Cú máy tracking shot đi lùi mượt mà ngang tầm mắt, một nam môi giới người Việt mặc sơ mi trắng và quần tây chỉn chu, khuôn mặt sáng vừa bước đi tự tin vừa mỉm cười giơ tay giới thiệu tuyến đường nhựa mới trải của khu đất nền phân lô, các mốc ranh giới rõ ràng, vỉa hè cây xanh mát mắt dưới bầu trời nắng mai trong vắt.*
 ```text
-Slow architectural dolly shot moving smoothly through a luxury minimalist penthouse living room, warm cream leather sofa, natural stone accent wall, floor-to-ceiling glass windows with morning sunbeams revealing a modern city skyline, interior design magazine style, photorealistic, 4k 60fps.
+Cinematic smooth tracking shot moving backwards, a handsome professional Vietnamese male real estate agent in a crisp white shirt and navy trousers, walking confidently forward along a newly paved asphalt subdivision road, smiling warmly and gesturing with his hand showcasing the demarcated residential land plots, lush green boundary posts, sunny blue sky, photorealistic 8k, ultra-realistic human skin details, 4k 60fps.
+```
+*(💡 Mẹo: Đây là câu lệnh 1 cảnh quay đơn với người mẫu AI ngẫu nhiên của Google Veo 3. Để ghép chính khuôn mặt của BẠN và làm trọn vẹn kịch bản nhiều cảnh, bạn có thể nâng cấp lên Gói VIP 199K).*
+
+### Mẫu 03 – Chủ đề: Giới Thiệu Căn Hộ Cao Cấp (Tour 3D Phòng Khách Panorama View Hoàng Hôn)
+> *Mô tả tiếng Việt: Máy quay lướt nhẹ nhàng (dolly shot) từ cửa chính bước vào không gian phòng khách căn hộ cao cấp ngập tràn ánh sáng, bộ sofa bọc vải cao cấp màu be, ánh đèn vàng hắt dịu nhẹ, ban công kính kịch trần mở ra góc nhìn toàn cảnh sông nước và thành phố lung linh ánh đèn lúc hoàng hôn.*
+```text
+Slow architectural dolly shot gliding smoothly through the entrance into a luxury high-floor apartment living room, contemporary beige modular sofa, elegant warm recessed lighting, floor-to-ceiling glass doors opening to a scenic riverfront balcony with city skyline sunset panorama, architectural photography, photorealistic, 4k 60fps.
 ```
 
-### Mẫu 03 – Chủ đề: BĐS Sinh Thái / Đồi Núi (Biệt Thự Nghỉ Dưỡng Giữa Rừng Thông Lúc Hoàng Hôn)
-> *Mô tả tiếng Việt: Cảnh flycam bao quát căn biệt thự nghỉ dưỡng sang trọng ẩn mình giữa đồi thông xanh ngát vào buổi chiều tà, ánh đèn vàng ấm áp từ bên trong hắt ra mặt nước hồ bơi, sương mờ nhẹ phủ trên dãy núi phía xa.*
-```text
-Sweeping aerial drone shot at dusk of a luxury mountain resort villa nestled among pine forests, warm glowing golden interior lights reflecting on a calm swimming pool, misty mountain peaks in the background under a twilight sky, cinematic atmosphere, ultra high definition 8k.
-```
+---
+
+## 👑 NÂNG CẤP GÓI VIP PRO REAL ESTATE (199.000đ)
+Nếu bạn muốn nâng cấp lên sản phẩm chuyên nghiệp hoàn chỉnh:
+* **👤 Kỹ thuật Ghép Mặt Chính Chủ:** Đưa khuôn mặt của bạn vào video AI chỉ với 1 bức ảnh chân dung.
+* **🎭 Bí Quyết Đồng Nhất Nhân Vật:** Giữ đúng 1 nhân vật xuất hiện xuyên suốt mọi phân cảnh.
+* **🤖 Prompt Gemini Biên Kịch BĐS Tự Động:** Nhập thông số lô đất/dự án ➔ Gemini tự sinh kịch bản 5 phân cảnh chi tiết chuẩn điện ảnh.
+* **🎬 Quy trình dựng video hoàn chỉnh 30s-60s:** Lồng tiếng AI tiếng Việt, phụ đề tự động và nhạc nền chốt deal.
+* **🎁 Tặng kèm 1 Tài khoản Google Veo 3 (1.000 credits)** để thực hành ngay.
+👉 Xem chi tiết tại: [Trang Mua Hàng](file:///e:/ui-ux-pro-max-skill/preview/index.html#bang-gia)
+
 
 ---
 
