@@ -336,6 +336,31 @@
                   linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 22%, transparent 78%, rgba(0,0,0,0.5) 100%);
       pointer-events: none;
     }
+    .vertical-slide {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #000; overflow: hidden;
+    }
+    .vertical-backdrop {
+      position: absolute; inset: -20%;
+      background-size: cover; background-position: center;
+      filter: blur(28px) brightness(0.35);
+      transform: scale(1.15);
+      pointer-events: none;
+    }
+    .vertical-video {
+      position: relative !important;
+      width: auto !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      aspect-ratio: 9 / 16;
+      object-fit: contain !important;
+      margin: 0 auto;
+      border-left: 1px solid rgba(255,255,255,0.12);
+      border-right: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 0 35px rgba(0,0,0,0.9);
+      z-index: 1;
+    }
     .scene-letterbox::before, .scene-letterbox::after { content: ''; position: absolute; left: 0; right: 0; height: 6.5%; background: #000; z-index: 2; }
     .scene-letterbox::before { top: 0; } .scene-letterbox::after { bottom: 0; }
 
@@ -343,7 +368,20 @@
     .hud-tl { top: 9%; left: 4%; display: flex; align-items: center; gap: 6px; }
     .hud-tl .rec { width: 8px; height: 8px; border-radius: 50%; background: #EF4444; box-shadow: 0 0 8px #EF4444; animation: blink 1.2s infinite; }
     @keyframes blink { 50% { opacity: 0.2; } }
-    .hud-tr { top: 9%; right: 4%; }
+    .hud-tr { top: 9%; right: 4%; display: flex; align-items: center; gap: 8px; }
+    .hud-sound-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 3px 8px; border-radius: 6px;
+      background: rgba(0,0,0,0.65); border: 1px solid rgba(255,255,255,0.25);
+      color: #fff; font-family: inherit; font-size: 0.66rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s; backdrop-filter: blur(6px);
+    }
+    .hud-sound-btn:hover {
+      background: rgba(34,211,238,0.25); border-color: var(--cyan); color: var(--cyan);
+    }
+    .hud-sound-btn.unmuted {
+      background: rgba(16,185,129,0.3); border-color: rgba(16,185,129,0.7); color: #A7F3D0;
+    }
     .hud-bl { bottom: 9%; left: 4%; padding: 4px 8px; border-radius: 6px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(6px); }
     .hud-br { bottom: 9%; right: 4%; display: flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 6px; background: rgba(0,0,0,0.6); border: 1px solid rgba(34,211,238,0.4); color: var(--cyan); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.05em; backdrop-filter: blur(6px); }
 
@@ -896,37 +934,56 @@
           <div class="scene-tabs" role="tablist" aria-label="Chọn mẫu video minh hoạ">
             <button class="scene-tab active" data-scene="0" role="tab" aria-selected="true" type="button">
               <span class="tab-dot"></span>
-              <span>🚁 Flycam Biệt Thự</span>
+              <span>🎙️ Review Dự Án (1)</span>
             </button>
             <button class="scene-tab" data-scene="1" role="tab" aria-selected="false" type="button">
               <span class="tab-dot"></span>
-              <span>🏢 Penthouse VIP</span>
+              <span>🌾 Đất Nền Dự Án (2)</span>
             </button>
             <button class="scene-tab" data-scene="2" role="tab" aria-selected="false" type="button">
               <span class="tab-dot"></span>
-              <span>🌲 Biệt Thự Nghỉ Dưỡng</span>
+              <span>📱 Đất Nền TikTok (3)</span>
+            </button>
+            <button class="scene-tab" data-scene="3" role="tab" aria-selected="false" type="button">
+              <span class="tab-dot"></span>
+              <span>🏢 Review Căn Hộ (4)</span>
             </button>
           </div>
 
           <!-- 16:9 Cinematic Viewport (Option 1) -->
           <div class="preview scene-letterbox">
             <div class="cinema-viewport" id="cinema-viewport">
+              <!-- Video 1: Giới thiệu dự án (ngang) -->
               <div class="cinema-slide active">
-                <video class="cinema-video" src="assets/video_villa_coastal.mp4" poster="assets/bds_flycam.jpg" autoplay loop muted playsinline preload="auto"></video>
+                <video class="cinema-video" src="assets/video_review_du_an.mp4" poster="assets/thumb_du_an_1.jpg" autoplay loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
+              <!-- Video 2: Giới thiệu đất nền (ngang) -->
               <div class="cinema-slide">
-                <video class="cinema-video" src="assets/video_penthouse_vip.mp4" poster="assets/real_estate_penthouse.jpg" loop muted playsinline preload="auto"></video>
+                <video class="cinema-video" src="assets/video_dat_nen_ngang.mp4" poster="assets/thumb_dat_nen_2.jpg" loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
-              <div class="cinema-slide">
-                <video class="cinema-video" src="assets/video_resort_villa.mp4" poster="assets/sapa_drone.jpg" loop muted playsinline preload="auto"></video>
+              <!-- Video 3: Đất nền dọc (TikTok / Reels) -->
+              <div class="cinema-slide vertical-slide">
+                <div class="vertical-backdrop" style="background-image:url('assets/thumb_dat_nen_doc_3.jpg')"></div>
+                <video class="cinema-video vertical-video" src="assets/video_dat_nen_doc.mp4" poster="assets/thumb_dat_nen_doc_3.jpg" loop muted playsinline preload="auto"></video>
+                <div class="cinema-overlay"></div>
+              </div>
+              <!-- Video 4: Giới thiệu căn hộ (dọc) -->
+              <div class="cinema-slide vertical-slide">
+                <div class="vertical-backdrop" style="background-image:url('assets/thumb_can_ho_4.jpg')"></div>
+                <video class="cinema-video vertical-video" src="assets/video_can_ho_doc.mp4" poster="assets/thumb_can_ho_4.jpg" loop muted playsinline preload="auto"></video>
                 <div class="cinema-overlay"></div>
               </div>
             </div>
             <div class="hud hud-tl"><span class="rec"></span> REC 00:08</div>
-            <div class="hud hud-tr">1080p · 24fps</div>
-            <div class="hud hud-bl" id="hud-cam">CAM: slow aerial dolly</div>
+            <div class="hud hud-tr">
+              <span>1080p · 24fps</span>
+              <button class="hud-sound-btn" id="hud-sound" type="button" title="Bật/Tắt âm thanh thuyết minh">
+                <span id="sound-icon">🔇</span> <span id="sound-text">Bật tiếng</span>
+              </button>
+            </div>
+            <div class="hud hud-bl" id="hud-cam">CAM: smooth forward tracking</div>
             <div class="hud hud-br" id="hud-engine">GOOGLE VEO 3</div>
           </div>
           <div class="gen-row">
@@ -1554,23 +1611,28 @@
     // Copy prompt buttons
     $$('[data-copy]').forEach(btn => btn.addEventListener('click', () => copyText($('#' + btn.dataset.copy).innerText.trim(), 'Đã sao chép prompt — dán vào Flow nhé!')));
 
-    /* ---------- Hero typing demo & Scene switcher (Option 1 + Option 3) ---------- */
+    /* ---------- Hero typing demo & Scene switcher (4 Video Sản Phẩm Thực Tế) ---------- */
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const demos = [
       {
-        title: '🚁 Flycam Biệt Thự',
-        text: 'Cinematic 8k aerial drone shot flying over a luxury modern coastal villa with a swimming pool, minimalist white architecture, bright sunny day, real estate commercial photography, slow dolly forward, 4k 60fps…',
-        cam: 'CAM: slow aerial dolly'
+        title: '🎙️ Review Dự Án (1)',
+        text: 'Hai nữ chuyên viên môi giới bất động sản chuyên nghiệp mặc vest thanh lịch, đang tự tin bước đi và giới thiệu tổng quan dự án chung cư cao cấp Cityon, camera tracking mượt mà, phong cách truyền hình 4k 60fps…',
+        cam: 'CAM: smooth forward tracking'
       },
       {
-        title: '🏢 Penthouse VIP',
-        text: 'Smooth slow dolly through a luxurious minimalist penthouse living room, premium leather sofa bathed in warm morning sunlight, panoramic city skyline view through floor-to-ceiling windows, 8k…',
-        cam: 'CAM: slow architectural dolly'
+        title: '🌾 Đất Nền Dự Án (2)',
+        text: 'Nam môi giới bất động sản mặc vest lịch lãm bước đi trên trục đường nội khu 12m dự án đất nền phân lô, cây xanh hai bên đường, thuyết minh giới thiệu vị trí đắc địa và tiềm năng sinh lời, 4k 60fps…',
+        cam: 'CAM: slow walking dolly'
       },
       {
-        title: '🌲 Biệt Thự Nghỉ Dưỡng',
-        text: 'Cinematic 8k aerial drone shot sweeping over an ultra-luxury modern mountain resort villa with infinity pool cantilevered above pine forest, golden sunset lighting, majestic mountains, 60fps…',
-        cam: 'CAM: sweeping aerial dolly'
+        title: '📱 Đất Nền TikTok (3)',
+        text: 'Video ngắn 9:16 dọc TikTok: Nam chuyên viên môi giới mặc vest xanh chỉ tay giới thiệu thực địa khu đất nền đang thi công san lấp, cọc mốc phân lô từng nền, hạ tầng điện nước, chữ nổi bật SỔ HỒNG RIÊNG…',
+        cam: 'CAM: vertical mobile 9:16'
+      },
+      {
+        title: '🏢 Review Căn Hộ (4)',
+        text: 'Video dọc 9:16: Cặp đôi chuyên viên bất động sản nam vest xanh cà vạt và nữ vest kem sang trọng dẫn khách tham quan căn hộ mẫu cao cấp, cửa kính panorama view sông lộng gió, nụ cười tươi tắn, 8k…',
+        cam: 'CAM: interior vertical tour'
       }
     ];
 
@@ -1580,6 +1642,27 @@
     let currentScene = 0;
     let typeTimer = null, runTimer = null, loopTimer = null;
     let userInteracted = false, resumeTimeout = null;
+    let isSoundOn = false;
+
+    // Bật/tắt âm thanh thuyết minh
+    const soundBtn = $('#hud-sound');
+    const soundIcon = $('#sound-icon');
+    const soundText = $('#sound-text');
+
+    if (soundBtn) {
+      soundBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        isSoundOn = !isSoundOn;
+        if (soundIcon) soundIcon.textContent = isSoundOn ? '🔊' : '🔇';
+        if (soundText) soundText.textContent = isSoundOn ? 'Đang bật' : 'Bật tiếng';
+        soundBtn.classList.toggle('unmuted', isSoundOn);
+        const currentVid = slides[currentScene]?.querySelector('video');
+        if (currentVid) {
+          currentVid.muted = !isSoundOn;
+          if (isSoundOn) currentVid.play().catch(() => {});
+        }
+      });
+    }
 
     function setSceneVisuals(idx) {
       currentScene = idx;
@@ -1590,6 +1673,7 @@
         if (vid) {
           if (isActive) {
             vid.currentTime = 0;
+            vid.muted = !isSoundOn;
             vid.play().catch(() => {});
           } else {
             vid.pause();
@@ -1601,7 +1685,7 @@
         tb.classList.toggle('active', isActive);
         tb.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-      if (hudCam) hudCam.textContent = demos[idx].cam;
+      if (hudCam && demos[idx]) hudCam.textContent = demos[idx].cam;
     }
 
     function runScene(idx) {
