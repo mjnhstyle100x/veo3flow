@@ -23,6 +23,7 @@
 
 
 
+
     :root {
       --bg: #090C15;
       --surface: #0F1423;
@@ -3815,6 +3816,273 @@
       margin: 24px 0;
     }
 
+  
+
+    /* Screenshot Caption Strip */
+    .img-caption-strip {
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    .caption-action-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .caption-arrow-tag {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #000000;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .caption-text {
+      color: #FFFFFF;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+    .caption-target {
+      color: #94A3B8;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Guide Step Cards with Real Screenshots */
+    .guide-step-card {
+      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+    .guide-step-card:hover {
+      border-color: rgba(34, 211, 238, 0.55);
+      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
+    }
+    .guide-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(10, 14, 24, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .guide-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .guide-step-badge.cyan {
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+    }
+    .guide-step-badge.green {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .guide-step-badge.amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .guide-step-badge.purple {
+      background: rgba(168, 85, 247, 0.15);
+      color: #C084FC;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+    }
+    .guide-step-body {
+      padding: 20px;
+    }
+    .guide-step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .guide-step-desc {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .guide-step-img-box {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .guide-step-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .guide-step-img-box:hover img {
+      transform: scale(1.008);
+    }
+    .guide-step-note {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: rgba(34, 211, 238, 0.08);
+      border-left: 3px solid var(--cyan);
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      line-height: 1.55;
+    }
+    .phase-divider {
+      margin: 40px 0 24px;
+      padding: 16px 20px;
+      background: linear-gradient(90deg, rgba(34, 211, 238, 0.15), rgba(99, 102, 241, 0.05));
+      border-left: 4px solid var(--cyan);
+      border-radius: 0 12px 12px 0;
+    }
+    .phase-divider h3 {
+      margin: 0 0 6px;
+      color: #FFFFFF;
+      font-size: 1.25rem;
+    }
+    .phase-divider p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .guide-video-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 78, 59, 0.25));
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    /* VIP 199K Badges & Cards */
+    .badge-vip-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #FBBF24;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .weapon-card {
+      background: linear-gradient(135deg, rgba(15, 20, 35, 0.9), rgba(22, 29, 49, 0.95));
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .weapon-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--cyan), var(--primary), var(--amber));
+    }
+    .weapon-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .weapon-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+    }
+    .weapon-tag.face { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.35); }
+    .weapon-tag.consistency { background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .weapon-tag.gemini { background: rgba(245, 158, 11, 0.15); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .weapon-tag.capcut { background: rgba(236, 72, 153, 0.15); color: #EC4899; border: 1px solid rgba(236, 72, 153, 0.35); }
+
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+    .story-shot-box {
+      background: rgba(15, 20, 35, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .story-shot-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .story-shot-timing {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--amber);
+      font-size: 0.75rem;
+    }
+    .story-shot-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #FFFFFF;
+    }
+    .story-shot-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .account-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(16, 185, 129, 0.08));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin: 24px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -3863,11 +4131,11 @@
       </div>
     </header>
 
-    <!-- Table of Contents (Clean 8 sections) -->
+    <!-- Table of Contents (Clean 7 sections) -->
     <div class="toc-card no-print">
       <div class="toc-title">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-        Mục Lục Nhanh 8 Phần Thực Hành BĐS VIP 199K
+        Mục Lục Nhanh 7 Phần Thực Hành BĐS VIP 199K
       </div>
       <div class="toc-grid">
         <a href="#ch-0" class="toc-link"><span class="toc-num">00</span> Kích hoạt Tài khoản Veo 3</a>
@@ -3876,8 +4144,7 @@
         <a href="#ch-3" class="toc-link" style="border: 1px solid rgba(16,185,129,0.4);"><span class="toc-num" style="color:#10B981;">03</span> 🎭 Bí Quyết Giữ Đồng Nhất Nhân Vật 5 Cảnh</a>
         <a href="#ch-4" class="toc-link" style="border: 1px solid rgba(245,158,11,0.4);"><span class="toc-num" style="color:#F59E0B;">04</span> 🤖 Gemini Biên Kịch BĐS 5 Phân Cảnh</a>
         <a href="#ch-5" class="toc-link" style="border: 1px solid rgba(236,72,153,0.4);"><span class="toc-num" style="color:#EC4899;">05</span> 🎬 Quy trình dựng hoàn chỉnh bằng CapCut</a>
-        <a href="#ch-6" class="toc-link"><span class="toc-num">06</span> 📸 Image-to-Video: Biến ảnh 3D thành video 4K</a>
-        <a href="#ch-7" class="toc-link"><span class="toc-num">07</span> 🛠️ Xử lý lỗi & Kênh Hỗ Trợ Kỹ Thuật VIP 1-1</a>
+        <a href="#ch-6" class="toc-link"><span class="toc-num">06</span> 🛠️ Xử lý lỗi & Kênh Hỗ Trợ Kỹ Thuật VIP 1-1</a>
       </div>
     </div>
 
@@ -4785,145 +5052,7 @@ Thông tin sản phẩm BĐS của tôi là: [ĐIỀN TÊN SẢN PHẨM, VỊ TR
     <!-- CHAPTER 6 -->
     <section id="ch-6">
       <div class="section-header">
-        <h2>Chương 6: 📸 Image-to-Video: Biến Ảnh Phối Cảnh 3D / Ảnh Thật Của CĐT Thành Video 4K</h2>
-        <span class="section-badge">GIỮ NGUYÊN THIẾT KẾ GỐC</span>
-      </div>
-
-      <p>
-        Khi bán dự án có sẵn ảnh phối cảnh 3D của Chủ đầu tư, bạn chỉ cần tải tấm ảnh đó lên làm <strong>Khung hình đầu tiên</strong> và dán 1 trong 6 câu lệnh điều khiển góc máy dưới đây:
-      </p>
-
-      <!-- I2V 1 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-01</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">DÀNH CHO ẢNH PHỐI CẢNH TỔNG THỂ DỰ ÁN / KHU ĐÔ THỊ / ĐẤT NỀN</span>
-          </div>
-          <div class="prompt-card-title">Góc Flycam Bay Tiến Chậm Bao Quát Toàn Khu</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên 100% quy hoạch kiến trúc trong ảnh, camera flycam bay tiến nhẹ nhàng về phía trước, mây trôi nhẹ, nắng vàng óng và cây cối đung đưa theo gió.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-01')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-01">Keep the exact architectural structure, buildings, and layout from the reference image intact. Smooth, slow cinematic aerial drone push-in shot gliding gently forward over the property. Subtle natural ambient motion: soft clouds drifting slowly across the sky, gentle tree leaves swaying in the breeze, and warm golden sunlight casting realistic reflections. Photorealistic architectural visualization, rock-steady gimbal movement, 4k 60fps.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- I2V 2 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-02</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">DÀNH CHO ẢNH MẶT TIỀN BIỆT THỰ / NHÀ PHỐ / SHOPHOUSE</span>
-          </div>
-          <div class="prompt-card-title">Góc Máy Trượt Ngang Điện Ảnh Qua Mặt Tiền</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên vật liệu đá, kính và hình khối mặt tiền nhà phố/shophouse, camera lướt ngang chậm rãi và đẩy nhẹ tới trước, ánh nắng sớm chiếu ấm áp.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-02')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-02">strictly preserve the original building facade, materials, and proportions from the input image. Slow, ultra-smooth cinematic camera trucking shot moving laterally across the front of the property, accompanied by a gentle push-in. Subtle environmental life: green foliage swaying softly in a light breeze, natural warm morning sunbeams shifting gently across the glass windows and stone walls. High-end real estate commercial, 4k 60fps, photorealistic.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- I2V 3 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-03</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">DÀNH CHO ẢNH BIỆT THỰ HỒ BƠI / RESORT VEN BIỂN</span>
-          </div>
-          <div class="prompt-card-title">Góc Máy Lướt Sát Mặt Nước Hồ Bơi Lung Linh</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên biệt thự trong ảnh, làm mặt nước hồ bơi gợn sóng lấp lánh phản chiếu ánh nắng, camera lướt thấp sát mặt nước tiến về căn nhà.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-03')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-03">Maintain the exact villa design and surrounding landscape from the uploaded image. Slow, low-angle cinematic dolly shot gliding smoothly forward just above the swimming pool surface. Realistic gentle water ripples reflecting the warm golden sunlight, palm fronds and garden plants moving softly in the coastal breeze. Ultra-realistic luxury resort cinematography, crystal-clear details, 4k 60fps.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- I2V 4 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-04</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">DÀNH CHO ẢNH NỘI THẤT PHÒNG KHÁCH / PHÒNG NGỦ CĂN HỘ MẪU</span>
-          </div>
-          <div class="prompt-card-title">Góc Tiến Vào Không Gian Sống Sang Trọng</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên từng chiếc sofa, bàn trà, đèn chùm trong ảnh căn hộ mẫu, camera đẩy nhẹ vào trong phòng, rèm voan khẽ đung đưa trong nắng sớm.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-04')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-04">Preserve all interior furniture, textures, colors, and spatial layout from the reference photo without distortion. Slow, steady architectural dolly-in camera movement advancing gently into the room. Subtle atmospheric motion: sheer window curtains breathing softly in a light draft, warm natural sunlight rays streaming through the glass with delicate dust motes, creating a cozy luxury living atmosphere. Architectural Digest style, 4k 60fps, photorealistic.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- I2V 5 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-05</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">DÀNH CHO ẢNH CHỤP BAN CÔNG / VIEW SÔNG / VIEW THÀNH PHỐ</span>
-          </div>
-          <div class="prompt-card-title">Góc Đẩy Máy Hướng Ra Tầm Nhìn Panorama Triệu Đô</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên lan can ban công, camera đẩy nhẹ ra ngoài mở ra toàn cảnh sông nước lung linh, mây trời chuyển động và ánh hoàng hôn ấm áp.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-05')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-05">Keep the balcony railings, foreground architecture, and skyline layout faithful to the input image. Smooth cinematic camera push-out moving gently forward toward the panoramic view. Subtle, realistic background motion: shimmering water surface on the river or lake, soft clouds moving across the horizon, and warm ambient sunset lighting enveloping the scenery. Ultra-high-definition real estate showcase, 4k 60fps.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- I2V 6 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">I2V-06</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">HIỆU ỨNG CHẠNG VẠNG LÊN ĐÈN (DAY-TO-DUSK)</span>
-          </div>
-          <div class="prompt-card-title">Biến Ảnh Phối Cảnh Ban Ngày Thành Video Chiều Tà Lên Đèn Rực Rỡ</div>
-          <p class="prompt-card-vi">
-            Giữ nguyên công trình trong ảnh, ánh sáng môi trường chuyển dần sang hoàng hôn lộng lẫy và toàn bộ hệ thống đèn nội thất, đèn cảnh quan sáng rực lung linh.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-i2v-06')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-i2v-06">Maintain the exact architectural geometry and framing of the building from the reference image. Very slow, subtle cinematic zoom-in as the ambient lighting transitions smoothly into golden twilight dusk. Warm, inviting golden interior lights and landscape pathway lamps gradually glow brighter, reflecting softly on the glass windows and surroundings. Luxury architectural twilight cinematography, 4k 60fps, photorealistic.</pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 7 -->
-    <section id="ch-7">
-      <div class="section-header">
-        <h2>Chương 7: 🛠️ Cẩm Nang Khắc Phục Mọi Lỗi & Trung Tâm Hỗ Trợ VIP 1-1</h2>
+        <h2>Chương 6: 🛠️ Cẩm Nang Khắc Phục Mọi Lỗi & Trung Tâm Hỗ Trợ VIP 1-1</h2>
         <span class="section-badge">BẢO HÀNH 1-1 TRỰC TIẾP</span>
       </div>
 
