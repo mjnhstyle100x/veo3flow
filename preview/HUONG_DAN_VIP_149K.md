@@ -2,7 +2,7 @@
 ## (ĐẶC QUYỀN GÓI VIP PRO REAL ESTATE 199.000đ — GHÉP MẶT CHÍNH CHỦ, ĐỒNG NHẤT NHÂN VẬT, GEMINI BIÊN KỊCH 5 PHÂN CẢNH, DỰNG CAPCUT & TẶNG 1 TÀI KHOẢN VEO 3)
 
 > 👑 **Chúc mừng bạn đã sở hữu Gói VIP Pro Real Estate 199.000đ!**  
-> Dưới đây là toàn bộ cẩm nang Master thực chiến tinh gọn dành riêng cho **Môi giới Bất động sản**: từ việc kích hoạt tài khoản Veo 3 (1.000 credits), kỹ thuật đưa khuôn mặt của chính bạn vào video, bí quyết giữ đúng 1 nhân vật qua mọi phân cảnh, dùng Google Gemini tự động xuất kịch bản 5 cảnh Hollywood, quy trình dựng CapCut có giọng đọc tiếng Việt đến kỹ thuật Image-to-Video biến ảnh 3D thành video 4K.
+> Dưới đây là toàn bộ cẩm nang Master thực chiến tinh gọn dành riêng cho **Môi giới Bất động sản**: từ việc kích hoạt tài khoản Veo 3 (1.000 credits), kỹ thuật đưa khuôn mặt của chính bạn vào video với hình ảnh minh họa từng bước, bí quyết giữ đúng 1 nhân vật qua mọi phân cảnh, dùng Google Gemini tự động xuất kịch bản 5 cảnh Hollywood, quy trình dựng CapCut có giọng đọc tiếng Việt đến kỹ thuật Image-to-Video biến ảnh 3D thành video 4K.
 
 ---
 
@@ -30,43 +30,97 @@ Slow architectural dolly shot gliding smoothly through the entrance into a luxur
 ---
 
 ## 🚀 CHƯƠNG 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN TRÊN GOOGLE FLOW
-1. **Bước 1:** Truy cập [https://labs.google/fx/tools/flow](https://labs.google/fx/tools/flow) ➔ Bấm **"Tạo bằng Google Flow"**.
-2. **Bước 2:** Đăng nhập Gmail & Mật khẩu được cấp ➔ Bấm Lưu mật khẩu trên Chrome.
-3. **Bước 3:** Nhấp nút **"+ Dự án mới"** để mở không gian sáng tạo.
-4. **Bước 4:** Chọn khung hình: **9:16 (Dọc)** cho TikTok/Reels hoặc **16:9 (Ngang)** cho YouTube. Model: **Veo 3.1 - Lite**.
-5. **Bước 5:** Dán Prompt vào ô *"Bạn muốn tạo những gì?"* ➔ Bấm nút mũi tên tạo video ➔ Chờ 60-90s (không bấm F5).
+1. **Bước 1:** Truy cập [https://flow.google.com](https://flow.google.com) ➔ Đăng nhập tài khoản được cấp.
+2. **Bước 2:** Nhấp nút **"+ Dự án mới"** để mở không gian làm việc.
+3. **Bước 3:** Chọn tỷ lệ khung hình: **16:9** (ngang) cho YouTube hoặc **9:16** (dọc) cho TikTok/Reels.
+4. **Bước 4:** Chọn mô hình **Omni 1.1 Flash** hoặc **Veo 3.1 - Lite**.
+5. **Bước 5:** Dán Prompt vào ô *"Bạn muốn tạo những gì?"* ➔ Bấm nút mũi tên gửi lệnh ➔ Chờ 60-90s.
 6. **Bước 6:** Bấm menu 3 chấm trên video ➔ Chọn **Tải xuống 1080p** lưu về máy.
 
 ---
 
-## 👤 CHƯƠNG 2: VŨ KHÍ 1: KỸ THUẬT GHÉP MẶT CHÍNH BẠN VÀO VIDEO AI (FACE SWAP BĐS)
+## 👤 CHƯƠNG 2: VŨ KHÍ 1: KỸ THUẬT TẠO NHÂN VẬT & GHÉP MẶT CHÍNH BẠN VÀO VIDEO AI (GOOGLE FLOW THỰC CHIẾN)
 
-### 1. Tiêu chuẩn chọn ảnh chân dung đầu vào:
-* Chụp thẳng trực diện (Front-facing), mắt nhìn vào ống kính, khuôn mặt mỉm cười tự tin.
-* Đủ sáng 2 bên má, không bị bóng râm loang lổ, không đeo kính đen, không đội mũ.
-
-### 2. Hai phương pháp ghép mặt đỉnh cao:
-* **Phương pháp 1: Native trên Google Flow (Image-to-Video)**
-  * Tải ảnh chân dung vào ô Khung hình đầu tiên (`+`) trên Google Flow.
-  * Dán câu thần chú khóa nét khuôn mặt:
-```text
-Strictly preserve the exact facial features, identity, hairstyle, and business attire from the reference photo without any distortion. The person smiles warmly and confidently at the camera, then gently turns head towards the modern real estate development in the background, speaking naturally with subtle expressive eye contact. Smooth natural lighting, high skin fidelity, 4k 60fps.
-```
-
-* **Phương pháp 2: Bộ đôi Google Flow + Remaker AI Face Swap (10 giây)**
-  * Dùng Veo 3 tạo ra video MC/người mẫu với dáng đi và góc máy điện ảnh trước khu đất/dự án.
-  * Mở công cụ Remaker AI Face Swap ➔ Tải video Veo 3 và ảnh chân dung của bạn lên ➔ Bấm Swap Face. Toàn bộ khuôn mặt của bạn sẽ được dán đè lên diễn viên chuẩn 100%.
+### 🌟 Tiêu Chuẩn "Vàng" Khi Chọn Ảnh Chân Dung Đầu Vào:
+* 📸 **Góc mặt:** Chụp thẳng trực diện (Front-facing) hoặc nghiêng nhẹ 5-10 độ, mắt nhìn thẳng vào ống kính.
+* 💡 **Ánh sáng:** Đủ sáng rõ 2 bên má, không chụp ngược sáng, không bị bóng râm loang lổ.
+* 👔 **Trang phục:** Ăn mặc chuyên nghiệp (áo vest, sơ mi trắng, blazer), khuôn mặt tự tin, mỉm cười thân thiện. Không đeo kính râm, không đội mũ che trán.
 
 ---
 
-## 🎭 CHƯƠNG 3: VŨ KHÍ 2: BÍ QUYẾT ĐỒNG NHẤT NHÂN VẬT (CHARACTER CONSISTENCY) MỌI CẢNH
+### 🔹 GIAI ĐOẠN 1: TẠO NHÂN VẬT CHÍNH MÌNH (KHỞI TẠO BẢN SAO AI TỪ ẢNH THẬT)
+* **Bước 1 (Khởi tạo dự án):** Truy cập `flow.google.com` ➔ Bấm **"+ Dự án mới"**.  
+  *(Minh họa: `assets/ghep-mat/1.PNG`)*
+* **Bước 2 (Mở tab Nhân vật):** Nhìn thanh công cụ bên trái ➔ Chọn mục **"Nhân vật"** (biểu tượng hình người).  
+  *(Minh họa: `assets/ghep-mat/2.PNG`)*
+* **Bước 3 (Thêm nhân vật mới):** Bấm vào ô **"+ Nhân vật mới"**.  
+  *(Minh họa: `assets/ghep-mat/3.PNG`)*
+* **Bước 4 (Tải ảnh lên):** Nhìn xuống thanh thuộc tính ở dưới ➔ Bấm nút **"Tải lên"** (Upload).  
+  *(Minh họa: `assets/ghep-mat/4.PNG`)*
+* **Bước 5 (Chọn ảnh chân dung):** Hộp thoại máy tính mở ra ➔ Chọn file ảnh chân dung đẹp nhất của bạn ➔ Bấm **"Open"**.  
+  *(Minh họa: `assets/ghep-mat/5.PNG`)*
+* **Bước 6 (Đặt tên định danh):** Ảnh chân dung tải lên thành công ➔ Nhấp chuột vào dòng chữ **"Nhân vật chưa có tên"**.  
+  *(Minh họa: `assets/ghep-mat/6.PNG`)*
+* **Bước 7 & 8 (Lưu nhân vật):** Nhập tên của bạn (ví dụ: **"Minh"**) ➔ Bấm nút **"Xong"** màu trắng ở góc trên bên phải màn hình.  
+  *(Minh họa: `assets/ghep-mat/7.PNG` & `8.PNG`)*  
+  ➔ Nhân vật Digital Human của bạn đã được lưu vĩnh viễn vào hệ thống!
 
-1. **Khóa cố định "Character DNA" trong mọi prompt:**
-   * **Nam môi giới:** `"A sharp 28-year-old Vietnamese male real estate consultant, neatly groomed short black hair, wearing a tailored navy blue blazer, crisp white dress shirt, no tie, modern minimalist silver watch, confident trustworthy smile"`
-   * **Nữ môi giới:** `"An elegant 26-year-old Vietnamese female real estate advisor, straight shoulder-length black hair, wearing a chic white cream business suit, light professional makeup, friendly radiant smile, holding a luxury leather portfolio"`
+---
 
-2. **Kỹ thuật "Nối Khung Hình" (Last Frame to First Frame):**
-   * Lấy ảnh khung hình cuối của Cảnh 1 tải vào ô Khung hình đầu tiên (`First Frame`) của Cảnh 2 ➔ Nhân vật di chuyển tiếp nối từ ngoài cổng vào trong nhà không bao giờ bị đổi người.
+### 🔹 GIAI ĐOẠN 2: GHÉP MẶT VÀO VIDEO AI THỰC CHIẾN (DỰ ÁN THE CITYON)
+* **Bước 8 (Mở ô câu lệnh):** Tại màn hình làm việc chính, nhân vật "MINH" đã có trong thư viện. Tại ô nhập lệnh ở dưới cùng, nhấp vào dấu cộng **`+`**.  
+  *(Minh họa: `assets/ghep-mat/9.PNG`)*
+* **Bước 9 (Gắn nhân vật vào câu lệnh):** Chọn tab **"Nhân vật"** ➔ Chọn nhân vật **"MINH"** ➔ Bấm nút **"Thêm vào câu lệnh"**.  
+  *(Minh họa: `assets/ghep-mat/10.PNG`)*
+* **Bước 10 (Gõ yêu cầu kịch bản):** Thẻ avatar Minh đã ghim cố định trên thanh lệnh. Gõ câu lệnh tiếng Việt tự nhiên:  
+  `hãy tạo cho tôi một câu lệnh 1 môi giới giới thiệu về dự án the cityon`  
+  *(Minh họa: `assets/ghep-mat/11.PNG`)*
+* **Bước 11 (Cài đặt tác nhân & chọn Omni 1.1 Flash):** Bấm biểu tượng Cài đặt ➔ Chọn tỷ lệ (16:9 hoặc 9:16) ➔ Chọn mô hình **"Omni 1.1 Flash"** (để giữ khuôn mặt người thật sắc nét nhất) ➔ Bấm **"Lưu"**.  
+  *(Minh họa: `assets/ghep-mat/12.PNG`)*
+* **Bước 12 (Gửi yêu cầu):** Bấm nút **Gửi (mũi tên tròn ->)** để AI xử lý kịch bản.  
+  *(Minh họa: `assets/ghep-mat/13.PNG`)*
+* **Bước 13 (Ra lệnh tạo video):** AI trả lời kịch bản chi tiết và hỏi bạn có muốn tạo video không. Bạn chỉ cần gõ trả lời: `bạn làm video cho tôi` và bấm gửi.  
+  *(Minh họa: `assets/ghep-mat/14.PNG`)*
+* **Bước 14 (Phê duyệt chi phí credits):** AI báo chi phí 15 tín dụng cho video 10 giây điện ảnh chân thực ➔ Bấm nút **"Phê duyệt"**.  
+  *(Minh họa: `assets/ghep-mat/15.PNG`)*
+* **Bước 15 (Video tự động render):** Hệ thống đưa video vào hàng đợi xử lý và render trực tiếp trên bàn làm việc của bạn.  
+  *(Minh họa: `assets/ghep-mat/16.PNG`)*
+* **Bước 16 (Kiểm tra trên Timeline):** Bấm vào video hoàn tất để mở trình biên tập Timeline (`Man introducing The Cityon project`). Toàn bộ khuôn mặt, khẩu hình và nụ cười của chính bạn cử động tự nhiên 100%, đứng thuyết minh giữa đại dự án BĐS The Cityon!  
+  *(Minh họa: `assets/ghep-mat/17.PNG`)*
+* **Bước 17 (Video thành phẩm thực tế):** Xem file video kết quả hoàn chỉnh `assets/ghep-mat/18.mp4` với độ sắc nét 4K 60fps mượt mà!
+
+---
+
+### 🔹 Prompt Khóa Nét Khuôn Mặt Khi Tự Viết Lệnh Chi Tiết:
+```text
+Strictly preserve the exact facial identity, eyes, smile, hairstyle, and professional attire of character MINH from the reference character card. The real estate consultant looks confidently at the camera with a warm, trustworthy expression, speaking naturally with subtle gestures introducing the modern luxury architectural development in the background. Ultra-realistic human skin details, cinematic golden hour lighting, 4k 60fps, photorealistic.
+```
+
+---
+
+## 🎭 CHƯƠNG 3: VŨ KHÍ 2: BÍ QUYẾT ĐỒNG NHẤT NHÂN VẬT (CHARACTER CONSISTENCY) MỌI PHÂN CẢNH BĐS
+
+### 1. Bí Quyết Cốt Tử: Luôn Gắn Thẻ [MINH] Vào Cả 5 Phân Cảnh TVC
+Vì nhân vật "MINH" đã được tạo ở Chương 2, bạn không cần phải vẽ lại nhân vật. Mỗi khi tạo cảnh mới trong TVC, chỉ cần:
+1. Bấm dấu cộng `+` ➔ Tab Nhân vật ➔ Chọn `[MINH]`.
+2. Dán kịch bản của cảnh đó:
+   * **Cảnh 1 (0-5s):** Gắn thẻ `[MINH]` + MC Minh đứng trước cổng chào dự án The Cityon.
+   * **Cảnh 2 (5-12s):** Gắn thẻ `[MINH]` + MC Minh sải bước trên đại lộ giao thông kết nối.
+   * **Cảnh 3 (12-20s):** Gắn thẻ `[MINH]` + MC Minh dạo bước bên hồ bơi vô cực & công viên nội khu.
+   * **Cảnh 4 (20-28s):** Gắn thẻ `[MINH]` + MC Minh thuyết minh tại phòng khách căn hộ mẫu / sa bàn quy hoạch.
+   * **Cảnh 5 (28-35s):** Gắn thẻ `[MINH]` + MC Minh mỉm cười kết màn, mời gọi để lại thông tin xem nhà.
+
+➔ **Kết quả:** Cả 5 cảnh quay đều xuất hiện đúng 1 nhân vật với khuôn mặt của chính bạn, cùng kiểu tóc và thần thái, không bao giờ lo bị "nhảy mặt" hay biến dạng!
+
+### 2. Khóa Cố Định "Character DNA" Trong Mọi Prompt:
+* **Nam môi giới:** `"wearing a tailored navy blue blazer, crisp white dress shirt, modern minimalist silver watch, neatly styled short black hair, confident friendly posture"`
+* **Nữ môi giới:** `"wearing an elegant cream-white business suit, straight shoulder-length black hair, light natural professional makeup, radiant trustworthy smile"`
+
+### 3. Kỹ Thuật "Nối Khung Hình" (Last Frame to First Frame):
+Khi muốn nối liền mạch 2 góc máy (ví dụ MC Minh bước từ cổng chào vào sảnh đón tiếp):
+* Chụp lại khung hình cuối cùng (Last Frame) của Cảnh 1.
+* Tải vào ô Khung hình đầu tiên (`First Frame`) của Cảnh 2.
+* Gắn thẻ `[MINH]` và gõ câu lệnh hành động tiếp nối. Chuyển động giữa 2 cảnh sẽ mượt mà 100% không một vết cắt gãy!
 
 ---
 
