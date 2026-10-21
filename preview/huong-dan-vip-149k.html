@@ -22,6 +22,7 @@
 
 
 
+
     :root {
       --bg: #090C15;
       --surface: #0F1423;
@@ -3547,6 +3548,273 @@
       margin: 24px 0;
     }
 
+  
+
+    /* Screenshot Caption Strip */
+    .img-caption-strip {
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    .caption-action-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .caption-arrow-tag {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #000000;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .caption-text {
+      color: #FFFFFF;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+    .caption-target {
+      color: #94A3B8;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Guide Step Cards with Real Screenshots */
+    .guide-step-card {
+      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+    .guide-step-card:hover {
+      border-color: rgba(34, 211, 238, 0.55);
+      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
+    }
+    .guide-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(10, 14, 24, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .guide-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .guide-step-badge.cyan {
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+    }
+    .guide-step-badge.green {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .guide-step-badge.amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .guide-step-badge.purple {
+      background: rgba(168, 85, 247, 0.15);
+      color: #C084FC;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+    }
+    .guide-step-body {
+      padding: 20px;
+    }
+    .guide-step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .guide-step-desc {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .guide-step-img-box {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      position: relative;
+    }
+    .guide-step-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .guide-step-img-box:hover img {
+      transform: scale(1.008);
+    }
+    .guide-step-note {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: rgba(34, 211, 238, 0.08);
+      border-left: 3px solid var(--cyan);
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      line-height: 1.55;
+    }
+    .phase-divider {
+      margin: 40px 0 24px;
+      padding: 16px 20px;
+      background: linear-gradient(90deg, rgba(34, 211, 238, 0.15), rgba(99, 102, 241, 0.05));
+      border-left: 4px solid var(--cyan);
+      border-radius: 0 12px 12px 0;
+    }
+    .phase-divider h3 {
+      margin: 0 0 6px;
+      color: #FFFFFF;
+      font-size: 1.25rem;
+    }
+    .phase-divider p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .guide-video-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 78, 59, 0.25));
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    /* VIP 199K Badges & Cards */
+    .badge-vip-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #FBBF24;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .weapon-card {
+      background: linear-gradient(135deg, rgba(15, 20, 35, 0.9), rgba(22, 29, 49, 0.95));
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .weapon-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--cyan), var(--primary), var(--amber));
+    }
+    .weapon-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .weapon-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+    }
+    .weapon-tag.face { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.35); }
+    .weapon-tag.consistency { background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .weapon-tag.gemini { background: rgba(245, 158, 11, 0.15); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .weapon-tag.capcut { background: rgba(236, 72, 153, 0.15); color: #EC4899; border: 1px solid rgba(236, 72, 153, 0.35); }
+
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+    .story-shot-box {
+      background: rgba(15, 20, 35, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .story-shot-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .story-shot-timing {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--amber);
+      font-size: 0.75rem;
+    }
+    .story-shot-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #FFFFFF;
+    }
+    .story-shot-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .account-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(16, 185, 129, 0.08));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin: 24px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -3602,8 +3870,8 @@
         Mục Lục Nhanh 8 Phần Thực Hành BĐS VIP 199K
       </div>
       <div class="toc-grid">
-        <a href="#ch-0" class="toc-link"><span class="toc-num">00</span> Kích hoạt Tài khoản & 3 Prompt khởi động</a>
-        <a href="#ch-1" class="toc-link"><span class="toc-num">01</span> Quy trình 6 bước Google Flow</a>
+        <a href="#ch-0" class="toc-link"><span class="toc-num">00</span> Kích hoạt Tài khoản Veo 3</a>
+        <a href="#ch-1" class="toc-link"><span class="toc-num">01</span> Quy trình 6 bước & 3 Prompt mẫu</a>
         <a href="#ch-2" class="toc-link" style="border: 1px solid rgba(34,211,238,0.4);"><span class="toc-num" style="color:var(--cyan);">02</span> 👤 Tạo Nhân Vật & Ghép Mặt Chính Bạn</a>
         <a href="#ch-3" class="toc-link" style="border: 1px solid rgba(16,185,129,0.4);"><span class="toc-num" style="color:#10B981;">03</span> 🎭 Bí Quyết Giữ Đồng Nhất Nhân Vật 5 Cảnh</a>
         <a href="#ch-4" class="toc-link" style="border: 1px solid rgba(245,158,11,0.4);"><span class="toc-num" style="color:#F59E0B;">04</span> 🤖 Gemini Biên Kịch BĐS 5 Phân Cảnh</a>
@@ -3616,7 +3884,7 @@
     <!-- CHAPTER 0 -->
     <section id="ch-0">
       <div class="section-header">
-        <h2>Phần 0: Kích Hoạt Tài Khoản Veo 3 & 3 Câu Lệnh BĐS Khởi Động</h2>
+        <h2>Phần 0: Kích Hoạt Tài Khoản Veo 3 Của Bạn</h2>
         <span class="section-badge">QUÀ TẶNG TRỊ GIÁ 69.000đ</span>
       </div>
 
@@ -3633,71 +3901,6 @@
         </p>
         <div style="background:rgba(15,20,35,0.7); border:1px solid var(--border); padding:12px 16px; border-radius:8px; font-size:0.88rem;">
           🔑 <strong>Thông tin đăng nhập:</strong> Xem trong email xác nhận đơn hàng hoặc nhắn tin Zalo: <strong>0347.999.726</strong> để nhận tài khoản dự phòng ngay lập tức.
-        </div>
-      </div>
-
-      <h3 style="color:#FFFFFF; margin:24px 0 14px; font-size:1.15rem;">🔥 3 Câu Lệnh BĐS Mẫu "Thử Lửa" Ngay Trong 1 Phút Đầu:</h3>
-
-      <!-- Prompt 1 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">MẪU 01</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">🏢 ĐẠI ĐÔ THỊ / CHUNG CƯ CAO CẤP</span>
-          </div>
-          <div class="prompt-card-title">Flycam Toàn Cảnh Dự Án & Quảng Trường Đài Phun Nước</div>
-          <p class="prompt-card-vi">
-            <strong>Mô tả tiếng Việt:</strong> Flycam lướt chậm từ trên không tiến dần vào cổng chào và quảng trường trung tâm đại dự án, các tòa tháp kính hiện đại phản chiếu nắng hoàng hôn vàng óng, đài phun nước pha lê và cây xanh nhiệt đới resort.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-01')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-vip-01">Cinematic aerial drone shot slowly descending towards the grand entrance of a luxury modern residential mega-project, glass facade towers reflecting the golden sunset, landscaped pedestrian plaza with crystal fountain and walking paths, lush tropical greenery, architectural cinematography, photorealistic, 4k 60fps, 8k resolution.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prompt 2 -->
-      <div class="prompt-card" style="border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index" style="background:var(--green); color:#fff;">MẪU 02</span>
-            <span style="font-size:0.85rem; color:var(--green); font-weight:800;">🌟 ĐẤT NỀN SỔ ĐỎ (CÓ MẶT NGƯỜI MẪU AI DẪN DẮT)</span>
-          </div>
-          <div class="prompt-card-title">Nam Môi Giới Lịch Lãm Dẫn Khách Trải Nghiệm Đường Nhựa Đất Nền</div>
-          <p class="prompt-card-vi">
-            <strong>Mô tả tiếng Việt:</strong> Cú máy tracking shot đi lùi ngang tầm mắt, nam môi giới người Việt mặc sơ mi trắng và quần tây navy vừa bước đi tự tin vừa mỉm cười giơ tay giới thiệu tuyến đường nhựa mới trải của khu đất nền phân lô, cọc mốc ranh giới rõ ràng, cây xanh dưới trời nắng mai.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-02')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-vip-02">Cinematic smooth tracking shot moving backwards, a handsome professional Vietnamese male real estate agent in a crisp white shirt and navy trousers, walking confidently forward along a newly paved asphalt subdivision road, smiling warmly and gesturing with his hand showcasing the demarcated residential land plots, lush green boundary posts, sunny blue sky, photorealistic 8k, ultra-realistic human skin details, 4k 60fps.</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prompt 3 -->
-      <div class="prompt-card">
-        <div class="prompt-card-body">
-          <div class="prompt-header-row">
-            <span class="prompt-index">MẪU 03</span>
-            <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">🛋️ TOUR CĂN HỘ CHUNG CƯ CAO CẤP</span>
-          </div>
-          <div class="prompt-card-title">Tour 3D Phòng Khách Panorama View Hoàng Hôn</div>
-          <p class="prompt-card-vi">
-            <strong>Mô tả tiếng Việt:</strong> Dolly shot lướt êm ái từ sảnh vào phòng khách sang trọng, sofa vải be cao cấp, đèn hắt dịu ấm, ban công kính kịch trần mở ra góc nhìn toàn cảnh sông nước và thành phố lung linh ánh đèn hoàng hôn.
-          </p>
-          <div class="prompt-code-wrap">
-            <div class="prompt-code-meta">
-              <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
-              <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-03')">Sao chép câu lệnh</button>
-            </div>
-            <pre id="p-vip-03">Slow architectural dolly shot gliding smoothly through the entrance into a luxury high-floor apartment living room, contemporary beige modular sofa, elegant warm recessed lighting, floor-to-ceiling glass doors opening to a scenic riverfront balcony with city skyline sunset panorama, architectural photography, photorealistic, 4k 60fps.</pre>
-          </div>
         </div>
       </div>
     </section>
@@ -3773,6 +3976,75 @@
         <p>Nhấp menu 3 chấm trên video ➔ Chọn <strong>"Tải xuống"</strong> ➔ Chọn độ phân giải <strong>1080p</strong> để lưu file MP4 sắc nét về máy tính hoặc điện thoại.</p>
         <div class="screen-frame">
           <img src="assets/guide_step6_download.png" alt="Bước 6: Tải xuống 1080p" loading="lazy">
+        </div>
+      </div>
+
+      <!-- 🔥 3 Câu Lệnh BĐS Mẫu "Thử Lửa" Ngay Sau Bước 6 -->
+      <div style="margin-top: 36px; padding-top: 24px; border-top: 1px dashed rgba(255, 255, 255, 0.15);">
+        <h3 style="color:#FFFFFF; margin:0 0 10px; font-size:1.25rem;">🔥 3 Câu Lệnh BĐS Mẫu "Thử Lửa" Ngay Trong 1 Phút Đầu:</h3>
+        <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:18px;">Bạn có thể sao chép ngay 1 trong 3 câu lệnh chuẩn điện ảnh dưới đây để dán vào ô <strong>Bước 5</strong> và trải nghiệm ngay:</p>
+
+        <!-- Prompt 1 -->
+        <div class="prompt-card">
+          <div class="prompt-card-body">
+            <div class="prompt-header-row">
+              <span class="prompt-index">MẪU 01</span>
+              <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">🏢 ĐẠI ĐÔ THỊ / CHUNG CƯ CAO CẤP</span>
+            </div>
+            <div class="prompt-card-title">Flycam Toàn Cảnh Dự Án & Quảng Trường Đài Phun Nước</div>
+            <p class="prompt-card-vi">
+              <strong>Mô tả tiếng Việt:</strong> Flycam lướt chậm từ trên không tiến dần vào cổng chào và quảng trường trung tâm đại dự án, các tòa tháp kính hiện đại phản chiếu nắng hoàng hôn vàng óng, đài phun nước pha lê và cây xanh nhiệt đới resort.
+            </p>
+            <div class="prompt-code-wrap">
+              <div class="prompt-code-meta">
+                <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
+                <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-01')">Sao chép câu lệnh</button>
+              </div>
+              <pre id="p-vip-01">Cinematic aerial drone shot slowly descending towards the grand entrance of a luxury modern residential mega-project, glass facade towers reflecting the golden sunset, landscaped pedestrian plaza with crystal fountain and walking paths, lush tropical greenery, architectural cinematography, photorealistic, 4k 60fps, 8k resolution.</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prompt 2 -->
+        <div class="prompt-card" style="border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);">
+          <div class="prompt-card-body">
+            <div class="prompt-header-row">
+              <span class="prompt-index" style="background:var(--green); color:#fff;">MẪU 02</span>
+              <span style="font-size:0.85rem; color:var(--green); font-weight:800;">🌟 ĐẤT NỀN SỔ ĐỎ (CÓ MẶT NGƯỜI MẪU AI DẪN DẮT)</span>
+            </div>
+            <div class="prompt-card-title">Nam Môi Giới Lịch Lãm Dẫn Khách Trải Nghiệm Đường Nhựa Đất Nền</div>
+            <p class="prompt-card-vi">
+              <strong>Mô tả tiếng Việt:</strong> Cú máy tracking shot đi lùi ngang tầm mắt, nam môi giới người Việt mặc sơ mi trắng và quần tây navy vừa bước đi tự tin vừa mỉm cười giơ tay giới thiệu tuyến đường nhựa mới trải của khu đất nền phân lô, cọc mốc ranh giới rõ ràng, cây xanh dưới trời nắng mai.
+            </p>
+            <div class="prompt-code-wrap">
+              <div class="prompt-code-meta">
+                <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
+                <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-02')">Sao chép câu lệnh</button>
+              </div>
+              <pre id="p-vip-02">Cinematic smooth tracking shot moving backwards, a handsome professional Vietnamese male real estate agent in a crisp white shirt and navy trousers, walking confidently forward along a newly paved asphalt subdivision road, smiling warmly and gesturing with his hand showcasing the demarcated residential land plots, lush green boundary posts, sunny blue sky, photorealistic 8k, ultra-realistic human skin details, 4k 60fps.</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prompt 3 -->
+        <div class="prompt-card">
+          <div class="prompt-card-body">
+            <div class="prompt-header-row">
+              <span class="prompt-index">MẪU 03</span>
+              <span style="font-size:0.85rem; color:var(--cyan); font-weight:700;">🛋️ TOUR CĂN HỘ CHUNG CƯ CAO CẤP</span>
+            </div>
+            <div class="prompt-card-title">Tour 3D Phòng Khách Panorama View Hoàng Hôn</div>
+            <p class="prompt-card-vi">
+              <strong>Mô tả tiếng Việt:</strong> Dolly shot lướt êm ái từ sảnh vào phòng khách sang trọng, sofa vải be cao cấp, đèn hắt dịu ấm, ban công kính kịch trần mở ra góc nhìn toàn cảnh sông nước và thành phố lung linh ánh đèn hoàng hôn.
+            </p>
+            <div class="prompt-code-wrap">
+              <div class="prompt-code-meta">
+                <span class="code-label">PROMPT TIẾNG ANH (BẤM ĐỂ COPY)</span>
+                <button class="btn-copy-prompt" onclick="copyPrompt('p-vip-03')">Sao chép câu lệnh</button>
+              </div>
+              <pre id="p-vip-03">Slow architectural dolly shot gliding smoothly through the entrance into a luxury high-floor apartment living room, contemporary beige modular sofa, elegant warm recessed lighting, floor-to-ceiling glass doors opening to a scenic riverfront balcony with city skyline sunset panorama, architectural photography, photorealistic, 4k 60fps.</pre>
+            </div>
+          </div>
         </div>
       </div>
     </section>
