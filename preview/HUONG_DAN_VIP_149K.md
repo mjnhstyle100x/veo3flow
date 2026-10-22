@@ -71,14 +71,98 @@ Slow architectural dolly shot gliding smoothly through the entrance into a luxur
 
 ---
 
-## 🎭 & 🤖 CHƯƠNG 3: VŨ KHÍ 2: TRỢ LÝ GEMINI BIÊN KỊCH BĐS & QUY TRÌNH 5 PHÂN CẢNH ĐỒNG NHẤT NHÂN VẬT THỰC CHIẾN (GOOGLE FLOW)
+## 🎭 & 🤖 CHƯƠNG 3: VŨ KHÍ 2: TRỢ LÝ GEMINI BIÊN KỊCH BĐS & QUY TRÌNH 6 PHÂN CẢNH ĐỒNG NHẤT NHÂN VẬT THỰC CHIẾN (GOOGLE FLOW)
 
 ### 🌟 3 Bí Quyết Cốt Tử Giữ Đồng Nhất Diễn Viên Qua Mọi Góc Quay:
 1. **Luôn Gắn Thẻ Nhân Vật [MINH] Vào Từng Phân Cảnh:** Mỗi khi bấm dấu '+' tạo cảnh mới trên timeline, luôn mở tab *Nhân vật* ➔ chọn thẻ **MINH** ➔ bấm *'Thêm vào câu lệnh'*.
 2. **Khóa Bộ Nhận Diện DNA Trang Phục:** Luôn mô tả trang phục cố định trong prompt: `wearing a tailored navy blue blazer, crisp white dress shirt, luxury watch, neatly styled short black hair`.
 3. **Kỹ Thuật Nối Khung Hình (Last Frame to First Frame):** Lấy ảnh khung hình cuối cùng của cảnh trước nạp vào First Frame của cảnh sau để chuyển động liền mạch 100%.
 
-### 🎬 Master Prompt Gemini Xuất Kịch Bản 60 Giây 6 Phân Cảnh:
+---
+
+## 🎯 HƯỚNG DẪN TỰ TẠO KỊCH BẢN BĐS "THEO Ý MÌNH" BẰNG TRỢ LÝ GEMINI
+
+> 💡 **Áp dụng cho mọi phân khúc BĐS:** Bạn không cần giỏi văn chương hay biết tiếng Anh. Chỉ cần chuẩn bị 4 thông tin cơ bản về dự án của bạn bằng tiếng Việt, trợ lý AI Gemini sẽ tự động đóng vai đạo diễn Hollywood để biên kịch kịch bản TVC và xuất trọn bộ câu lệnh chuẩn xác 100% cho Google Flow!
+
+### 📝 BƯỚC 1: Chuẩn bị 4 Thông Số Đầu Vào Của Bạn (Bằng Tiếng Việt Đơn Giản)
+1. **Thông tin BĐS của bạn:**
+   - Loại hình: Đất nền phân lô, Căn hộ chung cư, Shophouse thương mại, Biệt thự biển...
+   - Tên dự án & Vị trí: (Ví dụ: KDC Eden Garden Bình Phước, Masteri Centre Point Q9...)
+   - 3 Điểm đắt giá nhất: Sổ đỏ sẵn công chứng ngay, mặt tiền đường 12m, view hồ bơi/sông...
+2. **Nhân vật môi giới (Chính bạn):**
+   - Tên thẻ nhân vật: Khớp với Thẻ Nhân Vật trên Flow (Ví dụ: `[MINH]`, `[LAN]`, `[TUAN]`)
+   - Giới tính, độ tuổi: Nam/Nữ, 28-35 tuổi
+   - Trang phục cố định (DNA): Nam vest blazer navy sơ mi trắng / Nữ đầm công sở hoặc blazer thanh lịch
+3. **Thời lượng mong muốn:**
+   - **Video 30s (3 cảnh x 10s):** Tối ưu chạy Ads TikTok / Facebook Reels / YouTube Shorts chốt sale nhanh.
+   - **Video 60s (6 cảnh x 10s):** TVC giới thiệu tổng quan, review chuyên sâu đăng Facebook/YouTube.
+4. **Lời kêu gọi hành động (CTA):** Gọi hotline, đăng ký tham quan nhà mẫu, nhận bảng giá ưu đãi...
+
+---
+
+### 🤖 BƯỚC 2: Khuôn Mẫu Master Prompt "Điền Vào Chỗ Trống" Gửi Vào Gemini
+*Mở [Gemini](https://gemini.google.com/app) (chọn mô hình Flash / Advanced) ➔ Copy câu lệnh bên dưới ➔ Thay đổi các đoạn trong ngoặc vuông `[...]` theo đúng thông số ở Bước 1 ➔ Bấm Gửi:*
+
+```text
+Bạn là Đạo diễn hình ảnh và Biên kịch TVC Bất động sản chuyên nghiệp cho Google Flow & Google Veo 3.
+Hãy viết cho tôi một kịch bản video [CHỌN: 30 GIÂY GỒM 3 CẢNH / HOẶC 60 GIÂY GỒM 6 CẢNH], mỗi cảnh đúng 10 giây để tạo video trên Google Flow.
+
+THÔNG TIN DỰ ÁN VÀ Ý TƯỞNG CỦA TÔI:
+- Loại hình BĐS: [VÍ DỤ: Đất nền phân lô sổ đỏ / Căn hộ cao cấp 2PN / Shophouse thương mại / Biệt thự biển]
+- Tên dự án & Vị trí: [VÍ DỤ: Dự án KDC Eden Garden, mặt tiền Quốc Lộ 13, Bình Phước]
+- 3 Điểm nhấn quan trọng nhất cần nêu bật:
+  1. [VÍ DỤ: Sổ đỏ từng lô sẵn có, công chứng sang tên ngay trong ngày]
+  2. [VÍ DỤ: Đường nội bộ trải nhựa 12m, điện âm nước máy, đối diện công viên]
+  3. [VÍ DỤ: Giá chỉ từ 650 triệu/lô, ngân hàng hỗ trợ vay 70%]
+- Nhân vật môi giới chính chủ:
+  + Tên thẻ nhân vật: [[TÊN_BẠN, VÍ DỤ: [MINH]]] (giữ nguyên ngoặc vuông)
+  + Đặc điểm nhân vật: [VÍ DỤ: Nam môi giới người Việt 30 tuổi, tóc đen ngắn chỉn chu, mặc áo vest blazer xanh navy, sơ mi trắng, đồng hồ sang trọng, phong thái tự tin và đáng tin cậy]
+- Lời kêu gọi hành động (CTA) ở cảnh cuối: [VÍ DỤ: Liên hệ hotline để nhận ngay bảng giá nội bộ và ưu đãi chiết khấu 5%]
+
+YÊU CẦU ĐỊNH DẠNG ĐẦU RA CHO MỖI PHÂN CẢNH:
+Với mỗi phân cảnh (10 giây), hãy xuất ra rõ ràng:
+1. Mô tả nội dung cảnh quay và câu thoại lồng tiếng bằng tiếng Việt.
+2. Câu lệnh Prompt chi tiết chuẩn Google Flow có chứa thẻ nhân vật [[TÊN_BẠN]], góc quay camera (drone shot / tracking shot / dolly in), ánh sáng điện ảnh và các từ khóa chuẩn: photorealistic 8k, cinematic lighting, 4k 60fps, gimbal stabilization.
+```
+
+---
+
+### 🌟 BƯỚC 3: 3 Mẫu Kịch Bản Đã Soạn Sẵn Cho Từng Nhu Cầu Cụ Thể
+
+#### 🌾 Mẫu 1: Kịch Bản Đất Nền Phân Lô Sổ Đỏ (30s / 3 Cảnh) — Chốt Sale Nhanh
+* **Cảnh 1 (00s - 10s - Toàn cảnh dự án):** Flycam từ trên cao hạ dần xuống toàn cảnh khu đất nền phân lô vuông vắn, đường nhựa mới trải, các mốc ranh giới rõ ràng. Thẻ `[MINH]` đứng ở đầu đường tươi cười giơ tay đón chào khách hàng.  
+  *Prompt dán Flow:* `Cinematic smooth aerial drone descending towards newly paved asphalt subdivision road, clearly demarcated residential land plots with boundary markers, sunny blue sky, [MINH] wearing tailored navy blazer and white shirt walking forward smiling and gesturing welcomingly, photorealistic 8k, ultra-realistic human skin details, 4k 60fps, gimbal stabilization.`
+* **Cảnh 2 (10s - 20s - Cận cảnh hạ tầng & không gian):** Máy quay tracking lùi mượt mà ngang tầm mắt. Thẻ `[MINH]` tự tin bước đi dọc vỉa hè cây xanh, giới thiệu mặt tiền đường rộng 12m và hệ thống điện âm nước máy hiện đại.  
+  *Prompt dán Flow:* `Cinematic smooth eye-level tracking shot moving backwards, [MINH] walking confidently along the tree-lined sidewalk of the residential development, pointing towards modern underground electrical infrastructure and wide asphalt street, warm natural morning sunlight, photorealistic 8k, 4k 60fps.`
+* **Cảnh 3 (20s - 30s - Pháp lý sổ đỏ & Kêu gọi CTA):** Cận cảnh thẻ `[MINH]` cầm cuốn sổ đỏ trên tay đầy uy tín, mỉm cười giơ tay chào và kêu gọi khách hàng bấm vào link hoặc gọi hotline để xem đất thực tế ngay cuối tuần.  
+  *Prompt dán Flow:* `Cinematic medium close-up shot, [MINH] standing proudly in front of the landscaped development entrance holding official land title ownership certificate deed, smiling warmly at camera, making friendly welcoming call-to-action gesture, photorealistic, 4k 60fps, cinematic depth of field.`
+
+#### 🏢 Mẫu 2: Kịch Bản Căn Hộ Chung Cư Cao Cấp / Tour Nhà Mẫu (60s / 6 Cảnh)
+* **Cảnh 1 (Sảnh đón 5 sao):** Thẻ `[MINH]` đứng trước sảnh đón ốp đá marble lộng lẫy, chào đón quý khách đến với không gian sống thượng lưu.
+* **Cảnh 2 (Phòng khách & Ban công view sông):** Cú máy dolly lướt từ cửa chính vào phòng khách ngập tràn ánh nắng hoàng hôn, mở rộng ra ban công kính panorama view sông lộng gió.
+* **Cảnh 3 (Gian bếp tiện nghi cao cấp):** Thẻ `[MINH]` giới thiệu đảo bếp sang trọng mặt đá granite và hệ tủ bếp thông minh.
+* **Cảnh 4 (Phòng ngủ Master ấm cúng):** Góc quay chậm rãi ghi lại không gian nghỉ ngơi thư thái với cửa sổ kịch trần nhìn ngắm thành phố về đêm.
+* **Cảnh 5 (Tiện ích hồ bơi vô cực trên cao):** Flycam lướt trên mặt nước hồ bơi vô cực tầng thượng, cư dân thư giãn ngắm hoàng hôn.
+* **Cảnh 6 (Kêu gọi CTA chốt lịch xem nhà):** Thẻ `[MINH]` ngồi tại phòng khách mỉm cười thân thiện, mời khách hàng đăng ký trải nghiệm căn hộ thực tế.
+
+#### 🏪 Mẫu 3: Kịch Bản Nhà Phố Thương Mại / Shophouse Kinh Doanh (40s / 4 Cảnh)
+* **Cảnh 1 (Mặt tiền đại lộ sầm uất):** Flycam góc rộng lướt dọc dãy Shophouse kiến trúc tân cổ điển, phố đi bộ đông đúc người qua lại.
+* **Cảnh 2 (Tầng trệt kinh doanh thời thượng):** Thẻ `[MINH]` bước vào không gian quán cafe / cửa hàng thời trang sang trọng ở tầng 1.
+* **Cảnh 3 (Các tầng trên đa năng):** Giới thiệu thiết kế tối ưu vừa ở vừa cho thuê văn phòng mang lại dòng tiền kép bền vững.
+* **Cảnh 4 (Chốt tiềm năng sinh lời):** Thẻ `[MINH]` đứng trước căn shophouse góc 2 mặt tiền, nhấn mạnh chính sách cam kết thuê lại và kêu gọi liên hệ nhận suất ngoại giao.
+
+---
+
+### 💬 BƯỚC 4: Các Câu Lệnh Chat Với Gemini Để Tinh Chỉnh Đúng Ý Từng Chi Tiết
+Khi Gemini phản hồi, bạn có thể gõ tiếp các câu lệnh sau để chỉnh theo ý muốn:
+* 👉 **Muốn đổi góc máy:** *"Ở Cảnh 2, hãy đổi góc nhìn sang flycam lượn vòng từ trên cao (orbit shot) bao quát toàn bộ ngã tư thay vì góc đi bộ."*
+* 👉 **Muốn đổi nhân vật Nữ:** *"Hãy đổi nhân vật thành nữ môi giới tên [LAN], 28 tuổi, mặc đầm công sở màu trắng thanh lịch, tóc dài uốn xoăn nhẹ."*
+* 👉 **Muốn rút ngắn lời thoại:** *"Viết lại lời thoại cho mỗi cảnh ngắn hơn, chỉ khoảng 15-20 từ để đọc vừa khít trong 10 giây."*
+* 👉 **Muốn chuyển sang tiếng Anh chuẩn Flow:** *"Hãy dịch toàn bộ phần prompt của các cảnh sang tiếng Anh điện ảnh để tôi copy dán trực tiếp vào Google Flow."*
+
+---
+
+### 🎬 Master Prompt Gemini Xuất Kịch Bản 60 Giây 6 Phân Cảnh (Mẫu Thực Chiến Dự Án Cụ Thể):
 ```text
 Bạn là Đạo diễn hình ảnh và Biên kịch TVC Bất động sản triệu đô chuyên nghiệp.
 Hãy cho tôi một kịch bản video 60 giây chia làm 6 cảnh, mỗi cảnh 10 giây cho Google Flow về giới thiệu dự án [TÊN DỰ ÁN BĐS, VÍ DỤ: VINHOMES HẠ LONG XANH] cùng với nhân vật môi giới nam tên Minh (30 tuổi, tóc đen ngắn vuốt gọn, mặc vest blazer xanh navy, sơ mi trắng, đồng hồ sang trọng).
