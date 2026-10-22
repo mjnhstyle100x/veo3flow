@@ -349,29 +349,29 @@ Với mỗi cảnh, hãy xuất câu lệnh Prompt lời Việt chi tiết có c
 ## 🎬 CHƯƠNG 4: VŨ KHÍ 3: QUY TRÌNH GHÉP VIDEO TVC BĐS 6 PHÂN CẢNH BẰNG CAPCUT WEB (THỰC CHIẾN TỪ A-Z)
 
 ### 🔹 GIAI ĐOẠN 1: KHỞI TẠO DỰ ÁN TRÊN CAPCUT WEB (BƯỚC 1 – 4)
-* **Bước 01 (Khởi tạo CapCut Web):** Mở trình duyệt Google Chrome, truy cập `https://www.capcut.com/vi-vn/` ➔ Bấm nút **"Dùng thử trực tuyến miễn phí"**. *(Minh họa: `assets/capcut/1.PNG`)*
-* **Bước 02 (Chọn phương thức đăng nhập):** Tại cửa sổ *Chào mừng bạn đến với CapCut* ➔ Bấm chọn **"Tiếp tục bằng Google"**. *(Minh họa: `assets/capcut/2.PNG`)*
-* **Bước 03 (Xác thực tài khoản Google):** Nhấp chọn tài khoản Gmail của bạn trong danh sách để xác thực. *(Minh họa: `assets/capcut/3.PNG`)*
-* **Bước 04 (Mở phòng dựng video):** Tại trang chủ CapCut Web ➔ Nhấp nút **"+ Tạo mới"** màu xanh ngọc ở góc trên bên trái. *(Minh họa: `assets/capcut/4.PNG`)*
+* **Bước 01 (Khởi tạo CapCut Web):** Mở trình duyệt Google Chrome, truy cập `https://www.capcut.com/vi-vn/` ➔ Bấm nút **"Dùng thử trực tuyến miễn phí"**. *(Minh họa: `assets/capcut/capcut_step_01.png`)*
+* **Bước 02 (Chọn phương thức đăng nhập):** Tại cửa sổ *Chào mừng bạn đến với CapCut* ➔ Bấm chọn **"Tiếp tục bằng Google"**. *(Minh họa: `assets/capcut/capcut_step_02.png`)*
+* **Bước 03 (Xác thực tài khoản Google):** Nhấp chọn tài khoản Gmail của bạn trong danh sách để xác thực. *(Minh họa: `assets/capcut/capcut_step_03.png`)*
+* **Bước 04 (Mở phòng dựng video):** Tại trang chủ CapCut Web ➔ Nhấp nút **"+ Tạo mới"** màu xanh ngọc ở góc trên bên trái. *(Minh họa: `assets/capcut/capcut_step_04.png`)*
 
 ### 🔹 GIAI ĐOẠN 2: TẢI 6 PHÂN CẢNH BĐS LÊN KHO PHƯƠNG TIỆN (BƯỚC 5 – 6)
-* **Bước 05 (Mở khu vực tải lên):** Nhấp vào vùng **"Nhấp để tải lên (Hoặc kéo và thả tệp vào đây)"** ở trung tâm hoặc nút **"Tải lên"** ở cột bên trái. *(Minh họa: `assets/capcut/5.PNG`)*
-* **Bước 06 (Chọn toàn bộ 6 file phân cảnh):** Cửa sổ File Explorer mở ra ➔ Quét chọn trọn bộ 6 video phân cảnh từ Google Flow (`cảnh 1`, `cảnh 2`, `cảnh 3`, `cảnh 4`, `cảnh 5`, `cảnh 6`) ➔ Bấm **"Open"**. *(Minh họa: `assets/capcut/6.PNG`)*
+* **Bước 05 (Mở khu vực tải lên):** Nhấp vào vùng **"Nhấp để tải lên (Hoặc kéo và thả tệp vào đây)"** ở trung tâm hoặc nút **"Tải lên"** ở cột bên trái. *(Minh họa: `assets/capcut/capcut_step_05.png`)*
+* **Bước 06 (Chọn toàn bộ 6 file phân cảnh):** Cửa sổ File Explorer mở ra ➔ Quét chọn trọn bộ 6 video phân cảnh từ Google Flow (`cảnh 1`, `cảnh 2`, `cảnh 3`, `cảnh 4`, `cảnh 5`, `cảnh 6`) ➔ Bấm **"Open"**. *(Minh họa: `assets/capcut/capcut_step_06.png`)*
 
 ### 🔹 GIAI ĐOẠN 3: KÉO THẢ & GHÉP NỐI 6 PHÂN CẢNH TRÊN TIMELINE (BƯỚC 7 – 12)
-* **Bước 07 (Thêm Cảnh 1 vào Timeline):** Kéo thả video **Cảnh 1** (Cú máy flycam du thuyền / cổng chào đại đô thị) vào đầu thanh Timeline (từ `00:00:00` đến `00:10:00`). *(Minh họa: `assets/capcut/7.PNG`)*
-* **Bước 08 (Nối Cảnh 2 vào Timeline):** Kéo thả video **Cảnh 2** (Môi giới MINH sải bước giới thiệu hạ tầng) vào Timeline đặt nối tiếp ngay sau Cảnh 1 (từ `00:10:00` đến `00:20:00`). *(Minh họa: `assets/capcut/8.PNG`)*
-* **Bước 09 (Nối Cảnh 3 & Thu nhỏ Timeline):** Kéo thả video **Cảnh 3** (Cảnh quan bãi cát / biển hồ) nối tiếp sau Cảnh 2. Nhấp biểu tượng dấu trừ **`[-]`** ở thanh zoom bên phải để thu nhỏ timeline dễ nhìn toàn cảnh. *(Minh họa: `assets/capcut/9.PNG`)*
-* **Bước 10 (Nối Cảnh 4 vào Timeline):** Kéo thả video **Cảnh 4** (Tiện ích thể thao sân golf quốc tế) vào Timeline nối sau Cảnh 3 (từ `00:30:00` đến `00:40:00`). *(Minh họa: `assets/capcut/10.PNG`)*
-* **Bước 11 (Nối Cảnh 5 vào Timeline):** Kéo thả video **Cảnh 5** (MINH tại Sky Lounge tầng 40 ngắm toàn cảnh thành phố đêm) vào Timeline nối sau Cảnh 4 (từ `00:40:00` đến `00:50:00`). *(Minh họa: `assets/capcut/11.PNG`)*
-* **Bước 12 (Nối Cảnh 6 hoàn thiện 60 Giây):** Kéo thả video **Cảnh 6** (Biệt thự ven hồ hoàng hôn + kêu gọi hành động CTA) nối vào cuối timeline (từ `00:50:00` đến `01:00:00`). Đồng hồ hiển thị tròn **01:00:00** hoàn chỉnh! *(Minh họa: `assets/capcut/12.PNG`)*
+* **Bước 07 (Thêm Cảnh 1 vào Timeline):** Kéo thả video **Cảnh 1** (Cú máy flycam du thuyền / cổng chào đại đô thị) vào đầu thanh Timeline (từ `00:00:00` đến `00:10:00`). *(Minh họa: `assets/capcut/capcut_step_07.png`)*
+* **Bước 08 (Nối Cảnh 2 vào Timeline):** Kéo thả video **Cảnh 2** (Môi giới MINH sải bước giới thiệu hạ tầng) vào Timeline đặt nối tiếp ngay sau Cảnh 1 (từ `00:10:00` đến `00:20:00`). *(Minh họa: `assets/capcut/capcut_step_08.png`)*
+* **Bước 09 (Nối Cảnh 3 & Thu nhỏ Timeline):** Kéo thả video **Cảnh 3** (Cảnh quan bãi cát / biển hồ) nối tiếp sau Cảnh 2. Nhấp biểu tượng dấu trừ **`[-]`** ở thanh zoom bên phải để thu nhỏ timeline dễ nhìn toàn cảnh. *(Minh họa: `assets/capcut/capcut_step_09.png`)*
+* **Bước 10 (Nối Cảnh 4 vào Timeline):** Kéo thả video **Cảnh 4** (Tiện ích thể thao sân golf quốc tế) vào Timeline nối sau Cảnh 3 (từ `00:30:00` đến `00:40:00`). *(Minh họa: `assets/capcut/capcut_step_10.png`)*
+* **Bước 11 (Nối Cảnh 5 vào Timeline):** Kéo thả video **Cảnh 5** (MINH tại Sky Lounge tầng 40 ngắm toàn cảnh thành phố đêm) vào Timeline nối sau Cảnh 4 (từ `00:40:00` đến `00:50:00`). *(Minh họa: `assets/capcut/capcut_step_11.png`)*
+* **Bước 12 (Nối Cảnh 6 hoàn thiện 60 Giây):** Kéo thả video **Cảnh 6** (Biệt thự ven hồ hoàng hôn + kêu gọi hành động CTA) nối vào cuối timeline (từ `00:50:00` đến `01:00:00`). Đồng hồ hiển thị tròn **01:00:00** hoàn chỉnh! *(Minh họa: `assets/capcut/capcut_step_12.png`)*
 
 ### 🔹 GIAI ĐOẠN 4: THIẾT LẬP THÔNG SỐ XUẤT BẢN & LƯU VIDEO 1080P (BƯỚC 13 – 17)
-* **Bước 13 (Nhấp nút Xuất):** Nhìn lên góc trên bên phải màn hình ➔ Nhấp vào nút màu xanh dương **"Xuất"** (Export). *(Minh họa: `assets/capcut/13.PNG`)*
-* **Bước 14 (Chọn mục Tải xuống):** Menu chia sẻ mở ra ➔ Nhấp chọn mục **"Tải xuống"** ở phía dưới danh sách. *(Minh họa: `assets/capcut/14.PNG`)*
-* **Bước 15 (Cấu hình chất lượng 1080p):** Nhập Tên: **`vin hạ long xanh`** | Độ phân giải: **1080p** | Định dạng: **MP4** ➔ Bấm nút to màu xanh **"Xuất"**. *(Minh họa: `assets/capcut/15.PNG`)*
-* **Bước 16 (Tiến trình kết xuất đám mây):** Màn hình hiển thị phần trăm kết xuất (*Đang xuất... 0% ➔ 100%*). Quá trình render tự động diễn ra trên đám mây CapCut chỉ trong 30–60 giây. *(Minh họa: `assets/capcut/16.PNG`)*
-* **Bước 17 (Lưu video về máy tính):** Cửa sổ *Save As* mở ra ➔ Chọn thư mục lưu trên máy ➔ Bấm **"Save"** để tải file MP4 sắc nét về máy tính! *(Minh họa: `assets/capcut/17.PNG`)*
+* **Bước 13 (Nhấp nút Xuất):** Nhìn lên góc trên bên phải màn hình ➔ Nhấp vào nút màu xanh dương **"Xuất"** (Export). *(Minh họa: `assets/capcut/capcut_step_13.png`)*
+* **Bước 14 (Chọn mục Tải xuống):** Menu chia sẻ mở ra ➔ Nhấp chọn mục **"Tải xuống"** ở phía dưới danh sách. *(Minh họa: `assets/capcut/capcut_step_14.png`)*
+* **Bước 15 (Cấu hình chất lượng 1080p):** Nhập Tên: **`vin hạ long xanh`** | Độ phân giải: **1080p** | Định dạng: **MP4** ➔ Bấm nút to màu xanh **"Xuất"**. *(Minh họa: `assets/capcut/capcut_step_15.png`)*
+* **Bước 16 (Tiến trình kết xuất đám mây):** Màn hình hiển thị phần trăm kết xuất (*Đang xuất... 0% ➔ 100%*). Quá trình render tự động diễn ra trên đám mây CapCut chỉ trong 30–60 giây. *(Minh họa: `assets/capcut/capcut_step_16.png`)*
+* **Bước 17 (Lưu video về máy tính):** Cửa sổ *Save As* mở ra ➔ Chọn thư mục lưu trên máy ➔ Bấm **"Save"** để tải file MP4 sắc nét về máy tính! *(Minh họa: `assets/capcut/capcut_step_17.png`)*
 
 ### 🎬 THÀNH PHẨM THỰC TẾ:
 * File video hoàn chỉnh: `assets/capcut/18.mp4` (Vinhomes Hạ Long Xanh 60s Full HD 1080p, đồng nhất nhân vật MINH qua trọn vẹn 6 phân cảnh).
