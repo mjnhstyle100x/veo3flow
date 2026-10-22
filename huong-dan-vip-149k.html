@@ -21,6 +21,7 @@
 
 
 
+
     :root {
       --bg: #090C15;
       --surface: #0F1423;
@@ -4250,6 +4251,176 @@
       box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12);
     }
 
+  
+    /* Screenshot Caption Strip */
+    .img-caption-strip {
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    .caption-action-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .caption-arrow-tag {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #000000;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+      flex-shrink: 0;
+    }
+    .caption-text {
+      color: #F8FAFC;
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    .caption-target {
+      color: #94A3B8;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      padding-top: 4px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .caption-target strong {
+      color: #38BDF8;
+    }
+    .phase-divider {
+      margin: 40px 0 24px 0;
+      padding: 16px 20px;
+      background: linear-gradient(90deg, rgba(34, 211, 238, 0.12), rgba(99, 102, 241, 0.06), transparent);
+      border-left: 4px solid var(--cyan);
+      border-radius: 0 12px 12px 0;
+    }
+    .phase-divider h3 {
+      color: #FFFFFF;
+      font-size: 1.15rem;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.02em;
+    }
+    .phase-divider p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+    }
+    .guide-step-card {
+      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+    }
+    .guide-step-card:hover {
+      border-color: rgba(34, 211, 238, 0.55);
+      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
+    }
+    .guide-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(10, 14, 24, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .guide-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .guide-step-badge.cyan {
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+    }
+    .guide-step-badge.green {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .guide-step-badge.amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .guide-step-badge.purple {
+      background: rgba(168, 85, 247, 0.15);
+      color: #C084FC;
+      border: 1px solid rgba(168, 85, 247, 0.35);
+    }
+    .guide-step-body {
+      padding: 20px;
+    }
+    .guide-step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .guide-step-desc {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .guide-step-img-box {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000000;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      margin-bottom: 8px;
+    }
+    .guide-step-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .guide-step-img-box:hover img {
+      transform: scale(1.015);
+    }
+    .guide-step-note {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 3px solid #6366F1;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #C7D2FE;
+    }
+    .guide-video-card {
+      background: linear-gradient(145deg, rgba(16, 24, 40, 0.95), rgba(10, 15, 30, 0.98));
+      border: 2px solid rgba(16, 185, 129, 0.4);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 36px;
+      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12);
+    }
+
   </style>
 </head>
 <body>
@@ -4487,489 +4658,8 @@
 
       </div>
     </section>
-<!-- CHAPTER 2 -->
-    <section id="ch-2">
-      <div class="section-header">
-        <h2>Chương 2: 👤 Vũ Khí VIP 1: Kỹ Thuật Tạo Nhân Vật & Ghép Mặt Chính Bạn Vào Video AI (Google Flow Thực Chiến)</h2>
-        <span class="section-badge" style="background:rgba(34,211,238,0.15); color:var(--cyan); border:1px solid rgba(34,211,238,0.35);">ĐẶC QUYỀN VIP PRO</span>
-      </div>
-
-      <p>
-        <strong>Nỗi đau lớn nhất của Môi giới BĐS:</strong> Khách hàng lướt TikTok/Reels chỉ tin tưởng các video <em>có mặt người thật review</em>. Nhưng nếu bạn ngại trước máy quay, sợ nói vấp, hoặc không có ekip quay phim đắt đỏ thì sao? Tính năng <strong>Nhân Vật (Digital Clone Persona)</strong> kết hợp mô hình <strong>Omni 1.1 Flash & Veo 3</strong> trực tiếp trên Google Flow giải quyết 100% bài toán này chỉ với <strong>1 tấm ảnh chân dung duy nhất</strong>!
-      </p>
-
-      <!-- Standard Gold Box -->
-      <div class="weapon-card">
-        <div class="weapon-header">
-          <span class="weapon-tag face">TIÊU CHUẨN ĐẦU VÀO</span>
-          <span style="font-size:0.85rem; color:var(--text-muted);">Độ nét khuôn mặt AI đạt chuẩn: 10/10</span>
-        </div>
-        <h3 style="color:#FFFFFF; margin-bottom:12px; font-size:1.25rem;">Tiêu Chuẩn "Vàng" Khi Chọn Ảnh Chân Dung Để Tạo Nhân Vật:</h3>
-        <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7;">
-          <li>📸 <strong>Góc mặt:</strong> Chụp thẳng trực diện (Front-facing) hoặc nghiêng nhẹ 5-10 độ, mắt nhìn thẳng vào ống kính camera.</li>
-          <li>💡 <strong>Ánh sáng:</strong> Đủ sáng rõ cả 2 bên má, không chụp ngược sáng, không có bóng râm loang lổ trên mặt.</li>
-          <li>👔 <strong>Trang phục & thần thái:</strong> Ăn mặc lịch sự (áo vest, sơ mi trắng, blazer), mỉm cười thân thiện và tự tin. Tránh đeo kính râm hoặc đội mũ che khuất trán.</li>
-        </ul>
-      </div>
-
-      <!-- ================= GIAI ĐOẠN 1: TẠO NHÂN VẬT CHÍNH MÌNH ================= -->
-      <div class="phase-divider">
-        <h3>PHẦN 1: TẠO NHÂN VẬT CHÍNH MÌNH (KHỞI TẠO BẢN SAO AI TỪ ẢNH THẬT)</h3>
-        <p>Thực hiện các bước từ 1 đến 7 dưới đây trên Google Flow để lưu vĩnh viễn Digital Human của bạn vào hệ thống:</p>
-      </div>
-
-      <!-- Bước 1 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 01 · KHỞI TẠO DỰ ÁN</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">flow.google.com</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">1. Truy Cập Google Flow & Bấm "Dự Án Mới"</div>
-          <p class="guide-step-desc">
-            Đăng nhập vào Google Flow bằng tài khoản Gmail của bạn. Tại trang chủ quản lý dự án, nhấp vào nút <strong>"+ Dự án mới"</strong> để mở không gian làm việc.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/1.PNG" alt="Bước 1: Bấm Dự án mới trên Google Flow" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Bấm vào ô "+ Dự án mới" ở giữa màn hình để bắt đầu</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Mở bảng điều khiển dự án để chuẩn bị tải nhân vật và nhập kịch bản BĐS.</div>
-          </div>
-          <div class="guide-step-note">
-            💡 <em>Mẹo:</em> Bạn có thể đặt tên dự án theo tên sản phẩm BĐS đang bán (ví dụ: "Vinhomes King Park" hoặc "The Cityon") để dễ dàng quản lý tài nguyên.
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 2 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 02 · TRUY CẬP TAB NHÂN VẬT</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Left Sidebar > Nhân vật</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">2. Mở Khu Vực Quản Lý Nhân Vật Trên Thanh Công Cụ</div>
-          <p class="guide-step-desc">
-            Nhìn sang thanh điều hướng bên trái màn hình, nhấp chuột vào biểu tượng <strong>"Nhân vật"</strong> (khoanh đỏ). Đây là trung tâm quản lý các diễn viên ảo và Digital Clone của riêng bạn.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/2.PNG" alt="Bước 2: Chọn mục Nhân vật trên thanh công cụ" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Nhấp chuột vào mục "Nhân vật" trên thanh công cụ bên trái</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Truy cập vào trung tâm quản lý diễn viên ảo và Digital Human của bạn.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 3 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 03 · TẠO NHÂN VẬT MỚI</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">+ Nhân vật mới</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">3. Bấm Chọn "+ Nhân Vật Mới"</div>
-          <p class="guide-step-desc">
-            Trong giao diện danh sách, nhấp vào ô vuông đầu tiên có dấu cộng: <strong>"+ Nhân vật mới"</strong> (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/3.PNG" alt="Bước 3: Nhấp vào ô Nhân vật mới" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Nhấp vào ô "+ Nhân vật mới" để tạo diễn viên ảo</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Mở giao diện thiết lập thuộc tính nhân vật chính chủ từ ảnh thật.</div>
-          </div>
-          <div class="guide-step-note">
-            ⚠️ <em>Lưu ý:</em> Chọn đúng ô <strong>"Nhân vật mới"</strong> thay vì "Tạo hình đại diện của tôi" để đảm bảo video đầu ra giữ chuẩn tỷ lệ người thật 100%.
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 4 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 04 · BẤM NÚT TẢI LÊN</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Upload Reference Photo</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">4. Bấm Nút "Tải Lên" Ở Thanh Thuộc Tính</div>
-          <p class="guide-step-desc">
-            Tại màn hình thiết lập nhân vật, nhìn xuống phía dưới thanh nhập lệnh, nhấp vào nút <strong>"Tải lên"</strong> có biểu tượng khay mũi tên hướng lên (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/4.PNG" alt="Bước 4: Bấm nút Tải lên" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Bấm nút "Tải lên" (Upload) ở thanh thuộc tính phía dưới</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Kích hoạt cửa sổ chọn ảnh từ máy tính hoặc điện thoại của bạn.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 5 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 05 · CHỌN ẢNH CHÂN DUNG THẬT</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">File Dialog > Open</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">5. Chọn Ảnh Chân Dung Của Bạn Từ Máy Tính</div>
-          <p class="guide-step-desc">
-            Cửa sổ thư mục máy tính mở ra. Tìm đến vị trí lưu ảnh thẻ/ảnh chân dung đẹp nhất của bạn (mặt nhìn thẳng, mặc âu phục lịch lãm) ➔ Chọn file và nhấn nút <strong>"Open"</strong> (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/5.PNG" alt="Bước 5: Chọn ảnh chân dung và bấm Open" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Chọn ảnh thẻ chân dung của bạn từ máy tính rồi bấm "Open"</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Tải lên bức ảnh chân dung đẹp nhất, mặt nhìn thẳng, trang phục lịch sự.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 6 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge cyan">BƯỚC 06 · ĐẶT TÊN ĐỊNH DANH</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Rename Character</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">6. Nhấp Vào Ô "Nhân Vật Chưa Có Tên"</div>
-          <p class="guide-step-desc">
-            Google Flow lập tức phân tích và đưa ảnh đại diện của bạn vào khung "Chân dung". Hãy nhấp chuột vào dòng chữ <strong>"Nhân vật chưa có tên"</strong> (khoanh đỏ) ở ngay phía dưới để chuẩn bị đặt tên.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/6.PNG" alt="Bước 6: Nhấp vào ô Nhân vật chưa có tên" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Nhấp chuột vào ô "Nhân vật chưa có tên" để đặt tên định danh</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Chuẩn bị đặt tên nhân vật để AI dễ dàng nhận diện và gắn thẻ vào câu lệnh.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 7 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge green">BƯỚC 07 · LƯU NHÂN VẬT THÀNH CÔNG</span>
-          <span style="font-size:0.82rem; color:var(--green); font-family:'JetBrains Mono',monospace;">Save & Done</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">7. Đặt Tên (Ví dụ: "Minh") & Bấm "Xong"</div>
-          <p class="guide-step-desc">
-            Nhập tên của bạn vào ô (ví dụ: <strong>Minh</strong> - khoanh đỏ). Sau đó nhìn lên góc trên cùng bên phải màn hình, nhấp vào nút <strong>"Xong"</strong> màu trắng (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/7.PNG" alt="Bước 7: Đặt tên Minh và bấm Xong" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Gõ tên bạn (Ví dụ: Minh) ➔ Bấm nút "Xong" ở góc trên bên phải</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Lưu vĩnh viễn Digital Human của bạn vào hệ thống Google Flow.</div>
-          </div>
-          <div class="guide-step-note" style="border-left-color:var(--green); background:rgba(16,185,129,0.08);">
-            🎉 <strong>Chúc mừng!</strong> Bạn đã hoàn tất việc tạo một Digital Human chính chủ! Từ giây phút này, nhân vật của bạn đã sẵn sàng tham gia vào bất kỳ kịch bản video BĐS nào.
-          </div>
-        </div>
-      </div>
-
-      <!-- ================= GIAI ĐOẠN 2: GHÉP MẶT & TẠO VIDEO ================= -->
-      <div class="phase-divider" style="border-left-color:var(--amber); background:linear-gradient(90deg, rgba(245,158,11,0.15), rgba(99,102,241,0.05));">
-        <h3 style="color:#FBBF24;">PHẦN 2: GHÉP MẶT VÀO VIDEO AI THỰC CHIẾN (DỰ ÁN THE CITYON)</h3>
-        <p>Quy trình từng bước ra lệnh cho trợ lý AI gắn khuôn mặt bạn vào các phân cảnh review BĐS triệu đô:</p>
-      </div>
-
-      <!-- Bước 8 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 08 · GẮN NHÂN VẬT VÀO CÂU LỆNH</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Add Element (+)</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">8. Bấm Dấu Cộng (+) Tại Thanh Chat Nhập Lệnh</div>
-          <p class="guide-step-desc">
-            Trở lại màn hình dự án chính, nhân vật "MINH" đã hiển thị trong thư viện. Tại thanh nhập lệnh "Bạn muốn tạo những gì?" ở dưới cùng, nhấp vào dấu cộng <strong>`+`</strong> (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/9.PNG" alt="Bước 8: Bấm dấu cộng ở thanh nhập lệnh" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Tại thanh chat nhập lệnh ở dưới cùng, nhấp vào dấu cộng (+)</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Mở danh mục thành phần để chuẩn bị đính kèm thẻ nhân vật vào video.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 9 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 09 · CHỌN NHÂN VẬT CỦA BẠN</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Select MINH > Thêm vào câu lệnh</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">9. Chọn Nhân Vật "MINH" & Bấm "Thêm Vào Câu Lệnh"</div>
-          <p class="guide-step-desc">
-            Trong cửa sổ chọn thành phần, nhấp chọn tab <strong>"Nhân vật"</strong> (khoanh đỏ) ➔ Bấm chọn nhân vật <strong>"MINH"</strong> ➔ Nhấp vào nút <strong>"Thêm vào câu lệnh"</strong> (khoanh đỏ ở dưới).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/10.PNG" alt="Bước 9: Chọn nhân vật MINH và thêm vào câu lệnh" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Chọn tab "Nhân vật" ➔ Chọn "MINH" ➔ Bấm "Thêm vào câu lệnh"</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Ghim nhân vật của bạn vào làm diễn viên chính xuyên suốt phân cảnh.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 10 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 10 · NHẬP YÊU CẦU KỊCH BẢN</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Agent Prompting</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">10. Nhập Yêu Cầu Bằng Tiếng Việt Với Thẻ Nhân Vật Đã Ghim</div>
-          <p class="guide-step-desc">
-            Thẻ avatar của bạn đã được gắn cố định trên thanh lệnh. Bạn chỉ cần nhập yêu cầu kịch bản bằng tiếng Việt cực kỳ tự nhiên: <br>
-            <code style="color:var(--cyan); font-weight:700; background:rgba(34,211,238,0.1); padding:4px 10px; border-radius:6px; display:inline-block; margin:6px 0;">hãy tạo cho tôi một câu lệnh 1 môi giới giới thiệu về dự án the cityon</code> (khoanh đỏ).<br>
-            Đảm bảo nút <strong>"Tác nhân"</strong> đang được bật sáng.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/11.PNG" alt="Bước 10: Gõ câu lệnh tiếng Việt yêu cầu môi giới giới thiệu dự án The Cityon" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Thẻ nhân vật đã ghim ➔ Nhập câu lệnh tiếng Việt giới thiệu dự án BĐS</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Yêu cầu AI đóng vai môi giới BĐS giới thiệu đại dự án The Cityon.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 11 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 11 · CẤU HÌNH OMNI 1.1 FLASH</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Agent Settings > Omni 1.1 Flash</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">11. Mở Cài Đặt Tác Nhân & Chọn Mô Hình "Omni 1.1 Flash"</div>
-          <p class="guide-step-desc">
-            Nhấp vào biểu tượng <strong>Cài đặt</strong> (thanh trượt góc phải). Tại bảng cài đặt hiện ra:
-            <br>• Chọn tỷ lệ khung hình: <strong>16:9</strong> (ngang cho TVC/YouTube) hoặc <strong>9:16</strong> (dọc cho TikTok/Reels).
-            <br>• Tại danh mục mô hình, chọn <strong>"Omni 1.1 Flash"</strong> (khoanh đỏ) — đây là mô hình tối ưu nhất cho chuyển động cơ mặt và biểu cảm người thật.
-            <br>• Bấm nút <strong>"Lưu"</strong> (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/12.PNG" alt="Bước 11: Cài đặt tác nhân chọn Omni 1.1 Flash và bấm Lưu" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Mở Cài đặt tác nhân ➔ Chọn mô hình "Omni 1.1 Flash" ➔ Bấm "Lưu"</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Cấu hình mô hình tối ưu nhất cho chuyển động cơ mặt và tỷ lệ khung hình chuẩn.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 12 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 12 · GỬI YÊU CẦU</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Submit Prompt</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">12. Nhấn Nút Mũi Tên Gửi Lệnh Để Kích Hoạt AI</div>
-          <p class="guide-step-desc">
-            Sau khi kiểm tra câu lệnh và thẻ nhân vật đã gắn đầy đủ, nhấp vào nút <strong>Gửi</strong> (biểu tượng mũi tên tròn - khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/13.PNG" alt="Bước 12: Bấm nút mũi tên gửi câu lệnh" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Nhấn nút Mũi tên gửi lệnh để AI tiếp nhận và biên kịch</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Kích hoạt trợ lý AI phân tích và xây dựng kịch bản TVC chuyên nghiệp.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 13 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge amber">BƯỚC 13 · RA LỆNH TẠO VIDEO</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Chat Interaction</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">13. Trả Lời AI: "Bạn Làm Video Cho Tôi"</div>
-          <p class="guide-step-desc">
-            Trợ lý AI ở thanh bên phải sẽ xuất ra kịch bản chi tiết: <em>"Minh nói bằng giọng nam truyền cảm: Chào mừng quý anh chị đã đến với The Cityon..."</em> và hỏi bạn có muốn tạo video không. Bạn chỉ cần gõ: <br>
-            <strong style="color:#FFFFFF; background:rgba(255,255,255,0.12); padding:3px 10px; border-radius:6px; display:inline-block; margin:6px 0;">bạn làm video cho tôi</strong> (khoanh đỏ) và gửi.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/14.PNG" alt="Bước 13: Gõ bạn làm video cho tôi vào khung chat" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">AI gợi ý kịch bản ➔ Bạn gõ: "bạn làm video cho tôi" để ra lệnh</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Xác nhận với AI bắt đầu tiến hành sản xuất video thành phẩm.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 14 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge green">BƯỚC 14 · PHÊ DUYỆT TẠO VIDEO</span>
-          <span style="font-size:0.82rem; color:var(--green); font-family:'JetBrains Mono',monospace;">Approve (15 Credits)</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">14. Nhấn Nút "Phê Duyệt" Để Bắt Đầu Tạo Video</div>
-          <p class="guide-step-desc">
-            AI thông báo: <em>"Tôi sẽ tạo video giới thiệu dự án The Cityon với chuyên viên Minh bằng mô hình Omni 1.1 Flash. Video sẽ kéo dài 10 giây với phong cách điện ảnh chân thực... Chi phí là 15 tín dụng."</em> ➔ Bạn chỉ cần bấm nút <strong>"Phê duyệt"</strong> (khoanh đỏ).
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/15.PNG" alt="Bước 14: Bấm nút Phê duyệt" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">AI báo chi phí 15 credits ➔ Nhấn nút "Phê duyệt" để tạo video</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Xác nhận trừ tín dụng và đưa video 10 giây vào hàng đợi xử lý.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 15 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge green">BƯỚC 15 · HÀNG ĐỢI RENDER TỰ ĐỘNG</span>
-          <span style="font-size:0.82rem; color:var(--text-muted); font-family:'JetBrains Mono',monospace;">Processing Queue</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">15. Video Được Đưa Vào Hàng Đợi & Render Trực Tiếp</div>
-          <p class="guide-step-desc">
-            Video đã được đưa vào hàng đợi xử lý. Một khung hiển thị video (khoanh đỏ) sẽ xuất hiện trực tiếp trên bàn làm việc của bạn và quá trình kết xuất 10 giây chất lượng cao bắt đầu diễn ra.
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/16.PNG" alt="Bước 15: Video vào hàng đợi xử lý trên bảng dự án" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Video đã vào hàng đợi và đang được render tự động trên bàn làm việc</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Theo dõi tiến trình kết xuất video clip chất lượng cao trực tiếp.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bước 16 -->
-      <div class="guide-step-card">
-        <div class="guide-step-header">
-          <span class="guide-step-badge green">BƯỚC 16 · KIỂM TRA TRÊN TIMELINE</span>
-          <span style="font-size:0.82rem; color:var(--cyan); font-family:'JetBrains Mono',monospace;">Timeline Multi-track</span>
-        </div>
-        <div class="guide-step-body">
-          <div class="guide-step-title">16. Mở Video Trên Timeline Đa Kênh & Kiểm Tra Độ Nét</div>
-          <p class="guide-step-desc">
-            Bấm vào video đã render để mở trình biên tập Timeline chuyên nghiệp (tiêu đề: <em>Man introducing The Cityon project</em>). Đoạn clip 10 giây hiển thị hoàn hảo: Khuôn mặt, nụ cười, trang phục và ánh mắt của chính bạn cử động tự nhiên, thuyết minh mượt mà ngay trước biển tên dự án The Cityon!
-          </p>
-          <div class="guide-step-img-box">
-            <img src="assets/ghep-mat/17.PNG" alt="Bước 16: Mở video trên trình phát timeline kiểm tra chi tiết" loading="lazy">
-          
-          </div>
-          <div class="img-caption-strip">
-            <div class="caption-action-row">
-              <span class="caption-arrow-tag">👉 THAO TÁC</span>
-              <span class="caption-text">Video hoàn tất! Nhấp mở trình Timeline để kiểm tra khuôn mặt 4K</span>
-            </div>
-            <div class="caption-target">🎯 <strong>Mục tiêu:</strong> Chiêm ngưỡng đoạn phim 10 giây với khuôn mặt thật của bạn cử động tự nhiên.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ================= GIAI ĐOẠN 3: VIDEO KẾT QUẢ THỰC TẾ ================= -->
-      <div class="guide-video-card">
-        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-          <span style="font-size:1.8rem;">🎬</span>
-          <div>
-            <h3 style="color:#FFFFFF; margin:0; font-size:1.25rem;">Thành Phẩm Thực Tế: Video 10 Giây Ghép Mặt Chính Chủ Cực Nét</h3>
-            <span style="font-size:0.85rem; color:#A7F3D0;">Mô hình: Omni 1.1 Flash · Thời lượng: 10 giây · Dự án: The Cityon</span>
-          </div>
-        </div>
-        <p style="color:#E2E8F0; font-size:0.92rem; line-height:1.6; margin-bottom:18px;">
-          Dưới đây là file video kết quả thực tế xuất ra từ quy trình trên. Bạn hãy bấm <strong>Play</strong> để tận mắt thấy sự chân thực của khuôn mặt, chuyển động miệng tự nhiên và độ sắc nét điện ảnh:
-        </p>
-        <div style="max-width:850px; margin:0 auto; border-radius:12px; overflow:hidden; border:1px solid rgba(16,185,129,0.5); box-shadow:0 10px 30px rgba(0,0,0,0.7);">
-          <video controls playsinline style="width:100%; display:block; background:#000;" poster="assets/ghep-mat/17.PNG">
-            <source src="assets/ghep-mat/18.mp4" type="video/mp4">
-            Trình duyệt của bạn không hỗ trợ phát trực tiếp video này.
-          </video>
-        </div>
-        <div style="text-align:center; margin-top:14px; font-size:0.85rem; color:var(--text-muted);">
-          🎥 <em>Clip thực tế: Chuyên viên môi giới Minh thuyết minh trực tiếp tại dự án The Cityon (Độ nét 4K, 60fps)</em>
-        </div>
-      </div>
-
-    </section>
-""")
-
-# ==============================================================================
-# CHƯƠNG 3: VŨ KHÍ 2 - BÍ QUYẾT ĐỒNG NHẤT NHÂN VẬT
-# ==============================================================================
-parts.append("""
-    
+<!-- CHAPTER 2 -->')
+ch2_end = orig_code.find('
     <!-- CHAPTER 3 -->
     <section id="ch-3">
       <div class="section-header">
