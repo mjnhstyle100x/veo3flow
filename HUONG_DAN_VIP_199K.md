@@ -15,12 +15,12 @@
 
 ## 🚀 CHƯƠNG 1: QUY TRÌNH 6 BƯỚC THỰC CHIẾN TRÊN GOOGLE FLOW
 
-1. **Bước 1:** Truy cập [https://labs.google/fx/tools/flow](https://labs.google/fx/tools/flow) ➔ Bấm **"Tạo bằng Google Flow"**.
-2. **Bước 2:** Đăng nhập tài khoản Google được cấp ➔ Bấm lưu mật khẩu trên Chrome.
-3. **Bước 3:** Nhấp nút **"+ Dự án mới"** để mở phòng sáng tạo video.
-4. **Bước 4:** Chọn tỷ lệ khung hình: **16:9** (ngang) cho YouTube hoặc **9:16** (dọc) cho TikTok/Reels.
-5. **Bước 5:** Chọn mô hình **Omni 1.1 Flash** (tối ưu cử động mặt) hoặc **Veo 3.1 - Lite** (đại cảnh sắc nét).
-6. **Bước 6:** Dán Prompt vào ô *"Bạn muốn tạo những gì?"* ➔ Bấm nút mũi tên gửi lệnh ➔ Chờ 60-90s ➔ Tải về.
+1. **Bước 1:** Truy cập [https://labs.google/fx/tools/flow](https://labs.google/fx/tools/flow) ➔ Bấm **"Tạo bằng Google Flow"**. *(Minh họa: `assets/guide_step1_home.png`)*
+2. **Bước 2:** Đăng nhập tài khoản Google được cấp ➔ Bấm lưu mật khẩu trên Chrome. *(Minh họa: `assets/guide_step2_login.png`)*
+3. **Bước 3:** Nhấp nút **"+ Dự án mới"** để mở phòng sáng tạo video. *(Minh họa: `assets/guide_step3_new_project.png`)*
+4. **Bước 4:** Cài đặt khung hình: **9:16** (dọc) cho TikTok/Reels hoặc **16:9** (ngang) cho YouTube/Tivi & Chọn Model AI (**Omni 1.1 Flash** hoặc **Veo 3.1 - Lite**). *(Minh họa: `assets/guide_step4_aspect_ratio.png`)*
+5. **Bước 5:** Dán Prompt vào ô *"Bạn muốn tạo những gì?"* ➔ Bấm nút tròn mũi tên gửi lệnh tạo video ➔ Chờ 60-90s AI render. *(Minh họa: `assets/guide_step5_prompt_input.png`)*
+6. **Bước 6:** Xem video thành phẩm ➔ Bấm menu chọn **"Tải xuống"** ➔ Chọn **1080p** tải video sạch về máy. *(Minh họa: `assets/guide_step6_download.png`)*
 
 ### 🔥 3 Câu Lệnh BĐS Mẫu "Thử Lửa" Ngay Trong 1 Phút Đầu:
 1. **Mẫu 01 (Giới thiệu Dự án / Chung cư cao cấp):**
