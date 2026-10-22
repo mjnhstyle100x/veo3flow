@@ -20,9 +20,6 @@
 
 
 
-
-
-
     :root {
       --bg: #090C15;
       --surface: #0F1423;
@@ -302,15 +299,16 @@
     .toc-link {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
+      gap: 12px;
+      padding: 12px 16px;
+      min-height: 52px;
       border-radius: var(--radius-sm);
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.05);
       color: var(--text-muted);
       text-decoration: none;
       font-size: 0.88rem;
-      font-weight: 500;
+      font-weight: 600;
       transition: all 0.2s;
     }
 
@@ -323,12 +321,19 @@
 
     .toc-num {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 0.78rem;
+      font-weight: 800;
       color: var(--cyan);
       background: rgba(34, 211, 238, 0.1);
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      min-width: 32px;
+      text-align: center;
     }
 
     /* Section Styles */
@@ -3816,809 +3821,41 @@
     }
 
   
-
-    /* Screenshot Caption Strip */
-    .img-caption-strip {
-      margin-top: 12px;
-      padding: 12px 18px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-    .caption-action-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .caption-arrow-tag {
-      background: linear-gradient(135deg, #F59E0B, #D97706);
-      color: #000000;
-      font-size: 0.74rem;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .caption-text {
-      color: #FFFFFF;
-      font-size: 0.94rem;
-      font-weight: 600;
-    }
-    .caption-target {
-      color: #94A3B8;
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    /* Guide Step Cards with Real Screenshots */
-    .guide-step-card {
-      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
-      border: 1px solid rgba(99, 102, 241, 0.28);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      transition: all 0.25s ease;
-    }
-    .guide-step-card:hover {
-      border-color: rgba(34, 211, 238, 0.55);
-      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
-    }
-    .guide-step-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(10, 14, 24, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .guide-step-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-    .guide-step-badge.cyan {
-      background: rgba(34, 211, 238, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-    }
-    .guide-step-badge.green {
-      background: rgba(16, 185, 129, 0.15);
-      color: #10B981;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-    .guide-step-badge.amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #FBBF24;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .guide-step-badge.purple {
-      background: rgba(168, 85, 247, 0.15);
-      color: #C084FC;
-      border: 1px solid rgba(168, 85, 247, 0.35);
-    }
-    .guide-step-body {
-      padding: 20px;
-    }
-    .guide-step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .guide-step-desc {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-    .guide-step-img-box {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: #000000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      position: relative;
-    }
-    .guide-step-img-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .guide-step-img-box:hover img {
-      transform: scale(1.008);
-    }
-    .guide-step-note {
-      margin-top: 14px;
-      padding: 12px 16px;
-      border-radius: 10px;
-      background: rgba(34, 211, 238, 0.08);
-      border-left: 3px solid var(--cyan);
-      font-size: 0.88rem;
-      color: #E2E8F0;
-      line-height: 1.55;
-    }
-    .phase-divider {
-      margin: 40px 0 24px;
-      padding: 16px 20px;
-      background: linear-gradient(90deg, rgba(34, 211, 238, 0.15), rgba(99, 102, 241, 0.05));
-      border-left: 4px solid var(--cyan);
-      border-radius: 0 12px 12px 0;
-    }
-    .phase-divider h3 {
-      margin: 0 0 6px;
-      color: #FFFFFF;
-      font-size: 1.25rem;
-    }
-    .phase-divider p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    .guide-video-card {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 78, 59, 0.25));
-      border: 1px solid rgba(16, 185, 129, 0.45);
-      border-radius: 16px;
-      padding: 24px;
-      margin: 32px 0;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
-    }
-
-    /* VIP 199K Badges & Cards */
-    .badge-vip-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 18px;
-      border-radius: 999px;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.45);
-      color: #FBBF24;
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .weapon-card {
-      background: linear-gradient(135deg, rgba(15, 20, 35, 0.9), rgba(22, 29, 49, 0.95));
-      border: 1px solid rgba(99, 102, 241, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 28px 26px;
-      margin-bottom: 28px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-    .weapon-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--cyan), var(--primary), var(--amber));
-    }
-    .weapon-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
-    }
-    .weapon-tag {
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
-    }
-    .weapon-tag.face { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.35); }
-    .weapon-tag.consistency { background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.35); }
-    .weapon-tag.gemini { background: rgba(245, 158, 11, 0.15); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.35); }
-    .weapon-tag.capcut { background: rgba(236, 72, 153, 0.15); color: #EC4899; border: 1px solid rgba(236, 72, 153, 0.35); }
-
-    .storyboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin: 18px 0;
-    }
-    .story-shot-box {
-      background: rgba(15, 20, 35, 0.75);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .story-shot-num {
-      font-size: 0.75rem;
-      font-weight: 800;
-      color: var(--cyan);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .story-shot-timing {
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--amber);
-      font-size: 0.75rem;
-    }
-    .story-shot-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #FFFFFF;
-    }
-    .story-shot-desc {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-    .account-box {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(16, 185, 129, 0.08));
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      border-radius: var(--radius-md);
-      padding: 22px 24px;
-      margin: 24px 0;
-    }
-
-  
-    /* Screenshot Caption Strip */
-    .img-caption-strip {
-      margin-top: 12px;
-      padding: 12px 18px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-    .caption-action-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .caption-arrow-tag {
-      background: linear-gradient(135deg, #F59E0B, #D97706);
-      color: #000000;
-      font-size: 0.74rem;
-      font-weight: 800;
-      padding: 3px 9px;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
-      flex-shrink: 0;
-    }
-    .caption-text {
-      color: #F8FAFC;
-      font-size: 0.88rem;
-      font-weight: 600;
-      line-height: 1.45;
-    }
-    .caption-target {
-      color: #94A3B8;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      padding-top: 4px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    }
-    .caption-target strong {
-      color: #38BDF8;
-    }
-    .phase-divider {
-      margin: 40px 0 24px 0;
-      padding: 16px 20px;
-      background: linear-gradient(90deg, rgba(34, 211, 238, 0.12), rgba(99, 102, 241, 0.06), transparent);
-      border-left: 4px solid var(--cyan);
-      border-radius: 0 12px 12px 0;
-    }
-    .phase-divider h3 {
-      color: #FFFFFF;
-      font-size: 1.15rem;
-      margin: 0 0 6px 0;
-      letter-spacing: 0.02em;
-    }
-    .phase-divider p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin: 0;
-    }
-    .guide-step-card {
-      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
-      border: 1px solid rgba(99, 102, 241, 0.28);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      transition: all 0.25s ease;
-    }
-    .guide-step-card:hover {
-      border-color: rgba(34, 211, 238, 0.55);
-      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
-    }
-    .guide-step-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(10, 14, 24, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .guide-step-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-    .guide-step-badge.cyan {
-      background: rgba(34, 211, 238, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-    }
-    .guide-step-badge.green {
-      background: rgba(16, 185, 129, 0.15);
-      color: #10B981;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-    .guide-step-badge.amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #FBBF24;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .guide-step-badge.purple {
-      background: rgba(168, 85, 247, 0.15);
-      color: #C084FC;
-      border: 1px solid rgba(168, 85, 247, 0.35);
-    }
-    .guide-step-body {
-      padding: 20px;
-    }
-    .guide-step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .guide-step-desc {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-    .guide-step-img-box {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: #000000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      margin-bottom: 8px;
-    }
-    .guide-step-img-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .guide-step-img-box:hover img {
-      transform: scale(1.015);
-    }
-    .guide-step-note {
-      margin-top: 12px;
-      padding: 10px 14px;
-      background: rgba(99, 102, 241, 0.08);
-      border-left: 3px solid #6366F1;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      color: #C7D2FE;
-    }
-    .guide-video-card {
-      background: linear-gradient(145deg, rgba(16, 24, 40, 0.95), rgba(10, 15, 30, 0.98));
-      border: 2px solid rgba(16, 185, 129, 0.4);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 36px;
-      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12);
-    }
-
-  
-    /* Screenshot Caption Strip */
-    .img-caption-strip {
-      margin-top: 12px;
-      padding: 12px 18px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-    .caption-action-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .caption-arrow-tag {
-      background: linear-gradient(135deg, #F59E0B, #D97706);
-      color: #000000;
-      font-size: 0.74rem;
-      font-weight: 800;
-      padding: 3px 9px;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
-      flex-shrink: 0;
-    }
-    .caption-text {
-      color: #F8FAFC;
-      font-size: 0.88rem;
-      font-weight: 600;
-      line-height: 1.45;
-    }
-    .caption-target {
-      color: #94A3B8;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      padding-top: 4px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    }
-    .caption-target strong {
-      color: #38BDF8;
-    }
-    .phase-divider {
-      margin: 40px 0 24px 0;
-      padding: 16px 20px;
-      background: linear-gradient(90deg, rgba(34, 211, 238, 0.12), rgba(99, 102, 241, 0.06), transparent);
-      border-left: 4px solid var(--cyan);
-      border-radius: 0 12px 12px 0;
-    }
-    .phase-divider h3 {
-      color: #FFFFFF;
-      font-size: 1.15rem;
-      margin: 0 0 6px 0;
-      letter-spacing: 0.02em;
-    }
-    .phase-divider p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin: 0;
-    }
-    .guide-step-card {
-      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
-      border: 1px solid rgba(99, 102, 241, 0.28);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      transition: all 0.25s ease;
-    }
-    .guide-step-card:hover {
-      border-color: rgba(34, 211, 238, 0.55);
-      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
-    }
-    .guide-step-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(10, 14, 24, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .guide-step-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-    .guide-step-badge.cyan {
-      background: rgba(34, 211, 238, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-    }
-    .guide-step-badge.green {
-      background: rgba(16, 185, 129, 0.15);
-      color: #10B981;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-    .guide-step-badge.amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #FBBF24;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .guide-step-badge.purple {
-      background: rgba(168, 85, 247, 0.15);
-      color: #C084FC;
-      border: 1px solid rgba(168, 85, 247, 0.35);
-    }
-    .guide-step-body {
-      padding: 20px;
-    }
-    .guide-step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .guide-step-desc {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-    .guide-step-img-box {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: #000000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      margin-bottom: 8px;
-    }
-    .guide-step-img-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .guide-step-img-box:hover img {
-      transform: scale(1.015);
-    }
-    .guide-step-note {
-      margin-top: 12px;
-      padding: 10px 14px;
-      background: rgba(99, 102, 241, 0.08);
-      border-left: 3px solid #6366F1;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      color: #C7D2FE;
-    }
-    .guide-video-card {
-      background: linear-gradient(145deg, rgba(16, 24, 40, 0.95), rgba(10, 15, 30, 0.98));
-      border: 2px solid rgba(16, 185, 129, 0.4);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 36px;
-      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12);
-    }
-
-  
-    /* Screenshot Caption Strip */
-    .img-caption-strip {
-      margin-top: 12px;
-      padding: 12px 18px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-    .caption-action-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .caption-arrow-tag {
-      background: linear-gradient(135deg, #F59E0B, #D97706);
-      color: #000000;
-      font-size: 0.74rem;
-      font-weight: 800;
-      padding: 3px 9px;
-      border-radius: 6px;
-      letter-spacing: 0.04em;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
-      flex-shrink: 0;
-    }
-    .caption-text {
-      color: #F8FAFC;
-      font-size: 0.88rem;
-      font-weight: 600;
-      line-height: 1.45;
-    }
-    .caption-target {
-      color: #94A3B8;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      padding-top: 4px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    }
-    .caption-target strong {
-      color: #38BDF8;
-    }
-    .phase-divider {
-      margin: 40px 0 24px 0;
-      padding: 16px 20px;
-      background: linear-gradient(90deg, rgba(34, 211, 238, 0.12), rgba(99, 102, 241, 0.06), transparent);
-      border-left: 4px solid var(--cyan);
-      border-radius: 0 12px 12px 0;
-    }
-    .phase-divider h3 {
-      color: #FFFFFF;
-      font-size: 1.15rem;
-      margin: 0 0 6px 0;
-      letter-spacing: 0.02em;
-    }
-    .phase-divider p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin: 0;
-    }
-    .guide-step-card {
-      background: linear-gradient(145deg, rgba(18, 24, 38, 0.95), rgba(12, 16, 28, 0.98));
-      border: 1px solid rgba(99, 102, 241, 0.28);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 28px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-      transition: all 0.25s ease;
-    }
-    .guide-step-card:hover {
-      border-color: rgba(34, 211, 238, 0.55);
-      box-shadow: 0 14px 40px rgba(34, 211, 238, 0.12);
-    }
-    .guide-step-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      background: rgba(10, 14, 24, 0.9);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .guide-step-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-    .guide-step-badge.cyan {
-      background: rgba(34, 211, 238, 0.15);
-      color: var(--cyan);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-    }
-    .guide-step-badge.green {
-      background: rgba(16, 185, 129, 0.15);
-      color: #10B981;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-    .guide-step-badge.amber {
-      background: rgba(245, 158, 11, 0.15);
-      color: #FBBF24;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .guide-step-badge.purple {
-      background: rgba(168, 85, 247, 0.15);
-      color: #C084FC;
-      border: 1px solid rgba(168, 85, 247, 0.35);
-    }
-    .guide-step-body {
-      padding: 20px;
-    }
-    .guide-step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .guide-step-desc {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.65;
-      margin-bottom: 16px;
-    }
-    .guide-step-img-box {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: #000000;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      margin-bottom: 8px;
-    }
-    .guide-step-img-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-    .guide-step-img-box:hover img {
-      transform: scale(1.015);
-    }
-    .guide-step-note {
-      margin-top: 12px;
-      padding: 10px 14px;
-      background: rgba(99, 102, 241, 0.08);
-      border-left: 3px solid #6366F1;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      color: #C7D2FE;
-    }
-    .guide-video-card {
-      background: linear-gradient(145deg, rgba(16, 24, 40, 0.95), rgba(10, 15, 30, 0.98));
-      border: 2px solid rgba(16, 185, 129, 0.4);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 36px;
-      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.12);
-    }
-
   </style>
 </head>
 <body>
-
-  <!-- Top Hero Banner -->
-  <div class="hero-banner">
-    <div class="hero-badge">TÀI LIỆU MASTER ĐẶC QUYỀN VIP PRO · BẢN QUYỀN 2026</div>
-    <h1>Cẩm Nang Master VIP Real Estate 2026</h1>
-    <p>Quy trình thực chiến tạo video Bất Động Sản triệu view bằng Google Veo 3 & Google Flow</p>
-  </div>
-
   <div class="container">
-
-    <!-- Document Info Card -->
-    <header class="doc-header">
-      <div class="doc-badge-group">
-        <span class="badge vip">GÓI VIP PRO 199.000đ</span>
-        <span class="badge" style="background:rgba(16,185,129,0.15); color:#10B981; border:1px solid rgba(16,185,129,0.3);">FULL QUY TRÌNH THỰC CHIẾN</span>
-        <span class="badge hot">CẬP NHẬT 2026</span>
+    <!-- Top Action Bar -->
+    <div class="action-bar no-print">
+      <div class="bar-brand">
+        <div class="bar-brand-badge" style="background: linear-gradient(135deg, #F59E0B, #10B981);">VIP</div>
+        <span>👑 Veo 3 & Flow · VIP BẤT ĐỘNG SẢN 199K MASTER</span>
       </div>
-      <h1 class="doc-title">Cẩm Nang Master Video AI Bất Động Sản: Từ Kịch Bản Đến Video Hoàn Chỉnh</h1>
+      <div class="bar-buttons">
+        <button class="btn-action" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          In / Lưu PDF
+        </button>
+        <a href="index.html" class="btn-action primary" style="background: linear-gradient(135deg, #F59E0B, #6366F1);">
+          Trang Mua Hàng →
+        </a>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="doc-header">
+      <div class="badge-vip-pill">
+        👑 ĐẶC QUYỀN GÓI VIP PRO REAL ESTATE · 199.000đ · BẤT ĐỘNG SẢN 2026
+      </div>
+      <h1 style="background: linear-gradient(135deg, #FFFFFF 20%, #FDE68A 60%, var(--cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Google Veo 3 & Flow: Cẩm Nang Master VIP Bất Động Sản 2026
+      </h1>
       <p class="doc-subtitle">
-        Tài liệu hướng dẫn độc quyền dành riêng cho khách hàng sở hữu <strong>Gói VIP Pro Real Estate 199.000đ</strong>. Hướng dẫn toàn diện từ cách kích hoạt tài khoản Google Veo 3, ghép mặt chính bạn vào video, trợ lý Gemini biên kịch & quy trình 5 phân cảnh đồng nhất nhân vật, dựng phim CapCut và trung tâm hỗ trợ 1-1.
+        Chúc mừng bạn đã sở hữu <strong>Gói VIP Pro Real Estate 199.000đ</strong>! Đây là vũ khí tối thượng giúp môi giới BĐS tự động hóa quy trình làm video: Từ việc <strong>ghép khuôn mặt của chính bạn vào video</strong>, <strong>giữ đồng nhất 1 nhân vật</strong> qua từng phân cảnh, dùng <strong>Gemini viết kịch bản 5 cảnh Hollywood</strong>, lồng tiếng dựng phim <strong>CapCut hoàn chỉnh</strong> đến <strong>1 tài khoản Veo 3 (1.000 credits)</strong> được cấp sẵn!
       </p>
-      <div class="doc-meta-grid">
+      <div class="doc-meta-strip">
         <div class="doc-meta-item">
-          <span>👤 Tác giả: Đội ngũ Kỹ thuật Veo 3 Flow</span>
+          <span>📖 Định dạng: Cẩm Nang Master Thực Chiến</span>
         </div>
         <div class="doc-meta-item">
           <span>⏱️ Thời gian học: 15 phút thực hành</span>
@@ -4639,12 +3876,12 @@
         Mục Lục Nhanh 6 Phần Thực Hành BĐS VIP 199K
       </div>
       <div class="toc-grid">
-        <a href="#ch-0" class="toc-link"><span class="toc-num">00</span> Kích hoạt Tài khoản Veo 3</a>
-        <a href="#ch-1" class="toc-link"><span class="toc-num">01</span> Quy trình 6 bước & 3 Prompt mẫu</a>
-        <a href="#ch-2" class="toc-link" style="border: 1px solid rgba(34,211,238,0.4);"><span class="toc-num" style="color:var(--cyan);">02</span> 👤 Tạo Nhân Vật & Ghép Mặt Chính Bạn</a>
-        <a href="#ch-3" class="toc-link" style="border: 1px solid rgba(16,185,129,0.4);"><span class="toc-num" style="color:#10B981;">03</span> 🎭 & 🤖 Gemini Biên Kịch & 5 Cảnh Đồng Nhất MINH</a>
-        <a href="#ch-4" class="toc-link" style="border: 1px solid rgba(236,72,153,0.4);"><span class="toc-num" style="color:#EC4899;">04</span> 🎬 Quy trình dựng hoàn chỉnh bằng CapCut</a>
-        <a href="#ch-5" class="toc-link"><span class="toc-num">05</span> 🛠️ Xử lý lỗi & Kênh Hỗ Trợ Kỹ Thuật VIP 1-1</a>
+        <a href="#ch-0" class="toc-link" style="border: 1px solid rgba(245,158,11,0.35);"><span class="toc-num" style="color:#F59E0B; flex-shrink: 0; min-width: 26px;">00</span> <span>🎁 Kích hoạt Tài khoản Veo 3</span></a>
+        <a href="#ch-1" class="toc-link" style="border: 1px solid rgba(99,102,241,0.35);"><span class="toc-num" style="color:#818CF8; flex-shrink: 0; min-width: 26px;">01</span> <span>⚡ Quy trình 6 bước & 3 Prompt mẫu</span></a>
+        <a href="#ch-2" class="toc-link" style="border: 1px solid rgba(34,211,238,0.4);"><span class="toc-num" style="color:var(--cyan); flex-shrink: 0; min-width: 26px;">02</span> <span>👤 Tạo Nhân Vật & Ghép Mặt Chính Bạn</span></a>
+        <a href="#ch-3" class="toc-link" style="border: 1px solid rgba(16,185,129,0.4);"><span class="toc-num" style="color:#10B981; flex-shrink: 0; min-width: 26px;">03</span> <span>🎭 & 🤖 Gemini & 62 Bước Đồng Nhất MINH</span></a>
+        <a href="#ch-4" class="toc-link" style="border: 1px solid rgba(236,72,153,0.4);"><span class="toc-num" style="color:#EC4899; flex-shrink: 0; min-width: 26px;">04</span> <span>🎬 Quy trình dựng hoàn chỉnh bằng CapCut</span></a>
+        <a href="#ch-5" class="toc-link" style="border: 1px solid rgba(249,115,22,0.35);"><span class="toc-num" style="color:#F97316; flex-shrink: 0; min-width: 26px;">05</span> <span>🛠️ Xử lý lỗi & Kênh Hỗ Trợ VIP 1-1</span></a>
       </div>
     </div>
 
