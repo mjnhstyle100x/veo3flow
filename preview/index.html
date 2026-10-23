@@ -1971,6 +1971,64 @@
 
   <!-- Floating Contact Widget -->
   <style>
+
+    /* Mobile Sticky Bottom CTA Bar */
+    .mobile-sticky-bar { display: none !important; }
+    @media (max-width: 768px) {
+      .mobile-sticky-bar {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 850;
+        background: rgba(10, 15, 29, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid rgba(245, 158, 11, 0.4);
+        padding: 10px 16px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.65);
+        transform: translateY(115%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .mobile-sticky-bar.visible {
+        transform: translateY(0);
+      }
+      .mobile-sticky-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .mobile-sticky-badge {
+        font-size: 0.94rem;
+        font-weight: 800;
+        color: var(--amber-2);
+        letter-spacing: -0.01em;
+      }
+      .mobile-sticky-sub {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .mobile-sticky-btn {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        white-space: nowrap;
+        border-radius: var(--r-sm);
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        color: #000 !important;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+
     .float-contact { position: fixed; bottom: 20px; right: 20px; z-index: 900; display: flex; flex-direction: column; gap: 12px; }
     .float-btn { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,0.5); transition: all 0.3s; position: relative; }
     .float-btn:hover { transform: scale(1.1); }
