@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>VŨ KHÍ CHỐT DEAL — Tạo video BĐS với Google Veo 3 chỉ từ 19.000đ</title>
+    <!-- Favicon & Social Share Preview -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og_banner.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tạo Video BĐS với Google Veo 3 chỉ từ 19.000đ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og_banner.jpg">
+  <link rel="canonical" href="https://veo3flow.com/">
   <meta name="description" content="Hướng dẫn dùng Google Flow & Veo 3 cho người mới bằng tiếng Việt. Chỉ từ 19.000đ, có sẵn combo kèm tài khoản Veo 3 và bộ câu lệnh mẫu tạo video đẹp.">
   <meta property="og:title" content="Vũ khí chốt deal cho Môi giới BĐS: Tự tạo video Flycam, kiến trúc nội thất siêu thực bằng Google Veo 3. Không cần thuê đội media.">
   <meta property="og:description" content="Hướng dẫn tiếng Việt, combo kèm tài khoản Veo 3, bộ prompt mẫu. Thanh toán VietQR.">
@@ -1414,6 +1425,9 @@
         <a href="#hoi-dap">Hỏi đáp</a>
         <a href="https://zalo.me/0347999726" id="footer-zalo" target="_blank" rel="noopener">Zalo: 0347.999.726</a>
       </div>
+        <div class="footer-disclaimer" style="margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6;text-align:center;">
+          Tuyên bố miễn trừ: Google, Google Flow và Google Veo là các nhãn hiệu thương mại thuộc Google LLC. Trang web này cung cấp tài liệu đào tạo, hướng dẫn ứng dụng công nghệ, kịch bản thực chiến và dịch vụ hỗ trợ kỹ thuật độc lập cho cộng đồng Môi giới Bất động sản, không trực thuộc hay đại diện cho Google LLC.
+        </div>
     </div>
   </footer>
 
@@ -1504,7 +1518,7 @@
         <div style="background:rgba(15,23,42,0.85);border:1px solid rgba(34,211,238,0.25);border-radius:var(--r-md);padding:14px 16px;margin-bottom:20px;text-align:left;font-size:0.86rem;color:#CBD5E1;line-height:1.55;">
           <div style="display:flex;align-items:center;gap:6px;font-weight:700;color:var(--cyan);margin-bottom:4px;">
             <svg style="width:16px;height:16px;flex-shrink:0"><use href="#i-bolt"/></svg>
-            <span>NHẬN TÀI LIỆU & TÀI KHOẢN NGAY TRONG 2 PHÚT:</span>
+            <span>⚡ CAM KẾT BÀN GIAO TRONG 2 - 5 PHÚT (8:00 - 23:00 HÀNG NGÀY)</span>
           </div>
           Vui lòng bấm nút bên dưới để gửi ảnh chụp biên lai chuyển khoản qua Zalo. Kỹ thuật viên sẽ kiểm tra và kích hoạt ngay cho bạn!
         </div>
@@ -1823,6 +1837,21 @@
       document.body.classList.remove('modal-open');
       if (lastFocus) lastFocus.focus();
     }
+    
+    // Mobile sticky CTA bar show/hide on scroll past 400px
+    const stickyBar = document.getElementById('mobile-sticky-cta');
+    if (stickyBar) {
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+          if (window.scrollY > 400 && !document.body.classList.contains('modal-open')) {
+            stickyBar.classList.add('visible');
+          } else {
+            stickyBar.classList.remove('visible');
+          }
+        }
+      }, { passive: true });
+    }
+
     $$('[data-open]').forEach(b => b.addEventListener('click', () => openCheckout(b.dataset.open)));
     overlay.addEventListener('click', e => { if (e.target === overlay || e.target.closest('[data-close]')) closeCheckout(); });
     addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeCheckout(); });
@@ -1970,5 +1999,16 @@
       <div class="float-tooltip">Hỗ trợ & Mua Hàng 24/7</div>
     </a>
   </div>
+  <!-- Mobile Sticky Bottom CTA Bar -->
+  <div id="mobile-sticky-cta" class="mobile-sticky-bar" aria-label="Thanh đặt hàng nhanh">
+    <div class="mobile-sticky-info">
+      <div class="mobile-sticky-badge">💥 Chỉ từ 19.000đ</div>
+      <div class="mobile-sticky-sub">Combo kèm tài khoản Veo 3</div>
+    </div>
+    <button class="mobile-sticky-btn shine" data-open="combo" type="button">
+      ĐẶT MUA NGAY <svg style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
 </body>
 </html>
